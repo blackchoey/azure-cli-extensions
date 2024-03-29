@@ -22,9 +22,54 @@ from .aaz.latest.apic.api.definition import ExportSpecification
 from .aaz.latest.apic.metadata_schema import Create
 from .aaz.latest.apic.metadata_schema import Update
 from .aaz.latest.apic.metadata_schema import ExportMetadataSchema
+from .aaz.latest.apic.api import Update as UpdateAPI
+from .aaz.latest.apic.api.definition import Update as UpdateAPIDefinition
+from .aaz.latest.apic.api.deployment import Update as UpdateAPIDeployment
+from .aaz.latest.apic.api.version import Update as UpdateAPIVersion
+from .aaz.latest.apic.environment import Update as UpdateEnvironment
 
 logger = get_logger(__name__)
 
+
+class UpdateAPIExtension(UpdateAPI):
+    @classmethod
+    def _build_arguments_schema(cls, *args, **kwargs):
+        args_schema = super()._build_arguments_schema(*args, **kwargs)
+        args_schema.workspace_name._required = False
+        args_schema.workspace_name._default = "default"
+        return args_schema
+
+class UpdateAPIDefinitionExtension(UpdateAPIDefinition):
+    @classmethod
+    def _build_arguments_schema(cls, *args, **kwargs):
+        args_schema = super()._build_arguments_schema(*args, **kwargs)
+        args_schema.workspace_name._required = False
+        args_schema.workspace_name._default = "default"
+        return args_schema
+    
+class UpdateAPIDeploymentExtension(UpdateAPIDeployment):
+    @classmethod
+    def _build_arguments_schema(cls, *args, **kwargs):
+        args_schema = super()._build_arguments_schema(*args, **kwargs)
+        args_schema.workspace_name._required = False
+        args_schema.workspace_name._default = "default"
+        return args_schema
+    
+class UpdateAPIVersionExtension(UpdateAPIVersion):
+    @classmethod
+    def _build_arguments_schema(cls, *args, **kwargs):
+        args_schema = super()._build_arguments_schema(*args, **kwargs)
+        args_schema.workspace_name._required = False
+        args_schema.workspace_name._default = "default"
+        return args_schema
+    
+class UpdateEnvironmentExtension(UpdateEnvironment):
+    @classmethod
+    def _build_arguments_schema(cls, *args, **kwargs):
+        args_schema = super()._build_arguments_schema(*args, **kwargs)
+        args_schema.workspace_name._required = False
+        args_schema.workspace_name._default = "default"
+        return args_schema
 
 class ImportSpecificationExtension(ImportSpecification):
     @classmethod
