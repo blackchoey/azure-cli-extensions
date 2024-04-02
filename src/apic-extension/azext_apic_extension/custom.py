@@ -30,46 +30,32 @@ from .aaz.latest.apic.environment import Update as UpdateEnvironment
 
 logger = get_logger(__name__)
 
-
-class UpdateAPIExtension(UpdateAPI):
+class DefaultWorkspaceParameter:
     @classmethod
     def _build_arguments_schema(cls, *args, **kwargs):
         args_schema = super()._build_arguments_schema(*args, **kwargs)
         args_schema.workspace_name._required = False
-        args_schema.workspace_name._default = "default"
+        args_schema.workspace_name._registered = False
         return args_schema
 
-class UpdateAPIDefinitionExtension(UpdateAPIDefinition):
-    @classmethod
-    def _build_arguments_schema(cls, *args, **kwargs):
-        args_schema = super()._build_arguments_schema(*args, **kwargs)
-        args_schema.workspace_name._required = False
-        args_schema.workspace_name._default = "default"
-        return args_schema
+    def pre_operations(self):
+        args = self.ctx.args
+        args.workspace_name = "default"
+
+class UpdateAPIExtension(DefaultWorkspaceParameter, UpdateAPI):
+    pass
+
+class UpdateAPIDefinitionExtension(DefaultWorkspaceParameter, UpdateAPIDefinition):
+    pass
     
-class UpdateAPIDeploymentExtension(UpdateAPIDeployment):
-    @classmethod
-    def _build_arguments_schema(cls, *args, **kwargs):
-        args_schema = super()._build_arguments_schema(*args, **kwargs)
-        args_schema.workspace_name._required = False
-        args_schema.workspace_name._default = "default"
-        return args_schema
+class UpdateAPIDeploymentExtension(DefaultWorkspaceParameter, UpdateAPIDeployment):
+    pass
     
-class UpdateAPIVersionExtension(UpdateAPIVersion):
-    @classmethod
-    def _build_arguments_schema(cls, *args, **kwargs):
-        args_schema = super()._build_arguments_schema(*args, **kwargs)
-        args_schema.workspace_name._required = False
-        args_schema.workspace_name._default = "default"
-        return args_schema
+class UpdateAPIVersionExtension(DefaultWorkspaceParameter, UpdateAPIVersion):
+    pass
     
-class UpdateEnvironmentExtension(UpdateEnvironment):
-    @classmethod
-    def _build_arguments_schema(cls, *args, **kwargs):
-        args_schema = super()._build_arguments_schema(*args, **kwargs)
-        args_schema.workspace_name._required = False
-        args_schema.workspace_name._default = "default"
-        return args_schema
+class UpdateEnvironmentExtension(DefaultWorkspaceParameter, UpdateEnvironment):
+    pass
 
 class ImportSpecificationExtension(ImportSpecification):
     @classmethod
