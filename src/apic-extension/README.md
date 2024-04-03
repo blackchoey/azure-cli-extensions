@@ -45,7 +45,7 @@ az apic api create --resource-group api-center-test --service-name contosoeuap -
 
 Update API Examples
 ```
-az apic api update -g api-center-test -s contosoeuap --name echo-api --summary "Basic REST API service" -w default
+az apic api update -g api-center-test -s contosoeuap --name echo-api --summary "Basic REST API service"
 ```
 ```
 az apic api update --resource-group api-center-test -s contosoeuap --name echo-api --summary "Basic REST API service"
@@ -85,7 +85,7 @@ az apic api version create --resource-group api-center-test --service-name conto
 
 UPDATE Api Version Examples
 ```
-Az apic api version update -g api-center-test -s contosoeuap --api-name echo-api --name 2023-01-01 --title "2023-01-01" -w default
+Az apic api version update -g api-center-test -s contosoeuap --api-name echo-api --name 2023-01-01 --title "2023-01-01"
 ```
 ```
 az apic api version update --resource-group api-center-test --service-name contosoeuap --api-name echo-api --name 2023-01-01 --title "2023-01-01"
@@ -122,7 +122,7 @@ az apic api definition create -g api-center-test -s contosoeuap --api-name echo-
 
 UPDATE API Definition Example
 ```
-az apic api definition update -g api-center-test -s contosoeuap --api-name echo-api --version 2023-01-01 --name "openapi" --title "OpenAPI" -w default
+az apic api definition update -g api-center-test -s contosoeuap --api-name echo-api --version 2023-01-01 --name "openapi" --title "OpenAPI"
 ```
 
 SHOW API Definition Example
@@ -204,7 +204,7 @@ Where envcreate1.json contains
 
 UPDATE Environment
 ```
-az apic environment update -g api-center-test -s contosoeuap --name public --title "Public cloud" -w default
+az apic environment update -g api-center-test -s contosoeuap --name public --title "Public cloud"
 ```
 
 LIST Environment
