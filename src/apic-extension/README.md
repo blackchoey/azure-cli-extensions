@@ -35,11 +35,6 @@ az apic service delete --resource-group api-center-test --service-name contosoeu
 az apic service delete --resource-group arpi-test-rg1 -s apictestcli3
 ```
 
-Show Workspace Example
-```
-Az apic workspace show -g api-center-test -s contosoeuap --name devdiv
-```
-
 Create API Examples
 ```
 az apic api create -g api-center-test -s contosoeuap --name echo-api --title "Echo API" --kind "rest"
@@ -53,7 +48,7 @@ Update API Examples
 az apic api update -g api-center-test -s contosoeuap --name echo-api --summary "Basic REST API service" -w default
 ```
 ```
-az apic api update --resource-group api-center-test -s contosoeuap --name echo-api --summary "Basic REST API service" --workspace-name default
+az apic api update --resource-group api-center-test -s contosoeuap --name echo-api --summary "Basic REST API service"
 ```
 
 LIST Api Example
@@ -93,7 +88,7 @@ UPDATE Api Version Examples
 Az apic api version update -g api-center-test -s contosoeuap --api-name echo-api --name 2023-01-01 --title "2023-01-01" -w default
 ```
 ```
-az apic api version update --resource-group api-center-test --service-name contosoeuap --api-name echo-api --name 2023-01-01 --title "2023-01-01" --workspace-name default
+az apic api version update --resource-group api-center-test --service-name contosoeuap --api-name echo-api --name 2023-01-01 --title "2023-01-01"
 ```
 
 LIST Api Version Examples
