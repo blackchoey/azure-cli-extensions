@@ -49,6 +49,7 @@ class Create(AAZCommand):
             help="The name of the metadata schema.",
             required=True,
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -61,6 +62,7 @@ class Create(AAZCommand):
             help="The name of the API Center service.",
             required=True,
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -72,6 +74,7 @@ class Create(AAZCommand):
         _args_schema.assigned_to = AAZListArg(
             options=["--assigned-to"],
             arg_group="Properties",
+            help="The assignees",
         )
         _args_schema.schema = AAZStrArg(
             options=["--schema"],
@@ -86,6 +89,7 @@ class Create(AAZCommand):
         _element = cls._args_schema.assigned_to.Element
         _element.deprecated = AAZBoolArg(
             options=["deprecated"],
+            help="Deprecated assignment",
         )
         _element.entity = AAZStrArg(
             options=["entity"],
@@ -94,6 +98,7 @@ class Create(AAZCommand):
         )
         _element.required = AAZBoolArg(
             options=["required"],
+            help="Required assignment",
         )
         return cls._args_schema
 
@@ -191,7 +196,7 @@ class Create(AAZCommand):
                 typ=AAZObjectType,
                 typ_kwargs={"flags": {"required": True, "client_flatten": True}}
             )
-            _builder.set_prop("properties", AAZObjectType, typ_kwargs={"flags": {"client_flatten": True}})
+            _builder.set_prop("properties", AAZObjectType, ".", typ_kwargs={"flags": {"required": True, "client_flatten": True}})
 
             properties = _builder.get(".properties")
             if properties is not None:
@@ -235,7 +240,7 @@ class Create(AAZCommand):
                 flags={"read_only": True},
             )
             _schema_on_200_201.properties = AAZObjectType(
-                flags={"client_flatten": True},
+                flags={"required": True, "client_flatten": True},
             )
             _schema_on_200_201.system_data = AAZObjectType(
                 serialized_name="systemData",

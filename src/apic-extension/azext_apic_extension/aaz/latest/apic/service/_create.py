@@ -55,21 +55,22 @@ class Create(AAZCommand):
             help="The name of the API Center service.",
             required=True,
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
         )
 
-        # define Arg Group "Payload"
+        # define Arg Group "Resource"
 
         _args_schema = cls._args_schema
         _args_schema.identity = AAZObjectArg(
             options=["--identity"],
-            arg_group="Payload",
-            help="Managed service identity (system assigned and/or user assigned identities)",
+            arg_group="Resource",
+            help="The managed service identities assigned to this resource.",
         )
         _args_schema.location = AAZResourceLocationArg(
-            arg_group="Payload",
+            arg_group="Resource",
             help="The geo-location where the resource lives",
             required=True,
             fmt=AAZResourceLocationArgFormat(
@@ -78,7 +79,7 @@ class Create(AAZCommand):
         )
         _args_schema.tags = AAZDictArg(
             options=["--tags"],
-            arg_group="Payload",
+            arg_group="Resource",
             help="Resource tags.",
         )
 
@@ -192,7 +193,7 @@ class Create(AAZCommand):
             _content_value, _builder = self.new_content_builder(
                 self.ctx.args,
                 typ=AAZObjectType,
-                typ_kwargs={"flags": {"client_flatten": True}}
+                typ_kwargs={"flags": {"required": True, "client_flatten": True}}
             )
             _builder.set_prop("identity", AAZObjectType, ".identity")
             _builder.set_prop("location", AAZStrType, ".location", typ_kwargs={"flags": {"required": True}})
