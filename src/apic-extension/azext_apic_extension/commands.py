@@ -25,4 +25,4 @@ def load_custom_commands(self, _):  # pylint: disable=unused-argument
         self.command_table['apic metadata update'] = UpdateMetadataSchemaExtension(loader=self)
         self.command_table['apic metadata export'] = ExportMetadataSchemaExtension(loader=self)
     with self.command_group('apic api') as g:
-        g.custom_command("register", "register_apic")
+        g.custom_command("register", "register_apic", is_preview=True)
