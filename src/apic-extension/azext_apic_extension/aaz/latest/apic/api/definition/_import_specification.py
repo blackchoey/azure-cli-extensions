@@ -25,9 +25,9 @@ class ImportSpecification(AAZCommand):
     """
 
     _aaz_info = {
-        "version": "2024-03-01",
+        "version": "2024-05-01",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/apis/{}/versions/{}/definitions/{}/importspecification", "2024-03-01"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/apis/{}/versions/{}/definitions/{}/importspecification", "2024-05-01"],
         ]
     }
 
@@ -54,6 +54,7 @@ class ImportSpecification(AAZCommand):
             required=True,
             id_part="child_name_2",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -64,6 +65,7 @@ class ImportSpecification(AAZCommand):
             required=True,
             id_part="child_name_4",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -77,6 +79,7 @@ class ImportSpecification(AAZCommand):
             required=True,
             id_part="name",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -87,6 +90,7 @@ class ImportSpecification(AAZCommand):
             required=True,
             id_part="child_name_3",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -98,6 +102,7 @@ class ImportSpecification(AAZCommand):
             id_part="child_name_1",
             default="default",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -227,7 +232,7 @@ class ImportSpecification(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }

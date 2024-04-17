@@ -22,9 +22,9 @@ class Update(AAZCommand):
     """
 
     _aaz_info = {
-        "version": "2024-03-01",
+        "version": "2024-05-01",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/environments/{}", "2024-03-01"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/environments/{}", "2024-05-01"],
         ]
     }
 
@@ -46,12 +46,17 @@ class Update(AAZCommand):
         # define Arg Group ""
 
         _args_schema = cls._args_schema
+        _args_schema.if_match = AAZStrArg(
+            options=["--if-match"],
+            help="The request should only proceed if an entity matches this string.",
+        )
         _args_schema.environment_id = AAZStrArg(
             options=["--environment-id"],
             help="The id of the environment.",
             required=True,
             id_part="child_name_2",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -65,6 +70,7 @@ class Update(AAZCommand):
             required=True,
             id_part="name",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -75,6 +81,7 @@ class Update(AAZCommand):
             required=True,
             id_part="child_name_1",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -88,12 +95,11 @@ class Update(AAZCommand):
             arg_group="Properties",
             help="The custom metadata defined for API catalog entities.",
             nullable=True,
-            blank={},
         )
         _args_schema.description = AAZStrArg(
             options=["--description"],
             arg_group="Properties",
-            help="Description.",
+            help="The environment description.",
             nullable=True,
         )
         _args_schema.type = AAZStrArg(
@@ -105,7 +111,7 @@ class Update(AAZCommand):
         _args_schema.onboarding = AAZObjectArg(
             options=["--onboarding"],
             arg_group="Properties",
-            help="{developerPortalUri:['https://developer.contoso.com'],instructions:'instructions markdown'}",
+            help="Provide onboarding documentation related to your environment, e.g. {developerPortalUri:['https://developer.contoso.com'],instructions:'instructions markdown'}",
             nullable=True,
         )
         _args_schema.server = AAZObjectArg(
@@ -127,6 +133,7 @@ class Update(AAZCommand):
         onboarding = cls._args_schema.onboarding
         onboarding.developer_portal_uri = AAZListArg(
             options=["developer-portal-uri"],
+            help="The location of the development portal",
             nullable=True,
         )
         onboarding.instructions = AAZStrArg(
@@ -143,6 +150,7 @@ class Update(AAZCommand):
         server = cls._args_schema.server
         server.management_portal_uri = AAZListArg(
             options=["management-portal-uri"],
+            help="The location of the management portal",
             nullable=True,
         )
         server.type = AAZStrArg(
@@ -244,7 +252,7 @@ class Update(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }
@@ -335,7 +343,7 @@ class Update(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }
@@ -344,6 +352,9 @@ class Update(AAZCommand):
         @property
         def header_parameters(self):
             parameters = {
+                **self.serialize_header_param(
+                    "If-Match", self.ctx.args.if_match,
+                ),
                 **self.serialize_header_param(
                     "Content-Type", "application/json",
                 ),
@@ -393,7 +404,7 @@ class Update(AAZCommand):
                 value=instance,
                 typ=AAZObjectType
             )
-            _builder.set_prop("properties", AAZObjectType, typ_kwargs={"flags": {"client_flatten": True}})
+            _builder.set_prop("properties", AAZObjectType, ".", typ_kwargs={"flags": {"required": True, "client_flatten": True}})
 
             properties = _builder.get(".properties")
             if properties is not None:
@@ -462,7 +473,7 @@ class _UpdateHelper:
             flags={"read_only": True},
         )
         environment_read.properties = AAZObjectType(
-            flags={"client_flatten": True},
+            flags={"required": True, "client_flatten": True},
         )
         environment_read.system_data = AAZObjectType(
             serialized_name="systemData",

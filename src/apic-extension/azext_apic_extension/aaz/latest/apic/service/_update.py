@@ -22,9 +22,9 @@ class Update(AAZCommand):
     """
 
     _aaz_info = {
-        "version": "2024-03-01",
+        "version": "2024-05-01",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}", "2024-03-01"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}", "2024-05-01"],
         ]
     }
 
@@ -55,23 +55,24 @@ class Update(AAZCommand):
             required=True,
             id_part="name",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
         )
 
-        # define Arg Group "Payload"
+        # define Arg Group "Resource"
 
         _args_schema = cls._args_schema
         _args_schema.identity = AAZObjectArg(
             options=["--identity"],
-            arg_group="Payload",
-            help="Managed service identity (system assigned and/or user assigned identities)",
+            arg_group="Resource",
+            help="The managed service identities assigned to this resource.",
             nullable=True,
         )
         _args_schema.tags = AAZDictArg(
             options=["--tags"],
-            arg_group="Payload",
+            arg_group="Resource",
             help="Resource tags.",
             nullable=True,
         )
@@ -178,7 +179,7 @@ class Update(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }
@@ -261,7 +262,7 @@ class Update(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }
@@ -429,6 +430,7 @@ class _UpdateHelper:
             serialized_name="provisioningState",
             flags={"read_only": True},
         )
+        properties.restore = AAZBoolType()
 
         system_data = _schema_service_read.system_data
         system_data.created_at = AAZStrType(

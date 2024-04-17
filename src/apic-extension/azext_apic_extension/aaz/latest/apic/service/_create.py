@@ -25,9 +25,9 @@ class Create(AAZCommand):
     """
 
     _aaz_info = {
-        "version": "2024-03-01",
+        "version": "2024-05-01",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}", "2024-03-01"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}", "2024-05-01"],
         ]
     }
 
@@ -55,21 +55,32 @@ class Create(AAZCommand):
             help="The name of the API Center service.",
             required=True,
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
         )
 
-        # define Arg Group "Payload"
+        # define Arg Group "Properties"
+
+        _args_schema = cls._args_schema
+        _args_schema.restore = AAZBoolArg(
+            options=["--restore"],
+            arg_group="Properties",
+            help="Flag used to restore soft-deleted API Center service. If specified and set to 'true' all other properties will be ignored.",
+            default=False,
+        )
+
+        # define Arg Group "Resource"
 
         _args_schema = cls._args_schema
         _args_schema.identity = AAZObjectArg(
             options=["--identity"],
-            arg_group="Payload",
-            help="Managed service identity (system assigned and/or user assigned identities)",
+            arg_group="Resource",
+            help="The managed service identities assigned to this resource.",
         )
         _args_schema.location = AAZResourceLocationArg(
-            arg_group="Payload",
+            arg_group="Resource",
             help="The geo-location where the resource lives",
             required=True,
             fmt=AAZResourceLocationArgFormat(
@@ -78,7 +89,7 @@ class Create(AAZCommand):
         )
         _args_schema.tags = AAZDictArg(
             options=["--tags"],
-            arg_group="Payload",
+            arg_group="Resource",
             help="Resource tags.",
         )
 
@@ -169,7 +180,7 @@ class Create(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }
@@ -192,10 +203,11 @@ class Create(AAZCommand):
             _content_value, _builder = self.new_content_builder(
                 self.ctx.args,
                 typ=AAZObjectType,
-                typ_kwargs={"flags": {"client_flatten": True}}
+                typ_kwargs={"flags": {"required": True, "client_flatten": True}}
             )
             _builder.set_prop("identity", AAZObjectType, ".identity")
             _builder.set_prop("location", AAZStrType, ".location", typ_kwargs={"flags": {"required": True}})
+            _builder.set_prop("properties", AAZObjectType, typ_kwargs={"flags": {"client_flatten": True}})
             _builder.set_prop("tags", AAZDictType, ".tags")
 
             identity = _builder.get(".identity")
@@ -206,6 +218,10 @@ class Create(AAZCommand):
             user_assigned_identities = _builder.get(".identity.userAssignedIdentities")
             if user_assigned_identities is not None:
                 user_assigned_identities.set_elements(AAZObjectType, ".", typ_kwargs={"nullable": True})
+
+            properties = _builder.get(".properties")
+            if properties is not None:
+                properties.set_prop("restore", AAZBoolType, ".restore")
 
             tags = _builder.get(".tags")
             if tags is not None:
@@ -293,6 +309,7 @@ class Create(AAZCommand):
                 serialized_name="provisioningState",
                 flags={"read_only": True},
             )
+            properties.restore = AAZBoolType()
 
             system_data = cls._schema_on_200_201.system_data
             system_data.created_at = AAZStrType(

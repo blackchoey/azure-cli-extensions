@@ -22,10 +22,10 @@ class List(AAZCommand):
     """
 
     _aaz_info = {
-        "version": "2024-03-01",
+        "version": "2024-05-01",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/providers/microsoft.apicenter/services", "2024-03-01"],
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services", "2024-03-01"],
+            ["mgmt-plane", "/subscriptions/{}/providers/microsoft.apicenter/services", "2024-05-01"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services", "2024-05-01"],
         ]
     }
 
@@ -116,7 +116,7 @@ class List(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }
@@ -151,9 +151,10 @@ class List(AAZCommand):
             _schema_on_200 = cls._schema_on_200
             _schema_on_200.next_link = AAZStrType(
                 serialized_name="nextLink",
+                flags={"read_only": True},
             )
             _schema_on_200.value = AAZListType(
-                flags={"required": True},
+                flags={"required": True, "read_only": True},
             )
 
             value = cls._schema_on_200.value
@@ -222,6 +223,7 @@ class List(AAZCommand):
                 serialized_name="provisioningState",
                 flags={"read_only": True},
             )
+            properties.restore = AAZBoolType()
 
             system_data = cls._schema_on_200.value.Element.system_data
             system_data.created_at = AAZStrType(
@@ -288,7 +290,7 @@ class List(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }
@@ -323,9 +325,10 @@ class List(AAZCommand):
             _schema_on_200 = cls._schema_on_200
             _schema_on_200.next_link = AAZStrType(
                 serialized_name="nextLink",
+                flags={"read_only": True},
             )
             _schema_on_200.value = AAZListType(
-                flags={"required": True},
+                flags={"required": True, "read_only": True},
             )
 
             value = cls._schema_on_200.value
@@ -394,6 +397,7 @@ class List(AAZCommand):
                 serialized_name="provisioningState",
                 flags={"read_only": True},
             )
+            properties.restore = AAZBoolType()
 
             system_data = cls._schema_on_200.value.Element.system_data
             system_data.created_at = AAZStrType(

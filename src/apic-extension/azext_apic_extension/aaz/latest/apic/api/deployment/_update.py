@@ -22,9 +22,9 @@ class Update(AAZCommand):
     """
 
     _aaz_info = {
-        "version": "2024-03-01",
+        "version": "2024-05-01",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/apis/{}/deployments/{}", "2024-03-01"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/apis/{}/deployments/{}", "2024-05-01"],
         ]
     }
 
@@ -46,12 +46,17 @@ class Update(AAZCommand):
         # define Arg Group ""
 
         _args_schema = cls._args_schema
+        _args_schema.if_match = AAZStrArg(
+            options=["--if-match"],
+            help="The request should only proceed if an entity matches this string.",
+        )
         _args_schema.api_id = AAZStrArg(
             options=["--api-id"],
             help="The id of the API.",
             required=True,
             id_part="child_name_2",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -62,6 +67,7 @@ class Update(AAZCommand):
             required=True,
             id_part="child_name_3",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -75,6 +81,7 @@ class Update(AAZCommand):
             required=True,
             id_part="name",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -85,6 +92,7 @@ class Update(AAZCommand):
             required=True,
             id_part="child_name_1",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -98,12 +106,11 @@ class Update(AAZCommand):
             arg_group="Properties",
             help="The custom metadata defined for API catalog entities.",
             nullable=True,
-            blank={},
         )
         _args_schema.definition_id = AAZStrArg(
             options=["--definition-id"],
             arg_group="Properties",
-            help="Service-scoped definition resource ID.",
+            help="API center-scoped definition resource ID.",
             nullable=True,
         )
         _args_schema.description = AAZStrArg(
@@ -118,13 +125,13 @@ class Update(AAZCommand):
         _args_schema.environment_id = AAZStrArg(
             options=["--environment-id"],
             arg_group="Properties",
-            help="Service-scoped environment resource ID.",
+            help="API center-scoped environment resource ID.",
             nullable=True,
         )
         _args_schema.server = AAZObjectArg(
             options=["--server"],
             arg_group="Properties",
-            help="Server",
+            help="The deployment server",
             nullable=True,
         )
         _args_schema.state = AAZStrArg(
@@ -137,7 +144,7 @@ class Update(AAZCommand):
         _args_schema.title = AAZStrArg(
             options=["--title"],
             arg_group="Properties",
-            help="Title",
+            help="API deployment title",
             nullable=True,
             fmt=AAZStrArgFormat(
                 max_length=50,
@@ -251,7 +258,7 @@ class Update(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }
@@ -346,7 +353,7 @@ class Update(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }
@@ -355,6 +362,9 @@ class Update(AAZCommand):
         @property
         def header_parameters(self):
             parameters = {
+                **self.serialize_header_param(
+                    "If-Match", self.ctx.args.if_match,
+                ),
                 **self.serialize_header_param(
                     "Content-Type", "application/json",
                 ),

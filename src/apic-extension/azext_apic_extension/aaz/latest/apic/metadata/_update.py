@@ -22,9 +22,9 @@ class Update(AAZCommand):
     """
 
     _aaz_info = {
-        "version": "2024-03-01",
+        "version": "2024-05-01",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/metadataschemas/{}", "2024-03-01"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/metadataschemas/{}", "2024-05-01"],
         ]
     }
 
@@ -46,12 +46,17 @@ class Update(AAZCommand):
         # define Arg Group ""
 
         _args_schema = cls._args_schema
+        _args_schema.if_match = AAZStrArg(
+            options=["--if-match"],
+            help="The request should only proceed if an entity matches this string.",
+        )
         _args_schema.metadata_schema_name = AAZStrArg(
             options=["--name", "--metadata-schema", "--metadata-schema-name"],
             help="The name of the metadata schema.",
             required=True,
             id_part="child_name_1",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -65,6 +70,7 @@ class Update(AAZCommand):
             required=True,
             id_part="name",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -82,7 +88,7 @@ class Update(AAZCommand):
         _args_schema.schema = AAZStrArg(
             options=["--schema"],
             arg_group="Properties",
-            help="YAML schema defining the type.",
+            help="The schema defining the type.",
         )
 
         assignments = cls._args_schema.assignments
@@ -93,6 +99,7 @@ class Update(AAZCommand):
         _element = cls._args_schema.assignments.Element
         _element.deprecated = AAZBoolArg(
             options=["deprecated"],
+            help="Deprecated assignment",
             nullable=True,
         )
         _element.entity = AAZStrArg(
@@ -103,6 +110,7 @@ class Update(AAZCommand):
         )
         _element.required = AAZBoolArg(
             options=["required"],
+            help="Required assignment",
             nullable=True,
         )
         return cls._args_schema
@@ -189,7 +197,7 @@ class Update(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }
@@ -276,7 +284,7 @@ class Update(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }
@@ -285,6 +293,9 @@ class Update(AAZCommand):
         @property
         def header_parameters(self):
             parameters = {
+                **self.serialize_header_param(
+                    "If-Match", self.ctx.args.if_match,
+                ),
                 **self.serialize_header_param(
                     "Content-Type", "application/json",
                 ),
@@ -334,7 +345,7 @@ class Update(AAZCommand):
                 value=instance,
                 typ=AAZObjectType
             )
-            _builder.set_prop("properties", AAZObjectType, typ_kwargs={"flags": {"client_flatten": True}})
+            _builder.set_prop("properties", AAZObjectType, ".", typ_kwargs={"flags": {"required": True, "client_flatten": True}})
 
             properties = _builder.get(".properties")
             if properties is not None:
@@ -387,7 +398,7 @@ class _UpdateHelper:
             flags={"read_only": True},
         )
         metadata_schema_read.properties = AAZObjectType(
-            flags={"client_flatten": True},
+            flags={"required": True, "client_flatten": True},
         )
         metadata_schema_read.system_data = AAZObjectType(
             serialized_name="systemData",

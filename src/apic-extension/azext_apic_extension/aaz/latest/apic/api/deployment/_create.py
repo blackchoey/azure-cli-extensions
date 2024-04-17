@@ -22,9 +22,9 @@ class Create(AAZCommand):
     """
 
     _aaz_info = {
-        "version": "2024-03-01",
+        "version": "2024-05-01",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/apis/{}/deployments/{}", "2024-03-01"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/apis/{}/deployments/{}", "2024-05-01"],
         ]
     }
 
@@ -44,11 +44,16 @@ class Create(AAZCommand):
         # define Arg Group ""
 
         _args_schema = cls._args_schema
+        _args_schema.if_match = AAZStrArg(
+            options=["--if-match"],
+            help="The request should only proceed if an entity matches this string.",
+        )
         _args_schema.api_id = AAZStrArg(
             options=["--api-id"],
             help="The id of the API.",
             required=True,
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -58,6 +63,7 @@ class Create(AAZCommand):
             help="The id of the API deployment.",
             required=True,
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -70,6 +76,7 @@ class Create(AAZCommand):
             help="The name of the API Center service.",
             required=True,
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -80,6 +87,7 @@ class Create(AAZCommand):
             required=True,
             default="default",
             fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
@@ -224,7 +232,7 @@ class Create(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-01",
+                    "api-version", "2024-05-01",
                     required=True,
                 ),
             }
@@ -233,6 +241,9 @@ class Create(AAZCommand):
         @property
         def header_parameters(self):
             parameters = {
+                **self.serialize_header_param(
+                    "If-Match", self.ctx.args.if_match,
+                ),
                 **self.serialize_header_param(
                     "Content-Type", "application/json",
                 ),
