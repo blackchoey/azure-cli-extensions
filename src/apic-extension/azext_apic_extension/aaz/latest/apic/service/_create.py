@@ -60,27 +60,11 @@ class Create(AAZCommand):
                 min_length=1,
             ),
         )
-
-        # define Arg Group "Properties"
-
-        _args_schema = cls._args_schema
-        _args_schema.restore = AAZBoolArg(
-            options=["--restore"],
-            arg_group="Properties",
-            help="Flag used to restore soft-deleted API Center service. If specified and set to 'true' all other properties will be ignored.",
-            default=False,
-        )
-
-        # define Arg Group "Resource"
-
-        _args_schema = cls._args_schema
         _args_schema.identity = AAZObjectArg(
             options=["--identity"],
-            arg_group="Resource",
             help="The managed service identities assigned to this resource.",
         )
         _args_schema.location = AAZResourceLocationArg(
-            arg_group="Resource",
             help="The geo-location where the resource lives",
             required=True,
             fmt=AAZResourceLocationArgFormat(
@@ -89,7 +73,6 @@ class Create(AAZCommand):
         )
         _args_schema.tags = AAZDictArg(
             options=["--tags"],
-            arg_group="Resource",
             help="Resource tags.",
         )
 
@@ -113,6 +96,16 @@ class Create(AAZCommand):
 
         tags = cls._args_schema.tags
         tags.Element = AAZStrArg()
+
+        # define Arg Group "Properties"
+
+        _args_schema = cls._args_schema
+        _args_schema.restore = AAZBoolArg(
+            options=["--restore"],
+            arg_group="Properties",
+            help="Flag used to restore soft-deleted API Center service. If specified and set to 'true' all other properties will be ignored.",
+            default=False,
+        )
         return cls._args_schema
 
     def _execute_operations(self):
