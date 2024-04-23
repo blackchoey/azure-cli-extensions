@@ -137,3 +137,15 @@ class ExportMetadataExtension(ExportMetadata):
         args_schema = super()._build_arguments_schema(*args, **kwargs)
         args_schema.assignments._required = True
         return args_schema
+    
+# `az apic service commands`
+from .aaz.latest.apic.service import ImportFromApim
+
+class ImportFromApimExtension(ImportFromApim):
+    # pylint: disable=too-few-public-methods
+    @classmethod
+    def _build_arguments_schema(cls, *args, **kwargs):
+        # pylint: disable=protected-access
+        args_schema = super()._build_arguments_schema(*args, **kwargs)
+        args_schema.source_resource_ids._required = True
+        return args_schema
