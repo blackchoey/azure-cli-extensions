@@ -4,7 +4,7 @@
 # --------------------------------------------------------------------------------------------
 
 from azure.cli.testsdk import ScenarioTest, ResourceGroupPreparer
-from .utils import ApicServicePreparer, ApicEnvironmentPreparer
+from .utils import ApicServicePreparer, ApicEnvironmentPreparer, ApicMetadataPreparer
 
 class EnvironmentCommandsTests(ScenarioTest):
 
@@ -19,6 +19,29 @@ class EnvironmentCommandsTests(ScenarioTest):
             self.check('kind', 'testing'),
             self.check('title', 'test environment'),
             self.check('customProperties', '{{}}')
+        ])
+
+    @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
+    @ApicServicePreparer()
+    @ApicMetadataPreparer()
+    def test_environment_create_with_all_optional_params(self, metadata_name):
+        self.kwargs.update({
+          'name': self.create_random_name(prefix='cli', length=24),
+          'custom_properties': '{{"{}":true}}'.format(metadata_name),
+          'onboarding': "{developerPortalUri:['https://developer.contoso.com'],instructions:'instructions markdown'}",
+          'server': "{type:'Azure API Management',managementPortalUri:['example.com']}"
+        })
+        self.cmd('az apic environment create -g {rg} -s {s} --environment-id {name} --title "test environment" --type testing --custom-properties \'{custom_properties}\' --description "environment description" --onboarding "{onboarding}" --server "{server}"', checks=[
+            self.check('customProperties.{}'.format(metadata_name), True),
+            self.check('description', 'environment description'),
+            self.check('kind', 'testing'),
+            self.check('name', '{name}'),
+            self.check('onboarding.developerPortalUri[0]', 'https://developer.contoso.com'),
+            self.check('onboarding.instructions', 'instructions markdown'),
+            self.check('server.managementPortalUri[0]', 'example.com'),
+            self.check('server.type', 'Azure API Management'),
+            self.check('title', 'test environment'),
+            self.check('type', 'Microsoft.ApiCenter/services/workspaces/environments')
         ])
 
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
