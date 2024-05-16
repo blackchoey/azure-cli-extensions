@@ -68,10 +68,44 @@ class EnvironmentCommandsTests(ScenarioTest):
 
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
     @ApicServicePreparer()
+    @ApicEnvironmentPreparer(parameter_name='environment_name1')
+    @ApicEnvironmentPreparer(parameter_name='environment_name2')
+    def test_environment_list_with_all_optional_params(self, environment_name1):
+        self.kwargs.update({
+         'environment_name': environment_name1
+       })
+        self.cmd('az apic environment list -g {rg} -s {s} --filter "name eq \'{environment_name}\'"', checks=[
+            self.check('length(@)', 1),
+            self.check('@[0].name', environment_name1)
+        ])
+
+    @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
+    @ApicServicePreparer()
     @ApicEnvironmentPreparer()
     def test_environment_update(self):
         self.cmd('az apic environment update -g {rg} -s {s} --environment-id {e} --title "test environment 2"', checks=[
             self.check('title', 'test environment 2')
+        ])
+
+    @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
+    @ApicServicePreparer()
+    @ApicMetadataPreparer()
+    @ApicEnvironmentPreparer()
+    def test_environment_update_with_all_optional_params(self, metadata_name):
+        self.kwargs.update({
+          'custom_properties': '{{"{}":true}}'.format(metadata_name),
+          'onboarding': "{developerPortalUri:['https://developer.contoso.com'],instructions:'instructions markdown'}",
+          'server': "{type:'Azure API Management',managementPortalUri:['example.com']}"
+        })
+        self.cmd('az apic environment update -g {rg} -s {s} --environment-id {e} --title "test environment 2" --type testing --custom-properties \'{custom_properties}\' --description "environment description" --onboarding "{onboarding}" --server "{server}"', checks=[
+            self.check('customProperties.{}'.format(metadata_name), True),
+            self.check('description', 'environment description'),
+            self.check('kind', 'testing'),
+            self.check('onboarding.developerPortalUri[0]', 'https://developer.contoso.com'),
+            self.check('onboarding.instructions', 'instructions markdown'),
+            self.check('server.managementPortalUri[0]', 'example.com'),
+            self.check('server.type', 'Azure API Management'),
+            self.check('title', 'test environment 2'),
         ])
 
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)

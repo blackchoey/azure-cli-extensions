@@ -4,7 +4,7 @@
 # --------------------------------------------------------------------------------------------
 
 from azure.cli.testsdk import ScenarioTest, ResourceGroupPreparer
-from .utils import ApicServicePreparer, ApicApiPreparer, ApicVersionPreparer, ApicDefinitionPreparer, ApicEnvironmentPreparer, ApicDeploymentPreparer
+from .utils import ApicServicePreparer, ApicApiPreparer, ApicVersionPreparer, ApicDefinitionPreparer, ApicEnvironmentPreparer, ApicDeploymentPreparer, ApicMetadataPreparer
 
 class DeploymentCommandsTests(ScenarioTest):
 
@@ -15,6 +15,27 @@ class DeploymentCommandsTests(ScenarioTest):
     @ApicVersionPreparer()
     @ApicDefinitionPreparer()
     def test_deployment_create(self):
+        self.kwargs.update({
+          'name': self.create_random_name(prefix='cli', length=24),
+          'server': '{"runtimeUri":["https://example.com"]}',
+        })
+        self.cmd('az apic api deployment create -g {rg} -s {s} --api-id {api} --definition-id /workspaces/default/apis/{api}/versions/{v}/definitions/{d} --environment-id /workspaces/default/environments/{e} --deployment-id {name} --title "test deployment" --server \'{server}\'', checks=[
+            self.check('name', '{name}'),
+            self.check('title', 'test deployment'),
+            self.check('server.runtimeUri[0]', 'https://example.com'),
+            self.check('customProperties', {}),
+            self.check('definitionId', '/workspaces/default/apis/{api}/versions/{v}/definitions/{d}'),
+            self.check('environmentId', '/workspaces/default/environments/{e}'),
+        ])
+
+    @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
+    @ApicServicePreparer()
+    @ApicEnvironmentPreparer()
+    @ApicApiPreparer()
+    @ApicVersionPreparer()
+    @ApicDefinitionPreparer()
+    @ApicMetadataPreparer()
+    def test_deployment_create_with_all_optional_params(self, metadata_name):
         self.kwargs.update({
           'name': self.create_random_name(prefix='cli', length=24),
           'server': '{"runtimeUri":["https://example.com"]}',

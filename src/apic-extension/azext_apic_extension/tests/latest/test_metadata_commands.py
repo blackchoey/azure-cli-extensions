@@ -54,7 +54,7 @@ class MetadataCommandsTests(ScenarioTest):
     @ApicServicePreparer()
     @ApicMetadataPreparer(parameter_name='metadata_name1')
     @ApicMetadataPreparer(parameter_name='metadata_name2')
-    def test_metadata_list(self, metadata_name1):
+    def test_metadata_list_with_all_optional_params(self, metadata_name1):
        self.kwargs.update({
          'metadata_name': metadata_name1
        })
