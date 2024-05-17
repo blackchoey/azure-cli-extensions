@@ -10,7 +10,6 @@ import os
 from azure.cli.testsdk import ScenarioTest, ResourceGroupPreparer
 from .utils import ApicServicePreparer, ApicApiPreparer, ApicVersionPreparer, ApicDefinitionPreparer
 
-from knack.util import CLIError
 
 class VersionCommandsTests(ScenarioTest):
 
