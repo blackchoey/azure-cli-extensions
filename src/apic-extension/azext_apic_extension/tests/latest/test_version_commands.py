@@ -74,3 +74,4 @@ class VersionCommandsTests(ScenarioTest):
     @ApicVersionPreparer()
     def test_version_delete(self):
         self.cmd('az apic api version delete -g {rg} -s {s} --api-id {api} --version-id {v} --yes')
+        self.cmd('az apic api version show -g {rg} -s {s} --api-id {api} --version-id {v}', expect_failure=True)

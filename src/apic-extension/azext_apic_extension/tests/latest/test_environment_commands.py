@@ -113,3 +113,4 @@ class EnvironmentCommandsTests(ScenarioTest):
     @ApicEnvironmentPreparer()
     def test_environment_delete(self):
         self.cmd('az apic environment delete -g {rg} -s {s} --environment-id {e} --yes')
+        self.cmd('az apic environment show -g {rg} -s {s} --environment-id {e}', expect_failure=True)

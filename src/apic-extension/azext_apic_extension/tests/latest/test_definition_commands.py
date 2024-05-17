@@ -100,6 +100,7 @@ class VersionCommandsTests(ScenarioTest):
     @ApicDefinitionPreparer()
     def test_definition_delete(self):
         self.cmd('az apic api definition delete -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {d} --yes')
+        self.cmd('az apic api definition show -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {d}', expect_failure=True)
 
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
     @ApicServicePreparer()
@@ -165,12 +166,12 @@ class VersionCommandsTests(ScenarioTest):
     @ApicDefinitionPreparer()
     def test_definition_import_from_file(self):
         self.kwargs.update({
-        'import_filename': os.path.join(test_assets_dir, 'petstore.yaml'),
+        'import_filename': os.path.join(test_assets_dir, 'petstore.json'),
         'export_filename': "test_definition_import_from_file.json",
         'specification': '{"name":"openapi","version":"3.0.0"}'
         })
 
-        self.cmd('az apic api definition import-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {d} --format "inline" --specification \'{specification}\' --file-name "{import_filename}"')
+        self.cmd('az apic api definition import-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {d} --format "inline" --specification \'{specification}\' --value "@{import_filename}"')
 
         self.cmd('az apic api definition export-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {d} --file-name {export_filename}')
 
@@ -179,7 +180,8 @@ class VersionCommandsTests(ScenarioTest):
             with open(exported_file_path, 'r') as file:
                 exported_content = json.load(file)
 
-            imported_content = json.loads(self.kwargs['value'])
+            with open(self.kwargs['import_filename'], 'r') as file:
+                imported_content = json.load(file)
 
             assert exported_content == imported_content, "The exported content is not the same as the imported content."
         finally:

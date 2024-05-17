@@ -118,3 +118,4 @@ class ApiCommandsTests(ScenarioTest):
     @ApicApiPreparer()
     def test_api_delete(self):
         self.cmd('az apic api delete -g {rg} -s {s} --api-id {api} --yes')
+        self.cmd('az apic api show -g {rg} -s {s} --api-id {api}', expect_failure=True)

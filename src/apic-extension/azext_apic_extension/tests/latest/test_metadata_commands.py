@@ -80,6 +80,7 @@ class MetadataCommandsTests(ScenarioTest):
     @ApicMetadataPreparer()
     def test_metadata_delete(self):
        self.cmd('az apic metadata delete -g {rg} -s {s} --name {m} --yes')
+       self.cmd('az apic metadata show -g {rg} -s {s} --name {m}', expect_failure=True)
 
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
     @ApicServicePreparer()

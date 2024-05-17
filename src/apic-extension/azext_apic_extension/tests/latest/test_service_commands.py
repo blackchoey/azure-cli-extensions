@@ -80,7 +80,8 @@ class ServiceCommandsTests(ScenarioTest):
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
     @ApicServicePreparer()
     def test_delete_service(self):
-        self.cmd('az apic service delete -g {rg} -s {s}a --yes')
+        self.cmd('az apic service delete -g {rg} -s {s} --yes')
+        self.cmd('az apic service show -g {rg} -s {s}', expect_failure=True)
 
     @unittest.skip('The Control Plane API has bug')
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
