@@ -90,6 +90,7 @@ class ExportSpecificationExtension(ExportAPIDefinitionExtension):
                 else:
                     f.write(results)
 
+
 class ExportMetadataSchemaExtension(ExportMetadataExtension):
 
     @classmethod
