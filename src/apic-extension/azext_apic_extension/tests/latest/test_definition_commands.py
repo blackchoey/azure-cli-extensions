@@ -10,6 +10,8 @@ import os
 from azure.cli.testsdk import ScenarioTest, ResourceGroupPreparer
 from .utils import ApicServicePreparer, ApicApiPreparer, ApicVersionPreparer, ApicDefinitionPreparer
 
+from knack.util import CLIError
+
 class VersionCommandsTests(ScenarioTest):
 
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
@@ -124,3 +126,20 @@ class VersionCommandsTests(ScenarioTest):
             assert exported_content == imported_content, "The exported content is not the same as the imported content."
         finally:
             os.remove(exported_file_path)
+
+    @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
+    @ApicServicePreparer()
+    @ApicApiPreparer()
+    @ApicVersionPreparer()
+    @ApicDefinitionPreparer()
+    def test_definition_import_large_value(self):
+        self.kwargs.update({
+            'specification': '{"name":"openapi","version":"3.0.0"}',
+            'file_name': "test_definition_import_large_value.txt"
+        })
+
+        with open(self.kwargs['file_name'], 'w') as file:
+            file.write('a' * 4 * 1024 * 1024) # generate a 4MB file
+
+        with self.assertRaisesRegexp(CLIError, 'The size of "value" is greater than 3 MB. Please use --format "link" to import the specification from a URL for size greater than 3 mb.') as cm:
+            self.cmd('az apic api definition import-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {d} --format "inline" --specification \'{specification}\' --value "@{file_name}"')
