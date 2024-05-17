@@ -10,7 +10,6 @@ import os
 from azure.cli.testsdk import ScenarioTest, ResourceGroupPreparer
 from .utils import ApicServicePreparer, ApicApiPreparer, ApicVersionPreparer, ApicDefinitionPreparer
 
-
 class VersionCommandsTests(ScenarioTest):
 
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
