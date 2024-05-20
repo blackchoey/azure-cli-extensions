@@ -36,8 +36,10 @@ class ImportSpecificationExtension(ImportAPIDefinitionExtension):
             value_size_bytes = sys.getsizeof(str(args.value))
             value_size_mb = value_size_bytes / (1024 * 1024)  # Convert bytes to megabytes
             if value_size_mb > 3:
-                raise CLIError('The size of "value" is greater than 3 MB. '
-                             'Please use --format "link" to import the specification from a URL for size greater than 3 mb.')
+                raise CLIError(
+                    'The size of "value" is greater than 3 MB. '
+                    'Please use --format "link" to import the specification from a URL for size greater than 3 mb.'
+                )
 
 
 class ExportSpecificationExtension(ExportAPIDefinitionExtension):
