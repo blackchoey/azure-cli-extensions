@@ -245,7 +245,7 @@ class ImportFromApimExtension(ImportFromApim):
         # Use same subscription id and resource group as API Center by default
         resource_group = args.resource_group
         subscription_id = self.ctx.subscription_id
-        
+
         # Use user provided subscription id
         if args.apim_subscription_id:
             subscription_id = args.apim_subscription_id
@@ -256,6 +256,9 @@ class ImportFromApimExtension(ImportFromApim):
 
         source_resource_ids = []
         for item in args.apim_apis:
-            source_resource_ids.append(f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/Microsoft.ApiManagement/service/{args.apim_name}/apis/{item}")
+            source_resource_ids.append(
+                f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/"
+                f"Microsoft.ApiManagement/service/{args.apim_name}/apis/{item}"
+            )
 
         args.source_resource_ids = source_resource_ids
