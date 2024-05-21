@@ -188,15 +188,15 @@ class VersionCommandsTests(ScenarioTest):
         finally:
             os.remove(exported_file_path)
 
-    @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
-    @ApicServicePreparer()
-    @ApicApiPreparer()
-    @ApicVersionPreparer()
-    @ApicDefinitionPreparer()
     def test_definition_import_large_value(self):
         self.kwargs.update({
             'specification': '{"name":"openapi","version":"3.0.0"}',
-            'file_name': "test_definition_import_large_value.txt"
+            'file_name': "test_definition_import_large_value.txt",
+            'rg': "mock_resource_group",
+            's': 'mock-service-name',
+            'api': 'mock-api-id',
+            'v': 'mock-version-id',
+            'd': 'mock-definition-id'
         })
 
         try:
