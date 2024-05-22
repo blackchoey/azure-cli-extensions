@@ -19,7 +19,7 @@ class ServiceCommandsTests(ScenarioTest):
         self.cmd('az apic service create -g {rg} --name {name}', checks=[
             self.check('name', '{name}'),
             self.check('resourceGroup', '{rg}'),
-            self.check('dataApiHostname', '{name}.data.eastus.azure-apicenter.net')
+            self.check('dataApiHostname', '{name}.data.eastus.azure-apicenter.ms')
         ])
     
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
@@ -42,7 +42,7 @@ class ServiceCommandsTests(ScenarioTest):
         self.cmd('az apic service show -g {rg} -s {s}', checks=[
             self.check('name', '{s}'),
             self.check('resourceGroup', '{rg}'),
-            self.check('dataApiHostname', '{s}.data.eastus.azure-apicenter.net')
+            self.check('dataApiHostname', '{s}.data.eastus.azure-apicenter.ms')
         ])
 
     @unittest.skip('The Control Plane API has bug')
