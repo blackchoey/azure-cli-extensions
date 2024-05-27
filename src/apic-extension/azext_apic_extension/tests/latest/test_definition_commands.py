@@ -14,7 +14,7 @@ from .utils import ApicServicePreparer, ApicApiPreparer, ApicVersionPreparer, Ap
 current_dir = os.path.dirname(os.path.realpath(__file__))
 test_assets_dir = os.path.join(current_dir, 'test_assets')
 
-class VersionCommandsTests(ScenarioTest):
+class DefinitionCommandsTests(ScenarioTest):
 
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
     @ApicServicePreparer()
@@ -272,11 +272,10 @@ class VersionCommandsTests(ScenarioTest):
     @ApicDefinitionPreparer()
     def test_examples_import_specification_example_1(self):
         self.kwargs.update({
-          'name': self.create_random_name(prefix='cli', length=24),
           'value': '{"openapi":"3.0.1","info":{"title":"httpbin.org","description":"API Management facade for a very handy and free online HTTP tool.","version":"1.0"}}',
           'specification': '{"name":"openapi","version":"3.0.0"}'
         })
-        self.cmd('az apic api definition import-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {name} --format "inline" --value \'{value}\' --specification \'{specification}\'')
+        self.cmd('az apic api definition import-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {d} --format "inline" --value \'{value}\' --specification \'{specification}\'')
 
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
     @ApicServicePreparer()
@@ -285,11 +284,10 @@ class VersionCommandsTests(ScenarioTest):
     @ApicDefinitionPreparer()
     def test_examples_import_specification_example_2(self):
         self.kwargs.update({
-          'name': self.create_random_name(prefix='cli', length=24),
           'value': 'https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore.json',
           'specification': '{"name":"openapi","version":"3.0.0"}'
         })
-        self.cmd('az apic api definition import-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {name} --format "link" --value \'{value}\' --specification \'{specification}\'')
+        self.cmd('az apic api definition import-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {d} --format "link" --value \'{value}\' --specification \'{specification}\'')
 
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
     @ApicServicePreparer()
@@ -298,9 +296,8 @@ class VersionCommandsTests(ScenarioTest):
     @ApicDefinitionPreparer()
     def test_examples_export_specification(self):
         self.kwargs.update({
-          'name': self.create_random_name(prefix='cli', length=24),
           'filename': "test_examples_export_specification.json"
         })
-        self.cmd('az apic api version definition export-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {name}')
+        self.cmd('az apic api version definition export-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {d}')
         # Check the exported file exists
         assert os.path.exists(self.kwargs['filename'])

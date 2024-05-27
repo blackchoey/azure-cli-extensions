@@ -199,7 +199,7 @@ class DeploymentCommandsTests(ScenarioTest):
     def test_examples_show_api_deployment_details(self):
         self.cmd('az apic api deployment show -g {rg} -s {s} --deployment-id {dep} --api-id {api}', checks=[
             self.check('name', '{dep}'),
-            self.check('title', 'Production deployment'),
+            self.check('title', 'test deployment'),
             self.check('server.runtimeUri[0]', 'https://example.com'),
         ])
 
