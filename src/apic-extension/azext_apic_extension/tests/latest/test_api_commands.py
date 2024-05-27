@@ -119,3 +119,14 @@ class ApiCommandsTests(ScenarioTest):
     def test_api_delete(self):
         self.cmd('az apic api delete -g {rg} -s {s} --api-id {api} --yes')
         self.cmd('az apic api show -g {rg} -s {s} --api-id {api}', expect_failure=True)
+
+    @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
+    @ApicServicePreparer()
+    @ApicApiPreparer(parameter_name='api_id1')
+    @ApicApiPreparer(parameter_name='api_id2')
+    def test_examples_list_apis_with_filter(self, api_id1, api_id2):
+        self.cmd('az apic api list -g {rg} -s {s} --filter "kind eq \'rest\'"', checks=[
+            self.check('length(@)', 2),
+            self.check('@[0].name', api_id1),
+            self.check('@[1].name', api_id2)
+        ])
