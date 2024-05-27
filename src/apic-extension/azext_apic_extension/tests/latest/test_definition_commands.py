@@ -296,8 +296,17 @@ class DefinitionCommandsTests(ScenarioTest):
     @ApicDefinitionPreparer()
     def test_examples_export_specification(self):
         self.kwargs.update({
+          'value': 'https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore.json',
+          'specification': '{"name":"openapi","version":"3.0.0"}',
           'filename': "test_examples_export_specification.json"
         })
-        self.cmd('az apic api version definition export-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {d}')
-        # Check the exported file exists
-        assert os.path.exists(self.kwargs['filename'])
+        # Import a specification first
+        self.cmd('az apic api definition import-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {d} --format "link" --value \'{value}\' --specification \'{specification}\'')
+
+        self.cmd('az apic api definition export-specification -g {rg} -s {s} --api-id {api} --version-id {v} --definition-id {d} --file-name {filename}')
+
+        try:
+            # Check the exported file exists
+            assert os.path.exists(self.kwargs['filename'])
+        finally:
+            os.remove(self.kwargs['filename'])

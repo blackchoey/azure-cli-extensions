@@ -83,7 +83,7 @@ class VersionCommandsTests(ScenarioTest):
         self.kwargs.update({
           'name': self.create_random_name(prefix='cli', length=24)
         })
-        self.cmd('az apic api version create -g {rg} -s {s} --api-id {api} --version-id {name} --title "2023-01-01"', checks=[
+        self.cmd('az apic api version create -g {rg} -s {s} --api-id {api} --version-id {name} --title "2023-01-01" --lifecycle-stage production', checks=[
             self.check('name', '{name}'),
             self.check('title', '2023-01-01'),
         ])
@@ -101,11 +101,11 @@ class VersionCommandsTests(ScenarioTest):
     @ApicApiPreparer()
     @ApicVersionPreparer(parameter_name='version_id1')
     @ApicVersionPreparer(parameter_name='version_id2')
-    def test_examples_list_api_versions(self):
+    def test_examples_list_api_versions(self, version_id1, version_id2):
         self.cmd('az apic api version list -g {rg} -s {s} --api-id {api}', checks=[
             self.check('length(@)', 2),
-            self.check('@[0].name', '{version_id1}'),
-            self.check('@[1].name', '{version_id2}')
+            self.check('@[0].name', version_id1),
+            self.check('@[1].name', version_id2)
         ])
 
     @ResourceGroupPreparer(name_prefix="clirg", location='eastus', random_name_length=32)
