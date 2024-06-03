@@ -64,7 +64,7 @@ class ApicMetadataPreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
         group = self._get_resource_group(**kwargs)
         service = self._get_apic_service(**kwargs)
 
-        template = 'az apic metadata create -g {} -n {} --name {} --schema \'{}\' --assignments \'{}\''
+        template = 'az apic metadata create -g {} -n {} --metadata-name {} --schema \'{}\' --assignments \'{}\''
         cmd = template.format(group, service, name, self.schema, self.assignments)
         print(cmd)
         self.live_only_execute(self.cli_ctx, cmd)
