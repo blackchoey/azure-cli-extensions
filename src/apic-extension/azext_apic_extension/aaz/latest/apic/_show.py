@@ -12,13 +12,13 @@ from azure.cli.core.aaz import *
 
 
 @register_command(
-    "apic service update",
+    "apic show",
 )
-class Update(AAZCommand):
-    """Update an instance of an Azure API Center service.
+class Show(AAZCommand):
+    """Show details of an Azure API Center service instance.
 
-    :example: Update service details
-        az apic service update -g contoso-resources -s contoso
+    :example: Show service details
+        az apic service show -g contoso-resources -n contoso
     """
 
     _aaz_info = {
@@ -47,9 +47,9 @@ class Update(AAZCommand):
         _args_schema.resource_group = AAZResourceGroupNameArg(
             required=True,
         )
-        _args_schema.service_name = AAZStrArg(
-            options=["-s", "--name", "--service", "--service-name"],
-            help="The name of Azure API Center service.",
+        _args_schema.name = AAZStrArg(
+            options=["-n", "--name"],
+            help="The name of the API Center service.",
             required=True,
             id_part="name",
             fmt=AAZStrArgFormat(
@@ -58,40 +58,11 @@ class Update(AAZCommand):
                 min_length=1,
             ),
         )
-        _args_schema.identity = AAZObjectArg(
-            options=["--identity"],
-            help="The managed service identities assigned to this resource.",
-        )
-        _args_schema.tags = AAZDictArg(
-            options=["--tags"],
-            help="Resource tags.",
-        )
-
-        identity = cls._args_schema.identity
-        identity.type = AAZStrArg(
-            options=["type"],
-            help="Type of managed service identity (where both SystemAssigned and UserAssigned types are allowed).",
-            required=True,
-            enum={"None": "None", "SystemAssigned": "SystemAssigned", "SystemAssigned,UserAssigned": "SystemAssigned,UserAssigned", "UserAssigned": "UserAssigned"},
-        )
-        identity.user_assigned_identities = AAZDictArg(
-            options=["user-assigned-identities"],
-            help="The set of user assigned identities associated with the resource. The userAssignedIdentities dictionary keys will be ARM resource ids in the form: '/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}. The dictionary values can be empty objects ({}) in requests.",
-        )
-
-        user_assigned_identities = cls._args_schema.identity.user_assigned_identities
-        user_assigned_identities.Element = AAZObjectArg(
-            nullable=True,
-            blank={},
-        )
-
-        tags = cls._args_schema.tags
-        tags.Element = AAZStrArg()
         return cls._args_schema
 
     def _execute_operations(self):
         self.pre_operations()
-        self.ServicesUpdate(ctx=self.ctx)()
+        self.ServicesGet(ctx=self.ctx)()
         self.post_operations()
 
     @register_callback
@@ -106,7 +77,7 @@ class Update(AAZCommand):
         result = self.deserialize_output(self.ctx.vars.instance, client_flatten=True)
         return result
 
-    class ServicesUpdate(AAZHttpOperation):
+    class ServicesGet(AAZHttpOperation):
         CLIENT_TYPE = "MgmtClient"
 
         def __call__(self, *args, **kwargs):
@@ -126,7 +97,7 @@ class Update(AAZCommand):
 
         @property
         def method(self):
-            return "PATCH"
+            return "GET"
 
         @property
         def error_format(self):
@@ -140,7 +111,7 @@ class Update(AAZCommand):
                     required=True,
                 ),
                 **self.serialize_url_param(
-                    "serviceName", self.ctx.args.service_name,
+                    "serviceName", self.ctx.args.name,
                     required=True,
                 ),
                 **self.serialize_url_param(
@@ -164,38 +135,10 @@ class Update(AAZCommand):
         def header_parameters(self):
             parameters = {
                 **self.serialize_header_param(
-                    "Content-Type", "application/json",
-                ),
-                **self.serialize_header_param(
                     "Accept", "application/json",
                 ),
             }
             return parameters
-
-        @property
-        def content(self):
-            _content_value, _builder = self.new_content_builder(
-                self.ctx.args,
-                typ=AAZObjectType,
-                typ_kwargs={"flags": {"required": True, "client_flatten": True}}
-            )
-            _builder.set_prop("identity", AAZObjectType, ".identity")
-            _builder.set_prop("tags", AAZDictType, ".tags")
-
-            identity = _builder.get(".identity")
-            if identity is not None:
-                identity.set_prop("type", AAZStrType, ".type", typ_kwargs={"flags": {"required": True}})
-                identity.set_prop("userAssignedIdentities", AAZDictType, ".user_assigned_identities")
-
-            user_assigned_identities = _builder.get(".identity.userAssignedIdentities")
-            if user_assigned_identities is not None:
-                user_assigned_identities.set_elements(AAZObjectType, ".", typ_kwargs={"nullable": True})
-
-            tags = _builder.get(".tags")
-            if tags is not None:
-                tags.set_elements(AAZStrType, ".")
-
-            return self.serialize_content(_content_value)
 
         def on_200(self, session):
             data = self.deserialize_http_content(session)
@@ -304,8 +247,8 @@ class Update(AAZCommand):
             return cls._schema_on_200
 
 
-class _UpdateHelper:
-    """Helper class for Update"""
+class _ShowHelper:
+    """Helper class for Show"""
 
 
-__all__ = ["Update"]
+__all__ = ["Show"]

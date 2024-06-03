@@ -12,7 +12,7 @@ from azure.cli.core.aaz import *
 
 
 @register_command(
-    "apic service import-from-apim",
+    "apic import-from-apim",
 )
 class ImportFromApim(AAZCommand):
     """Imports APIs from an Azure API Management service instance.
@@ -55,7 +55,7 @@ class ImportFromApim(AAZCommand):
             required=True,
         )
         _args_schema.service_name = AAZStrArg(
-            options=["-s", "--service", "--service-name"],
+            options=["-n", "--service-name"],
             help="The name of Azure API Center service.",
             required=True,
             id_part="name",

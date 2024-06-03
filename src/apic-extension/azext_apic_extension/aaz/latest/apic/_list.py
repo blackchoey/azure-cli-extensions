@@ -12,7 +12,7 @@ from azure.cli.core.aaz import *
 
 
 @register_command(
-    "apic service list",
+    "apic list",
 )
 class List(AAZCommand):
     """Lists Azure API Center services within an Azure subscription.
