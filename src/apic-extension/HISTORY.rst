@@ -9,6 +9,8 @@ Release History
 * Fix: API title created by register command is not same with provided spec
 * Fix: Error not thrown when import spec with >3MB file
 * Fix: Error when register API with long description in spec
+* Fix: `--definition-id`, `--environment-id`, `--server`, `--title` parameters should be required in `az apic api deployment create` command
+* Fix: `--format`, `--specification`, `--value` parameters should be required in `az apic api definition import-specification` command
 * Remove: `--state`` parameter for `az apic api deployment` commands.
 * Remove: `--file-name`` parameter for `az apic api definition import-specification`, `az apic metadata create` and `az apic metadata update` command. Use the `@filename` syntax provided by Azure CLI to read parameter value from a file directly.
 
