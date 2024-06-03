@@ -19,7 +19,7 @@ class Delete(AAZCommand):
     """Deletes an instance of an Azure API Center service.
 
     :example: Delete service
-        az apic service delete -n contoso -g contoso-resources
+        az apic delete -n contoso -g contoso-resources
     """
 
     _aaz_info = {

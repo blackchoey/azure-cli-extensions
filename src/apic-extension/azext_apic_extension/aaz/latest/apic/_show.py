@@ -18,7 +18,7 @@ class Show(AAZCommand):
     """Show details of an Azure API Center service instance.
 
     :example: Show service details
-        az apic service show -g contoso-resources -n contoso
+        az apic show -g contoso-resources -n contoso
     """
 
     _aaz_info = {
