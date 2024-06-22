@@ -5,7 +5,7 @@ Release History
 
 1.0.0
 ++++++++++++++++++
-**Potential Impact**: The changes in this release, including the renaming of commands and parameters, may require changes to existing scripts and integrations. Please review the changes carefully and update your code accordingly.
+Potential Impact: The changes in this release, including the renaming of commands and parameters, may require changes to existing scripts and integrations. Please review the changes carefully and update your code accordingly.
 
 **Updates:**
 
