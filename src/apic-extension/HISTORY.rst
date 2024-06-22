@@ -6,15 +6,14 @@ Release History
 1.0.0
 ++++++++++++++++++
 **Updates:**
-
-**Potential Impact**: The updates in this release, including the renaming of commands and parameters, may require changes to existing scripts and integrations. Please review the changes carefully and update your code accordingly.
+Potential Impact: The updates in this release, including the renaming of commands and parameters, may require changes to existing scripts and integrations. Please review the changes carefully and update your code accordingly.
 
 * Redesigned `az apic service import-from-apim` command for an easier specification of APIM instances.
 * [BREAKING CHANGE] Renamed `az apic service *` commands to `az apic *` commands.
-* **[BREAKING CHANGE]** Renamed `--name/--service/--service-name/-s` parameters in `az apic *` commands to `--name/-n`.
-* **[BREAKING CHANGE]** Renamed `--service/--service-name/-s` parameters in subcommands to `--service-name/-n`.
-* **[BREAKING CHANGE]** Renamed `--metadata-schema/--metadata-schema-name/--name` parameters in `az apic metadata *` commands to `--metadata-name`.
-* **[BREAKING CHANGE]** Renamed `--environment-name` parameter in `az apic api register` command to `--environment-id`.
+* [BREAKING CHANGE] Renamed `--name/--service/--service-name/-s` parameters in `az apic *` commands to `--name/-n`.
+* [BREAKING CHANGE] Renamed `--service/--service-name/-s` parameters in subcommands to `--service-name/-n`.
+* [BREAKING CHANGE] Renamed `--metadata-schema/--metadata-schema-name/--name` parameters in `az apic metadata *` commands to `--metadata-name`.
+* [BREAKING CHANGE] Renamed `--environment-name` parameter in `az apic api register` command to `--environment-id`.
 
 **Fixes:**
 
