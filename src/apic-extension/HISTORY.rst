@@ -5,8 +5,9 @@ Release History
 
 1.0.0
 ++++++++++++++++++
+**Potential Impact**: The updates/fixes/removals in this release, including the renaming of commands and parameters, may require changes to existing scripts and integrations. Please review the changes carefully and update your code accordingly.
+
 **Updates:**
-*The updates in this release, including the renaming of commands and parameters, may require changes to existing scripts and integrations. Please review the changes carefully and update your code accordingly.*
 
 * Redesigned ``az apic service import-from-apim`` command for an easier specification of APIM instances.
 * [BREAKING CHANGE] Renamed ``az apic service *`` commands to ``az apic *`` commands.
