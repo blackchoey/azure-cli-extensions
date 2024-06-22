@@ -5,7 +5,7 @@ Release History
 
 1.0.0
 ++++++++++++++++++
-**Updates:**
+###Updates:
 *The updates in this release, including the renaming of commands and parameters, may require changes to existing scripts and integrations. Please review the changes carefully and update your code accordingly.*
 
 * Redesigned `az apic service import-from-apim` command for an easier specification of APIM instances.
@@ -15,7 +15,7 @@ Release History
 * [BREAKING CHANGE] Renamed `--metadata-schema/--metadata-schema-name/--name` parameters in `az apic metadata *` commands to `--metadata-name`.
 * [BREAKING CHANGE] Renamed `--environment-name` parameter in `az apic api register` command to `--environment-id`.
 
-**Fixes:**
+###Fixes:
 
 * Ensured API title created by `register` command matches the provided specification.
 * Addressed the non-throwing of errors when importing specifications with files larger than 3MB.
@@ -23,7 +23,7 @@ Release History
 * Made `--definition-id`, `--environment-id`, `--server`, `--title` parameters mandatory in `az apic api deployment create` command.
 * Made `--format`, `--specification`, `--value` parameters mandatory in `az apic api definition import-specification` command.
 
-**Removals:**
+###Removals:
 
 * Removed `--state` parameter from `az apic api deployment` commands.
 * Eliminated `--file-name` parameter for `az apic api definition import-specification`, `az apic metadata create`, and `az apic metadata update` commands. Introduced usage of the `@filename` syntax for reading parameter values from a file directly in Azure CLI.
