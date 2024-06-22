@@ -20,13 +20,13 @@ Release History
 * Ensured API title created by ``register`` command matches the provided specification.
 * Addressed the non-throwing of errors when importing specifications with files larger than 3MB.
 * Resolved errors occurring when registering APIs with long descriptions in the specification.
-* Made ``--definition-id``, ``--environment-id``, ``--server``, ``--title`` parameters mandatory in ``az apic api deployment create`` command.
-* Made ``--format``, ``--specification``, ``--value`` parameters mandatory in ``az apic api definition import-specification`` command.
+* [BREAKING CHANGE] Made ``--definition-id``, ``--environment-id``, ``--server``, ``--title`` parameters mandatory in ``az apic api deployment create`` command.
+* [BREAKING CHANGE] Made ``--format``, ``--specification``, ``--value`` parameters mandatory in ``az apic api definition import-specification`` command.
 
 **Removals:**
 
 * Removed ``--state`` parameter from ``az apic api deployment`` commands.
-* Eliminated ``--file-name`` parameter for ``az apic api definition import-specification``, ``az apic metadata create``, and ``az apic metadata update`` commands. Introduced usage of the ``@filename`` syntax for reading parameter values from a file directly in Azure CLI.
+* [BREAKING CHANGE] Eliminated ``--file-name`` parameter for ``az apic api definition import-specification``, ``az apic metadata create``, and ``az apic metadata update`` commands. Introduced usage of the ``@filename`` syntax for reading parameter values from a file directly in Azure CLI.
 
 1.0.0b5
 ++++++++++++++++++
