@@ -9,24 +9,24 @@ Release History
 *The updates in this release, including the renaming of commands and parameters, may require changes to existing scripts and integrations. Please review the changes carefully and update your code accordingly.*
 
 * Redesigned ``az apic service import-from-apim`` command for an easier specification of APIM instances.
-* [BREAKING CHANGE] Renamed `az apic service *` commands to `az apic *` commands.
-* [BREAKING CHANGE] Renamed `--name/--service/--service-name/-s` parameters in `az apic *` commands to `--name/-n`.
-* [BREAKING CHANGE] Renamed `--service/--service-name/-s` parameters in subcommands to `--service-name/-n`.
-* [BREAKING CHANGE] Renamed `--metadata-schema/--metadata-schema-name/--name` parameters in `az apic metadata *` commands to `--metadata-name`.
-* [BREAKING CHANGE] Renamed `--environment-name` parameter in `az apic api register` command to `--environment-id`.
+* [BREAKING CHANGE] Renamed ``az apic service *`` commands to ``az apic *`` commands.
+* [BREAKING CHANGE] Renamed ``--name/--service/--service-name/-s`` parameters in ``az apic *`` commands to ``--name/-n``.
+* [BREAKING CHANGE] Renamed ``--service/--service-name/-s`` parameters in subcommands to ``--service-name/-n``.
+* [BREAKING CHANGE] Renamed ``--metadata-schema/--metadata-schema-name/--name`` parameters in ``az apic metadata *`` commands to ``--metadata-name``.
+* [BREAKING CHANGE] Renamed ``--environment-name`` parameter in ``az apic api register`` command to ``--environment-id``.
 
 **Fixes:**
 
-* Ensured API title created by `register` command matches the provided specification.
+* Ensured API title created by ``register`` command matches the provided specification.
 * Addressed the non-throwing of errors when importing specifications with files larger than 3MB.
 * Resolved errors occurring when registering APIs with long descriptions in the specification.
-* Made `--definition-id`, `--environment-id`, `--server`, `--title` parameters mandatory in `az apic api deployment create` command.
-* Made `--format`, `--specification`, `--value` parameters mandatory in `az apic api definition import-specification` command.
+* Made ``--definition-id``, ``--environment-id``, ``--server``, ``--title`` parameters mandatory in ``az apic api deployment create`` command.
+* Made ``--format``, ``--specification``, ``--value`` parameters mandatory in ``az apic api definition import-specification`` command.
 
 **Removals:**
 
-* Removed `--state` parameter from `az apic api deployment` commands.
-* Eliminated `--file-name` parameter for `az apic api definition import-specification`, `az apic metadata create`, and `az apic metadata update` commands. Introduced usage of the `@filename` syntax for reading parameter values from a file directly in Azure CLI.
+* Removed ``--state`` parameter from ``az apic api deployment`` commands.
+* Eliminated ``--file-name`` parameter for ``az apic api definition import-specification``, ``az apic metadata create``, and ``az apic metadata update`` commands. Introduced usage of the ``@filename`` syntax for reading parameter values from a file directly in Azure CLI.
 
 1.0.0b5
 ++++++++++++++++++
