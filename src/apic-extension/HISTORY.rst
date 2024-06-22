@@ -6,6 +6,7 @@ Release History
 1.0.0
 ++++++++++++++++++
 Updates:
+
 - Redesigned `az apic service import-from-apim` command for an easier specification of APIM instances.
 - Renamed `az apic service *` commands to `az apic *` commands.
 - Renamed `--name/--service/--service-name/-s` parameters in `az apic *` commands to `--name/-n`.
