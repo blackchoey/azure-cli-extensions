@@ -76,10 +76,11 @@ class CreateServiceExtension(CreateService):
         # temporary hide sku parameter as SKU has many fields and we needs more discussion on the UX
         args_schema.sku_name._registered = False
         return args_schema
-    
+
     def pre_operations(self):
         args = self.ctx.args
         args.sku_name = "Free"
+
 
 # `az apic api` commands
 class CreateAPIExtension(DefaultWorkspaceParameter, CreateAPI):
