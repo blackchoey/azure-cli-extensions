@@ -21,7 +21,10 @@ class Update(AAZCommand):
         az apic api update -g contoso-resources -n contoso --api-id echo-api --summary "Basic REST API service"
 
     :example: Update custom properties
-        az apic api update -g contoso-resources -n contoso --api-id echo-api --custom-properties '{\"public-facing\":true}'
+        az apic api update -g contoso-resources -n contoso --api-id echo-api --custom-properties '{\\"public-facing\\":true}'
+
+    :example: Update single custom metadata
+        az az apic api update -g contoso-resources -n contoso --api-id echo-api --set customProperties.internal=false
     """
 
     _aaz_info = {
@@ -95,7 +98,7 @@ class Update(AAZCommand):
             help="The contact information for the API.",
             nullable=True,
         )
-        _args_schema.custom_properties = AAZFreeFormDictArg(
+        _args_schema.custom_properties = AAZObjectArg(
             options=["--custom-properties"],
             arg_group="Properties",
             help="The custom metadata defined for API catalog entities.",
@@ -471,12 +474,12 @@ class Update(AAZCommand):
                 value=instance,
                 typ=AAZObjectType
             )
-            _builder.set_prop("properties", AAZObjectType, ".", typ_kwargs={"flags": {"required": True, "client_flatten": True}})
+            _builder.set_prop("properties", AAZObjectType, typ_kwargs={"flags": {"client_flatten": True}})
 
             properties = _builder.get(".properties")
             if properties is not None:
                 properties.set_prop("contacts", AAZListType, ".contacts")
-                properties.set_prop("customProperties", AAZFreeFormDictType, ".custom_properties")
+                properties.set_prop("customProperties", AAZObjectType, ".custom_properties")
                 properties.set_prop("description", AAZStrType, ".description")
                 properties.set_prop("externalDocumentation", AAZListType, ".external_documentation")
                 properties.set_prop("kind", AAZStrType, ".type", typ_kwargs={"flags": {"required": True}})
@@ -493,10 +496,6 @@ class Update(AAZCommand):
                 _elements.set_prop("email", AAZStrType, ".email")
                 _elements.set_prop("name", AAZStrType, ".name")
                 _elements.set_prop("url", AAZStrType, ".url")
-
-            custom_properties = _builder.get(".properties.customProperties")
-            if custom_properties is not None:
-                custom_properties.set_anytype_elements(".")
 
             external_documentation = _builder.get(".properties.externalDocumentation")
             if external_documentation is not None:
@@ -550,7 +549,7 @@ class _UpdateHelper:
             flags={"read_only": True},
         )
         api_read.properties = AAZObjectType(
-            flags={"required": True, "client_flatten": True},
+            flags={"client_flatten": True},
         )
         api_read.system_data = AAZObjectType(
             serialized_name="systemData",
@@ -562,7 +561,7 @@ class _UpdateHelper:
 
         properties = _schema_api_read.properties
         properties.contacts = AAZListType()
-        properties.custom_properties = AAZFreeFormDictType(
+        properties.custom_properties = AAZObjectType(
             serialized_name="customProperties",
         )
         properties.description = AAZStrType()
