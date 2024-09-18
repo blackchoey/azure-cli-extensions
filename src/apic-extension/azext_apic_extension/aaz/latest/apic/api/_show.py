@@ -196,7 +196,7 @@ class Show(AAZCommand):
                 flags={"read_only": True},
             )
             _schema_on_200.properties = AAZObjectType(
-                flags={"required": True, "client_flatten": True},
+                flags={"client_flatten": True},
             )
             _schema_on_200.system_data = AAZObjectType(
                 serialized_name="systemData",
@@ -208,7 +208,7 @@ class Show(AAZCommand):
 
             properties = cls._schema_on_200.properties
             properties.contacts = AAZListType()
-            properties.custom_properties = AAZFreeFormDictType(
+            properties.custom_properties = AAZObjectType(
                 serialized_name="customProperties",
             )
             properties.description = AAZStrType()
