@@ -71,10 +71,8 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
-      x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '1199'
       x-msedge-ref:
       - 'Ref A: ABABBCBF318942349913A2BAAEEBC50C Ref B: MAA201060516047 Ref C: 2024-10-09T08:19:53Z'
       x-powered-by:
@@ -131,10 +129,8 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
-      x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '1199'
       x-msedge-ref:
       - 'Ref A: 517F261485BF4D8FB1E0C2D974274BFC Ref B: MAA201060516039 Ref C: 2024-10-09T08:19:55Z'
       x-powered-by:
@@ -188,7 +184,7 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '1168'
+      - '1167'
       content-type:
       - application/json; charset=utf-8
       date:
@@ -207,10 +203,8 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
-      x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '1199'
       x-msedge-ref:
       - 'Ref A: 2006204F91514BF494E5D9616CAC87BB Ref B: MAA201060515051 Ref C: 2024-10-09T08:19:56Z'
       x-powered-by:
@@ -675,10 +669,8 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
-      x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '1199'
       x-msedge-ref:
       - 'Ref A: 9A17F989BD03498E839563259636550F Ref B: MAA201060515053 Ref C: 2024-10-09T08:19:58Z'
       x-powered-by:
@@ -742,8 +734,6 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
-      x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
       x-msedge-ref:
       - 'Ref A: 3A6EB45269BE4D76BC76123E5D6A53E0 Ref B: MAA201060513027 Ref C: 2024-10-09T08:20:00Z'
       x-powered-by:
@@ -839,7 +829,7 @@ interactions:
       cache-control:
       - no-cache
       content-length:
-      - '1221'
+      - '1220'
       content-type:
       - application/json; charset=utf-8
       date:
@@ -1327,10 +1317,8 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
-      x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '1199'
       x-msedge-ref:
       - 'Ref A: 333EF8440AAA48B78D9BC181AA8F1C74 Ref B: MAA201060516049 Ref C: 2024-10-09T08:20:03Z'
       x-powered-by:
