@@ -119,9 +119,7 @@ class ExportMetadataSchemaExtension(ExportMetadataExtension):
 
         if result:
             response_format = result['format']
-            value = json.loads(result['value'])
-            # Check if custom metadata only
-            exportedResults = value.get('properties').get('customProperties', {}) if arguments.custom_metadata_only else value
+            exportedResults = result['value']
 
             if response_format == 'link':
                 getReponse = requests.get(exportedResults, timeout=10)
