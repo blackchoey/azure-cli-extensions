@@ -23,7 +23,7 @@ Release History
 
 **Removals:**
 
-* Eliminated duplicate example for ``az apic create `` command.
+* Eliminated duplicate example for ``az apic create`` command.
 
 1.0.0
 ++++++++++++++++++
