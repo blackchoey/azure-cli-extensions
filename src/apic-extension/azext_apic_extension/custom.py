@@ -187,6 +187,19 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
         if value is None:
             logger.error('Could not load spec file')
             return
+        
+        if (str(api_location).startswith('https://') or str(api_location).startswith('http://')):
+            try:
+                # Fetch the JSON content from the URL
+                response = requests.get(api_location)
+                response.raise_for_status()  # Raise an error for bad status codes
+                # Parse the JSON content
+                data = response.json()
+                if data:
+                    value = content
+            except requests.exceptions.RequestException as e:
+                print(f"Error fetching data from {api_location}: {e}")
+                value = None 
 
         # Check if the first field is 'swagger', 'openapi', or something else and get the definition name and version
         first_key, first_value = list(data.items())[0]
