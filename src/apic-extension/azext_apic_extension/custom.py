@@ -164,20 +164,29 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
 
         value = None
         # Read the spec content from URL
-        if (str(api_location).startswith('https://') or str(api_location).startswith('http://')):
+        if str(api_location).startswith('https://') or str(api_location).startswith('http://'):
             try:
                 # Fetch the content from the URL
                 response = requests.get(api_location)
                 # Raise an error for bad status codes
                 response.raise_for_status()
-                # Parse the content
-                data = json.loads(response.content)
+                # Try to parse the content as JSON
+                try:
+                    data = json.loads(response.content)
+                except json.JSONDecodeError:
+                    try:
+                        # If JSON parsing fails, try to parse as YAML
+                        data = yaml.safe_load(response.content)
+                    except Exception as e:
+                        logger.error(f"Error parsing data from {api_location}: {e}")
+                        data = None
+                # If we could parse the content(json or yaml), convert it to a json format string
                 value = json.dumps(data) if data else None
             except requests.exceptions.RequestException as e:
-                print(f"Error fetching data from {api_location}: {e}")
+                logger.error(f"Error fetching data from {api_location}: {e}")
                 value = None
         else:
-            # TODO Future Confirm its a file and not link
+            # Confirm its a file and not link
             with open(str(api_location), 'rb') as f:
                 rawdata = f.read()
                 result = chardet.detect(rawdata)
