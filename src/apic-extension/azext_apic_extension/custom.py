@@ -162,44 +162,45 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
     # Load the JSON file
     if api_location:
 
-        # TODO Future Confirm its a file and not link
-        with open(str(api_location), 'rb') as f:
-            rawdata = f.read()
-            result = chardet.detect(rawdata)
-            encoding = result['encoding']
-
-        # TODO - read other file types later
         value = None
-        if str(api_location).endswith('.yaml') or str(api_location).endswith('.yml'):
-            with open(str(api_location), 'r', encoding=encoding) as f:
-                content = f.read()
-                data = yaml.safe_load(content)
-                if data:
-                    value = content
-        if (str(api_location).endswith('.json')):
-            with open(str(api_location), 'r', encoding=encoding) as f:
-                content = f.read()
-                data = json.loads(content)
-                if data:
-                    value = content
+        # Read the spec content from URL
+        if (str(api_location).startswith('https://') or str(api_location).startswith('http://')):
+            try:
+                # Fetch the content from the URL
+                response = requests.get(api_location)
+                # Raise an error for bad status codes
+                response.raise_for_status()
+                # Parse the content
+                data = json.loads(response.content)
+                value = json.dumps(data) if data else None
+            except requests.exceptions.RequestException as e:
+                print(f"Error fetching data from {api_location}: {e}")
+                value = None
+        else:
+            # TODO Future Confirm its a file and not link
+            with open(str(api_location), 'rb') as f:
+                rawdata = f.read()
+                result = chardet.detect(rawdata)
+                encoding = result['encoding']
+
+            # TODO - read other file types later
+            if str(api_location).endswith('.yaml') or str(api_location).endswith('.yml'):
+                with open(str(api_location), 'r', encoding=encoding) as f:
+                    content = f.read()
+                    data = yaml.safe_load(content)
+                    if data:
+                        value = content
+            if (str(api_location).endswith('.json')):
+                with open(str(api_location), 'r', encoding=encoding) as f:
+                    content = f.read()
+                    data = json.loads(content)
+                    if data:
+                        value = content
 
         # If we could not read the file, return error
         if value is None:
             logger.error('Could not load spec file')
             return
-        
-        if (str(api_location).startswith('https://') or str(api_location).startswith('http://')):
-            try:
-                # Fetch the JSON content from the URL
-                response = requests.get(api_location)
-                response.raise_for_status()  # Raise an error for bad status codes
-                # Parse the JSON content
-                data = response.json()
-                if data:
-                    value = content
-            except requests.exceptions.RequestException as e:
-                print(f"Error fetching data from {api_location}: {e}")
-                value = None 
 
         # Check if the first field is 'swagger', 'openapi', or something else and get the definition name and version
         first_key, first_value = list(data.items())[0]
