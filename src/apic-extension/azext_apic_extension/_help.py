@@ -34,4 +34,5 @@ helps['apic api register'] = """
       - name: Register api by providing spec url.
         text: |
           az apic api register -g api-center-test -n contosoeuap --api-location "https://petstore.swagger.io/v2/swagger.json" --environment-id public
+          az apic api register -g api-center-test -n contosoeuap --api-location "https://petstore.swagger.io/v2/swagger.yaml" --environment-id public
 """
