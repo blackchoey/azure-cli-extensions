@@ -118,6 +118,78 @@ class RegisterCommandTests(ScenarioTest):
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
     @ApicServicePreparer()
+    def test_register_with_json_spec_from_url(self):
+        self.kwargs.update({
+          'spec_url': 'https://petstore.swagger.io/v2/swagger.json'
+        })
+        self.cmd('az apic api register -g {rg} -n {s} -l "{spec_url}"')
+
+        # verify command results
+        self.cmd('az apic api show -g {rg} -n {s} --api-id swaggerpetstore', checks=[
+            self.check('contacts[0].email', 'apiteam@swagger.io'),
+            self.check('description', 'This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.'),
+            self.check('kind', 'rest'),
+            self.check('license.name', 'Apache 2.0'),
+            self.check('license.url', 'http://www.apache.org/licenses/LICENSE-2.0.html'),
+            self.check('lifecycleStage', 'design'),
+            self.check('name', 'swaggerpetstore'),
+            self.check('summary', None),
+            self.check('title', 'Swagger Petstore'),
+            self.check('externalDocumentation', [{'description': 'Find out more about Swagger', 'title': 'Title', 'url': 'http://swagger.io'}])
+        ])
+
+        self.cmd('az apic api version show -g {rg} -n {s} --api-id swaggerpetstore --version-id 1-0-7', checks=[
+            self.check('lifecycleStage', 'design'),
+            self.check('name', '1-0-7'),
+            self.check('title', '1-0-7'),
+        ])
+
+        self.cmd('az apic api definition show -g {rg} -n {s} --api-id swaggerpetstore --version-id 1-0-7 --definition-id openapi', checks=[
+            self.check('description', 'This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.'),
+            self.check('name', 'openapi'),
+            self.check('specification.name', 'openapi'),
+            self.check('specification.version', '2-0'),
+            self.check('title', 'openapi'),
+        ])
+
+    @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
+    @ApicServicePreparer()
+    def test_register_with_yaml_spec_from_url(self):
+        self.kwargs.update({
+          'spec_url': 'https://petstore.swagger.io/v2/swagger.yaml'
+        })
+        self.cmd('az apic api register -g {rg} -n {s} -l "{spec_url}"')
+
+        # verify command results
+        self.cmd('az apic api show -g {rg} -n {s} --api-id swaggerpetstore', checks=[
+            self.check('contacts[0].email', 'apiteam@swagger.io'),
+            self.check('description', 'This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.'),
+            self.check('kind', 'rest'),
+            self.check('license.name', 'Apache 2.0'),
+            self.check('license.url', 'http://www.apache.org/licenses/LICENSE-2.0.html'),
+            self.check('lifecycleStage', 'design'),
+            self.check('name', 'swaggerpetstore'),
+            self.check('summary', None),
+            self.check('title', 'Swagger Petstore'),
+            self.check('externalDocumentation', [{'description': 'Find out more about Swagger', 'title': 'Title', 'url': 'http://swagger.io'}])
+        ])
+
+        self.cmd('az apic api version show -g {rg} -n {s} --api-id swaggerpetstore --version-id 1-0-7', checks=[
+            self.check('lifecycleStage', 'design'),
+            self.check('name', '1-0-7'),
+            self.check('title', '1-0-7'),
+        ])
+
+        self.cmd('az apic api definition show -g {rg} -n {s} --api-id swaggerpetstore --version-id 1-0-7 --definition-id openapi', checks=[
+            self.check('description', 'This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.'),
+            self.check('name', 'openapi'),
+            self.check('specification.name', 'openapi'),
+            self.check('specification.version', '2-0'),
+            self.check('title', 'openapi'),
+        ])
+
+    @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
+    @ApicServicePreparer()
     def test_register_with_long_openapi_description(self):
         self.kwargs.update({
           'spec_file': os.path.join(test_assets_dir, 'spec_with_long_description.json')
