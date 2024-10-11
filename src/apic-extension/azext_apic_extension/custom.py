@@ -163,7 +163,7 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
     if api_location:
 
         value = None
-        format = 'inline'
+        custom_format = 'inline'
         # Read the spec content from URL
         if str(api_location).startswith('https://') or str(api_location).startswith('http://'):
             try:
@@ -183,7 +183,7 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
                         data = None
                 # If we could parse the content(json or yaml), set format to link
                 value = str(api_location) if data else None
-                format = 'link' if data else 'inline'
+                custom_format = 'link' if data else 'inline'
             except requests.exceptions.RequestException as e:
                 logger.error("Error fetching data from %s: %s", api_location, e)
                 value = None
@@ -338,7 +338,7 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
                 'api_id': extracted_api_name,
                 'version_id': extracted_api_version,
                 'definition_id': extracted_definition_name,
-                'format': format,
+                'format': custom_format,
                 'specification': specification_details,  # TODO write the correct spec object
                 'value': value
             }
