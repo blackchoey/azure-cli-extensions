@@ -196,16 +196,33 @@ class RegisterCommandTests(ScenarioTest):
         self.kwargs.update({
             'spec_url': 'https://github.com/invalidrepo'
         })
-
         # Capture the logs
         with self.assertLogs(logger, level='ERROR') as log:
             with self.assertRaises(SystemExit) as cm:
                 self.cmd('az apic api register -g {rg} -n {s} -l "{spec_url}"', expect_failure=True)
-
         # Verify error message
-        self.assertIn("Error fetching data from https://github.com/invalidrepo:", log.output[0])
+        self.assertIn("Error fetching data from invalid url https://github.com/invalidrepo:", log.output[0])
         # Verify SystemExit code
         self.assertEqual(cm.exception.code, -1)
+        # Verify the API is not registered
+        self.cmd('az apic api show -g {rg} -n {s} --api-id swaggerpetstore', expect_failure=True)
+
+    @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
+    @ApicServicePreparer()
+    def test_register_using_spec_url_with_invalid_content(self):
+        # Set up an URL with invalid spec
+        self.kwargs.update({
+            'spec_url': 'https://github.com/'
+        })
+        # Capture the logs
+        with self.assertLogs(logger, level='ERROR') as log:
+            with self.assertRaises(SystemExit) as cm:
+                self.cmd('az apic api register -g {rg} -n {s} -l "{spec_url}"', expect_failure=True)
+        # Verify error message
+        self.assertIn("Error parsing data from https://github.com/:", log.output[0])
+        # Verify SystemExit code
+        self.assertEqual(cm.exception.code, -1)
+        # Verify the API is not registered
         self.cmd('az apic api show -g {rg} -n {s} --api-id swaggerpetstore', expect_failure=True)
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)

@@ -181,11 +181,13 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
                     except yaml.YAMLError as e:
                         logger.error("Error parsing data from %s: %s", api_location, e)
                         data = None
+                        value = None
+                        sys.exit(-1)
                 # If we could parse the content(json or yaml), set format to link
                 value = str(api_location) if data else None
                 custom_format = 'link' if data else 'inline'
             except requests.exceptions.RequestException as e:
-                logger.error("Error fetching data from %s: %s", api_location, e)
+                logger.error("Error fetching data from invalid url %s: %s", api_location, e)
                 data = None
                 value = None
                 sys.exit(-1)
