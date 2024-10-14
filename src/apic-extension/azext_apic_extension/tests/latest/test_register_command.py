@@ -4,6 +4,7 @@
 # --------------------------------------------------------------------------------------------
 
 import os
+from azext_apic_extension.custom import logger
 
 from azure.cli.testsdk import ScenarioTest, ResourceGroupPreparer
 from .utils import ApicServicePreparer, ApicEnvironmentPreparer
@@ -187,6 +188,22 @@ class RegisterCommandTests(ScenarioTest):
             self.check('specification.version', '2-0'),
             self.check('title', 'openapi'),
         ])
+
+    @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
+    @ApicServicePreparer()
+    def test_register_with_invalid_spec_url(self):
+        # Set up an invalid URL
+        self.kwargs.update({
+            'spec_url': 'https://invalid.invalid'
+        })
+
+        # Capture the logs
+        with self.assertLogs(logger, level='ERROR') as log:
+            self.cmd('az apic api register -g {rg} -n {s} -l "{spec_url}"')
+
+        # Verify error message
+        self.cmd('az apic api show -g {rg} -n {s} --api-id swaggerpetstore', expect_failure=True)
+        self.assertIn("Error fetching data from https://invalid.invalid:", log.output[0])
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
     @ApicServicePreparer()
