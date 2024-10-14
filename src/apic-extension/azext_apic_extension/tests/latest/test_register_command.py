@@ -199,11 +199,13 @@ class RegisterCommandTests(ScenarioTest):
 
         # Capture the logs
         with self.assertLogs(logger, level='ERROR') as log:
-            self.cmd('az apic api register -g {rg} -n {s} -l "{spec_url}"')
+            with self.assertRaises(SystemExit) as cm:
+                self.cmd('az apic api register -g {rg} -n {s} -l "{spec_url}"', expect_failure=True)
 
         # Verify error message
-        self.cmd('az apic api show -g {rg} -n {s} --api-id swaggerpetstore', expect_failure=True)
         self.assertIn("Error fetching data from https://invalid.invalid:", log.output[0])
+        # Verify SystemExit code
+        self.assertEqual(cm.exception.code, -1)
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
     @ApicServicePreparer()

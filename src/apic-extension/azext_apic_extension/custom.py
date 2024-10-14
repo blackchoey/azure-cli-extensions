@@ -186,7 +186,9 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
                 custom_format = 'link' if data else 'inline'
             except requests.exceptions.RequestException as e:
                 logger.error("Error fetching data from %s: %s", api_location, e)
+                data = None
                 value = None
+                sys.exit(-1)
         else:
             # Confirm its a file and not link
             with open(str(api_location), 'rb') as f:
