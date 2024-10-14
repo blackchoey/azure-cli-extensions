@@ -1,0 +1,109 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - python-requests/2.32.3
+    method: GET
+    uri: https://github.com/invalidrepo
+  response:
+    body:
+      string: Not Found
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '9'
+      content-security-policy:
+      - default-src 'none'; base-uri 'self'; connect-src 'self'; form-action 'self';
+        img-src 'self' data:; script-src 'self'; style-src 'unsafe-inline'
+      content-type:
+      - text/plain; charset=utf-8
+      date:
+      - Mon, 14 Oct 2024 06:36:01 GMT
+      referrer-policy:
+      - origin-when-cross-origin, strict-origin-when-cross-origin
+      server:
+      - GitHub.com
+      set-cookie:
+      - _gh_sess=6Bvugk9%2BdzKXY1UvKUXoc9utasA8ctNeuCG4FWITyZd5r492RP2G805R23PvgMJoq7ujd32vSsDhL5evFFaIXaZrSVPhNSP9iyuhKIKQdQ9nsAd%2BJBj6E4bJLLLCv6HyUrtM176PMbXcJh7d3eadecGmvJosGmIqUrg0CygUZma0XiY95enVkPtoFZcG2gZJ0xUCNIxBon4QjxzYtNN%2Fq7FkNtdsW2a9%2Bkv2vHx5IGQF7i5wNIhssJbVYD6uAoMOhZsElBp1%2F2B3lflh1ce7bw%3D%3D--ar%2BP7SI7LyQoGkeK--zdqvDQ1p7kKcumuF4mNvNg%3D%3D;
+        Path=/; HttpOnly; Secure; SameSite=Lax
+      - _octo=GH1.1.1934795728.1728887761; Path=/; Domain=github.com; Expires=Tue,
+        14 Oct 2025 06:36:01 GMT; Secure; SameSite=Lax
+      - logged_in=no; Path=/; Domain=github.com; Expires=Tue, 14 Oct 2025 06:36:01
+        GMT; HttpOnly; Secure; SameSite=Lax
+      strict-transport-security:
+      - max-age=31536000; includeSubdomains; preload
+      vary:
+      - X-PJAX, X-PJAX-Container, Turbo-Visit, Turbo-Frame, Accept-Encoding, Accept,
+        X-Requested-With
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - deny
+      x-github-request-id:
+      - BF36:213C0F:1D5B53E:20B6AD9:670CBBD1
+      x-xss-protection:
+      - '0'
+    status:
+      code: 404
+      message: Not Found
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apic api show
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --api-id
+      User-Agent:
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore?api-version=2024-03-01
+  response:
+    body:
+      string: '{"code":"404"}'
+    headers:
+      api-supported-versions:
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      cache-control:
+      - no-cache
+      content-length:
+      - '14'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 14 Oct 2024 06:36:02 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-cache:
+      - CONFIG_NOCACHE
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-global-reads:
+      - '16499'
+      x-msedge-ref:
+      - 'Ref A: DE650A4725C04952938521858943C701 Ref B: MAA201060516029 Ref C: 2024-10-14T06:36:02Z'
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 404
+      message: Not Found
+version: 1

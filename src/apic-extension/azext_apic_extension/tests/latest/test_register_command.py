@@ -194,7 +194,7 @@ class RegisterCommandTests(ScenarioTest):
     def test_register_with_invalid_spec_url(self):
         # Set up an invalid URL
         self.kwargs.update({
-            'spec_url': 'https://invalid.invalid'
+            'spec_url': 'https://github.com/invalidrepo'
         })
 
         # Capture the logs
@@ -203,9 +203,10 @@ class RegisterCommandTests(ScenarioTest):
                 self.cmd('az apic api register -g {rg} -n {s} -l "{spec_url}"', expect_failure=True)
 
         # Verify error message
-        self.assertIn("Error fetching data from https://invalid.invalid:", log.output[0])
+        self.assertIn("Error fetching data from https://github.com/invalidrepo:", log.output[0])
         # Verify SystemExit code
         self.assertEqual(cm.exception.code, -1)
+        self.cmd('az apic api show -g {rg} -n {s} --api-id swaggerpetstore', expect_failure=True)
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
     @ApicServicePreparer()
