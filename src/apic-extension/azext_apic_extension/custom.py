@@ -23,7 +23,7 @@ from .command_patches import ImportAPIDefinitionExtension
 from .command_patches import ExportAPIDefinitionExtension
 from .command_patches import ExportMetadataExtension
 
-from azure.core.exceptions import HttpResponseError
+from azure.cli.core.azclierror import InvalidArgumentValueError
 
 logger = get_logger(__name__)
 
@@ -181,19 +181,17 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
                         # If JSON parsing fails, try to parse as YAML
                         data = yaml.safe_load(response.content)
                     except yaml.YAMLError as e:
-                        logger.error("Error parsing data from %s: %s", api_location, e)
                         data = None
                         value = None
-                        raise HttpResponseError(response=response)
+                        raise InvalidArgumentValueError(error_msg=f"Error parsing data from {api_location}: {e}")
                         # sys.exit(-1)
                 # If we could parse the content(json or yaml), set format to link
                 value = str(api_location) if data else None
                 custom_format = 'link' if data else 'inline'
             except requests.exceptions.RequestException as e:
-                logger.error("Error fetching data from invalid url %s: %s", api_location, e)
                 data = None
                 value = None
-                raise HttpResponseError(response=response)
+                raise InvalidArgumentValueError(error_msg=f"Error fetching data from invalid url {api_location}: {e}")
                 # sys.exit(-1)
         else:
             # Confirm its a file and not link
