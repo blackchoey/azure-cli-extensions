@@ -197,13 +197,12 @@ class RegisterCommandTests(ScenarioTest):
             'spec_url': 'https://github.com/invalidrepo'
         })
         # Capture the logs
-        with self.assertLogs(logger, level='ERROR') as log:
-            with self.assertRaises(SystemExit) as cm:
-                self.cmd('az apic api register -g {rg} -n {s} -l "{spec_url}"', expect_failure=True)
+        with self.assertLogs(logger, level='INFO') as log:
+            self.cmd('az apic api register -g {rg} -n {s} -l "{spec_url}"', expect_failure=True)
         # Verify error message
         self.assertIn("Error fetching data from invalid url https://github.com/invalidrepo:", log.output[0])
         # Verify SystemExit code
-        self.assertEqual(cm.exception.code, -1)
+        # self.assertEqual(cm.exception.code, -1)
         # Verify the API is not registered
         self.cmd('az apic api show -g {rg} -n {s} --api-id swaggerpetstore', expect_failure=True)
 
@@ -215,13 +214,12 @@ class RegisterCommandTests(ScenarioTest):
             'spec_url': 'https://github.com/'
         })
         # Capture the logs
-        with self.assertLogs(logger, level='ERROR') as log:
-            with self.assertRaises(SystemExit) as cm:
-                self.cmd('az apic api register -g {rg} -n {s} -l "{spec_url}"', expect_failure=True)
+        with self.assertLogs(logger, level='INFO') as log:
+            self.cmd('az apic api register -g {rg} -n {s} -l "{spec_url}"', expect_failure=True)
         # Verify error message
         self.assertIn("Error parsing data from https://github.com/:", log.output[0])
         # Verify SystemExit code
-        self.assertEqual(cm.exception.code, -1)
+        # self.assertEqual(cm.exception.code, -1)
         # Verify the API is not registered
         self.cmd('az apic api show -g {rg} -n {s} --api-id swaggerpetstore', expect_failure=True)
 

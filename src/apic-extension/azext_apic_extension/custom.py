@@ -23,6 +23,8 @@ from .command_patches import ImportAPIDefinitionExtension
 from .command_patches import ExportAPIDefinitionExtension
 from .command_patches import ExportMetadataExtension
 
+from azure.core.exceptions import HttpResponseError
+
 logger = get_logger(__name__)
 
 
@@ -182,7 +184,8 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
                         logger.error("Error parsing data from %s: %s", api_location, e)
                         data = None
                         value = None
-                        sys.exit(-1)
+                        raise HttpResponseError(response=response)
+                        # sys.exit(-1)
                 # If we could parse the content(json or yaml), set format to link
                 value = str(api_location) if data else None
                 custom_format = 'link' if data else 'inline'
@@ -190,7 +193,8 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
                 logger.error("Error fetching data from invalid url %s: %s", api_location, e)
                 data = None
                 value = None
-                sys.exit(-1)
+                raise HttpResponseError(response=response)
+                # sys.exit(-1)
         else:
             # Confirm its a file and not link
             with open(str(api_location), 'rb') as f:
