@@ -259,7 +259,7 @@ class ServiceCommandsTests(ScenarioTest):
             # add user-assigned identity to api center service:
             try:
                 cmd_str='az apic update --name {s} -g {rg} --identity \'\{"type":"UserAssigned","user-assigned-identities":{usi_id}\}\''
-                print(cmd_str)
+                print(f"command={cmd_str}")
                 self.cmd(cmd_str)
             except Exception as e:
                 print(e)
