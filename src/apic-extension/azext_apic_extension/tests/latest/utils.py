@@ -16,7 +16,7 @@ class ApicServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
         self.parameter_name = parameter_name
         self.enable_system_assigned_identity = enable_system_assigned_identity
         self.key = key
-        self.usi_id = "/subscriptions/976c6e22-5aa9-47a4-a6db-bc1dcfebf792/resourceGroups/rg-apim-reader-MI/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apim-reader-MI"
+        self.usi_id = "{/subscriptions/976c6e22-5aa9-47a4-a6db-bc1dcfebf792/resourceGroups/rg-apim-reader-MI/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apim-reader-MI}"
 
     def create_resource(self, name, **kwargs):
         group = self._get_resource_group(**kwargs)
