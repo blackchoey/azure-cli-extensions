@@ -257,4 +257,4 @@ class ServiceCommandsTests(ScenarioTest):
             # self.cmd('az role assignment create --role "API Management Service Reader Role" --assignee-object-id {identity_id} --assignee-principal-type ServicePrincipal --scope {apim_id}')
             
             # add user-assigned identity to api center service:
-            self.cmd('az apic update --name {name} -g {rg} --identity \'\{"type":"UserAssigned","user-assigned-identities":\{"{usi_id}"\}\}\'')
+            self.cmd('az apic update --name {s} -g {rg} --identity \'\{"type":"UserAssigned","user-assigned-identities":\{"{usi_id}"\}\}\'')
