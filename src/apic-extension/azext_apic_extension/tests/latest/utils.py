@@ -8,13 +8,15 @@ from azure.cli.testsdk.preparers import NoTrafficRecordingPreparer, SingleValueR
 class ApicServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
     def __init__(self, name_prefix='clitest', length=24,
                  parameter_name='service_name', resource_group_parameter_name='resource_group', key='s',
-                 enable_system_assigned_identity=False):
+                 enable_system_assigned_identity=False,
+                 usi_id=None):
         super(ApicServicePreparer, self).__init__(name_prefix, length)
         self.cli_ctx = get_dummy_cli()
         self.resource_group_parameter_name = resource_group_parameter_name
         self.parameter_name = parameter_name
         self.enable_system_assigned_identity = enable_system_assigned_identity
         self.key = key
+        self.usi_id = "/subscriptions/976c6e22-5aa9-47a4-a6db-bc1dcfebf792/resourceGroups/rg-apim-reader-MI/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apim-reader-MI"
 
     def create_resource(self, name, **kwargs):
         group = self._get_resource_group(**kwargs)

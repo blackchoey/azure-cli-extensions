@@ -254,4 +254,7 @@ class ServiceCommandsTests(ScenarioTest):
                 'apim_id': apim_id
             })
             # Grant system assigned identity of API Center access to APIM
-            self.cmd('az role assignment create --role "API Management Service Reader Role" --assignee-object-id {identity_id} --assignee-principal-type ServicePrincipal --scope {apim_id}')
+            # self.cmd('az role assignment create --role "API Management Service Reader Role" --assignee-object-id {identity_id} --assignee-principal-type ServicePrincipal --scope {apim_id}')
+            
+            # add user-assigned identity to api center service:
+            self.cmd('az apic update --name {name} -g {rg} --identity \'\{"type":"UserAssigned","user-assigned-identities":\{"{usi_id}"\}\}\'')
