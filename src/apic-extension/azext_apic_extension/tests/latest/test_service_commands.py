@@ -238,9 +238,9 @@ class ServiceCommandsTests(ScenarioTest):
             # Only setup APIM in live mode
             # Get system assigned identity id for API Center
             apic_service = self.cmd('az apic show -g {rg} -n {s}').get_output_in_json()
-            self.kwargs.update({
-                'identity_id': apic_service['identity']['principalId']
-            })
+            # self.kwargs.update({
+            #     'identity_id': apic_service['identity']['principalId']
+            # })
             # Create APIM service
             apim_service = self.cmd('az apim create -g {rg} --name {apim_name} --publisher-name test --publisher-email test@example.com --sku-name Consumption').get_output_in_json()
             # Add echo api
