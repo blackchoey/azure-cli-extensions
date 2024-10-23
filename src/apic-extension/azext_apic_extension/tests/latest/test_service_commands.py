@@ -111,7 +111,7 @@ class ServiceCommandsTests(ScenarioTest):
         self.cmd('az apic show -g {rg} -n {s}', expect_failure=True)
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
-    @ApicServicePreparer()
+    @ApicServicePreparer(enable_system_assigned_identity=False)
     def test_import_from_apim(self):
         self.kwargs.update({
           'apim_name': self.create_random_name(prefix='cli', length=24)
@@ -127,7 +127,7 @@ class ServiceCommandsTests(ScenarioTest):
 
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
-    @ApicServicePreparer(enable_system_assigned_identity=True)
+    @ApicServicePreparer(enable_system_assigned_identity=False)
     def test_import_from_apim_for_one_api(self):
         self.kwargs.update({
           'apim_name': self.create_random_name(prefix='cli', length=24)
@@ -146,7 +146,7 @@ class ServiceCommandsTests(ScenarioTest):
         ])
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
-    @ApicServicePreparer(enable_system_assigned_identity=True)
+    @ApicServicePreparer(enable_system_assigned_identity=False)
     def test_import_from_apim_for_multiple_apis(self):
         self.kwargs.update({
           'apim_name': self.create_random_name(prefix='cli', length=24)
@@ -195,7 +195,7 @@ class ServiceCommandsTests(ScenarioTest):
         self.cmd('az apic show -g {rg} -n {s}', expect_failure=True)
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
-    @ApicServicePreparer(enable_system_assigned_identity=True)
+    @ApicServicePreparer(enable_system_assigned_identity=False)
     def test_examples_import_all_apis_from_apim(self):
         self.kwargs.update({
           'apim_name': self.create_random_name(prefix='cli', length=24)
@@ -204,7 +204,7 @@ class ServiceCommandsTests(ScenarioTest):
         self.cmd('az apic import-from-apim -g {rg} --service-name {s} --apim-name {apim_name} --apim-apis *')
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
-    @ApicServicePreparer(enable_system_assigned_identity=True)
+    @ApicServicePreparer(enable_system_assigned_identity=False)
     def test_examples_import_selected_apis_from_apim(self):
         self.kwargs.update({
           'apim_name': self.create_random_name(prefix='cli', length=24)
@@ -258,9 +258,4 @@ class ServiceCommandsTests(ScenarioTest):
             # self.cmd('az role assignment create --role "API Management Service Reader Role" --assignee-object-id {identity_id} --assignee-principal-type ServicePrincipal --scope {apim_id}')
             
             # add user-assigned identity to api center service:
-            try:
-                cmd_str='az apic update --name {s} -g {rg} --identity {{type:UserAssigned,user-assigned-identities:{usi_id}}}'
-                print(f"command={cmd_str}")
-                self.cmd(cmd_str)
-            except Exception as e:
-                print(e)
+            self.cmd('az apic update --name {s} -g {rg} --identity {{type:UserAssigned,user-assigned-identities:{usi_id}}}')
