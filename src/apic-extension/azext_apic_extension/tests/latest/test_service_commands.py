@@ -111,7 +111,7 @@ class ServiceCommandsTests(ScenarioTest):
         self.cmd('az apic show -g {rg} -n {s}', expect_failure=True)
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
-    @ApicServicePreparer(enable_system_assigned_identity=True)
+    @ApicServicePreparer()
     def test_import_from_apim(self):
         self.kwargs.update({
           'apim_name': self.create_random_name(prefix='cli', length=24)
