@@ -251,14 +251,15 @@ class ServiceCommandsTests(ScenarioTest):
             self.cmd('az apim api operation create -g {rg} --service-name {apim_name} --api-id foo --url-template "/foo" --method "GET" --display-name "GetOperation"')
             apim_id = apim_service['id']
             self.kwargs.update({
-                'apim_id': apim_id
+                'apim_id': apim_id,
+                'usi_id': USERASSIGNED_IDENTITY
             })
             # Grant system assigned identity of API Center access to APIM
             # self.cmd('az role assignment create --role "API Management Service Reader Role" --assignee-object-id {identity_id} --assignee-principal-type ServicePrincipal --scope {apim_id}')
             
             # add user-assigned identity to api center service:
             try:
-                cmd_str='az apic update --name {s} -g {rg} --identity {{type:UserAssigned,user-assigned-identities:{}}}'.format(USERASSIGNED_IDENTITY)
+                cmd_str='az apic update --name {s} -g {rg} --identity {{type:UserAssigned,user-assigned-identities:{usi_id}}}'
                 print(f"command={cmd_str}")
                 self.cmd(cmd_str)
             except Exception as e:
