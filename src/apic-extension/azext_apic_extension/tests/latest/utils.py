@@ -8,7 +8,8 @@ from azure.cli.testsdk.preparers import NoTrafficRecordingPreparer, SingleValueR
 class ApicServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
     def __init__(self, name_prefix='clitest', length=24,
                  parameter_name='service_name', resource_group_parameter_name='resource_group', key='s',
-                 enable_system_assigned_identity=False):
+                 enable_system_assigned_identity=False,
+                 usi_id=None):
         super(ApicServicePreparer, self).__init__(name_prefix, length)
         self.cli_ctx = get_dummy_cli()
         self.resource_group_parameter_name = resource_group_parameter_name
