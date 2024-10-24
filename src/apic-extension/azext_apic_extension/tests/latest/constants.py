@@ -6,5 +6,5 @@
 import os
 
 TEST_REGION = "eastus"
+# to set USERASSIGNED_IDENTITY, refer to https://learn.microsoft.com/en-us/azure/api-center/import-api-management-apis?tabs=portal#option-2-import-apis-directly-from-your-api-management-instance
 USERASSIGNED_IDENTITY = os.getenv('USERASSIGNED_IDENTITY')
-USERASSIGNED_IDENTITY = USERASSIGNED_IDENTITY if USERASSIGNED_IDENTITY else "{/subscriptions/976c6e22-5aa9-47a4-a6db-bc1dcfebf792/resourceGroups/rg-apim-reader-MI/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apim-reader-MI}"
