@@ -243,7 +243,7 @@ class ServiceCommandsTests(ScenarioTest):
             apic_service = self.cmd('az apic show -g {rg} -n {s}').get_output_in_json()
             self.kwargs.update({
                 'identity_id': apic_service['identity']['principalId']
-            }) if enable_system_assigned_identity
+            }) if enable_system_assigned_identity else None
             # Create APIM service
             apim_service = self.cmd('az apim create -g {rg} --name {apim_name} --publisher-name test --publisher-email test@example.com --sku-name Consumption').get_output_in_json()
             # Add echo api
