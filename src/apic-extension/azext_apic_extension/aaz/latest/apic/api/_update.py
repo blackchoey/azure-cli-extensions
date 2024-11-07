@@ -22,6 +22,7 @@ class Update(AAZCommand):
 
     :example: Update custom properties
         az apic api update -g contoso-resources -n contoso --api-id echo-api --custom-properties '{\"public-facing\":true}'
+        az apic api update -g contoso-resources -n contoso --api-id echo-api --custom-properties '@customProperities.json'
 
     :example: Update single custom metadata
         az apic api update -g contoso-resources -n contoso --api-id echo-api --set customProperties.internal=false
