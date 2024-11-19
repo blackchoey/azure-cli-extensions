@@ -23,7 +23,7 @@ from .command_patches import ImportAPIDefinitionExtension
 from .command_patches import ExportAPIDefinitionExtension
 from .command_patches import ExportMetadataExtension
 
-from azure.cli.core.azclierror import InvalidArgumentValueError
+from azure.cli.core.azclierror import InvalidArgumentValueError, UserFault
 
 logger = get_logger(__name__)
 
@@ -158,6 +158,13 @@ class ExportMetadataSchemaExtension(ExportMetadataExtension):
                     f.write(results)
 
 
+class CustomCommandInternalError(UserFault):
+    """ Internal error in custom command. """
+    def __init__(self, error_msg, code=None):
+        error_msg = f'Code: {code}\nMessage: {error_msg}'
+        super(CustomCommandInternalError, self).__init__(error_msg)
+
+
 # Quick Import
 def register_apic(cmd, api_location, resource_group, service_name, environment_id=None):
 
@@ -230,9 +237,9 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
             # TODO how to determine other kinds - enum={"graphql": "graphql", "grpc": "grpc", "rest": "rest", "soap": "soap", "webhook": "webhook", "websocket": "websocket"}
 
         # Create API and Create API Version
-        info = data['info']
-        if info:
-            try:
+        try:
+            info = data['info']
+            if info:
                 # Create API and Create API Version
                 extracted_api_name = _generate_api_id(info.get('title', 'Default-API')).lower()
                 extracted_api_description = info.get('description', 'API Description')[:1000]
@@ -358,7 +365,6 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
                 from .aaz.latest.apic.api.deployment import Create as CreateAPIDeployment
                 from .aaz.latest.apic.environment import Show as GetEnvironment
 
-                environment_id = None
                 if environment_id:
                     # GET Environment ID
                     environment_args = {
@@ -405,9 +411,8 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
 
                         CreateAPIDeployment(cli_ctx=cmd.cli_ctx)(command_args=api_deployment_args)
                         logger.warning('API deployment was created successfully')
-            except Exception as e:
-                logger.error('Error while creating API. Error: %s', e)
-                raise InvalidArgumentValueError(error_msg=f"Error while creating API: {e}")
+        except Exception as e:
+            raise CustomCommandInternalError(error_msg=f'Error while creating API. Field missing: {e}', code='KeyError') if type(e).__name__ == 'KeyError' else e
 
 
 def _generate_api_id(title: str) -> str:
