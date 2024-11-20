@@ -314,7 +314,7 @@ class ShowIntegrationExtension(DefaultWorkspaceParameter, ShowIntegration):
     pass
 
 @register_command(
-    "apic integration create apim",
+    "apic integration create azure-api-management",
     is_preview=True,
 )
 class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
