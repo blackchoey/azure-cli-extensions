@@ -303,15 +303,19 @@ class ImportFromApimExtension(ImportFromApim):
 
         args.source_resource_ids = source_resource_ids
 
+
 # `az apic integration` commands
 class ListIntegrationExtension(DefaultWorkspaceParameter, ListIntegration):
     pass
 
+
 class DeleteIntegrationExtension(DefaultWorkspaceParameter, DeleteIntegration):
     pass
 
+
 class ShowIntegrationExtension(DefaultWorkspaceParameter, ShowIntegration):
     pass
+
 
 @register_command(
     "apic integration create azure-api-management",
@@ -346,7 +350,7 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
         )
 
         return args_schema
-    
+
     def pre_operations(self):
         # Set apim_resource_id based on user input
         super().pre_operations()
@@ -365,4 +369,4 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
             resource_group = args.apim_resource_group
 
         args.apim_resource_id = (f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/"
-                                f"Microsoft.ApiManagement/service/{args.apim_name}/")
+                                 f"Microsoft.ApiManagement/service/{args.apim_name}/")
