@@ -365,6 +365,7 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
                 from .aaz.latest.apic.api.deployment import Create as CreateAPIDeployment
                 from .aaz.latest.apic.environment import Show as GetEnvironment
 
+                environment_id = None
                 if environment_id:
                     # GET Environment ID
                     environment_args = {
