@@ -211,12 +211,12 @@ class Create(AAZCommand):
 
             properties = _builder.get(".properties")
             if properties is not None:
-                properties.set_prop("apimSource", AAZObjectType)
+                properties.set_prop("azureApiManagementSource", AAZObjectType)
                 properties.set_prop("importSpecification", AAZStrType, ".import_specification")
                 properties.set_prop("targetEnvironmentId", AAZStrType, ".target_environment_id")
                 properties.set_prop("targetLifecycleStage", AAZStrType, ".target_lifecycle_stage")
 
-            azure_api_management_source = _builder.get(".properties.apimSource")
+            azure_api_management_source = _builder.get(".properties.azureApiManagementSource")
             if azure_api_management_source is not None:
                 azure_api_management_source.set_prop("msiResourceId", AAZStrType, ".msi_resource_id")
                 azure_api_management_source.set_prop("resourceId", AAZStrType, ".apim_resource_id", typ_kwargs={"flags": {"required": True}})
