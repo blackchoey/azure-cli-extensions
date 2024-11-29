@@ -370,3 +370,24 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
 
         args.apim_resource_id = (f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/"
                                  f"Microsoft.ApiManagement/service/{args.apim_name}/")
+        
+@register_command(
+    "apic integration create amazon-api-gateway",
+    is_preview=True,
+)
+class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegration):
+    """Add Amazon API Gateway as API source
+    """
+
+    @classmethod
+    def _build_arguments_schema(cls, *args, **kwargs):
+        # pylint: disable=protected-access
+        args_schema = super()._build_arguments_schema(*args, **kwargs)
+        return args_schema
+
+    def pre_operations(self):
+        super().pre_operations()
+        args = self.ctx.args
+        args.aws_access_key = args.aws_access_key
+        args.aws_secret_access_key = args.aws_secret_access_key
+        args.aws_region = args.aws_region

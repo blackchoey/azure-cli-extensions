@@ -86,6 +86,33 @@ class Create(AAZCommand):
             help="API Management service resource ID.",
         )
 
+        # define Arg Group "AmazonApiGatewaySource"
+
+        _args_schema = cls._args_schema
+        _args_schema.aws_access_key = AAZStrArg(
+            options=["--aws-access-key"],
+            arg_group="AmazonApiGatewaySource",
+            help="The AWS access key.",
+            required=True,
+        )
+        _args_schema.aws_secret_access_key = AAZStrArg(
+            options=["--aws-secret-access-key"],
+            arg_group="AmazonApiGatewaySource",
+            help="The AWS secret access key.",
+            required=True,
+        )
+        _args_schema.aws_region = AAZStrArg(
+            options=["--aws-region"],
+            arg_group="AmazonApiGatewaySource",
+            help="The region name of AWS.",
+            required=True,
+        )
+        # _args_schema.msi_resource_id = AAZResourceIdArg(
+        #     options=["--msi-resource-id"],
+        #     arg_group="AmazonApiGatewaySource",
+        #     help="The resource ID of the managed identity that has access to the API Management instance.",
+        # )
+
         # define Arg Group "Properties"
 
         _args_schema = cls._args_schema
@@ -131,6 +158,7 @@ class Create(AAZCommand):
 
         def __call__(self, *args, **kwargs):
             request = self.make_request()
+            print(f'request = {request}\n\ncontent = {self.content}')
             session = self.client.send_request(request=request, stream=False, **kwargs)
             if session.http_response.status_code in [200, 201]:
                 return self.on_200_201(session)
@@ -221,6 +249,13 @@ class Create(AAZCommand):
                 azure_api_management_source.set_prop("msiResourceId", AAZStrType, ".msi_resource_id")
                 azure_api_management_source.set_prop("resourceId", AAZStrType, ".apim_resource_id", typ_kwargs={"flags": {"required": True}})
 
+            amazon_api_gateway_source = _builder.get(".properties.amazonApiGatewaySource")
+            if amazon_api_gateway_source is not None:
+                amazon_api_gateway_source.set_prop("accessKey", AAZStrType, ".aws_access_key")
+                amazon_api_gateway_source.set_prop("secretAccessKey", AAZStrType, ".aws_secret_access_key")
+                amazon_api_gateway_source.set_prop("regionName", AAZStrType, ".aws_region")
+                amazon_api_gateway_source.set_prop("msiResourceId", AAZStrType, ".msi_resource_id")
+
             return self.serialize_content(_content_value)
 
         def on_200_201(self, session):
@@ -261,6 +296,9 @@ class Create(AAZCommand):
             properties = cls._schema_on_200_201.properties
             properties.azure_api_management_source = AAZObjectType(
                 serialized_name="azureApiManagementSource",
+            )
+            properties.amazon_api_gateway_source = AAZObjectType(
+                serialized_name="amazonApiGatewaySource",
             )
             properties.import_specification = AAZStrType(
                 serialized_name="importSpecification",
