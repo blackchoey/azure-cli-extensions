@@ -72,47 +72,6 @@ class Create(AAZCommand):
             ),
         )
 
-        # define Arg Group "AzureApiManagementSource"
-
-        _args_schema = cls._args_schema
-        _args_schema.msi_resource_id = AAZResourceIdArg(
-            options=["--msi-resource-id"],
-            arg_group="AzureApiManagementSource",
-            help="The resource ID of the managed identity that has access to the API Management instance.",
-        )
-        _args_schema.apim_resource_id = AAZResourceIdArg(
-            options=["--apim-resource-id"],
-            arg_group="AzureApiManagementSource",
-            help="API Management service resource ID.",
-        )
-
-        # define Arg Group "AmazonApiGatewaySource"
-
-        _args_schema = cls._args_schema
-        _args_schema.aws_access_key = AAZStrArg(
-            options=["--aws-access-key"],
-            arg_group="AmazonApiGatewaySource",
-            help="The AWS access key.",
-            # required=True,
-        )
-        _args_schema.aws_secret_access_key = AAZStrArg(
-            options=["--aws-secret-access-key"],
-            arg_group="AmazonApiGatewaySource",
-            help="The AWS secret access key.",
-            # required=True,
-        )
-        _args_schema.aws_region = AAZStrArg(
-            options=["--aws-region"],
-            arg_group="AmazonApiGatewaySource",
-            help="The region name of AWS.",
-            # required=True,
-        )
-        # _args_schema.msi_resource_id = AAZResourceIdArg(
-        #     options=["--msi-resource-id"],
-        #     arg_group="AmazonApiGatewaySource",
-        #     help="The resource ID of the managed identity that has access to the API Management instance.",
-        # )
-
         # define Arg Group "Properties"
 
         _args_schema = cls._args_schema

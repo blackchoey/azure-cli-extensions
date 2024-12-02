@@ -47,7 +47,6 @@ from .aaz.latest.apic.metadata import (
     Export as ExportMetadata
 )
 from .aaz.latest.apic import ImportFromApim, Create as CreateService
-from .aaz.latest.api_center.service.workspace import ImportApiSource
 from .aaz.latest.apic.integration import (
     Create as CreateIntegration,
     Show as ShowIntegration,
@@ -55,7 +54,7 @@ from .aaz.latest.apic.integration import (
     Delete as DeleteIntegration
 )
 
-from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg
+from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg, AAZResourceIdArg
 from azure.cli.core.aaz import register_command
 
 
@@ -330,7 +329,7 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
     def _build_arguments_schema(cls, *args, **kwargs):
         # pylint: disable=protected-access
         args_schema = super()._build_arguments_schema(*args, **kwargs)
-        args_schema.apim_resource_id._registered = False
+        # args_schema.apim_resource_id._registered = False
 
         args_schema.apim_subscription_id = AAZStrArg(
             options=["--apim-subscription"],
@@ -357,6 +356,20 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
             default="AzureApiManagement",
         )
 
+        # define Arg Group "AzureApiManagementSource"
+
+        _args_schema = cls._args_schema
+        _args_schema.msi_resource_id = AAZResourceIdArg(
+            options=["--msi-resource-id"],
+            arg_group="AzureApiManagementSource",
+            help="The resource ID of the managed identity that has access to the API Management instance.",
+        )
+        _args_schema.apim_resource_id = AAZResourceIdArg(
+            options=["--apim-resource-id"],
+            arg_group="AzureApiManagementSource",
+            help="API Management service resource ID.",
+        )
+
         return args_schema
 
     def pre_operations(self):
@@ -379,6 +392,9 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
         args.apim_resource_id = (f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/"
                                  f"Microsoft.ApiManagement/service/{args.apim_name}/")
         
+        # Set api_source_type
+        args.api_source_type = "AzureApiManagement"
+        
 @register_command(
     "apic integration create amazon-api-gateway",
     is_preview=True,
@@ -391,11 +407,32 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
     def _build_arguments_schema(cls, *args, **kwargs):
         # pylint: disable=protected-access
         args_schema = super()._build_arguments_schema(*args, **kwargs)
+
         args_schema.api_source_type = AAZStrArg(
             options=["--api-source-type"],
             arg_group="Properties",
             help="API source type",
             default="AmazonApiGateway"
+        )
+
+         # define Arg Group "AmazonApiGatewaySource"
+        args_schema.aws_access_key = AAZStrArg(
+            options=["--aws-access-key"],
+            arg_group="AmazonApiGatewaySource",
+            help="The AWS access key.",
+            required=True,
+        )
+        args_schema.aws_secret_access_key = AAZStrArg(
+            options=["--aws-secret-access-key"],
+            arg_group="AmazonApiGatewaySource",
+            help="The AWS secret access key.",
+            required=True,
+        )
+        args_schema.aws_region = AAZStrArg(
+            options=["--aws-region"],
+            arg_group="AmazonApiGatewaySource",
+            help="The region name of AWS.",
+            required=True,
         )
         return args_schema
 
