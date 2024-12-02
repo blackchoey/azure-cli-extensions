@@ -47,6 +47,7 @@ from .aaz.latest.apic.metadata import (
     Export as ExportMetadata
 )
 from .aaz.latest.apic import ImportFromApim, Create as CreateService
+from .aaz.latest.api_center.service.workspace import ImportApiSource
 from .aaz.latest.apic.integration import (
     Create as CreateIntegration,
     Show as ShowIntegration,
@@ -349,6 +350,13 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
             required=True
         )
 
+        args_schema.api_source_type = AAZStrArg(
+            options=["--api-source-type"],
+            arg_group="Properties",
+            help="API source type",
+            default="AzureApiManagement",
+        )
+
         return args_schema
 
     def pre_operations(self):
@@ -383,6 +391,12 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
     def _build_arguments_schema(cls, *args, **kwargs):
         # pylint: disable=protected-access
         args_schema = super()._build_arguments_schema(*args, **kwargs)
+        args_schema.api_source_type = AAZStrArg(
+            options=["--api-source-type"],
+            arg_group="Properties",
+            help="API source type",
+            default="AmazonApiGateway"
+        )
         return args_schema
 
     def pre_operations(self):
@@ -391,3 +405,4 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
         args.aws_access_key = args.aws_access_key
         args.aws_secret_access_key = args.aws_secret_access_key
         args.aws_region = args.aws_region
+        args.api_source_type = "AmazonApiGateway"
