@@ -93,19 +93,19 @@ class Create(AAZCommand):
             options=["--aws-access-key"],
             arg_group="AmazonApiGatewaySource",
             help="The AWS access key.",
-            required=True,
+            # required=True,
         )
         _args_schema.aws_secret_access_key = AAZStrArg(
             options=["--aws-secret-access-key"],
             arg_group="AmazonApiGatewaySource",
             help="The AWS secret access key.",
-            required=True,
+            # required=True,
         )
         _args_schema.aws_region = AAZStrArg(
             options=["--aws-region"],
             arg_group="AmazonApiGatewaySource",
             help="The region name of AWS.",
-            required=True,
+            # required=True,
         )
         # _args_schema.msi_resource_id = AAZResourceIdArg(
         #     options=["--msi-resource-id"],
@@ -239,12 +239,13 @@ class Create(AAZCommand):
 
             properties = _builder.get(".properties")
             if properties is not None:
-                properties.set_prop("apimSource", AAZObjectType)
+                properties.set_prop("azureApiManagementSource", AAZObjectType)
+                properties.set_prop("amazonApiGatewaySource", AAZObjectType)
                 properties.set_prop("importSpecification", AAZStrType, ".import_specification")
                 properties.set_prop("targetEnvironmentId", AAZStrType, ".target_environment_id")
                 properties.set_prop("targetLifecycleStage", AAZStrType, ".target_lifecycle_stage")
 
-            azure_api_management_source = _builder.get(".properties.apimSource")
+            azure_api_management_source = _builder.get(".properties.azureApiManagementSource")
             if azure_api_management_source is not None:
                 azure_api_management_source.set_prop("msiResourceId", AAZStrType, ".msi_resource_id")
                 azure_api_management_source.set_prop("resourceId", AAZStrType, ".apim_resource_id", typ_kwargs={"flags": {"required": True}})
