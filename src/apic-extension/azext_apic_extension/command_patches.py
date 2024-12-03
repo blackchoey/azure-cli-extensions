@@ -322,7 +322,14 @@ class ShowIntegrationExtension(DefaultWorkspaceParameter, ShowIntegration):
     is_preview=True,
 )
 class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
-    """Add Azure APIM as API source
+    """Add Azure APIM as an API source
+
+    :example: Add Azure APIM in the same resource group as the Azure API Center instance as an API source
+        az apic integration create azure-api-management -g contoso-resources -n contoso --integration-id sync-from-my-apim --apim-name myapim
+
+    :example: Add Azure APIM in another resource group as an API source
+        az apic integration create azure-api-management -g contoso-resources -n contoso --integration-id sync-from-my-apim --apim-name myapim --apim-resource-group myapim-resource-group
+
     """
 
     @classmethod
