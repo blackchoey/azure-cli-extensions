@@ -363,7 +363,6 @@ def register_apic(cmd, api_location, resource_group, service_name, environment_i
 
                 # Create API Deployment -----------------------------------------------------------------------------
                 from .aaz.latest.apic.api.deployment import Create as CreateAPIDeployment
-                from .aaz.latest.apic.environment import Show as GetEnvironment
 
                 servers = data.get('servers')
                 if environment_id and servers:
