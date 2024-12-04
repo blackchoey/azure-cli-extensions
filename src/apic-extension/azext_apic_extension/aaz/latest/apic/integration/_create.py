@@ -11,18 +11,14 @@
 from azure.cli.core.aaz import *
 
 
-@register_command(
-    "apic integration create",
-    is_preview=True,
-)
 class Create(AAZCommand):
     """Create new or updates existing API source.
     """
 
     _aaz_info = {
-        "version": "2024-12-01-preview",
+        "version": "2024-06-01-preview",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/apisources/{}", "2024-12-01-preview"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/apisources/{}", "2024-06-01-preview"],
         ]
     }
 
@@ -53,6 +49,7 @@ class Create(AAZCommand):
             ),
         )
         _args_schema.resource_group = AAZResourceGroupNameArg(
+            help="Name of Azure API Center resource group. You can configure the default group using `az configure --defaults group=<name>`.",
             required=True,
         )
         _args_schema.service_name = AAZStrArg(

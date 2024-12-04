@@ -20,9 +20,9 @@ class Show(AAZCommand):
     """
 
     _aaz_info = {
-        "version": "2024-06-01-preview",
+        "version": "2024-12-01-preview",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/apisources/{}", "2024-06-01-preview"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/apisources/{}", "2024-12-01-preview"],
         ]
     }
 
@@ -54,7 +54,6 @@ class Show(AAZCommand):
             ),
         )
         _args_schema.resource_group = AAZResourceGroupNameArg(
-            help="Name of Azure API Center resource group. You can configure the default group using `az configure --defaults group=<name>`.",
             required=True,
         )
         _args_schema.service_name = AAZStrArg(
@@ -154,7 +153,7 @@ class Show(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-06-01-preview",
+                    "api-version", "2024-12-01-preview",
                     required=True,
                 ),
             }
@@ -205,6 +204,13 @@ class Show(AAZCommand):
             )
 
             properties = cls._schema_on_200.properties
+            properties.amazon_api_gateway_source = AAZObjectType(
+                serialized_name="amazonApiGatewaySource",
+            )
+            properties.api_source_type = AAZStrType(
+                serialized_name="apiSourceType",
+                flags={"required": True},
+            )
             properties.azure_api_management_source = AAZObjectType(
                 serialized_name="azureApiManagementSource",
             )
@@ -220,6 +226,23 @@ class Show(AAZCommand):
             )
             properties.target_lifecycle_stage = AAZStrType(
                 serialized_name="targetLifecycleStage",
+            )
+
+            amazon_api_gateway_source = cls._schema_on_200.properties.amazon_api_gateway_source
+            amazon_api_gateway_source.access_key = AAZStrType(
+                serialized_name="accessKey",
+                flags={"required": True},
+            )
+            amazon_api_gateway_source.msi_resource_id = AAZStrType(
+                serialized_name="msiResourceId",
+            )
+            amazon_api_gateway_source.region_name = AAZStrType(
+                serialized_name="regionName",
+                flags={"required": True},
+            )
+            amazon_api_gateway_source.secret_access_key = AAZStrType(
+                serialized_name="secretAccessKey",
+                flags={"required": True},
             )
 
             azure_api_management_source = cls._schema_on_200.properties.azure_api_management_source
