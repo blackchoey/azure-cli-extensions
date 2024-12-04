@@ -59,6 +59,7 @@ from .aaz.latest.apic.integration import (
     List as ListIntegration,
     Delete as DeleteIntegration
 )
+from .aaz.latest.api_center.service.workspace import ImportApiSource
 
 from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg
 from azure.cli.core.aaz import register_command
@@ -403,13 +404,6 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
     def _build_arguments_schema(cls, *args, **kwargs):
         # pylint: disable=protected-access
         args_schema = super()._build_arguments_schema(*args, **kwargs)
-
-        args_schema.api_source_type = AAZStrArg(
-            options=["--api-source-type"],
-            arg_group="Properties",
-            help="API source type",
-            default="AmazonApiGateway"
-        )
 
          # define Arg Group "AmazonApiGatewaySource"
         args_schema.aws_access_key = AAZStrArg(
