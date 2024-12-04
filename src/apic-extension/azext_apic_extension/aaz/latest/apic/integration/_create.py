@@ -11,6 +11,10 @@
 from azure.cli.core.aaz import *
 
 
+@register_command(
+    "apic integration create",
+    is_preview=True,
+)
 class Create(AAZCommand):
     """Create new or updates existing API source.
     """
