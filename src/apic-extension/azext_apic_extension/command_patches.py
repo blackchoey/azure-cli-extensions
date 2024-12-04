@@ -413,13 +413,13 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
 
         # Add separate parameters for access-key, secret-access-key, and region-name
         args_schema.access_key = AAZStrArg(
-            options=["--access-key"],
+            options=["--amazon-access-key-reference"],
             arg_group="AmazonApiGatewaySource",
             help="Amazon API Gateway Access Key. Must be an Azure Key Vault secret reference.",
             required=True,
         )
         args_schema.secret_access_key = AAZStrArg(
-            options=["--secret-access-key"],
+            options=["--amazon-secret-access-key-reference"],
             arg_group="AmazonApiGatewaySource",
             help="Amazon API Gateway Secret Access Key. Must be an Azure Key Vault secret reference.",
             required=True,
