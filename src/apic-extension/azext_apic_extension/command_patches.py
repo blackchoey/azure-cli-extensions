@@ -53,7 +53,15 @@ from .aaz.latest.apic.integration import (
     List as ListIntegration,
     Delete as DeleteIntegration
 )
+from .aaz.latest.apic.integration import (
+    Create as CreateIntegration,
+    Show as ShowIntegration,
+    List as ListIntegration,
+    Delete as DeleteIntegration
+)
 
+from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg
+from azure.cli.core.aaz import register_command
 from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg, AAZResourceIdArg
 from azure.cli.core.aaz import register_command
 
@@ -302,6 +310,135 @@ class ImportFromApimExtension(ImportFromApim):
             )
 
         args.source_resource_ids = source_resource_ids
+
+
+# `az apic integration` commands
+class ListIntegrationExtension(DefaultWorkspaceParameter, ListIntegration):
+    pass
+
+
+class DeleteIntegrationExtension(DefaultWorkspaceParameter, DeleteIntegration):
+    pass
+
+
+class ShowIntegrationExtension(DefaultWorkspaceParameter, ShowIntegration):
+    pass
+
+
+@register_command(
+    "apic integration create azure-api-management",
+    is_preview=True,
+)
+class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
+    # pylint: disable=C0301
+    """Add Azure APIM as an API source
+
+    :example: Add Azure APIM in the same resource group as the Azure API Center instance as an API source
+        az apic integration create azure-api-management -g contoso-resources -n contoso --integration-id sync-from-my-apim --apim-name myapim
+
+    :example: Add Azure APIM in another resource group as an API source
+        az apic integration create azure-api-management -g contoso-resources -n contoso --integration-id sync-from-my-apim --apim-name myapim --apim-resource-group myapim-resource-group
+
+    """
+    # pylint: enable=C0301
+
+    @classmethod
+    def _build_arguments_schema(cls, *args, **kwargs):
+        # pylint: disable=protected-access
+        args_schema = super()._build_arguments_schema(*args, **kwargs)
+        args_schema.apim_resource_id._registered = False
+
+        args_schema.apim_subscription_id = AAZStrArg(
+            options=["--apim-subscription"],
+            help="The subscription id of the source APIM instance.",
+            required=False
+        )
+
+        args_schema.apim_resource_group = AAZStrArg(
+            options=["--apim-resource-group"],
+            help="The resource group of the source APIM instance.",
+            required=False
+        )
+
+        args_schema.apim_name = AAZStrArg(
+            options=["--apim-name"],
+            help="The name of the source APIM instance.",
+            required=True
+        )
+
+        return args_schema
+
+    def pre_operations(self):
+        # Set apim_resource_id based on user input
+        super().pre_operations()
+        args = self.ctx.args
+
+        # Use same subscription id and resource group as API Center by default
+        resource_group = args.resource_group
+        subscription_id = self.ctx.subscription_id
+
+        # Use user provided subscription id
+        if args.apim_subscription_id:
+            subscription_id = args.apim_subscription_id
+
+        # Use user provided resource group
+        if args.apim_resource_group:
+            resource_group = args.apim_resource_group
+
+        args.apim_resource_id = (f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/"
+                                 f"Microsoft.ApiManagement/service/{args.apim_name}/")
+        
+        # Set api_source_type
+        args.api_source_type = "AzureApiManagement"
+        
+@register_command(
+    "apic integration create amazon-api-gateway",
+    is_preview=True,
+)
+class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegration):
+    """Add Amazon API Gateway as API source
+    """
+
+    @classmethod
+    def _build_arguments_schema(cls, *args, **kwargs):
+        # pylint: disable=protected-access
+        args_schema = super()._build_arguments_schema(*args, **kwargs)
+
+        args_schema.api_source_type = AAZStrArg(
+            options=["--api-source-type"],
+            arg_group="Properties",
+            help="API source type",
+            default="AmazonApiGateway"
+        )
+
+         # define Arg Group "AmazonApiGatewaySource"
+        args_schema.aws_access_key = AAZStrArg(
+            options=["--aws-access-key"],
+            arg_group="AmazonApiGatewaySource",
+            help="The AWS access key.",
+            required=True,
+        )
+        args_schema.aws_secret_access_key = AAZStrArg(
+            options=["--aws-secret-access-key"],
+            arg_group="AmazonApiGatewaySource",
+            help="The AWS secret access key.",
+            required=True,
+        )
+        args_schema.aws_region = AAZStrArg(
+            options=["--aws-region"],
+            arg_group="AmazonApiGatewaySource",
+            help="The region name of AWS.",
+            required=True,
+        )
+        return args_schema
+
+    def pre_operations(self):
+        super().pre_operations()
+        args = self.ctx.args
+        args.aws_access_key = args.aws_access_key
+        args.aws_secret_access_key = args.aws_secret_access_key
+        args.aws_region = args.aws_region
+        args.api_source_type = "AmazonApiGateway"
 
 
 # `az apic integration` commands

@@ -49,6 +49,7 @@ class Create(AAZCommand):
             ),
         )
         _args_schema.resource_group = AAZResourceGroupNameArg(
+            help="Name of Azure API Center resource group. You can configure the default group using `az configure --defaults group=<name>`.",
             required=True,
         )
         _args_schema.service_name = AAZStrArg(
@@ -72,6 +73,20 @@ class Create(AAZCommand):
             ),
         )
 
+        # define Arg Group "AzureApiManagementSource"
+
+        _args_schema = cls._args_schema
+        _args_schema.msi_resource_id = AAZResourceIdArg(
+            options=["--msi-resource-id"],
+            arg_group="AzureApiManagementSource",
+            help="The resource ID of the managed identity that has access to the API Management instance.",
+        )
+        _args_schema.apim_resource_id = AAZResourceIdArg(
+            options=["--apim-resource-id"],
+            arg_group="AzureApiManagementSource",
+            help="API Management service resource ID.",
+        )
+
         # define Arg Group "Properties"
 
         _args_schema = cls._args_schema
@@ -79,7 +94,7 @@ class Create(AAZCommand):
             options=["--import-specification"],
             arg_group="Properties",
             help="Indicates if the specification should be imported along with metadata.",
-            default="ondemand",
+            default="always",
             enum={"always": "always", "never": "never", "ondemand": "ondemand"},
         )
         _args_schema.target_environment_id = AAZResourceIdArg(
@@ -198,8 +213,6 @@ class Create(AAZCommand):
             properties = _builder.get(".properties")
             if properties is not None:
                 properties.set_prop("azureApiManagementSource", AAZObjectType)
-                properties.set_prop("amazonApiGatewaySource", AAZObjectType)
-                properties.set_prop("apiSourceType", AAZStrType, ".api_source_type")
                 properties.set_prop("importSpecification", AAZStrType, ".import_specification")
                 properties.set_prop("targetEnvironmentId", AAZStrType, ".target_environment_id")
                 properties.set_prop("targetLifecycleStage", AAZStrType, ".target_lifecycle_stage")
@@ -208,13 +221,6 @@ class Create(AAZCommand):
             if azure_api_management_source is not None:
                 azure_api_management_source.set_prop("msiResourceId", AAZStrType, ".msi_resource_id")
                 azure_api_management_source.set_prop("resourceId", AAZStrType, ".apim_resource_id", typ_kwargs={"flags": {"required": True}})
-
-            amazon_api_gateway_source = _builder.get(".properties.amazonApiGatewaySource")
-            if amazon_api_gateway_source is not None:
-                amazon_api_gateway_source.set_prop("accessKey", AAZStrType, ".aws_access_key")
-                amazon_api_gateway_source.set_prop("secretAccessKey", AAZStrType, ".aws_secret_access_key")
-                amazon_api_gateway_source.set_prop("regionName", AAZStrType, ".aws_region")
-                amazon_api_gateway_source.set_prop("msiResourceId", AAZStrType, ".msi_resource_id")
 
             return self.serialize_content(_content_value)
 
@@ -256,9 +262,6 @@ class Create(AAZCommand):
             properties = cls._schema_on_200_201.properties
             properties.azure_api_management_source = AAZObjectType(
                 serialized_name="azureApiManagementSource",
-            )
-            properties.amazon_api_gateway_source = AAZObjectType(
-                serialized_name="amazonApiGatewaySource",
             )
             properties.import_specification = AAZStrType(
                 serialized_name="importSpecification",
