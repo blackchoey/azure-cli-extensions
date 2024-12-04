@@ -53,16 +53,8 @@ from .aaz.latest.apic.integration import (
     List as ListIntegration,
     Delete as DeleteIntegration
 )
-from .aaz.latest.apic.integration import (
-    Create as CreateIntegration,
-    Show as ShowIntegration,
-    List as ListIntegration,
-    Delete as DeleteIntegration
-)
 
 from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg
-from azure.cli.core.aaz import register_command
-from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg, AAZResourceIdArg
 from azure.cli.core.aaz import register_command
 
 
@@ -389,10 +381,11 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
 
         args.apim_resource_id = (f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/"
                                  f"Microsoft.ApiManagement/service/{args.apim_name}/")
-        
+
         # Set api_source_type
         args.api_source_type = "AzureApiManagement"
-        
+
+
 @register_command(
     "apic integration create amazon-api-gateway",
     is_preview=True,
@@ -401,7 +394,11 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
     """Add Amazon API Gateway as API source
 
     :example: Add Amazon API Gateway as an API source
-        az apic integration create amazon-api-gateway -g contoso-resources -n contoso --integration-id sync-from-my-amazon-api-gateway --access-key https://mykey.vault.azure.net/secrets/AccessKey --secret-access-key https://mykey.vault.azure.net/secrets/SecretAccessKey --region-name us-east-2
+        az apic integration create amazon-api-gateway -g contoso-resources -n contoso
+            --integration-id sync-from-my-amazon-api-gateway
+            --access-key https://mykey.vault.azure.net/secrets/AccessKey
+            --secret-access-key https://mykey.vault.azure.net/secrets/SecretAccessKey
+            --region-name us-east-2
     """
 
     @classmethod
