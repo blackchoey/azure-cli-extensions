@@ -372,6 +372,7 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
 
         args_schema.apim_name = AAZStrArg(
             options=["--apim-name"],
+            arg_group="AzureApiManagementSource",
             help="The name of the source APIM instance.",
             required=True
         )
