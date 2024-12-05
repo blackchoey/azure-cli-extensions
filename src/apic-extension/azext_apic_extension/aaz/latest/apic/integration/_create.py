@@ -137,8 +137,8 @@ class Create(AAZCommand):
             options=["msi-resource-id"],
             help="(Optional) The resource ID of the managed identity that has access to the API Management instance.",
         )
-        azure_api_management_source.resource_id = AAZResourceIdArg(
-            options=["resource-id"],
+        azure_api_management_source.apim_resource_id = AAZResourceIdArg(
+            options=["apim-resource-id"],
             help="API Management service resource ID.",
             required=True,
         )
@@ -263,7 +263,7 @@ class Create(AAZCommand):
             azure_api_management_source = _builder.get(".properties.azureApiManagementSource")
             if azure_api_management_source is not None:
                 azure_api_management_source.set_prop("msiResourceId", AAZStrType, ".msi_resource_id")
-                azure_api_management_source.set_prop("resourceId", AAZStrType, ".resource_id", typ_kwargs={"flags": {"required": True}})
+                azure_api_management_source.set_prop("resourceId", AAZStrType, ".apim_resource_id", typ_kwargs={"flags": {"required": True}})
 
             return self.serialize_content(_content_value)
 
