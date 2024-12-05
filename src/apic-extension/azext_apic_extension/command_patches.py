@@ -394,7 +394,7 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
             resource_group = args.apim_resource_group
 
         apim_resource_id = (f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/"
-                                 f"Microsoft.ApiManagement/service/{args.apim_name}")
+                            f"Microsoft.ApiManagement/service/{args.apim_name}")
 
         args.azure_api_management_source = {
             "msi_resource_id": args.msi_resource_id,
