@@ -338,8 +338,9 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
     def _build_arguments_schema(cls, *args, **kwargs):
         # pylint: disable=protected-access
         args_schema = super()._build_arguments_schema(*args, **kwargs)
-        args_schema.apim_resource_id._registered = False
-        # Remove the amazon_api_gateway_source parameter
+        # Remove the azure-api-management-source parameter
+        args_schema.azure_api_management_source._registered = False
+        # Remove the amazon-api-gateway-source parameter
         args_schema.amazon_api_gateway_source._registered = False
 
         args_schema.msi_resource_id = AAZResourceIdArg(
@@ -387,6 +388,11 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
 
         args.apim_resource_id = (f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/"
                                  f"Microsoft.ApiManagement/service/{args.apim_name}/")
+        
+        args.azure_api_management_source = {
+            "msi_resource_id": args.msi_resource_id,
+            "apim_resource_id": args.apim_resource_id
+        }
 
         # Set api_source_type
         args.api_source_type = "AzureApiManagement"
@@ -401,17 +407,17 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
     """Add Amazon API Gateway as API source
 
     :example: Add Amazon API Gateway as an API source
-        az apic integration create amazon-api-gateway -g contoso-resources -n contoso --integration-id sync-from-my-amazon-api-gateway --access-key https://mykey.vault.azure.net/secrets/AccessKey --secret-access-key https://mykey.vault.azure.net/secrets/SecretAccessKey --region-name us-east-2
+        az apic integration create amazon-api-gateway -g contoso-resources -n contoso --integration-id sync-from-my-amazon-api-gateway --access-key-reference https://mykey.vault.azure.net/secrets/AccessKey --secret-access-key-reference https://mykey.vault.azure.net/secrets/SecretAccessKey --region-name us-east-2
     """
 
     @classmethod
     def _build_arguments_schema(cls, *args, **kwargs):
         # pylint: disable=protected-access
         args_schema = super()._build_arguments_schema(*args, **kwargs)
-        # Remove the amazon_api_gateway_source parameter
+        # Remove the azure-api-management-source parameter
+        args_schema.azure_api_management_source._registered = False
+        # Remove the amazon-api-gateway-source parameter
         args_schema.amazon_api_gateway_source._registered = False
-        # Remove the apim_resource parameter
-        args_schema.apim_resource_id._registered = False
 
         # Add separate parameters for access-key, secret-access-key, and region-name
         

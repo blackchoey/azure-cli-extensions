@@ -73,18 +73,14 @@ class Create(AAZCommand):
             ),
         )
 
-        # define Arg Group "AzureApiManagementSource"
-
-        _args_schema = cls._args_schema
-        _args_schema.apim_resource_id = AAZResourceIdArg(
-            options=["--apim-resource-id"],
-            arg_group="AzureApiManagementSource",
-            help="API Management service resource ID.",
-        )
-
         # define Arg Group "Properties"
 
         _args_schema = cls._args_schema
+        _args_schema.azure_api_management_source = AAZObjectArg(
+            options=["--azure-api-management-source"],
+            arg_group="Properties",
+            help="API source configuration for Azure API Management.",
+        )
         _args_schema.amazon_api_gateway_source = AAZObjectArg(
             options=["--amazon-api-gateway-source"],
             arg_group="Properties",
@@ -113,6 +109,16 @@ class Create(AAZCommand):
             arg_group="Properties",
             help="The target lifecycle stage.",
             enum={"deprecated": "deprecated", "design": "design", "development": "development", "preview": "preview", "production": "production", "retired": "retired", "testing": "testing"},
+        )
+
+        azure_api_management_source = cls._args_schema.azure_api_management_source
+        azure_api_management_source.apim_resource_id = AAZResourceIdArg(
+            options=["apim-resource-id"],
+            help="API Management service resource ID.",
+        )
+        azure_api_management_source.msi_resource_id = AAZStrArg(
+            options=["msi-resource-id"],
+            help="(Optional) The resource ID of the managed identity that has access to the Azure Key Vault secrets.",
         )
 
         amazon_api_gateway_source = cls._args_schema.amazon_api_gateway_source
