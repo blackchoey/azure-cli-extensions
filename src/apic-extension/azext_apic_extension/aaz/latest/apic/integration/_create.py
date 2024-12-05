@@ -76,11 +76,6 @@ class Create(AAZCommand):
         # define Arg Group "Properties"
 
         _args_schema = cls._args_schema
-        _args_schema.azure_api_management_source = AAZObjectArg(
-            options=["--azure-api-management-source"],
-            arg_group="Properties",
-            help="API source configuration for Azure API Management.",
-        )
         _args_schema.amazon_api_gateway_source = AAZObjectArg(
             options=["--amazon-api-gateway-source"],
             arg_group="Properties",
@@ -91,6 +86,11 @@ class Create(AAZCommand):
             arg_group="Properties",
             help="API source type",
             enum={"AmazonApiGateway": "AmazonApiGateway", "AzureApiManagement": "AzureApiManagement"},
+        )
+        _args_schema.azure_api_management_source = AAZObjectArg(
+            options=["--azure-api-management-source"],
+            arg_group="Properties",
+            help="API source configuration for Azure API Management.",
         )
         _args_schema.import_specification = AAZStrArg(
             options=["--import-specification"],
@@ -111,16 +111,6 @@ class Create(AAZCommand):
             enum={"deprecated": "deprecated", "design": "design", "development": "development", "preview": "preview", "production": "production", "retired": "retired", "testing": "testing"},
         )
 
-        azure_api_management_source = cls._args_schema.azure_api_management_source
-        azure_api_management_source.apim_resource_id = AAZResourceIdArg(
-            options=["apim-resource-id"],
-            help="API Management service resource ID.",
-        )
-        azure_api_management_source.msi_resource_id = AAZStrArg(
-            options=["msi-resource-id"],
-            help="(Optional) The resource ID of the managed identity that has access to the Azure Key Vault secrets.",
-        )
-
         amazon_api_gateway_source = cls._args_schema.amazon_api_gateway_source
         amazon_api_gateway_source.access_key = AAZStrArg(
             options=["access-key"],
@@ -139,6 +129,17 @@ class Create(AAZCommand):
         amazon_api_gateway_source.secret_access_key = AAZStrArg(
             options=["secret-access-key"],
             help="Amazon API Gateway Secret Access Key. Must be an Azure Key Vault secret reference.",
+            required=True,
+        )
+
+        azure_api_management_source = cls._args_schema.azure_api_management_source
+        azure_api_management_source.msi_resource_id = AAZResourceIdArg(
+            options=["msi-resource-id"],
+            help="(Optional) The resource ID of the managed identity that has access to the API Management instance.",
+        )
+        azure_api_management_source.resource_id = AAZResourceIdArg(
+            options=["resource-id"],
+            help="API Management service resource ID.",
             required=True,
         )
         return cls._args_schema
@@ -262,7 +263,7 @@ class Create(AAZCommand):
             azure_api_management_source = _builder.get(".properties.azureApiManagementSource")
             if azure_api_management_source is not None:
                 azure_api_management_source.set_prop("msiResourceId", AAZStrType, ".msi_resource_id")
-                azure_api_management_source.set_prop("resourceId", AAZStrType, ".apim_resource_id", typ_kwargs={"flags": {"required": True}})
+                azure_api_management_source.set_prop("resourceId", AAZStrType, ".resource_id", typ_kwargs={"flags": {"required": True}})
 
             return self.serialize_content(_content_value)
 
