@@ -342,13 +342,15 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
         args_schema.azure_api_management_source._registered = False
         # Remove the amazon-api-gateway-source parameter
         args_schema.amazon_api_gateway_source._registered = False
+        # Remove the api_source_type parameter, will set it for users in pre_operations
+        args_schema.api_source_type._registered = False
 
         # Create arg group for AzureApiManagementSource
 
         args_schema.msi_resource_id = AAZResourceIdArg(
             options=["--msi-resource-id"],
             arg_group="AzureApiManagementSource",
-            help="(Optional) The resource ID of the managed identity that has access to the API Management instance.",
+            help="The resource ID of the managed identity that has access to the API Management instance.",
         )
 
         args_schema.apim_subscription_id = AAZStrArg(
@@ -409,7 +411,7 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
 )
 class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegration):
     # pylint: disable=C0301
-    """Add Amazon API Gateway as API source
+    """Add Amazon API Gateway as an API source
 
     :example: Add Amazon API Gateway as an API source
         az apic integration create amazon-api-gateway -g contoso-resources -n contoso --integration-id sync-from-my-amazon-api-gateway --access-key-reference https://mykey.vault.azure.net/secrets/AccessKey --secret-access-key-reference https://mykey.vault.azure.net/secrets/SecretAccessKey --region-name us-east-2
@@ -423,6 +425,8 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
         args_schema.azure_api_management_source._registered = False
         # Remove the amazon-api-gateway-source parameter
         args_schema.amazon_api_gateway_source._registered = False
+        # Remove the api_source_type parameter, will set it for users in pre_operations
+        args_schema.api_source_type._registered = False
 
         # Create arg group for AmazonApiGatewaySource
         # Add separate parameters for access-key, secret-access-key, and region-name
@@ -447,7 +451,7 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
         args_schema.msi_resource_id = AAZResourceIdArg(
             options=["--msi-resource-id"],
             arg_group="AmazonApiGatewaySource",
-            help="(Optional) The resource ID of the managed identity that has access to the Azure Key Vault.",
+            help="The resource ID of the managed identity that has access to the Azure Key Vault.",
             required=False,
         )
 
