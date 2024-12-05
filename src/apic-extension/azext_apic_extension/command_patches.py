@@ -360,12 +360,14 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
 
         args_schema.apim_subscription_id = AAZStrArg(
             options=["--apim-subscription"],
+            arg_group="AzureApiManagementSource",
             help="The subscription id of the source APIM instance.",
             required=False
         )
 
         args_schema.apim_resource_group = AAZStrArg(
             options=["--apim-resource-group"],
+            arg_group="AzureApiManagementSource",
             help="The resource group of the source APIM instance.",
             required=False
         )
@@ -452,7 +454,7 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
         args_schema.msi_resource_id = AAZResourceIdArg(
             options=["--msi-resource-id"],
             arg_group="AmazonApiGatewaySource",
-            help="(Optional) The resource id of the managed identity to use for authentication.",
+            help="(Optional) The resource ID of the managed identity that has access to the Amazon API Gateway instance.",
             required=False,
         )
 
