@@ -54,7 +54,7 @@ from .aaz.latest.apic.integration import (
     Delete as DeleteIntegration
 )
 
-from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg
+from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg, AAZResourceIdArg
 from azure.cli.core.aaz import register_command
 
 
@@ -342,6 +342,12 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
         # Remove the amazon_api_gateway_source parameter
         args_schema.amazon_api_gateway_source._registered = False
 
+        args_schema.msi_resource_id = AAZResourceIdArg(
+            options=["--msi-resource-id"],
+            arg_group="AzureApiManagementSource",
+            help="The resource ID of the managed identity that has access to the API Management instance.",
+        )
+
         args_schema.apim_subscription_id = AAZStrArg(
             options=["--apim-subscription"],
             help="The subscription id of the source APIM instance.",
@@ -391,14 +397,11 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
     is_preview=True,
 )
 class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegration):
+    # pylint: disable=C0301
     """Add Amazon API Gateway as API source
 
     :example: Add Amazon API Gateway as an API source
-        az apic integration create amazon-api-gateway -g contoso-resources -n contoso
-            --integration-id sync-from-my-amazon-api-gateway
-            --access-key https://mykey.vault.azure.net/secrets/AccessKey
-            --secret-access-key https://mykey.vault.azure.net/secrets/SecretAccessKey
-            --region-name us-east-2
+        az apic integration create amazon-api-gateway -g contoso-resources -n contoso --integration-id sync-from-my-amazon-api-gateway --access-key https://mykey.vault.azure.net/secrets/AccessKey --secret-access-key https://mykey.vault.azure.net/secrets/SecretAccessKey --region-name us-east-2
     """
 
     @classmethod
@@ -409,17 +412,17 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
         args_schema.amazon_api_gateway_source._registered = False
         # Remove the apim_resource parameter
         args_schema.apim_resource_id._registered = False
-        args_schema.msi_resource_id._registered = False
 
         # Add separate parameters for access-key, secret-access-key, and region-name
+        
         args_schema.access_key = AAZStrArg(
-            options=["--amazon-access-key-reference"],
+            options=["--access-key-reference", "--access-key"],
             arg_group="AmazonApiGatewaySource",
             help="Amazon API Gateway Access Key. Must be an Azure Key Vault secret reference.",
             required=True,
         )
         args_schema.secret_access_key = AAZStrArg(
-            options=["--amazon-secret-access-key-reference"],
+            options=["--secret-access-key-reference", "--secret-access-key"],
             arg_group="AmazonApiGatewaySource",
             help="Amazon API Gateway Secret Access Key. Must be an Azure Key Vault secret reference.",
             required=True,
@@ -430,6 +433,13 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
             help="Amazon API Gateway Region (ex. us-east-2).",
             required=True,
         )
+        args_schema.msi_resource_id = AAZResourceIdArg(
+            options=["--msi-resource-id"],
+            arg_group="AmazonApiGatewaySource",
+            help="(Optional) The resource id of the managed identity to use for authentication.",
+            required=False,
+        )
+        
         return args_schema
 
     def pre_operations(self):
@@ -442,4 +452,5 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
             "access_key": args.access_key,
             "secret_access_key": args.secret_access_key,
             "region_name": args.region_name,
+            "msi_resource_id": args.msi_resource_id
         }

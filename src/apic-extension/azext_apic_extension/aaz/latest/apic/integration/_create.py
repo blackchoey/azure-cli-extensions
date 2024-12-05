@@ -76,11 +76,6 @@ class Create(AAZCommand):
         # define Arg Group "AzureApiManagementSource"
 
         _args_schema = cls._args_schema
-        _args_schema.msi_resource_id = AAZResourceIdArg(
-            options=["--msi-resource-id"],
-            arg_group="AzureApiManagementSource",
-            help="The resource ID of the managed identity that has access to the API Management instance.",
-        )
         _args_schema.apim_resource_id = AAZResourceIdArg(
             options=["--apim-resource-id"],
             arg_group="AzureApiManagementSource",
