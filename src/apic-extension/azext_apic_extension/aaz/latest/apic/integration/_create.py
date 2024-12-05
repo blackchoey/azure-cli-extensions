@@ -247,7 +247,7 @@ class Create(AAZCommand):
             if properties is not None:
                 properties.set_prop("amazonApiGatewaySource", AAZObjectType, ".amazon_api_gateway_source")
                 properties.set_prop("apiSourceType", AAZStrType, ".api_source_type", typ_kwargs={"flags": {"required": True}})
-                properties.set_prop("azureApiManagementSource", AAZObjectType)
+                properties.set_prop("azureApiManagementSource", AAZObjectType, ".azure_api_management_source")
                 properties.set_prop("importSpecification", AAZStrType, ".import_specification")
                 properties.set_prop("targetEnvironmentId", AAZStrType, ".target_environment_id")
                 properties.set_prop("targetLifecycleStage", AAZStrType, ".target_lifecycle_stage")
