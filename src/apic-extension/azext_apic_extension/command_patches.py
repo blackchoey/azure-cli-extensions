@@ -344,13 +344,6 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
         args_schema.amazon_api_gateway_source._registered = False
 
         # Create arg group for AzureApiManagementSource
-        args_schema.apim_resource_id = AAZResourceIdArg(
-            options=["--apim-resource-id"],
-            arg_group="AzureApiManagementSource",
-            help="The resource ID of the source APIM instance.",
-        )
-        # Do not expose the --apim-resource-id parameter to the user
-        args_schema.apim_resource_id._registered = False
 
         args_schema.msi_resource_id = AAZResourceIdArg(
             options=["--msi-resource-id"],
@@ -398,12 +391,12 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
         if args.apim_resource_group:
             resource_group = args.apim_resource_group
 
-        args.apim_resource_id = (f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/"
+        apim_resource_id = (f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/"
                                  f"Microsoft.ApiManagement/service/{args.apim_name}")
 
         args.azure_api_management_source = {
             "msi_resource_id": args.msi_resource_id,
-            "apim_resource_id": args.apim_resource_id
+            "apim_resource_id": apim_resource_id
         }
 
         # Set api_source_type
@@ -454,7 +447,7 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
         args_schema.msi_resource_id = AAZResourceIdArg(
             options=["--msi-resource-id"],
             arg_group="AmazonApiGatewaySource",
-            help="(Optional) The resource ID of the managed identity that has access to the Amazon API Gateway instance.",
+            help="(Optional) The resource ID of the managed identity that has access to the Azure Key Vault.",
             required=False,
         )
 
