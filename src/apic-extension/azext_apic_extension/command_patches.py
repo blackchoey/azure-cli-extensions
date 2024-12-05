@@ -388,7 +388,7 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
 
         args.apim_resource_id = (f"/subscriptions/{subscription_id}/resourceGroups/{resource_group}/providers/"
                                  f"Microsoft.ApiManagement/service/{args.apim_name}/")
-        
+
         args.azure_api_management_source = {
             "msi_resource_id": args.msi_resource_id,
             "apim_resource_id": args.apim_resource_id
@@ -420,7 +420,7 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
         args_schema.amazon_api_gateway_source._registered = False
 
         # Add separate parameters for access-key, secret-access-key, and region-name
-        
+
         args_schema.access_key = AAZStrArg(
             options=["--access-key-reference", "--access-key"],
             arg_group="AmazonApiGatewaySource",
@@ -445,7 +445,7 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
             help="(Optional) The resource id of the managed identity to use for authentication.",
             required=False,
         )
-        
+
         return args_schema
 
     def pre_operations(self):
