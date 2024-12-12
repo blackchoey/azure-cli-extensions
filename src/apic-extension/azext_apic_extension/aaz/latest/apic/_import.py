@@ -16,9 +16,9 @@ class Import(AAZCommand):
     """
 
     _aaz_info = {
-        "version": "2024-06-01-preview",
+        "version": "2024-12-01-preview",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/importapisource", "2024-06-01-preview"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/importapisource", "2024-12-01-preview"],
         ]
     }
 
@@ -43,7 +43,7 @@ class Import(AAZCommand):
             required=True,
         )
         _args_schema.service_name = AAZStrArg(
-            options=["--service-name"],
+            options=["-n", "--service-name"],
             help="The name of Azure API Center service.",
             required=True,
             id_part="name",
@@ -64,42 +64,32 @@ class Import(AAZCommand):
                 min_length=1,
             ),
         )
-
-        # define Arg Group "Body"
-
-        _args_schema = cls._args_schema
         _args_schema.amazon_api_gateway_source = AAZObjectArg(
             options=["--amazon-api-gateway-source"],
-            arg_group="Body",
             help="API source configuration for Amazon API Gateway.",
         )
         _args_schema.api_source_type = AAZStrArg(
             options=["--api-source-type"],
-            arg_group="Body",
             help="API source type",
             required=True,
             enum={"AmazonApiGateway": "AmazonApiGateway", "AzureApiManagement": "AzureApiManagement"},
         )
         _args_schema.azure_api_management_source = AAZObjectArg(
             options=["--azure-api-management-source"],
-            arg_group="Body",
             help="API source configuration for Azure API Management.",
         )
         _args_schema.import_specification = AAZStrArg(
             options=["--import-specification"],
-            arg_group="Body",
             help="Indicates if the specification should be imported along with metadata.",
             default="always",
             enum={"always": "always", "never": "never", "ondemand": "ondemand"},
         )
         _args_schema.target_environment_id = AAZResourceIdArg(
             options=["--target-environment-id"],
-            arg_group="Body",
             help="The target environment resource ID.",
         )
         _args_schema.target_lifecycle_stage = AAZStrArg(
             options=["--target-lifecycle-stage"],
-            arg_group="Body",
             help="The target lifecycle stage.",
             enum={"deprecated": "deprecated", "design": "design", "development": "development", "preview": "preview", "production": "production", "retired": "retired", "testing": "testing"},
         )
@@ -222,7 +212,7 @@ class Import(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-06-01-preview",
+                    "api-version", "2024-12-01-preview",
                     required=True,
                 ),
             }
