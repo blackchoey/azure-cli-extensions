@@ -340,7 +340,7 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
     def _build_arguments_schema(cls, *args, **kwargs):
         # pylint: disable=protected-access
         args_schema = super()._build_arguments_schema(*args, **kwargs)
-        # Remove the apim-source parameter
+        # Remove the azure-api-management-source parameter
         args_schema.azure_api_management_source._registered = False
         # Remove the amazon-api-gateway-source parameter
         args_schema.amazon_api_gateway_source._registered = False
@@ -403,7 +403,7 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
     def _build_arguments_schema(cls, *args, **kwargs):
         # pylint: disable=protected-access
         args_schema = super()._build_arguments_schema(*args, **kwargs)
-        # Remove the apim-source parameter
+        # Remove the azure-api-management-source parameter
         args_schema.azure_api_management_source._registered = False
         # Remove the amazon-api-gateway-source parameter
         args_schema.amazon_api_gateway_source._registered = False
