@@ -328,10 +328,10 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
     """Add Azure APIM as an API source
 
     :example: Add Azure APIM in the same resource group as the Azure API Center instance as an API source
-        az apic integration create apim -g contoso-resources -n contoso --integration-id sync-from-my-apim --apim-name myapim
+        az apic integration create apim -g contoso-resources -n contoso --integration-name sync-from-my-apim --azure-apim myapim
 
     :example: Add Azure APIM in another resource group as an API source
-        az apic integration create apim -g contoso-resources -n contoso --integration-id sync-from-my-apim --apim-name myapim --apim-resource-group myapim-resource-group
+        az apic integration create apim -g contoso-resources -n contoso --integration-name sync-from-my-apim --azure-apim /subscriptions/12345678-1234-1234-1234-123456789abc/resourceGroups/samplegroup/providers/Microsoft.ApiManagement/service/sampleapim
 
     """
     # pylint: enable=C0301
@@ -369,7 +369,7 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
         super().pre_operations()
         args = self.ctx.args
 
-        if not is_valid_resource_id(args.azure_apim):
+        if not is_valid_resource_id(args.azure_apim.to_serialized_data()):
             # The APIM is in the same resource group
             resource_group = args.resource_group
             subscription_id = self.ctx.subscription_id
@@ -396,7 +396,7 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
     """Add Amazon API Gateway as an API source
 
     :example: Add Amazon API Gateway as an API source
-        az apic integration create aws -g contoso-resources -n contoso --integration-id sync-from-my-amazon-api-gateway --aws-access-key-reference https://mykey.vault.azure.net/secrets/AccessKey --aws-secret-access-key-reference https://mykey.vault.azure.net/secrets/SecretAccessKey --aws-region-name us-east-2
+        az apic integration create aws -g contoso-resources -n contoso --integration-name sync-from-my-amazon-api-gateway --aws-access-key-reference https://mykey.vault.azure.net/secrets/AccessKey --aws-secret-access-key-reference https://mykey.vault.azure.net/secrets/SecretAccessKey --aws-region-name us-east-2
     """
 
     @classmethod
