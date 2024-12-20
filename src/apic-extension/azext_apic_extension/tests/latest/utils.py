@@ -4,6 +4,7 @@
 # --------------------------------------------------------------------------------------------
 
 from azure.cli.testsdk.preparers import NoTrafficRecordingPreparer, SingleValueReplacer, get_dummy_cli, CliTestError, ResourceGroupPreparer
+from .constants import USERASSIGNED_IDENTITY
 
 class ApicServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
     def __init__(self, name_prefix='clitest', length=24,
@@ -380,3 +381,64 @@ class ApicDeploymentPreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
             template = 'To create an API Center Deployment an API Center Environment is required. Please add ' \
                        'decorator @{} in front of this preparer.'
             raise CliTestError(template.format(ApicEnvironmentPreparer.__name__))
+        
+class ApimServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
+    def __init__(self, name_prefix='clitest', length=24,
+                 parameter_name='apim_name', resource_group_parameter_name='resource_group', key='apim_name',
+                 enable_system_assigned_identity=False):
+        super(ApimServicePreparer, self).__init__(name_prefix, length)
+        self.cli_ctx = get_dummy_cli()
+        self.resource_group_parameter_name = resource_group_parameter_name
+        self.parameter_name = parameter_name
+        self.enable_system_assigned_identity = enable_system_assigned_identity
+        self.key = key
+
+    def create_resource(self, name, **kwargs):
+        group = self._get_resource_group(**kwargs)
+
+        # Only setup APIM in live mode
+        if self.test_class_instance.is_live:
+            # Get system assigned identity id for API Center
+            apic_service = self.test_class_instance.cmd('az apic show -g {} -n {}'.format(group, self.test_class_instance.kwargs['s'])).get_output_in_json()
+            if self.enable_system_assigned_identity:
+                self.test_class_instance.kwargs.update({
+                    'identity_id': apic_service['identity']['principalId']
+                })
+
+            # Create APIM service
+            apim_service = self.test_class_instance.cmd('az apim create -g {} --name {} --publisher-name test --publisher-email test@example.com --sku-name Consumption'.format(group, name)).get_output_in_json()
+            apim_id = apim_service['id']
+            self.test_class_instance.kwargs[self.key] = name
+            self.test_class_instance.kwargs.update({
+                'apim_id': apim_id,
+                'usi_id': USERASSIGNED_IDENTITY
+            })
+
+            # Add echo api
+            self.test_class_instance.cmd('az apim api create -g {} --service-name {} --api-id echo --display-name "Echo API" --path "/echo"'.format(group, name))
+            self.test_class_instance.cmd('az apim api operation create -g {} --service-name {} --api-id echo --url-template "/echo" --method "GET" --display-name "GetOperation"'.format(group, name))
+            # Add foo api
+            self.test_class_instance.cmd('az apim api create -g {} --service-name {} --api-id foo --display-name "Foo API" --path "/foo"'.format(group, name))
+            self.test_class_instance.cmd('az apim api operation create -g {} --service-name {} --api-id foo --url-template "/foo" --method "GET" --display-name "GetOperation"'.format(group, name))
+
+            if self.enable_system_assigned_identity:
+                # Grant system assigned identity of API Center access to APIM
+                self.test_class_instance.cmd('az role assignment create --role "API Management Service Reader Role" --assignee-object-id {} --assignee-principal-type ServicePrincipal --scope {}'.format(self.test_class_instance.kwargs['identity_id'], apim_id))
+            else:
+                # Add user-assigned identity to API Center service
+                self.test_class_instance.cmd('az apic update --name {} -g {} --identity {{type:UserAssigned,user-assigned-identities:{}}}'.format(self.test_class_instance.kwargs['s'], group, self.test_class_instance.kwargs['usi_id']))
+
+        self.test_class_instance.kwargs[self.key] = name
+        return {self.parameter_name: name}
+
+    def remove_resource(self, name, **kwargs):
+        # ResourceGroupPreparer will delete everything
+        pass
+
+    def _get_resource_group(self, **kwargs):
+        try:
+            return kwargs.get(self.resource_group_parameter_name)
+        except KeyError:
+            template = 'To create an API Management service a resource group is required. Please add ' \
+                       'decorator @{} in front of this preparer.'
+            raise CliTestError(template.format(ResourceGroupPreparer.__name__))        
