@@ -8,13 +8,12 @@ from .constants import USERASSIGNED_IDENTITY
 
 class ApicServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
     def __init__(self, name_prefix='clitest', length=24,
-                 parameter_name='service_name', resource_group_parameter_name='resource_group', key='s',
-                 enable_system_assigned_identity=False):
+                 parameter_name='service_name', resource_group_parameter_name='resource_group', key='s'):
         super(ApicServicePreparer, self).__init__(name_prefix, length)
         self.cli_ctx = get_dummy_cli()
         self.resource_group_parameter_name = resource_group_parameter_name
         self.parameter_name = parameter_name
-        self.enable_system_assigned_identity = enable_system_assigned_identity
+        self.use_system_assigned_identity = False if USERASSIGNED_IDENTITY else True
         self.key = key
 
     def create_resource(self, name, **kwargs):
@@ -22,7 +21,7 @@ class ApicServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
 
         template = 'az apic create --name {} -g {}'
 
-        if self.enable_system_assigned_identity:
+        if self.use_system_assigned_identity:
             template += ' --identity \'{{type:SystemAssigned}}\''
 
         cmd=template.format(name, group)
@@ -384,23 +383,27 @@ class ApicDeploymentPreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
         
 class ApimServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
     def __init__(self, name_prefix='clitest', length=24,
-                 parameter_name='apim_name', resource_group_parameter_name='resource_group', key='apim_name',
-                 enable_system_assigned_identity=False):
+                 parameter_name='apim_name', resource_group_parameter_name='resource_group',
+                 apic_service_name = 'service_name',
+                 key='apim'):
         super(ApimServicePreparer, self).__init__(name_prefix, length)
         self.cli_ctx = get_dummy_cli()
         self.resource_group_parameter_name = resource_group_parameter_name
+        self.apic_service_name = apic_service_name
         self.parameter_name = parameter_name
-        self.enable_system_assigned_identity = enable_system_assigned_identity
+        self.use_system_assigned_identity = False if USERASSIGNED_IDENTITY else True
         self.key = key
 
     def create_resource(self, name, **kwargs):
+        self.test_class_instance.kwargs['use_system_assigned_identity'] = self.use_system_assigned_identity
         group = self._get_resource_group(**kwargs)
+        service_name = self._get_apic_service(**kwargs)
 
         # Only setup APIM in live mode
         if self.test_class_instance.is_live:
             # Get system assigned identity id for API Center
-            apic_service = self.test_class_instance.cmd('az apic show -g {} -n {}'.format(group, self.test_class_instance.kwargs['s'])).get_output_in_json()
-            if self.enable_system_assigned_identity:
+            apic_service = self.test_class_instance.cmd('az apic show -g {} -n {}'.format(group, service_name)).get_output_in_json()
+            if self.use_system_assigned_identity:
                 self.test_class_instance.kwargs.update({
                     'identity_id': apic_service['identity']['principalId']
                 })
@@ -408,10 +411,12 @@ class ApimServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
             # Create APIM service
             apim_service = self.test_class_instance.cmd('az apim create -g {} --name {} --publisher-name test --publisher-email test@example.com --sku-name Consumption'.format(group, name)).get_output_in_json()
             apim_id = apim_service['id']
-            self.test_class_instance.kwargs[self.key] = name
+            self.test_class_instance.kwargs[self.parameter_name] = name
             self.test_class_instance.kwargs.update({
                 'apim_id': apim_id,
-                'usi_id': USERASSIGNED_IDENTITY
+                'usi_id': USERASSIGNED_IDENTITY,
+                'apic_service_name': service_name,
+                'group': group
             })
 
             # Add echo api
@@ -421,14 +426,14 @@ class ApimServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
             self.test_class_instance.cmd('az apim api create -g {} --service-name {} --api-id foo --display-name "Foo API" --path "/foo"'.format(group, name))
             self.test_class_instance.cmd('az apim api operation create -g {} --service-name {} --api-id foo --url-template "/foo" --method "GET" --display-name "GetOperation"'.format(group, name))
 
-            if self.enable_system_assigned_identity:
+            if self.use_system_assigned_identity:
                 # Grant system assigned identity of API Center access to APIM
                 self.test_class_instance.cmd('az role assignment create --role "API Management Service Reader Role" --assignee-object-id {} --assignee-principal-type ServicePrincipal --scope {}'.format(self.test_class_instance.kwargs['identity_id'], apim_id))
             else:
-                # Add user-assigned identity to API Center service
-                self.test_class_instance.cmd('az apic update --name {} -g {} --identity {{type:UserAssigned,user-assigned-identities:{}}}'.format(self.test_class_instance.kwargs['s'], group, self.test_class_instance.kwargs['usi_id']))
+                # Attach user assigned identity with access to APIM to API Center 
+                self.test_class_instance.cmd('az apic update --name {apic_service_name} -g {group} --identity {{type:UserAssigned,user-assigned-identities:{{{usi_id}}}}}')
 
-        self.test_class_instance.kwargs[self.key] = name
+        self.test_class_instance.kwargs[self.parameter_name] = name
         return {self.parameter_name: name}
 
     def remove_resource(self, name, **kwargs):
@@ -441,4 +446,12 @@ class ApimServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
         except KeyError:
             template = 'To create an API Management service a resource group is required. Please add ' \
                        'decorator @{} in front of this preparer.'
-            raise CliTestError(template.format(ResourceGroupPreparer.__name__))        
+            raise CliTestError(template.format(ResourceGroupPreparer.__name__))    
+
+    def _get_apic_service(self, **kwargs):
+        try:
+            return kwargs.get(self.apic_service_name)
+        except KeyError:
+            template = 'To create an API Center service is required. Please add ' \
+                       'decorator @{} in front of this preparer.'
+            raise CliTestError(template.format(ApicServicePreparer.__name__))    

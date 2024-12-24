@@ -3,43 +3,69 @@
 # Licensed under the MIT License. See License.txt in the project root for license information.
 # --------------------------------------------------------------------------------------------
 
+import jmespath
+import collections
 from azure.cli.testsdk import ScenarioTest, ResourceGroupPreparer
+from azure.cli.testsdk.checkers import JMESPathCheck
+from azure.cli.testsdk.exceptions import JMESPathCheckAssertionError
 from .utils import ApicServicePreparer, ApimServicePreparer
 from .constants import TEST_REGION, USERASSIGNED_IDENTITY
 
-# if USERASSIGNED_IDENTITY is set, enable_system_assigned_identity is False, otherwise use system assigned identity
-enable_system_assigned_identity = False if USERASSIGNED_IDENTITY else True
+class JMESPathCheckAny(JMESPathCheck):
+    def __init__(self, query, expected_results, case_sensitive=True):
+        super().__init__(query, expected_results, case_sensitive)
+        if not isinstance(expected_results, list):
+            raise ValueError("expected_results should be a list of possible values")
+
+    def __call__(self, execution_result):
+        json_value = execution_result.get_output_in_json()
+        actual_value = jmespath.search(self._query, json_value, jmespath.Options(collections.OrderedDict))
+        if self._case_sensitive:
+            if actual_value not in [result for result in self._expected_result]:
+                raise JMESPathCheckAssertionError(self._query, self._expected_result, actual_value, execution_result.output)
+        else:
+            if actual_value.lower() not in [result.lower() for result in self._expected_result]:
+                raise JMESPathCheckAssertionError(self._query, self._expected_result, actual_value, execution_result.output)
 
 class IntegrationCommandTests(ScenarioTest):
+    # override the check method to support checking multiple possible values
+    def check(self, query, expected_results, case_sensitive=True):
+        query = self._apply_kwargs(query)
+        expected_results = self._apply_kwargs(expected_results)
+        
+        if isinstance(expected_results, list):
+            print(f"{expected_results}: yes, list")
+            return JMESPathCheckAny(query, expected_results, case_sensitive)
+        else:
+            print(f"{expected_results}: no, not list")
+            return JMESPathCheck(query, expected_results, case_sensitive)
+
     # TODO: change the location to TEST_REGION when the APIC resource provider is available in all regions
     @ResourceGroupPreparer(name_prefix="clirg", location="centraluseuap", random_name_length=32)
-    @ApicServicePreparer(enable_system_assigned_identity=enable_system_assigned_identity)
-    @ApimServicePreparer(enable_system_assigned_identity=enable_system_assigned_identity)
+    @ApicServicePreparer()
+    @ApimServicePreparer()
     def test_integration_create_apim(self):
-        # prepare test data
-        self.kwargs.update({
-          'integration_name': self.create_random_name(prefix='cli', length=8)
-        })
-
-        if enable_system_assigned_identity:
-            self.cmd('az apic integration create apim -g {rg} -n {s} --azure-apim {apim_name} -i {integration_name}')
-        else:
-            # TODO: ugly codes, need to find a better way to handle this
-            import re
+        if self.is_live:
+            # prepare test data
             self.kwargs.update({
-                # remove curly braces from usi_id
-                'usi_id': re.sub(r'^\{|\}$', '', self.kwargs['usi_id'])
-            })
-            self.cmd('az apic integration create apim -g {rg} -n {s} --azure-apim {apim_name} -i {integration_name} --msi-resource-id "{usi_id}"')
-            self.kwargs.update({
-                # add curly braces to usi_id
-                'usi_id': f"{{{self.kwargs['usi_id']}}}"
+            'integration_name': self.create_random_name(prefix='cli', length=8)
             })
 
-        # verify command results
-        # TODO: add more checks, e.g. status, etc.
-        self.cmd('az apic integration list -g {rg} -n {s}', checks=[
-            self.check('length(@)', 1),
-            self.check('@[0].apiSourceType', 'AzureApiManagement'),
-            self.check('@[0].name', '{integration_name}')
-        ])
+            if self.kwargs['use_system_assigned_identity'] or not self.is_live:
+                self.cmd('az apic integration create apim -g {rg} -n {s} --azure-apim {apim_name} -i {integration_name}')
+            else:
+                self.cmd('az apic integration create apim -g {rg} -n {s} --azure-apim {apim_name} -i {integration_name} --msi-resource-id "{usi_id}"')
+
+            # verify command results
+            self.cmd('az apic integration show -g {rg} -n {s} -i {integration_name}', checks=[
+                self.check('apiSourceType', 'AzureApiManagement'),
+                self.check('name', '{integration_name}'),
+                self.check('linkState.state', list(['initializing', 'syncing']))
+            ])
+
+    @ResourceGroupPreparer(name_prefix="clirg", location="centraluseuap", random_name_length=32)
+    @ApicServicePreparer()
+    @ApimServicePreparer()
+    def test_integration_create_aws(self):
+        # TODO: add codes for AWS integration test
+        pass
