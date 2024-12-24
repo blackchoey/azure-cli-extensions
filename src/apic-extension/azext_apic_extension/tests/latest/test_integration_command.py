@@ -11,6 +11,7 @@ from azure.cli.testsdk.exceptions import JMESPathCheckAssertionError
 from .utils import ApicServicePreparer, ApimServicePreparer
 from .constants import TEST_REGION, USERASSIGNED_IDENTITY
 
+# override the JMESPathCheck class to support checking multiple possible values as a list
 class JMESPathCheckAny(JMESPathCheck):
     def __init__(self, query, expected_results, case_sensitive=True):
         super().__init__(query, expected_results, case_sensitive)
@@ -34,10 +35,8 @@ class IntegrationCommandTests(ScenarioTest):
         expected_results = self._apply_kwargs(expected_results)
         
         if isinstance(expected_results, list):
-            print(f"{expected_results}: yes, list")
             return JMESPathCheckAny(query, expected_results, case_sensitive)
         else:
-            print(f"{expected_results}: no, not list")
             return JMESPathCheck(query, expected_results, case_sensitive)
 
     # TODO: change the location to TEST_REGION when the APIC resource provider is available in all regions
