@@ -9,7 +9,7 @@ from azure.cli.testsdk import ScenarioTest, ResourceGroupPreparer
 from azure.cli.testsdk.checkers import JMESPathCheck
 from azure.cli.testsdk.exceptions import JMESPathCheckAssertionError
 from .utils import ApicServicePreparer, ApimServicePreparer
-from .constants import TEST_REGION, USERASSIGNED_IDENTITY
+from .constants import TEST_REGION, ACCESS_KEY_LINK, SECRET_ACCESS_KEY_LINK, AWS_REGION, USERASSIGNED_IDENTITY
 
 # override the JMESPathCheck class to support checking multiple possible values as a list
 class JMESPathCheckAny(JMESPathCheck):
@@ -47,7 +47,7 @@ class IntegrationCommandTests(ScenarioTest):
         if self.is_live:
             # prepare test data
             self.kwargs.update({
-            'integration_name': self.create_random_name(prefix='cli', length=8)
+                'integration_name': self.create_random_name(prefix='cli', length=8)
             })
 
             if self.kwargs['use_system_assigned_identity'] or not self.is_live:
@@ -64,7 +64,25 @@ class IntegrationCommandTests(ScenarioTest):
 
     @ResourceGroupPreparer(name_prefix="clirg", location="centraluseuap", random_name_length=32)
     @ApicServicePreparer()
-    @ApimServicePreparer()
     def test_integration_create_aws(self):
-        # TODO: add codes for AWS integration test
-        pass
+        if self.is_live:
+            # prepare test data
+            self.kwargs.update({
+                'integration_name': self.create_random_name(prefix='cli', length=8),
+                'usi_id': USERASSIGNED_IDENTITY,
+                'access_key_link': ACCESS_KEY_LINK,
+                'secret_access_key_link': SECRET_ACCESS_KEY_LINK,
+                'aws_region': AWS_REGION
+            })
+
+            # Attach user assigned identity with access to AWS KeyVault to API Center 
+            self.cmd('az apic update --name {s} -g {rg} --identity {{type:UserAssigned,user-assigned-identities:{{{usi_id}}}}}')
+
+            self.cmd('az apic integration create aws -g {rg} -n {s} -i {integration_name} --aws-access-key-reference {access_key_link} --aws-region {aws_region} --aws-secret-access-key-reference {secret_access_key_link}')
+
+            # verify command results
+            self.cmd('az apic integration show -g {rg} -n {s} -i {integration_name}', checks=[
+                self.check('apiSourceType', 'AmazonApiGateway'),
+                self.check('name', '{integration_name}'),
+                self.check('linkState.state', list(['initializing', 'syncing']))
+            ])
