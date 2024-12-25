@@ -20,8 +20,6 @@ jobs:
 
     - name: Setup development environment
       run: |
-        pip install azure-cli==2.63.0  # Specify the version of azure-cli
-        pip install azure-core==1.28.0  # Specify the version of azsdk-python-core
         python -m venv .venv
         source .venv/bin/activate
         python -m pip install -U pip
