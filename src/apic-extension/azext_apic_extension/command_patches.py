@@ -54,6 +54,7 @@ from .aaz.latest.apic.integration import (
     Delete as DeleteIntegration
 )
 from .aaz.latest.apic import Import
+from .aaz.latest.apic.api_analysis import Create as CreateApiAnalysis
 
 from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg, AAZResourceIdArg
 from azure.cli.core.aaz import register_command
@@ -519,3 +520,28 @@ class ImportAmazonApiGatewaySource(DefaultWorkspaceParameter, Import):
             "region_name": args.region_name,
             "msi_resource_id": args.msi_resource_id
         }
+
+
+@register_command(
+    "apic api-analysis create",
+    is_preview=True,
+)
+class CreateApiAnalysis(DefaultWorkspaceParameter, CreateApiAnalysis):
+    # pylint: disable=C0301
+    """Create an API Analysis rule
+
+    :example: Create an API Analysis rule
+        az apic api-analysis create --service-name {apic-name} --name {config-name} --analyzer-type spectral
+    """
+
+    @classmethod
+    def _build_arguments_schema(cls, *args, **kwargs):
+        # pylint: disable=protected-access
+        args_schema = super()._build_arguments_schema(*args, **kwargs)
+        args_schema.analyzer_type._required = True
+        return args_schema
+
+    def pre_operations(self):
+        super().pre_operations()
+        args = self.ctx.args
+        

@@ -11,17 +11,14 @@
 from azure.cli.core.aaz import *
 
 
-@register_command(
-    "apic api-analysis create",
-)
 class Create(AAZCommand):
     """Create new or updates existing API analyzer configuration.
     """
 
     _aaz_info = {
-        "version": "2024-12-15-preview",
+        "version": "2024-03-15preview",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/analyzerconfigs/{}", "2024-12-15-preview"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/analyzerconfigs/{}", "2024-03-15preview"],
         ]
     }
 
@@ -131,7 +128,7 @@ class Create(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-12-15-preview",
+                    "api-version", "2024-03-15preview",
                     required=True,
                 ),
             }
