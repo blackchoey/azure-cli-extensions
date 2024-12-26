@@ -9,7 +9,7 @@ from azure.cli.testsdk import ScenarioTest, ResourceGroupPreparer
 from azure.cli.testsdk.checkers import JMESPathCheck
 from azure.cli.testsdk.exceptions import JMESPathCheckAssertionError
 from .utils import ApicServicePreparer, ApimServicePreparer
-from .constants import TEST_REGION, ACCESS_KEY_LINK, SECRET_ACCESS_KEY_LINK, AWS_REGION, USERASSIGNED_IDENTITY
+from .constants import TEST_REGION, AWS_ACCESS_KEY_LINK, AWS_SECRET_ACCESS_KEY_LINK, AWS_REGION, USERASSIGNED_IDENTITY
 
 # override the JMESPathCheck class to support checking multiple possible values as a list
 class JMESPathCheckAny(JMESPathCheck):
@@ -70,8 +70,8 @@ class IntegrationCommandTests(ScenarioTest):
             self.kwargs.update({
                 'integration_name': self.create_random_name(prefix='cli', length=8),
                 'usi_id': USERASSIGNED_IDENTITY,
-                'access_key_link': ACCESS_KEY_LINK,
-                'secret_access_key_link': SECRET_ACCESS_KEY_LINK,
+                'access_key_link': AWS_ACCESS_KEY_LINK,
+                'secret_access_key_link': AWS_SECRET_ACCESS_KEY_LINK,
                 'aws_region': AWS_REGION
             })
 
