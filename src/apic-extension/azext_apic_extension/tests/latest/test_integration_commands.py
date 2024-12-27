@@ -63,7 +63,7 @@ class IntegrationCommandTests(ScenarioTest):
             ])
 
     @ResourceGroupPreparer(name_prefix="clirg", location="centraluseuap", random_name_length=32)
-    @ApicServicePreparer()
+    @ApicServicePreparer(user_assigned_identity=USERASSIGNED_IDENTITY)
     def test_integration_create_aws(self):
         if self.is_live:
             # prepare test data
@@ -74,9 +74,6 @@ class IntegrationCommandTests(ScenarioTest):
                 'secret_access_key_link': AWS_SECRET_ACCESS_KEY_LINK,
                 'aws_region': AWS_REGION
             })
-
-            # Attach user assigned identity with access to AWS KeyVault to API Center 
-            self.cmd('az apic update --name {s} -g {rg} --identity {{type:UserAssigned,user-assigned-identities:{{{usi_id}}}}}')
 
             self.cmd('az apic integration create aws -g {rg} -n {s} -i {integration_name} --aws-access-key-reference {access_key_link} --aws-region {aws_region} --aws-secret-access-key-reference {secret_access_key_link}')
 

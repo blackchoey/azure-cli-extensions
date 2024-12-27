@@ -8,12 +8,13 @@ from .constants import USERASSIGNED_IDENTITY
 
 class ApicServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
     def __init__(self, name_prefix='clitest', length=24,
-                 parameter_name='service_name', resource_group_parameter_name='resource_group', key='s'):
+                 parameter_name='service_name', resource_group_parameter_name='resource_group', key='s', 
+                 user_assigned_identity = None):
         super(ApicServicePreparer, self).__init__(name_prefix, length)
         self.cli_ctx = get_dummy_cli()
         self.resource_group_parameter_name = resource_group_parameter_name
         self.parameter_name = parameter_name
-        self.use_system_assigned_identity = False if USERASSIGNED_IDENTITY else True
+        self.user_assigned_identity = user_assigned_identity
         self.key = key
 
     def create_resource(self, name, **kwargs):
@@ -21,12 +22,19 @@ class ApicServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
 
         template = 'az apic create --name {} -g {}'
 
-        if self.use_system_assigned_identity:
+        if self.user_assigned_identity is None:
             template += ' --identity \'{{type:SystemAssigned}}\''
 
         cmd=template.format(name, group)
         print(cmd)
         self.live_only_execute(self.cli_ctx, cmd)
+
+        # Attach user assigned identity to the API Center service
+        if self.user_assigned_identity:
+            template = 'az apic update --name {} -g {} --identity \'{{type:UserAssigned,user-assigned-identities:\'{{{}}}\'}}\''
+            cmd = template.format(name, group, self.user_assigned_identity)
+            print(cmd)
+            self.live_only_execute(self.cli_ctx, cmd)
 
         self.test_class_instance.kwargs[self.key] = name
             
@@ -430,7 +438,8 @@ class ApimServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
                 # Grant system assigned identity of API Center access to APIM
                 self.test_class_instance.cmd('az role assignment create --role "API Management Service Reader Role" --assignee-object-id {} --assignee-principal-type ServicePrincipal --scope {}'.format(self.test_class_instance.kwargs['identity_id'], apim_id))
             else:
-                # Attach user assigned identity with access to APIM to API Center 
+                # Attach user assigned identity with access to APIM to API Center
+                # In APICServicePreparer, we already attached the user assigned identity provided by user to API Center. Please check it.
                 self.test_class_instance.cmd('az apic update --name {apic_service_name} -g {group} --identity {{type:UserAssigned,user-assigned-identities:{{{usi_id}}}}}')
 
         self.test_class_instance.kwargs[self.parameter_name] = name
