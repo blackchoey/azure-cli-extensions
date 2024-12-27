@@ -24,17 +24,13 @@ class ApicServicePreparer(NoTrafficRecordingPreparer, SingleValueReplacer):
 
         if self.user_assigned_identity is None:
             template += ' --identity \'{{type:SystemAssigned}}\''
+            cmd = template.format(name, group)
+        else:
+            template += ' --identity \'{{type:UserAssigned,user-assigned-identities:\'{{{}}}\'}}\''
+            cmd = template.format(name, group, self.user_assigned_identity)
 
-        cmd=template.format(name, group)
         print(cmd)
         self.live_only_execute(self.cli_ctx, cmd)
-
-        # Attach user assigned identity to the API Center service
-        if self.user_assigned_identity:
-            template = 'az apic update --name {} -g {} --identity \'{{type:UserAssigned,user-assigned-identities:\'{{{}}}\'}}\''
-            cmd = template.format(name, group, self.user_assigned_identity)
-            print(cmd)
-            self.live_only_execute(self.cli_ctx, cmd)
 
         self.test_class_instance.kwargs[self.key] = name
             
