@@ -16,9 +16,9 @@ class Create(AAZCommand):
     """
 
     _aaz_info = {
-        "version": "2024-03-15preview",
+        "version": "2024-06-01-preview",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/analyzerconfigs/{}", "2024-03-15preview"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/analyzerconfigs/{}", "2024-06-01-preview"],
         ]
     }
 
@@ -50,6 +50,26 @@ class Create(AAZCommand):
         )
         _args_schema.resource_group = AAZResourceGroupNameArg(
             required=True,
+        )
+        _args_schema.service_name = AAZStrArg(
+            options=["-s", "--service-name"],
+            help="The name of Azure API Center service.",
+            required=True,
+            fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
+                max_length=90,
+                min_length=1,
+            ),
+        )
+        _args_schema.workspace_name = AAZStrArg(
+            options=["--workspace-name"],
+            help="The name of the workspace.",
+            required=True,
+            fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
+                max_length=90,
+                min_length=1,
+            ),
         )
 
         # define Arg Group "Properties"
@@ -94,7 +114,7 @@ class Create(AAZCommand):
         @property
         def url(self):
             return self.client.format_url(
-                "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiCenter/analyzerConfigs/{analyzerConfigName}",
+                "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiCenter/services/{serviceName}/workspaces/{workspaceName}/analyzerConfigs/{analyzerConfigName}",
                 **self.url_parameters
             )
 
@@ -118,7 +138,15 @@ class Create(AAZCommand):
                     required=True,
                 ),
                 **self.serialize_url_param(
+                    "serviceName", self.ctx.args.service_name,
+                    required=True,
+                ),
+                **self.serialize_url_param(
                     "subscriptionId", self.ctx.subscription_id,
+                    required=True,
+                ),
+                **self.serialize_url_param(
+                    "workspaceName", self.ctx.args.workspace_name,
                     required=True,
                 ),
             }
@@ -128,7 +156,7 @@ class Create(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-03-15preview",
+                    "api-version", "2024-06-01-preview",
                     required=True,
                 ),
             }
