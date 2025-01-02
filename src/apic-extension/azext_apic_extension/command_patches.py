@@ -56,12 +56,23 @@ from .aaz.latest.apic.integration import (
 from .aaz.latest.apic import Import
 from .aaz.latest.apic.api_analysis import (
     Create as CreateApiAnalysis,
-    Delete as DeleteApiAnalysis
+    Delete as DeleteApiAnalysis,
+    ImportRuleset,
+    ExportRuleset
 )
 
-from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg, AAZResourceIdArg
+from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg, AAZResourceIdArg, AAZObjectArg
 from azure.cli.core.aaz import register_command
 from msrestazure.tools import is_valid_resource_id
+import base64
+import zipfile
+import os
+import io
+import requests
+import logging
+
+
+logger = logging.getLogger(__name__)
 
 
 class DefaultWorkspaceParameter:
@@ -525,11 +536,12 @@ class ImportAmazonApiGatewaySource(DefaultWorkspaceParameter, Import):
         }
 
 
+# `az apic api-analysis` commands
 @register_command(
     "apic api-analysis create",
     is_preview=True,
 )
-class CreateApiAnalysis(DefaultWorkspaceParameter, CreateApiAnalysis):
+class CreateApiAnalysisRuleset(DefaultWorkspaceParameter, CreateApiAnalysis):
     # pylint: disable=C0301
     """Create an API Analysis rule
 
@@ -542,6 +554,12 @@ class CreateApiAnalysis(DefaultWorkspaceParameter, CreateApiAnalysis):
         # pylint: disable=protected-access
         args_schema = super()._build_arguments_schema(*args, **kwargs)
         args_schema.analyzer_type._required = True
+
+        args_schema.selection = AAZObjectArg(
+            options=["--selection"],
+            help="The selection criteria JSON object for the rule.",
+            required=False,
+        )
         return args_schema
 
 
@@ -550,7 +568,7 @@ class CreateApiAnalysis(DefaultWorkspaceParameter, CreateApiAnalysis):
     is_preview=True,
     confirmation="Are you sure you want to perform this operation?",
 )
-class DeleteApiAnalysis(DefaultWorkspaceParameter, DeleteApiAnalysis):
+class DeleteApiAnalysisRuleset(DefaultWorkspaceParameter, DeleteApiAnalysis):
     # pylint: disable=C0301
     """Delete an API Analysis rule
 
@@ -564,3 +582,112 @@ class DeleteApiAnalysis(DefaultWorkspaceParameter, DeleteApiAnalysis):
         args_schema = super()._build_arguments_schema(*args, **kwargs)
         return args_schema
 
+
+@register_command(
+    "apic api-analysis import-ruleset",
+    is_preview=True,
+)
+class ImportApiAnalysisRuleset(DefaultWorkspaceParameter, ImportRuleset):
+    # pylint: disable=C0301
+    """Import an API Analysis ruleset
+
+    :example: Import an API Analysis ruleset
+        az apic api-analysis import-ruleset -g {resource-group} --service-name {apic-name} -n {analysis-config-name} --format {ruleset-format} --ruleset-folder-path {ruleset-folder-path}
+    """
+
+    # Zip and encode the ruleset folder to base64
+    def zip_folder_to_buffer(self, folder_path):
+        # pylint: disable=unused-variable
+        buffer = io.BytesIO()
+        with zipfile.ZipFile(buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
+            for root, dirs, files in os.walk(folder_path):
+                for file in files:
+                    file_path = os.path.join(root, file)
+                    zip_file.write(file_path, os.path.relpath(file_path, folder_path))
+        return base64.b64encode(buffer.getvalue()).decode('utf-8')
+
+    @classmethod
+    def _build_arguments_schema(cls, *args, **kwargs):
+        # pylint: disable=protected-access
+        args_schema = super()._build_arguments_schema(*args, **kwargs)
+
+        args_schema.ruleset_folder_path = AAZStrArg(
+            options=["--ruleset-folder-path"],
+            help="The folder path containing the ruleset files.",
+            required=True,
+        )
+        return args_schema
+
+    def pre_operations(self):
+        super().pre_operations()
+        args = self.ctx.args
+        args.value = self.zip_folder_to_buffer(str(args.ruleset_folder_path))
+
+
+@register_command(
+    "apic api-analysis export-ruleset",
+    is_preview=True,
+)
+class ExportApiAnalysisRuleset(DefaultWorkspaceParameter, ExportRuleset):
+    # pylint: disable=C0301
+    """Export an API Analysis ruleset
+
+    :example: Export an API Analysis ruleset
+        az apic api-analysis export-ruleset -g {resource-group} --service-name {apic-name} -n {analysis-config-name} --ruleset-folder-path {ruleset-folder-path}
+    """
+
+    # Decode and extract the ruleset folder from base64
+    def unzip_buffer_to_folder(self, buffer, folder_path):
+        zip_file = io.BytesIO(base64.b64decode(buffer))
+        with zipfile.ZipFile(zip_file) as zip_ref:
+            zip_ref.extractall(folder_path)
+
+    @classmethod
+    def _build_arguments_schema(cls, *args, **kwargs):
+        # pylint: disable=protected-access
+        args_schema = super()._build_arguments_schema(*args, **kwargs)
+
+        args_schema.ruleset_folder_path = AAZStrArg(
+            options=["--ruleset-folder-path"],
+            help="The folder path to extract the ruleset files.",
+            required=True,
+        )
+        # args_schema.result = None
+        return args_schema
+
+    def _output(self, *args, **kwargs):
+        result = self.deserialize_output(self.ctx.vars.instance, client_flatten=True)
+        arguments = self.ctx.args
+
+        if result:
+            response_format = result['format']
+            exportedResults = result['value']
+
+            if response_format == 'link':
+                logger.warning('Fetching specification from: %s', exportedResults)
+                getReponse = requests.get(exportedResults, timeout=10)
+                if getReponse.status_code == 200:
+                    exportedResults = getReponse.content.decode()
+                else:
+                    error_message = f'Error while fetching the results from the link. Status code: {getReponse.status_code}'
+                    logger.error(error_message)
+                    print(error_message)
+
+            if arguments.ruleset_folder_path:
+                try:
+                    self.unzip_buffer_to_folder(exportedResults, str(arguments.ruleset_folder_path))
+                    logger.warning('Results exported to %s', arguments.ruleset_folder_path)
+                except Exception as e:  # pylint: disable=broad-except
+                    error_message = f'Error while writing the results to the file. Error: {e}'
+                    logger.error(error_message)
+                    print(error_message)
+            else:
+                error_message = 'Please provide the --ruleset-folder-path to export the results to.'
+                logger.error(error_message)
+                print(error_message)
+        else:
+            error_message = 'No results found.'
+            logger.error(error_message)
+            print(error_message)
+
+        return result
