@@ -11,6 +11,9 @@
 from azure.cli.core.aaz import *
 
 
+@register_command(
+    "apic api-analysis import-ruleset",
+)
 class ImportRuleset(AAZCommand):
     """Imports the API analyzer ruleset.
     """

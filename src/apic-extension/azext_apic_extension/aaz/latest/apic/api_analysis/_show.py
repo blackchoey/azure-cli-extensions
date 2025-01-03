@@ -11,8 +11,14 @@
 from azure.cli.core.aaz import *
 
 
+@register_command(
+    "apic api-analysis show",
+)
 class Show(AAZCommand):
     """Get details of the API analyzer configuration.
+
+    :example: Show details of an API Analysis rule config
+        az apic api-analysis show -g contoso-resources -s contoso -n spectral-openapi
     """
 
     _aaz_info = {

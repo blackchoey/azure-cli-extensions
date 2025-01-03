@@ -11,8 +11,14 @@
 from azure.cli.core.aaz import *
 
 
+@register_command(
+    "apic api-analysis list",
+)
 class List(AAZCommand):
     """List API analyzer configurations.
+
+    :example: List all API Analysis rule configs for the service
+        az apic api-analysis list -g contoso-resources -s contoso
     """
 
     _aaz_info = {
