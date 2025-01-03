@@ -578,7 +578,6 @@ class DeleteApiAnalysisRuleset(DefaultWorkspaceParameter, DeleteApiAnalysis):
     :example: Delete an API Analysis rule
         az apic api-analysis delete -g contoso-resources -s contoso -n myconfig
     """
-    pass
 
 
 @register_command(
