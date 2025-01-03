@@ -541,7 +541,7 @@ class ImportAmazonApiGatewaySource(DefaultWorkspaceParameter, Import):
     "apic api-analysis create",
     is_preview=True,
 )
-class CreateApiAnalysisRuleset(DefaultWorkspaceParameter, CreateApiAnalysis):
+class CreateApiAnalysisConfig(DefaultWorkspaceParameter, CreateApiAnalysis):
     # pylint: disable=C0301
     """Create an API Analysis rule
 
@@ -571,7 +571,7 @@ class CreateApiAnalysisRuleset(DefaultWorkspaceParameter, CreateApiAnalysis):
     is_preview=True,
     confirmation="Are you sure you want to perform this operation?",
 )
-class DeleteApiAnalysisRuleset(DefaultWorkspaceParameter, DeleteApiAnalysis):
+class DeleteApiAnalysisConfig(DefaultWorkspaceParameter, DeleteApiAnalysis):
     # pylint: disable=C0301
     """Delete an API Analysis rule
 
