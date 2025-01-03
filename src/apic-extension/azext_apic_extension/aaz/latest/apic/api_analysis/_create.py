@@ -11,8 +11,14 @@
 from azure.cli.core.aaz import *
 
 
+@register_command(
+    "apic api-analysis create",
+)
 class Create(AAZCommand):
     """Create new or updates existing API analyzer configuration.
+
+    :example: Create an API Analysis rule config
+        az apic api-analysis create -g contoso-resources -s contoso -n spectral-openapi
     """
 
     _aaz_info = {

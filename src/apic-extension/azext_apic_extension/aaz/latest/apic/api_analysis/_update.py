@@ -11,8 +11,14 @@
 from azure.cli.core.aaz import *
 
 
+@register_command(
+    "apic api-analysis update",
+)
 class Update(AAZCommand):
     """Update new or updates existing API analyzer configuration.
+
+    :example: Update an API Analysis rule config
+        az apic api-analysis update -g contoso-resources -s contoso -n spectral-openapi
     """
 
     _aaz_info = {

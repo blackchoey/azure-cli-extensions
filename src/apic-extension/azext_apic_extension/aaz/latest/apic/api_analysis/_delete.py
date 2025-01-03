@@ -11,8 +11,15 @@
 from azure.cli.core.aaz import *
 
 
+@register_command(
+    "apic api-analysis delete",
+    confirmation="Are you sure you want to perform this operation?",
+)
 class Delete(AAZCommand):
     """Delete deletes API analyzer configuration.
+
+    :example: Delete an API Analysis rule config
+        az apic api-analysis delete -g contoso-resources -s contoso -n spectral-openapi
     """
 
     _aaz_info = {

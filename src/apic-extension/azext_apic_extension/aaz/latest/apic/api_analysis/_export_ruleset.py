@@ -11,6 +11,9 @@
 from azure.cli.core.aaz import *
 
 
+@register_command(
+    "apic api-analysis export-ruleset",
+)
 class ExportRuleset(AAZCommand):
     """Exports the API analyzer ruleset.
     """
