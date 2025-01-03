@@ -61,7 +61,7 @@ from .aaz.latest.apic.api_analysis import (
     ExportRuleset
 )
 
-from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg, AAZResourceIdArg, AAZObjectArg
+from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg, AAZResourceIdArg
 from azure.cli.core.aaz import register_command
 from msrestazure.tools import is_valid_resource_id
 import base64
@@ -537,53 +537,14 @@ class ImportAmazonApiGatewaySource(DefaultWorkspaceParameter, Import):
 
 
 # `az apic api-analysis` commands
-@register_command(
-    "apic api-analysis create",
-    is_preview=True,
-)
 class CreateApiAnalysisConfig(DefaultWorkspaceParameter, CreateApiAnalysis):
-    # pylint: disable=C0301
-    """Create an API Analysis rule
-
-    :example: Create an API Analysis rule
-        az apic api-analysis create -g contoso-resources -s contoso -n myconfig --analyzer-type spectral
-    """
-
-    @classmethod
-    def _build_arguments_schema(cls, *args, **kwargs):
-        # pylint: disable=protected-access
-        args_schema = super()._build_arguments_schema(*args, **kwargs)
-        args_schema.analyzer_type._required = True
-        args_schema.analyzer_type._arg_group = ''
-        # args_schema.analyzer_type._registered = False
-
-        args_schema.selection = AAZObjectArg(
-            options=["--selection"],
-            help="The selection criteria JSON object for the rule.",
-            required=False,
-            registered=False
-        )
-        return args_schema
+    pass
 
 
-@register_command(
-    "apic api-analysis delete",
-    is_preview=True,
-    confirmation="Are you sure you want to perform this operation?",
-)
 class DeleteApiAnalysisConfig(DefaultWorkspaceParameter, DeleteApiAnalysis):
-    # pylint: disable=C0301
-    """Delete an API Analysis rule
-
-    :example: Delete an API Analysis rule
-        az apic api-analysis delete -g contoso-resources -s contoso -n myconfig
-    """
+    pass
 
 
-@register_command(
-    "apic api-analysis import-ruleset",
-    is_preview=True,
-)
 class ImportApiAnalysisRuleset(DefaultWorkspaceParameter, ImportRuleset):
     # pylint: disable=C0301
     """Import an API Analysis ruleset
@@ -625,10 +586,6 @@ class ImportApiAnalysisRuleset(DefaultWorkspaceParameter, ImportRuleset):
         args.value = self.zip_folder_to_buffer(str(args.ruleset_folder_path))
 
 
-@register_command(
-    "apic api-analysis export-ruleset",
-    is_preview=True,
-)
 class ExportApiAnalysisRuleset(DefaultWorkspaceParameter, ExportRuleset):
     # pylint: disable=C0301
     """Export an API Analysis ruleset
@@ -672,7 +629,6 @@ class ExportApiAnalysisRuleset(DefaultWorkspaceParameter, ExportRuleset):
                 else:
                     error_message = f'Error while fetching the results from the link. Status code: {getReponse.status_code}'
                     logger.error(error_message)
-                    print(error_message)
 
             if arguments.ruleset_folder_path:
                 try:
@@ -681,14 +637,11 @@ class ExportApiAnalysisRuleset(DefaultWorkspaceParameter, ExportRuleset):
                 except Exception as e:  # pylint: disable=broad-except
                     error_message = f'Error while writing the results to the file. Error: {e}'
                     logger.error(error_message)
-                    print(error_message)
             else:
                 error_message = 'Please provide the --path to export the results to.'
                 logger.error(error_message)
-                print(error_message)
         else:
             error_message = 'No results found.'
             logger.error(error_message)
-            print(error_message)
 
         return result
