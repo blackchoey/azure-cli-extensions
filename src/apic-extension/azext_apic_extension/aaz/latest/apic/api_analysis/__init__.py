@@ -13,5 +13,6 @@ from ._create import *
 from ._delete import *
 from ._export_ruleset import *
 from ._import_ruleset import *
+from ._list import *
 from ._show import *
 from ._update import *

@@ -11,9 +11,6 @@
 from azure.cli.core.aaz import *
 
 
-@register_command(
-    "apic api-analysis update",
-)
 class Update(AAZCommand):
     """Update new or updates existing API analyzer configuration.
     """
@@ -21,7 +18,7 @@ class Update(AAZCommand):
     _aaz_info = {
         "version": "2024-12-15-preview",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/analyzerconfigs/{}", "2024-12-15-preview"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/analyzerconfigs/{}", "2024-12-15-preview"],
         ]
     }
 
@@ -47,7 +44,7 @@ class Update(AAZCommand):
             options=["-n", "--name", "--analyzer-config-name"],
             help="The name of the configuration.",
             required=True,
-            id_part="name",
+            id_part="child_name_2",
             fmt=AAZStrArgFormat(
                 pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
@@ -56,6 +53,28 @@ class Update(AAZCommand):
         )
         _args_schema.resource_group = AAZResourceGroupNameArg(
             required=True,
+        )
+        _args_schema.service_name = AAZStrArg(
+            options=["-s", "--service-name"],
+            help="The name of Azure API Center service.",
+            required=True,
+            id_part="name",
+            fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
+                max_length=90,
+                min_length=1,
+            ),
+        )
+        _args_schema.workspace_name = AAZStrArg(
+            options=["--workspace-name"],
+            help="The name of the workspace.",
+            required=True,
+            id_part="child_name_1",
+            fmt=AAZStrArgFormat(
+                pattern="^[a-zA-Z0-9-]{3,90}$",
+                max_length=90,
+                min_length=1,
+            ),
         )
 
         # define Arg Group "Properties"
@@ -113,7 +132,7 @@ class Update(AAZCommand):
         @property
         def url(self):
             return self.client.format_url(
-                "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiCenter/analyzerConfigs/{analyzerConfigName}",
+                "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiCenter/services/{serviceName}/workspaces/{workspaceName}/analyzerConfigs/{analyzerConfigName}",
                 **self.url_parameters
             )
 
@@ -137,7 +156,15 @@ class Update(AAZCommand):
                     required=True,
                 ),
                 **self.serialize_url_param(
+                    "serviceName", self.ctx.args.service_name,
+                    required=True,
+                ),
+                **self.serialize_url_param(
                     "subscriptionId", self.ctx.subscription_id,
+                    required=True,
+                ),
+                **self.serialize_url_param(
+                    "workspaceName", self.ctx.args.workspace_name,
                     required=True,
                 ),
             }
@@ -196,7 +223,7 @@ class Update(AAZCommand):
         @property
         def url(self):
             return self.client.format_url(
-                "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiCenter/analyzerConfigs/{analyzerConfigName}",
+                "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiCenter/services/{serviceName}/workspaces/{workspaceName}/analyzerConfigs/{analyzerConfigName}",
                 **self.url_parameters
             )
 
@@ -220,7 +247,15 @@ class Update(AAZCommand):
                     required=True,
                 ),
                 **self.serialize_url_param(
+                    "serviceName", self.ctx.args.service_name,
+                    required=True,
+                ),
+                **self.serialize_url_param(
                     "subscriptionId", self.ctx.subscription_id,
+                    required=True,
+                ),
+                **self.serialize_url_param(
+                    "workspaceName", self.ctx.args.workspace_name,
                     required=True,
                 ),
             }
