@@ -40,10 +40,10 @@ class ImportRuleset(AAZCommand):
 
         _args_schema = cls._args_schema
         _args_schema.analyzer_config_name = AAZStrArg(
-            options=["--analyzer-config-name"],
+            options=["-n", "--name", "--analyzer-config-name"],
             help="The name of the configuration.",
             required=True,
-            id_part="name",
+            id_part="child_name_2",
             fmt=AAZStrArgFormat(
                 pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
@@ -57,6 +57,7 @@ class ImportRuleset(AAZCommand):
             options=["-s", "--service-name"],
             help="The name of Azure API Center service.",
             required=True,
+            id_part="name",
             fmt=AAZStrArgFormat(
                 pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
@@ -67,6 +68,7 @@ class ImportRuleset(AAZCommand):
             options=["--workspace-name"],
             help="The name of the workspace.",
             required=True,
+            id_part="child_name_1",
             fmt=AAZStrArgFormat(
                 pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,

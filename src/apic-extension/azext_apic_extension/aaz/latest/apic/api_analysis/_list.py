@@ -11,22 +11,22 @@
 from azure.cli.core.aaz import *
 
 
-class ExportRuleset(AAZCommand):
-    """Exports the API analyzer ruleset.
+class List(AAZCommand):
+    """List API analyzer configurations.
     """
 
     _aaz_info = {
-        "version": "2024-06-01-preview",
+        "version": "2024-12-15-preview",
         "resources": [
-            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/analyzerconfigs/{}/exportruleset", "2024-06-01-preview"],
+            ["mgmt-plane", "/subscriptions/{}/resourcegroups/{}/providers/microsoft.apicenter/services/{}/workspaces/{}/analyzerconfigs", "2024-12-15-preview"],
         ]
     }
 
-    AZ_SUPPORT_NO_WAIT = True
+    AZ_SUPPORT_PAGINATION = True
 
     def _handler(self, command_args):
         super()._handler(command_args)
-        return self.build_lro_poller(self._execute_operations, self._output)
+        return self.build_paging(self._execute_operations, self._output)
 
     _args_schema = None
 
@@ -39,17 +39,6 @@ class ExportRuleset(AAZCommand):
         # define Arg Group ""
 
         _args_schema = cls._args_schema
-        _args_schema.analyzer_config_name = AAZStrArg(
-            options=["-n", "--name", "--analyzer-config-name"],
-            help="The name of the configuration.",
-            required=True,
-            id_part="child_name_2",
-            fmt=AAZStrArgFormat(
-                pattern="^[a-zA-Z0-9-]{3,90}$",
-                max_length=90,
-                min_length=1,
-            ),
-        )
         _args_schema.resource_group = AAZResourceGroupNameArg(
             required=True,
         )
@@ -57,7 +46,6 @@ class ExportRuleset(AAZCommand):
             options=["-s", "--service-name"],
             help="The name of Azure API Center service.",
             required=True,
-            id_part="name",
             fmt=AAZStrArgFormat(
                 pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
@@ -68,18 +56,21 @@ class ExportRuleset(AAZCommand):
             options=["--workspace-name"],
             help="The name of the workspace.",
             required=True,
-            id_part="child_name_1",
             fmt=AAZStrArgFormat(
                 pattern="^[a-zA-Z0-9-]{3,90}$",
                 max_length=90,
                 min_length=1,
             ),
         )
+        _args_schema.filter = AAZStrArg(
+            options=["--filter"],
+            help="OData filter parameter.",
+        )
         return cls._args_schema
 
     def _execute_operations(self):
         self.pre_operations()
-        yield self.AnalyzerConfigsExportRuleset(ctx=self.ctx)()
+        self.AnalyzerConfigsList(ctx=self.ctx)()
         self.post_operations()
 
     @register_callback
@@ -91,46 +82,31 @@ class ExportRuleset(AAZCommand):
         pass
 
     def _output(self, *args, **kwargs):
-        result = self.deserialize_output(self.ctx.vars.instance, client_flatten=True)
-        return result
+        result = self.deserialize_output(self.ctx.vars.instance.value, client_flatten=True)
+        next_link = self.deserialize_output(self.ctx.vars.instance.next_link)
+        return result, next_link
 
-    class AnalyzerConfigsExportRuleset(AAZHttpOperation):
+    class AnalyzerConfigsList(AAZHttpOperation):
         CLIENT_TYPE = "MgmtClient"
 
         def __call__(self, *args, **kwargs):
             request = self.make_request()
             session = self.client.send_request(request=request, stream=False, **kwargs)
-            if session.http_response.status_code in [202]:
-                return self.client.build_lro_polling(
-                    self.ctx.args.no_wait,
-                    session,
-                    self.on_200,
-                    self.on_error,
-                    lro_options={"final-state-via": "location"},
-                    path_format_arguments=self.url_parameters,
-                )
             if session.http_response.status_code in [200]:
-                return self.client.build_lro_polling(
-                    self.ctx.args.no_wait,
-                    session,
-                    self.on_200,
-                    self.on_error,
-                    lro_options={"final-state-via": "location"},
-                    path_format_arguments=self.url_parameters,
-                )
+                return self.on_200(session)
 
             return self.on_error(session.http_response)
 
         @property
         def url(self):
             return self.client.format_url(
-                "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiCenter/services/{serviceName}/workspaces/{workspaceName}/analyzerConfigs/{analyzerConfigName}/exportRuleset",
+                "/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ApiCenter/services/{serviceName}/workspaces/{workspaceName}/analyzerConfigs",
                 **self.url_parameters
             )
 
         @property
         def method(self):
-            return "POST"
+            return "GET"
 
         @property
         def error_format(self):
@@ -139,10 +115,6 @@ class ExportRuleset(AAZCommand):
         @property
         def url_parameters(self):
             parameters = {
-                **self.serialize_url_param(
-                    "analyzerConfigName", self.ctx.args.analyzer_config_name,
-                    required=True,
-                ),
                 **self.serialize_url_param(
                     "resourceGroupName", self.ctx.args.resource_group,
                     required=True,
@@ -166,7 +138,10 @@ class ExportRuleset(AAZCommand):
         def query_parameters(self):
             parameters = {
                 **self.serialize_query_param(
-                    "api-version", "2024-06-01-preview",
+                    "$filter", self.ctx.args.filter,
+                ),
+                **self.serialize_query_param(
+                    "api-version", "2024-12-15-preview",
                     required=True,
                 ),
             }
@@ -199,14 +174,69 @@ class ExportRuleset(AAZCommand):
             cls._schema_on_200 = AAZObjectType()
 
             _schema_on_200 = cls._schema_on_200
-            _schema_on_200.format = AAZStrType()
-            _schema_on_200.value = AAZStrType()
+            _schema_on_200.next_link = AAZStrType(
+                serialized_name="nextLink",
+                flags={"read_only": True},
+            )
+            _schema_on_200.value = AAZListType(
+                flags={"required": True, "read_only": True},
+            )
+
+            value = cls._schema_on_200.value
+            value.Element = AAZObjectType()
+
+            _element = cls._schema_on_200.value.Element
+            _element.id = AAZStrType(
+                flags={"read_only": True},
+            )
+            _element.name = AAZStrType(
+                flags={"read_only": True},
+            )
+            _element.properties = AAZObjectType(
+                flags={"client_flatten": True},
+            )
+            _element.system_data = AAZObjectType(
+                serialized_name="systemData",
+                flags={"read_only": True},
+            )
+            _element.type = AAZStrType(
+                flags={"read_only": True},
+            )
+
+            properties = cls._schema_on_200.value.Element.properties
+            properties.analyzer_type = AAZStrType(
+                serialized_name="analyzerType",
+                flags={"required": True},
+            )
+            properties.state = AAZStrType(
+                flags={"read_only": True},
+            )
+
+            system_data = cls._schema_on_200.value.Element.system_data
+            system_data.created_at = AAZStrType(
+                serialized_name="createdAt",
+            )
+            system_data.created_by = AAZStrType(
+                serialized_name="createdBy",
+            )
+            system_data.created_by_type = AAZStrType(
+                serialized_name="createdByType",
+            )
+            system_data.last_modified_at = AAZStrType(
+                serialized_name="lastModifiedAt",
+            )
+            system_data.last_modified_by = AAZStrType(
+                serialized_name="lastModifiedBy",
+            )
+            system_data.last_modified_by_type = AAZStrType(
+                serialized_name="lastModifiedByType",
+            )
 
             return cls._schema_on_200
 
 
-class _ExportRulesetHelper:
-    """Helper class for ExportRuleset"""
+class _ListHelper:
+    """Helper class for List"""
 
 
-__all__ = ["ExportRuleset"]
+__all__ = ["List"]
