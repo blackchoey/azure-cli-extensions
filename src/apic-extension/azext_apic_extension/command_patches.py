@@ -546,7 +546,7 @@ class CreateApiAnalysisRuleset(DefaultWorkspaceParameter, CreateApiAnalysis):
     """Create an API Analysis rule
 
     :example: Create an API Analysis rule
-        az apic api-analysis create -g {resource-group} --service-name {apic-name} --name {config-name} --analyzer-type spectral
+        az apic api-analysis create -g contoso-resources -s contoso -n myconfig --analyzer-type spectral
     """
 
     @classmethod
@@ -554,11 +554,14 @@ class CreateApiAnalysisRuleset(DefaultWorkspaceParameter, CreateApiAnalysis):
         # pylint: disable=protected-access
         args_schema = super()._build_arguments_schema(*args, **kwargs)
         args_schema.analyzer_type._required = True
+        args_schema.analyzer_type._arg_group = ''
+        # args_schema.analyzer_type._registered = False
 
         args_schema.selection = AAZObjectArg(
             options=["--selection"],
             help="The selection criteria JSON object for the rule.",
             required=False,
+            registered=False
         )
         return args_schema
 
@@ -573,14 +576,9 @@ class DeleteApiAnalysisRuleset(DefaultWorkspaceParameter, DeleteApiAnalysis):
     """Delete an API Analysis rule
 
     :example: Delete an API Analysis rule
-        az apic api-analysis delete -g {resource-group} --service-name {apic-name} --name {config-name}
+        az apic api-analysis delete -g contoso-resources -s contoso -n myconfig
     """
-
-    @classmethod
-    def _build_arguments_schema(cls, *args, **kwargs):
-        # pylint: disable=protected-access
-        args_schema = super()._build_arguments_schema(*args, **kwargs)
-        return args_schema
+    pass
 
 
 @register_command(
@@ -592,7 +590,7 @@ class ImportApiAnalysisRuleset(DefaultWorkspaceParameter, ImportRuleset):
     """Import an API Analysis ruleset
 
     :example: Import an API Analysis ruleset
-        az apic api-analysis import-ruleset -g {resource-group} --service-name {apic-name} -n {analysis-config-name} --format {ruleset-format} --ruleset-folder-path {ruleset-folder-path}
+        az apic api-analysis import-ruleset -g contoso-resources -s contoso -n myconfig --path '\\path\\to\\ruleset\\folder'
     """
 
     # Zip and encode the ruleset folder to base64
@@ -610,9 +608,11 @@ class ImportApiAnalysisRuleset(DefaultWorkspaceParameter, ImportRuleset):
     def _build_arguments_schema(cls, *args, **kwargs):
         # pylint: disable=protected-access
         args_schema = super()._build_arguments_schema(*args, **kwargs)
+        args_schema.format._registered = False
+        args_schema.value._registered = False
 
         args_schema.ruleset_folder_path = AAZStrArg(
-            options=["--ruleset-folder-path"],
+            options=["--path"],
             help="The folder path containing the ruleset files.",
             required=True,
         )
@@ -621,6 +621,8 @@ class ImportApiAnalysisRuleset(DefaultWorkspaceParameter, ImportRuleset):
     def pre_operations(self):
         super().pre_operations()
         args = self.ctx.args
+
+        args.format = 'inline-zip'
         args.value = self.zip_folder_to_buffer(str(args.ruleset_folder_path))
 
 
@@ -633,7 +635,7 @@ class ExportApiAnalysisRuleset(DefaultWorkspaceParameter, ExportRuleset):
     """Export an API Analysis ruleset
 
     :example: Export an API Analysis ruleset
-        az apic api-analysis export-ruleset -g {resource-group} --service-name {apic-name} -n {analysis-config-name} --ruleset-folder-path {ruleset-folder-path}
+        az apic api-analysis export-ruleset -g contoso-resources -s contoso -n myconfig --path '\\path\\for\\output\\files'
     """
 
     # Decode and extract the ruleset folder from base64
@@ -648,7 +650,7 @@ class ExportApiAnalysisRuleset(DefaultWorkspaceParameter, ExportRuleset):
         args_schema = super()._build_arguments_schema(*args, **kwargs)
 
         args_schema.ruleset_folder_path = AAZStrArg(
-            options=["--ruleset-folder-path"],
+            options=["--path"],
             help="The folder path to extract the ruleset files.",
             required=True,
         )
@@ -682,7 +684,7 @@ class ExportApiAnalysisRuleset(DefaultWorkspaceParameter, ExportRuleset):
                     logger.error(error_message)
                     print(error_message)
             else:
-                error_message = 'Please provide the --ruleset-folder-path to export the results to.'
+                error_message = 'Please provide the --path to export the results to.'
                 logger.error(error_message)
                 print(error_message)
         else:
