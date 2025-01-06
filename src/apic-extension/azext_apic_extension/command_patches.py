@@ -61,8 +61,9 @@ from .aaz.latest.apic.api_analysis import (
     ExportRuleset
 )
 
-from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg, AAZResourceIdArg
 from azure.cli.core.aaz import register_command
+from azure.cli.core.aaz._arg import AAZStrArg, AAZListArg, AAZResourceIdArg
+from azure.cli.core.azclierror import FileOperationError, AzureResponseError
 from msrestazure.tools import is_valid_resource_id
 import base64
 import zipfile
@@ -554,7 +555,7 @@ class ImportApiAnalysisRuleset(DefaultWorkspaceParameter, ImportRuleset):
     """
 
     # Zip and encode the ruleset folder to base64
-    def zip_folder_to_buffer(self, folder_path):
+    def zip_folder_to_buffer(_self, folder_path):
         # pylint: disable=unused-variable
         buffer = io.BytesIO()
         with zipfile.ZipFile(buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
@@ -595,7 +596,7 @@ class ExportApiAnalysisRuleset(DefaultWorkspaceParameter, ExportRuleset):
     """
 
     # Decode and extract the ruleset folder from base64
-    def unzip_buffer_to_folder(self, buffer, folder_path):
+    def unzip_buffer_to_folder(_self, buffer, folder_path):
         zip_file = io.BytesIO(base64.b64decode(buffer))
         with zipfile.ZipFile(zip_file) as zip_ref:
             zip_ref.extractall(folder_path)
@@ -622,26 +623,25 @@ class ExportApiAnalysisRuleset(DefaultWorkspaceParameter, ExportRuleset):
             exportedResults = result['value']
 
             if response_format == 'link':
-                logger.warning('Fetching specification from: %s', exportedResults)
+                logger.info('Fetching specification from: %s', exportedResults)
                 getReponse = requests.get(exportedResults, timeout=10)
                 if getReponse.status_code == 200:
                     exportedResults = getReponse.content.decode()
                 else:
                     error_message = f'Error while fetching the results from the link. Status code: {getReponse.status_code}'
                     logger.error(error_message)
+                    raise getReponse.raise_for_status()
 
-            if arguments.ruleset_folder_path:
-                try:
-                    self.unzip_buffer_to_folder(exportedResults, str(arguments.ruleset_folder_path))
-                    logger.warning('Results exported to %s', arguments.ruleset_folder_path)
-                except Exception as e:  # pylint: disable=broad-except
-                    error_message = f'Error while writing the results to the file. Error: {e}'
-                    logger.error(error_message)
-            else:
-                error_message = 'Please provide the --path to export the results to.'
+            try:
+                self.unzip_buffer_to_folder(exportedResults, str(arguments.ruleset_folder_path))
+                logger.info('Results exported to %s', arguments.ruleset_folder_path)
+            except Exception as e:  # pylint: disable=broad-except
+                error_message = f'Error while writing the results to the file. Error: {e}'
                 logger.error(error_message)
+                raise FileOperationError(error_message)
         else:
             error_message = 'No results found.'
             logger.error(error_message)
+            raise AzureResponseError(error_message)
 
         return result
