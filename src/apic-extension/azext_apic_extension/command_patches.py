@@ -555,7 +555,7 @@ class ImportApiAnalysisRuleset(DefaultWorkspaceParameter, ImportRuleset):
     """
 
     # Zip and encode the ruleset folder to base64
-    def zip_folder_to_buffer(_self, folder_path):
+    def zip_folder_to_buffer(self, folder_path):
         # pylint: disable=unused-variable
         buffer = io.BytesIO()
         with zipfile.ZipFile(buffer, 'w', zipfile.ZIP_DEFLATED) as zip_file:
@@ -596,7 +596,7 @@ class ExportApiAnalysisRuleset(DefaultWorkspaceParameter, ExportRuleset):
     """
 
     # Decode and extract the ruleset folder from base64
-    def unzip_buffer_to_folder(_self, buffer, folder_path):
+    def unzip_buffer_to_folder(self, buffer, folder_path):
         zip_file = io.BytesIO(base64.b64decode(buffer))
         with zipfile.ZipFile(zip_file) as zip_ref:
             zip_ref.extractall(folder_path)
