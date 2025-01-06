@@ -13,6 +13,7 @@ from azure.cli.core.aaz import *
 
 @register_command_group(
     "apic api-analysis",
+    is_preview=True,
 )
 class __CMDGroup(AAZCommandGroup):
     """Manage Azure API Center service api analysis features

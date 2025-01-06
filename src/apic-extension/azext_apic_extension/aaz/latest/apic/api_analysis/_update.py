@@ -13,6 +13,7 @@ from azure.cli.core.aaz import *
 
 @register_command(
     "apic api-analysis update",
+    is_preview=True,
 )
 class Update(AAZCommand):
     """Update new or updates existing API analyzer configuration.

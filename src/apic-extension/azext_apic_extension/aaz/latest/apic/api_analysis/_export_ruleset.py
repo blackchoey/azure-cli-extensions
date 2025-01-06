@@ -13,6 +13,7 @@ from azure.cli.core.aaz import *
 
 @register_command(
     "apic api-analysis export-ruleset",
+    is_preview=True,
 )
 class ExportRuleset(AAZCommand):
     """Exports the API analyzer ruleset.
