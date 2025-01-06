@@ -13,6 +13,7 @@ from azure.cli.core.aaz import *
 
 @register_command(
     "apic api-analysis list",
+    is_preview=True,
 )
 class List(AAZCommand):
     """List API analyzer configurations.

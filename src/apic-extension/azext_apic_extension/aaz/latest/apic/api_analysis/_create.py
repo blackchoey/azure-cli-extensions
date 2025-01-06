@@ -13,6 +13,7 @@ from azure.cli.core.aaz import *
 
 @register_command(
     "apic api-analysis create",
+    is_preview=True,
 )
 class Create(AAZCommand):
     """Create new or updates existing API analyzer configuration.
