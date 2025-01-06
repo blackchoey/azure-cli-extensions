@@ -59,7 +59,7 @@ class Show(AAZCommand):
             required=True,
         )
         _args_schema.service_name = AAZStrArg(
-            options=["-s", "--service-name"],
+            options=["-s", "--service", "--service-name"],
             help="The name of Azure API Center service.",
             required=True,
             id_part="name",
