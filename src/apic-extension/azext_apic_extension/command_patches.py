@@ -344,10 +344,10 @@ class CreateApimIntegration(DefaultWorkspaceParameter, CreateIntegration):
     """Add Azure APIM as an API source
 
     :example: Add Azure APIM in the same resource group as the Azure API Center instance as an API source
-        az apic integration create apim -g contoso-resources -n contoso --integration-name sync-from-my-apim --azure-apim myapim
+        az apic integration create apim -g contoso-resources -s contoso --integration-name sync-from-my-apim --azure-apim myapim
 
     :example: Add Azure APIM in another resource group as an API source
-        az apic integration create apim -g contoso-resources -n contoso --integration-name sync-from-my-apim --azure-apim /subscriptions/12345678-1234-1234-1234-123456789abc/resourceGroups/samplegroup/providers/Microsoft.ApiManagement/service/sampleapim
+        az apic integration create apim -g contoso-resources -s contoso --integration-name sync-from-my-apim --azure-apim /subscriptions/12345678-1234-1234-1234-123456789abc/resourceGroups/samplegroup/providers/Microsoft.ApiManagement/service/sampleapim
 
     """
     # pylint: enable=C0301
@@ -412,7 +412,7 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
     """Add Amazon API Gateway as an API source
 
     :example: Add Amazon API Gateway as an API source
-        az apic integration create aws -g contoso-resources -n contoso --integration-name sync-from-my-amazon-api-gateway --aws-access-key-reference https://mykey.vault.azure.net/secrets/AccessKey --aws-secret-access-key-reference https://mykey.vault.azure.net/secrets/SecretAccessKey --aws-region-name us-east-2
+        az apic integration create aws -g contoso-resources -s contoso --integration-name sync-from-my-amazon-api-gateway --aws-access-key-reference https://mykey.vault.azure.net/secrets/AccessKey --aws-secret-access-key-reference https://mykey.vault.azure.net/secrets/SecretAccessKey --aws-region-name us-east-2
     """
 
     @classmethod
@@ -435,7 +435,7 @@ class CreateAmazonApiGatewayIntegration(DefaultWorkspaceParameter, CreateIntegra
             required=True,
         )
         args_schema.secret_access_key = AAZStrArg(
-            options=["--aws-secret-access-key-reference", "-s"],
+            options=["--aws-secret-access-key-reference", "-c"],
             arg_group="AmazonApiGatewaySource",
             help="Amazon API Gateway Secret Access Key. Must be an Azure Key Vault secret reference.",
             required=True,
@@ -479,7 +479,7 @@ class ImportAmazonApiGatewaySource(DefaultWorkspaceParameter, Import):
     """Import an Amazon API Gateway API source
 
     :example: Import an Amazon API Gateway API source
-        az apic import aws -g contoso-resources -n contoso --aws-access-key-reference https://mykey.vault.azure.net/secrets/AccessKey --aws-secret-access-key-reference https://mykey.vault.azure.net/secrets/SecretAccessKey --aws-region-name us-east-2
+        az apic import aws -g contoso-resources -s contoso --aws-access-key-reference https://mykey.vault.azure.net/secrets/AccessKey --aws-secret-access-key-reference https://mykey.vault.azure.net/secrets/SecretAccessKey --aws-region-name us-east-2
     """
 
     @classmethod
