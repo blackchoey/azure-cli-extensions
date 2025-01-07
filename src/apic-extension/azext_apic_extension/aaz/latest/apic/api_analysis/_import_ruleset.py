@@ -17,6 +17,9 @@ from azure.cli.core.aaz import *
 )
 class ImportRuleset(AAZCommand):
     """Imports the API analyzer ruleset.
+
+    :example: Import an API Analysis ruleset
+        az apic api-analysis import-ruleset -g contoso-resources -n contoso -c spectral-openapi --path '\\path\\to\\ruleset\\folder'
     """
 
     _aaz_info = {

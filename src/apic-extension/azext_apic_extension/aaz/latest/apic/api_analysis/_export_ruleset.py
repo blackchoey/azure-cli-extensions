@@ -17,6 +17,9 @@ from azure.cli.core.aaz import *
 )
 class ExportRuleset(AAZCommand):
     """Exports the API analyzer ruleset.
+
+    :example: Export an API Analysis ruleset
+        az apic api-analysis export-ruleset -g contoso-resources -n contoso -c spectral-openapi --path '\\path\\for\\output\\files'
     """
 
     _aaz_info = {
