@@ -19,7 +19,7 @@ class Create(AAZCommand):
     """Create new or updates existing API analyzer configuration.
 
     :example: Create an API Analysis rule config
-        az apic api-analysis create -g contoso-resources -s contoso -n spectral-openapi
+        az apic api-analysis create -g contoso-resources -n contoso -c spectral-openapi
     """
 
     _aaz_info = {
@@ -46,7 +46,7 @@ class Create(AAZCommand):
 
         _args_schema = cls._args_schema
         _args_schema.analyzer_config_name = AAZStrArg(
-            options=["-n", "--name", "--analyzer-config-name"],
+            options=["-c", "--config-name", "--analyzer-config-name"],
             help="The name of the configuration.",
             required=True,
             fmt=AAZStrArgFormat(
@@ -59,7 +59,7 @@ class Create(AAZCommand):
             required=True,
         )
         _args_schema.service_name = AAZStrArg(
-            options=["-s", "--service-name"],
+            options=["-n", "--service-name"],
             help="The name of Azure API Center service.",
             required=True,
             fmt=AAZStrArgFormat(

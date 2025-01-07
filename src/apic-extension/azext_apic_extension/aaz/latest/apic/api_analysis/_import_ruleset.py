@@ -44,7 +44,7 @@ class ImportRuleset(AAZCommand):
 
         _args_schema = cls._args_schema
         _args_schema.analyzer_config_name = AAZStrArg(
-            options=["-n", "--name", "--analyzer-config-name"],
+            options=["-c", "--config-name", "--analyzer-config-name"],
             help="The name of the configuration.",
             required=True,
             id_part="child_name_2",
@@ -58,7 +58,7 @@ class ImportRuleset(AAZCommand):
             required=True,
         )
         _args_schema.service_name = AAZStrArg(
-            options=["-s", "--service-name"],
+            options=["-n", "--service-name"],
             help="The name of Azure API Center service.",
             required=True,
             id_part="name",
