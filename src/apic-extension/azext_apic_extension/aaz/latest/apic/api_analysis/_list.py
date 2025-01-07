@@ -19,7 +19,7 @@ class List(AAZCommand):
     """List API analyzer configurations.
 
     :example: List all API Analysis rule configs for the service
-        az apic api-analysis list -g contoso-resources -s contoso
+        az apic api-analysis list -g contoso-resources -n contoso
     """
 
     _aaz_info = {
@@ -50,7 +50,7 @@ class List(AAZCommand):
             required=True,
         )
         _args_schema.service_name = AAZStrArg(
-            options=["-s", "--service", "--service-name"],
+            options=["-n", "--service-name"],
             help="The name of Azure API Center service.",
             required=True,
             fmt=AAZStrArgFormat(

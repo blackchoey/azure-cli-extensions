@@ -17,6 +17,9 @@ from azure.cli.core.aaz import *
 )
 class ExportRuleset(AAZCommand):
     """Exports the API analyzer ruleset.
+
+    :example: Export an API Analysis ruleset
+        az apic api-analysis export-ruleset -g contoso-resources -n contoso -c spectral-openapi --path '\\path\\for\\output\\files'
     """
 
     _aaz_info = {
@@ -44,7 +47,7 @@ class ExportRuleset(AAZCommand):
 
         _args_schema = cls._args_schema
         _args_schema.analyzer_config_name = AAZStrArg(
-            options=["-n", "--name", "--analyzer-config-name"],
+            options=["-c", "--config-name", "--analyzer-config-name"],
             help="The name of the configuration.",
             required=True,
             id_part="child_name_2",
@@ -58,7 +61,7 @@ class ExportRuleset(AAZCommand):
             required=True,
         )
         _args_schema.service_name = AAZStrArg(
-            options=["-s", "--service", "--service-name"],
+            options=["-n", "--service-name"],
             help="The name of Azure API Center service.",
             required=True,
             id_part="name",

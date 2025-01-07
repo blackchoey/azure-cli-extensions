@@ -539,7 +539,10 @@ class ImportAmazonApiGatewaySource(DefaultWorkspaceParameter, Import):
 
 # `az apic api-analysis` commands
 class CreateApiAnalysisConfig(DefaultWorkspaceParameter, CreateApiAnalysis):
-    pass
+    def pre_operations(self):
+        super().pre_operations()
+        args = self.ctx.args
+        args.analyzer_type = "spectral"
 
 
 class DeleteApiAnalysisConfig(DefaultWorkspaceParameter, DeleteApiAnalysis):
@@ -548,12 +551,6 @@ class DeleteApiAnalysisConfig(DefaultWorkspaceParameter, DeleteApiAnalysis):
 
 class ImportApiAnalysisRuleset(DefaultWorkspaceParameter, ImportRuleset):
     # pylint: disable=C0301
-    """Import an API Analysis ruleset
-
-    :example: Import an API Analysis ruleset
-        az apic api-analysis import-ruleset -g contoso-resources -s contoso -n myconfig --path '\\path\\to\\ruleset\\folder'
-    """
-
     # Zip and encode the ruleset folder to base64
     def zip_folder_to_buffer(self, folder_path):
         # pylint: disable=unused-variable
@@ -589,12 +586,6 @@ class ImportApiAnalysisRuleset(DefaultWorkspaceParameter, ImportRuleset):
 
 class ExportApiAnalysisRuleset(DefaultWorkspaceParameter, ExportRuleset):
     # pylint: disable=C0301
-    """Export an API Analysis ruleset
-
-    :example: Export an API Analysis ruleset
-        az apic api-analysis export-ruleset -g contoso-resources -s contoso -n myconfig --path '\\path\\for\\output\\files'
-    """
-
     # Decode and extract the ruleset folder from base64
     def unzip_buffer_to_folder(self, buffer, folder_path):
         zip_file = io.BytesIO(base64.b64decode(buffer))
