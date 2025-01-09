@@ -648,6 +648,7 @@ class ListAPIAnalysisConfig(DefaultWorkspaceParameter, ListAPIAnalysis):
 class ShowAPIAnalysisConfig(DefaultWorkspaceParameter, ShowAPIAnalysis):
     pass
 
+
 class UpdateAPIAnalysisConfig(DefaultWorkspaceParameter, UpdateAPIAnalysis):
     def pre_operations(self):
         super().pre_operations()
