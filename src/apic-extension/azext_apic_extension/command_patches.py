@@ -58,7 +58,10 @@ from .aaz.latest.apic.api_analysis import (
     Create as CreateApiAnalysis,
     Delete as DeleteApiAnalysis,
     ImportRuleset,
-    ExportRuleset
+    ExportRuleset,
+    List as ListAPIAnalysis,
+    Show as ShowAPIAnalysis,
+    Update as UpdateAPIAnalysis
 )
 
 from azure.cli.core.aaz import register_command
@@ -636,3 +639,17 @@ class ExportApiAnalysisRuleset(DefaultWorkspaceParameter, ExportRuleset):
             raise AzureResponseError(error_message)
 
         return result
+
+
+class ListAPIAnalysisConfig(DefaultWorkspaceParameter, ListAPIAnalysis):
+    pass
+
+
+class ShowAPIAnalysisConfig(DefaultWorkspaceParameter, ShowAPIAnalysis):
+    pass
+
+class UpdateAPIAnalysisConfig(DefaultWorkspaceParameter, UpdateAPIAnalysis):
+    def pre_operations(self):
+        super().pre_operations()
+        args = self.ctx.args
+        args.analyzer_type = "spectral"
