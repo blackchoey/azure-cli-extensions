@@ -125,6 +125,11 @@ class Import(AAZCommand):
             help="API Management service resource ID.",
             required=True,
         )
+        azure_api_management_source.source_resource_ids = AAZListArg(
+            options=["source-resource-ids"],
+            help="API Management service resource ID.",
+            required=True,
+        )
         return cls._args_schema
 
     def _execute_operations(self):
@@ -255,6 +260,7 @@ class Import(AAZCommand):
             if azure_api_management_source is not None:
                 azure_api_management_source.set_prop("msiResourceId", AAZStrType, ".msi_resource_id")
                 azure_api_management_source.set_prop("resourceId", AAZStrType, ".resource_id", typ_kwargs={"flags": {"required": True}})
+                azure_api_management_source.set_prop("sourceResourceIds", AAZListType, ".source_resource_ids", typ_kwargs={"flags": {"required": True}})
 
             return self.serialize_content(_content_value)
 
