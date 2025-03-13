@@ -6,6 +6,7 @@
 import os
 import jmespath
 import collections
+import json
 import shutil
 from azure.cli.testsdk import ScenarioTest, ResourceGroupPreparer
 from azure.cli.testsdk.checkers import JMESPathCheck
@@ -97,14 +98,16 @@ class ApiAnalysisCommandTests(ScenarioTest):
     @ApicServicePreparer()
     @ApiAnalysisPreparer()
     def test_api_analysis_update(self):
-        self.cmd('az apic api-analysis create -g {rg} -n {s} -c {config_name}', checks=[
+        filter_file = os.path.join(test_assets_dir, 'filter.json')
+        with open(filter_file, 'r') as f:
+            filter_content = f.read()
+        filter_content = json.loads(filter_content)
+        self.kwargs.update({
+            'filter': filter_content
+        })
+        self.cmd('az apic api-analysis update -g {rg} -n {s} -c {config_name} --filter "{filter}"')
+        self.cmd('az apic api-analysis show -g {rg} -n {s} -c {config_name}', checks=[
             self.check('name', '{config_name}'),
             self.check('resourceGroup', '{rg}'),
-            self.check('type', 'Microsoft.ApiCenter/services/workspaces/analyzerConfigs')
-        ])
-
-        self.cmd('az apic api-analysis update -g {rg} -n {s} -c {config_name} --analyzer-type spectral', checks=[
-            self.check('name', '{config_name}'),
-            self.check('resourceGroup', '{rg}'),
-            self.check('analyzerType', 'Spectral')
+            self.check('filter.apiDefinitions[0].value', '[\'openapi\', \'asyncapi\']')
         ])
