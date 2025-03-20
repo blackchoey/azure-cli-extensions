@@ -110,15 +110,8 @@ class IntegrationCommandTests(ScenarioTest):
     @ApicServicePreparer()
     @ApimServicePreparer()
     def test_import_apim_all_apis(self):
-        self.kwargs.update({
-            'apim_name': self.create_random_name(prefix='cli', length=24)
-        })
         # Import all APIs from APIM
         self.cmd('az apic import apim -g {rg} -n {s} --azure-apim {apim_name} --apim-apis \'*\'')
-
-        # Wait for import to finish
-        if self.is_live:
-            asyncio.sleep(10)
 
         # Verify all APIs imported
         self.cmd('az apic api list -g {rg} -n {s}', checks=[
@@ -129,37 +122,25 @@ class IntegrationCommandTests(ScenarioTest):
     @ApicServicePreparer()
     @ApimServicePreparer()
     def test_import_apim_single_api(self):
-        self.kwargs.update({
-            'apim_name': self.create_random_name(prefix='cli', length=24)
-        })
         # Import single API from APIM
-        self.cmd('az apic import apim -g {rg} -n {s} --azure-apim {apim_name} --apim-apis echo')
-
-        # Wait for import to finish
-        if self.is_live:
-            asyncio.sleep(10)
+        cmd = 'az apic import apim -g {} -n {} --azure-apim {} --apim-apis echotest'.format(self.kwargs['rg'],self.kwargs['s'],self.kwargs['apim_name'])
+        print(cmd)
+        self.cmd(cmd)
 
         # Verify single API imported
         self.cmd('az apic api list -g {rg} -n {s}', checks=[
-            self.check('contains(@[*].title, `Echo API`)', True),
+            self.check('contains(@[*].title, `Echo API Test`)', True),
         ])
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
     @ApicServicePreparer()
     @ApimServicePreparer()
     def test_import_apim_multiple_apis(self):
-        self.kwargs.update({
-            'apim_name': self.create_random_name(prefix='cli', length=24)
-        })
         # Import multiple APIs from APIM
-        self.cmd('az apic import apim -g {rg} -n {s} --azure-apim {apim_name} --apim-apis [echo,foo]')
-
-        # Wait for import to finish
-        if self.is_live:
-            asyncio.sleep(10)
+        self.cmd('az apic import apim -g {rg} -n {s} --azure-apim {apim_name} --apim-apis [echotest,footest]')
 
         # Verify multiple APIs imported
         self.cmd('az apic api list -g {rg} -n {s}', checks=[
-            self.check('contains(@[*].title, `Echo API`)', True),
-            self.check('contains(@[*].title, `Foo API`)', True)
+            self.check('contains(@[*].title, `Echo API Test`)', True),
+            self.check('contains(@[*].title, `Foo API Test`)', True)
         ])
