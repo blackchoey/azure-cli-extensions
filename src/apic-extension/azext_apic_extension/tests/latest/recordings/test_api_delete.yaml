@@ -23,11 +23,11 @@ interactions:
       string: ''
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       date:
-      - Wed, 09 Oct 2024 08:17:51 GMT
+      - Fri, 21 Mar 2025 02:31:45 GMT
       expires:
       - '-1'
       pragma:
@@ -39,11 +39,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-deletes:
-      - '199'
+      - '197'
       x-ms-ratelimit-remaining-subscription-global-deletes:
-      - '2999'
+      - '2997'
       x-msedge-ref:
-      - 'Ref A: CF464C6696BD4F96B3BDA9F59C318C4C Ref B: MAA201060515049 Ref C: 2024-10-09T08:17:50Z'
+      - 'Ref A: 9C1286BD4E264A4C925FFCECB49080BA Ref B: MAA201060516039 Ref C: 2025-03-21T02:31:44Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -71,7 +71,7 @@ interactions:
       string: '{"code":"404"}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -79,7 +79,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:17:53 GMT
+      - Fri, 21 Mar 2025 02:31:46 GMT
       expires:
       - '-1'
       pragma:
@@ -93,9 +93,9 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '3748'
       x-msedge-ref:
-      - 'Ref A: E132F768DBCA489D90E2E1D8A9B7207D Ref B: MAA201060514053 Ref C: 2024-10-09T08:17:52Z'
+      - 'Ref A: 87199100327D49AA80AFDC27EC69FC6D Ref B: MAA201060516051 Ref C: 2025-03-21T02:31:45Z'
       x-powered-by:
       - ASP.NET
     status:

@@ -443,13 +443,13 @@ interactions:
       string: ''
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
       - '0'
       date:
-      - Wed, 09 Oct 2024 08:17:31 GMT
+      - Fri, 21 Mar 2025 02:31:20 GMT
       expires:
       - '-1'
       pragma:
@@ -461,11 +461,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '2997'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '197'
       x-msedge-ref:
-      - 'Ref A: D54B23C106AD4F14BAB482B8FB3EA467 Ref B: MAA201060516017 Ref C: 2024-10-09T08:17:29Z'
+      - 'Ref A: E75A2C6C452F44EEA5E1B1EB7D129D04 Ref B: MAA201060515025 Ref C: 2025-03-21T02:31:19Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -916,7 +916,7 @@ interactions:
         \"header\"\r\n            }\r\n        }\r\n    }\r\n}"}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -924,7 +924,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:17:31 GMT
+      - Fri, 21 Mar 2025 02:31:22 GMT
       expires:
       - '-1'
       pragma:
@@ -938,11 +938,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2998'
+      - '2995'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '198'
+      - '195'
       x-msedge-ref:
-      - 'Ref A: 045457A053A744FE92BB04EC0344E192 Ref B: MAA201060516035 Ref C: 2024-10-09T08:17:31Z'
+      - 'Ref A: 4C2F7C03555E4AED804CFEDC79DADA82 Ref B: MAA201060513051 Ref C: 2025-03-21T02:31:22Z'
       x-powered-by:
       - ASP.NET
     status:

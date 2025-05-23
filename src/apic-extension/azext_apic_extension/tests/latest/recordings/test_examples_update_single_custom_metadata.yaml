@@ -19,20 +19,20 @@ interactions:
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis","properties":{"title":"Echo
-        API","kind":"rest","externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003","name":"clitest000003","systemData":{"createdAt":"2024-10-09T08:17:41.4502469Z","lastModifiedAt":"2024-10-09T08:17:41.450246Z"}}'
+        API","kind":"rest","externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003","name":"clitest000003","systemData":{"createdAt":"2025-03-21T02:31:15.5049591Z","lastModifiedAt":"2025-03-21T02:31:15.5049569Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '471'
+      - '472'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:17:44 GMT
+      - Fri, 21 Mar 2025 02:31:18 GMT
       etag:
-      - c1003559-0000-0100-0000-67063c250000
+      - d5001e87-0000-0100-0000-67dccf730000
       expires:
       - '-1'
       pragma:
@@ -46,9 +46,9 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '3748'
       x-msedge-ref:
-      - 'Ref A: 2EA9EF76F02348E58376D98D10C0D934 Ref B: MAA201060516033 Ref C: 2024-10-09T08:17:43Z'
+      - 'Ref A: C27774A4D2E646C3872BD1128A9062E0 Ref B: MAA201060515017 Ref C: 2025-03-21T02:31:18Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -79,20 +79,20 @@ interactions:
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis","properties":{"title":"Echo
-        API","kind":"rest","externalDocumentation":[],"contacts":[],"customProperties":{"clitest000004":false}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003","name":"clitest000003","systemData":{"lastModifiedAt":"2024-10-09T08:17:46.0474694Z"}}'
+        API","kind":"rest","externalDocumentation":[],"contacts":[],"customProperties":{"clitest000004":false}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003","name":"clitest000003","systemData":{"createdAt":"2025-03-21T02:31:15.5049591Z","lastModifiedAt":"2025-03-21T02:31:19.9350383Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '450'
+      - '493'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:17:45 GMT
+      - Fri, 21 Mar 2025 02:31:19 GMT
       etag:
-      - c100005a-0000-0100-0000-67063c2a0000
+      - d500cf87-0000-0100-0000-67dccf770000
       expires:
       - '-1'
       pragma:
@@ -106,11 +106,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '2996'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '196'
       x-msedge-ref:
-      - 'Ref A: 9A31231618B147DE8E4BAF54C0B0E403 Ref B: MAA201060516033 Ref C: 2024-10-09T08:17:45Z'
+      - 'Ref A: A7C2D34A104E4C46B757B62686550E5F Ref B: MAA201060515017 Ref C: 2025-03-21T02:31:19Z'
       x-powered-by:
       - ASP.NET
     status:

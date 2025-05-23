@@ -23,20 +23,20 @@ interactions:
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis","properties":{"title":"Echo
-        API","kind":"rest","externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/cli000003","name":"cli000003","systemData":{"createdAt":"2024-10-09T08:17:25.8179858Z","lastModifiedAt":"2024-10-09T08:17:25.817985Z"}}'
+        API","kind":"rest","externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/cli000003","name":"cli000003","systemData":{"createdAt":"2025-03-21T02:31:15.9669218Z","lastModifiedAt":"2025-03-21T02:31:15.9669183Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '463'
+      - '464'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:17:25 GMT
+      - Fri, 21 Mar 2025 02:31:15 GMT
       etag:
-      - c1000958-0000-0100-0000-67063c150000
+      - d5003387-0000-0100-0000-67dccf730000
       expires:
       - '-1'
       pragma:
@@ -50,11 +50,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2997'
+      - '2996'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '197'
+      - '196'
       x-msedge-ref:
-      - 'Ref A: BB7A57E9360D4BFE8C3879306BD2225E Ref B: MAA201060516049 Ref C: 2024-10-09T08:17:24Z'
+      - 'Ref A: 93DBCAD79B9646CD9AF4F39F7829B74F Ref B: MAA201060513049 Ref C: 2025-03-21T02:31:14Z'
       x-powered-by:
       - ASP.NET
     status:

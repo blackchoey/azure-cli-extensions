@@ -27,13 +27,13 @@ interactions:
       string: ''
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
       - '0'
       date:
-      - Wed, 09 Oct 2024 08:17:51 GMT
+      - Fri, 21 Mar 2025 02:31:41 GMT
       expires:
       - '-1'
       pragma:
@@ -49,7 +49,7 @@ interactions:
       x-ms-ratelimit-remaining-subscription-writes:
       - '198'
       x-msedge-ref:
-      - 'Ref A: 56978BC57894428FB7C095792892B7E9 Ref B: MAA201060513021 Ref C: 2024-10-09T08:17:51Z'
+      - 'Ref A: B396A3F44D6645CE9469C5C4AE64E2C7 Ref B: MAA201060516031 Ref C: 2025-03-21T02:31:41Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -80,7 +80,7 @@ interactions:
         Management facade for a very handy and free online HTTP tool.\",\"version\":\"1.0\"}}"}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -88,7 +88,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:17:53 GMT
+      - Fri, 21 Mar 2025 02:31:43 GMT
       expires:
       - '-1'
       pragma:
@@ -102,11 +102,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '2994'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '194'
       x-msedge-ref:
-      - 'Ref A: 7C3A28E1C6D14BE083988DC2C5A7E8EC Ref B: MAA201060516017 Ref C: 2024-10-09T08:17:52Z'
+      - 'Ref A: 7D2E3B5710D24F24AA438D92C59D8FEA Ref B: MAA201060515025 Ref C: 2025-03-21T02:31:42Z'
       x-powered-by:
       - ASP.NET
     status:

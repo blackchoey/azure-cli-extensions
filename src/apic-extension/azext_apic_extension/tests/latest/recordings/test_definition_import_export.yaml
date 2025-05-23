@@ -26,17 +26,17 @@ interactions:
       string: ''
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
       - '0'
       date:
-      - Wed, 09 Oct 2024 08:18:02 GMT
+      - Fri, 21 Mar 2025 02:32:10 GMT
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005/operationResults/41859bada3bd4b6682e1f5289256e7cf?api-version=2024-03-01&t=638640586833247584&c=MIIHhzCCBm-gAwIBAgITfAWQ0hCHZtQ3fJ4PSAAABZDSEDANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDUwHhcNMjQwOTI3MDkwMTAzWhcNMjUwMzI2MDkwMTAzWjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANt7qVbg97HivqUzi3BPPNiHD4wLqYw03AkBiXDpww3W8iIU6FZbbOXVgCL-rGpnbxPkLEVZ1WtRfvLgR3qDiVRjkSnE2knSE6qtvBRWdqqsD9YiSi5lYW67vgtBA_mHzHNDb0zhZ2iofVE5GjHIKYINZSTo8of54bY_fJe0xenYEq7lMpbffWaoano6LQH1L0hSdzAreTN7T_bTsK7TkXQtx45c1upRueZR1wq4PRd-9AYpkfKHhxnCe5LBeLB-Q88WZbmNxuycYiJZzbEGVcEbg5fYdfYb4QveB2WmK7bCWSEDu7WzRaYN9zfP9ZpVnTHTmRcN-f3uvUzxNBMe26UCAwEAAaOCBHQwggRwMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHLBggrBgEFBQcBAQSCAb0wggG5MGMGCCsGAQUFBzAChldodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MFMGCCsGAQUFBzAChkdodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9DTzFQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA1LmNydDBTBggrBgEFBQcwAoZHaHR0cDovL2NybDMuYW1lLmdibC9haWEvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MB0GA1UdDgQWBBT07kfCxeuv0whuO9NP27UpdS8ZAzAOBgNVHQ8BAf8EBAMCBaAwggEmBgNVHR8EggEdMIIBGTCCARWgggERoIIBDYY_aHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwEwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBR61hmFKHlscXYeYPjzS--iBUIWHTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBAFB6-4Y-Z7skVWaPi2vBOob5I-JLv_MqkE8tGWMMCFI9McOWBWfeJWV7aA4X4MEwnVfuFzE4mdak49KhEWgAbnGBMMumWJtlE1VDYwoYj3k6VDrhg4K8cRAO24Ezl3_L9yTqPLHhnKpjnjZONChdqvy6tXy9zLDyo9uThhHykSdIVQPaynG83JYpUlN1akyNJVLxae9NCRV251OTh00g9z6gt1b4nk-Nszy6YtF1AoskPTpeZVcsxGTlq3ITXveDCeZrYbQ6EtZf5O8ekTrNsG-8DMSDIgDta1Dud4RchYh74jtodoiwmneC_ZG5VDcpozae4Mh1w3_kD4-E11i1U1U&s=w816vjyKkRcnE0qboU2QMgXrWzOV5MuaM442k_gZ5dbeT2Dq5J4GtRKZNsyYlkCLufJ0PMNQMwq-6MyOy-29ecXAQ1MDGbHRV9isU6sOnUhHkGA-emq0rRm7HSsCDtjRTJ_hIcQzyAiknWpz5TqK9kfabliBcPSc2tA9tja338fprx3eHS_XhM6S_Xz00Gs2pZ9leRt1Llm70SklwJD07SIFOqL_Jbc960iXFKss_s-B-4eFvScra7kUatz_nB9U8AXAax8fGlIMJf_kRiLohlwH8EG90CebhWicX4fIc3apiJ8qqwKar1gl6KXvkRYUlAw8hXIK7jlXxPxYlKFyxw&h=vzZrRK90d1d9z4ppadpcSPsZETdfi9r1WTVrQt2Ct5I
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005/operationResults/37ff48555f7a43e3aa73d8c5cb6a4c90?api-version=2024-06-01-preview&t=638781211307849159&c=MIIINDCCBxygAwIBAgITOgTUt9ojTC6toHWmHwAEBNS32jANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSU5GUkEgQ0EgMDEwHhcNMjUwMjA0MDkzMjA2WhcNMjYwMTMwMDkzMjA2WjCBjDELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAldBMRAwDgYDVQQHEwdSZWRtb25kMR4wHAYDVQQKExVNaWNyb3NvZnQgQ29ycG9yYXRpb24xPjA8BgNVBAMTNWFzeW5jb3BlcmF0aW9uc2lnbmluZ2NlcnRpZmljYXRlLm1hbmFnZW1lbnQuYXp1cmUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA16gXsQ1dUq5VsuLYh8_f2fFjN1fHR5gGvSdemC5T25vGoRhLE5a0J5pu_nsjICYcwNUPY49vWZmxbEUsSWlu-RHIHkNrVheJzuN9m3yqff-ariOKGq-dm_-hfBMbmaYPTNBNt0ZWH_NO9XCTL7RvwK3cX1z3VognQZ7c8zqdkO-Zgcz7BQnwgGZXUeSVT9bw9XMp_V2tgVvj317WDXkVULi1qSRc9NHXNbxxGsYtaRcRU151tI4W0XZ8L5ps70C9FstptoEa9li_bkS6l7Xo84LQPsM8AgtKtm_9i0nYKpx5qTlT2rkR9y_-ZJiv7eme8PV2puU1c4GHnx2ycnlBfQIDAQABo4IE1DCCBNAwJwYJKwYBBAGCNxUKBBowGDAKBggrBgEFBQcDATAKBggrBgEFBQcDAjA9BgkrBgEEAYI3FQcEMDAuBiYrBgEEAYI3FQiGkOMNhNW0eITxiz6Fm90Wzp0SgWCC9fYrg_LRIAIBZAIBCjCCAdoGCCsGAQUFBwEBBIIBzDCCAcgwZgYIKwYBBQUHMAKGWmh0dHA6Ly9jcmwubWljcm9zb2Z0LmNvbS9wa2lpbmZyYS9DZXJ0cy9CWTJQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSU5GUkElMjBDQSUyMDAxKDQpLmNydDBWBggrBgEFBQcwAoZKaHR0cDovL2NybDEuYW1lLmdibC9haWEvQlkyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcnQwVgYIKwYBBQUHMAKGSmh0dHA6Ly9jcmwyLmFtZS5nYmwvYWlhL0JZMlBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJTkZSQSUyMENBJTIwMDEoNCkuY3J0MFYGCCsGAQUFBzAChkpodHRwOi8vY3JsMy5hbWUuZ2JsL2FpYS9CWTJQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSU5GUkElMjBDQSUyMDAxKDQpLmNydDBWBggrBgEFBQcwAoZKaHR0cDovL2NybDQuYW1lLmdibC9haWEvQlkyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcnQwHQYDVR0OBBYEFFgo523mRBSbKnT6KXvtmw6cvpgrMA4GA1UdDwEB_wQEAwIFoDBABgNVHREEOTA3gjVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCATUGA1UdHwSCASwwggEoMIIBJKCCASCgggEchkJodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ1JML0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmwxLmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmwyLmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmwzLmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmw0LmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmwwgZ0GA1UdIASBlTCBkjAMBgorBgEEAYI3ewEBMGYGCisGAQQBgjd7AgIwWDBWBggrBgEFBQcCAjBKHkgAMwAzAGUAMAAxADkAMgAxAC0ANABkADYANAAtADQAZgA4AGMALQBhADAANQA1AC0ANQBiAGQAYQBmAGYAZAA1AGUAMwAzAGQwDAYKKwYBBAGCN3sDAjAMBgorBgEEAYI3ewQCMB8GA1UdIwQYMBaAFOXZm2f8-Oy6u_DAqJ2KV4i53z5jMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjANBgkqhkiG9w0BAQsFAAOCAQEAVdrZKGNY4To-sOoukfhPE6X8uHQslYC_RDdwyCW6BK_9MYBNnrjbKFpk9QUXZo61om9p-reuxTfNWATUdTUS4jmiwTArS9PHR18pz0w5auMwrmBGpyDAtbwfCaxnOrMvc3EVEVGdDfC12wH9QZitwIJnpRiONSd12X7KNRSU2lf0dOjB41-PEouKLflcwH0hQ2-cfTsZ7_BPRU7o5-Dk_rrZGVCWFhYfEawAQBT4C8oLiIREvNX620dGVifBT93_md64kbIHBr7HRSIlud-Pj9cuuQbMPLQxBNZOAk3lqU0_2rMwtIG8TsUKVRXTUiV4l0_RrDP9e519Fhq_PcZGsg&s=FSIt3hr5WJfC3h75PEtUu8FlYpELuPy3SJvyutgi6RbyzNiXzzYRVJhDiW4GMg9lt5ylgUs8kzjzi5uIlIvBD1tgLgcIPL0fTfYjpxRdlJ2F-ii73Gp8LRidsl1OL_4BIsEKtCOCP8LaJ7rDkzRG_BOAaDg73Em-NaUWSap8L2mwLc0DqbWtd0EvvrWfauTg3PsETxtakVeUyTDRVfe4GbhM6pKsoL9qen_MQZ7upDSVWtbiMfG_HRASmF-nmMI5HKGchPR3wchaGrFnx5dUyCVUIeY2u88Mckt02-zsZR0y22P9Jrj1rNAJjc0AsX514bjjNvC8pd7l9gy8i2D8mg&h=JYJKkdLho9gMDh8JPjIUmnFlIeSL4bzHf8B8wIHxegw
       pragma:
       - no-cache
       strict-transport-security:
@@ -46,11 +46,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2998'
+      - '2995'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '198'
+      - '195'
       x-msedge-ref:
-      - 'Ref A: 81CFBDD08D1249CC873D468F9404EF1A Ref B: MAA201060515047 Ref C: 2024-10-09T08:18:02Z'
+      - 'Ref A: D7B79A3CB1FA430ABB32F487AEAA9C43 Ref B: MAA201060516035 Ref C: 2025-03-21T02:32:09Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -72,13 +72,67 @@ interactions:
       User-Agent:
       - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005/operationResults/41859bada3bd4b6682e1f5289256e7cf?api-version=2024-03-01&t=638640586833247584&c=MIIHhzCCBm-gAwIBAgITfAWQ0hCHZtQ3fJ4PSAAABZDSEDANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDUwHhcNMjQwOTI3MDkwMTAzWhcNMjUwMzI2MDkwMTAzWjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANt7qVbg97HivqUzi3BPPNiHD4wLqYw03AkBiXDpww3W8iIU6FZbbOXVgCL-rGpnbxPkLEVZ1WtRfvLgR3qDiVRjkSnE2knSE6qtvBRWdqqsD9YiSi5lYW67vgtBA_mHzHNDb0zhZ2iofVE5GjHIKYINZSTo8of54bY_fJe0xenYEq7lMpbffWaoano6LQH1L0hSdzAreTN7T_bTsK7TkXQtx45c1upRueZR1wq4PRd-9AYpkfKHhxnCe5LBeLB-Q88WZbmNxuycYiJZzbEGVcEbg5fYdfYb4QveB2WmK7bCWSEDu7WzRaYN9zfP9ZpVnTHTmRcN-f3uvUzxNBMe26UCAwEAAaOCBHQwggRwMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHLBggrBgEFBQcBAQSCAb0wggG5MGMGCCsGAQUFBzAChldodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MFMGCCsGAQUFBzAChkdodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9DTzFQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA1LmNydDBTBggrBgEFBQcwAoZHaHR0cDovL2NybDMuYW1lLmdibC9haWEvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MB0GA1UdDgQWBBT07kfCxeuv0whuO9NP27UpdS8ZAzAOBgNVHQ8BAf8EBAMCBaAwggEmBgNVHR8EggEdMIIBGTCCARWgggERoIIBDYY_aHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwEwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBR61hmFKHlscXYeYPjzS--iBUIWHTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBAFB6-4Y-Z7skVWaPi2vBOob5I-JLv_MqkE8tGWMMCFI9McOWBWfeJWV7aA4X4MEwnVfuFzE4mdak49KhEWgAbnGBMMumWJtlE1VDYwoYj3k6VDrhg4K8cRAO24Ezl3_L9yTqPLHhnKpjnjZONChdqvy6tXy9zLDyo9uThhHykSdIVQPaynG83JYpUlN1akyNJVLxae9NCRV251OTh00g9z6gt1b4nk-Nszy6YtF1AoskPTpeZVcsxGTlq3ITXveDCeZrYbQ6EtZf5O8ekTrNsG-8DMSDIgDta1Dud4RchYh74jtodoiwmneC_ZG5VDcpozae4Mh1w3_kD4-E11i1U1U&s=w816vjyKkRcnE0qboU2QMgXrWzOV5MuaM442k_gZ5dbeT2Dq5J4GtRKZNsyYlkCLufJ0PMNQMwq-6MyOy-29ecXAQ1MDGbHRV9isU6sOnUhHkGA-emq0rRm7HSsCDtjRTJ_hIcQzyAiknWpz5TqK9kfabliBcPSc2tA9tja338fprx3eHS_XhM6S_Xz00Gs2pZ9leRt1Llm70SklwJD07SIFOqL_Jbc960iXFKss_s-B-4eFvScra7kUatz_nB9U8AXAax8fGlIMJf_kRiLohlwH8EG90CebhWicX4fIc3apiJ8qqwKar1gl6KXvkRYUlAw8hXIK7jlXxPxYlKFyxw&h=vzZrRK90d1d9z4ppadpcSPsZETdfi9r1WTVrQt2Ct5I
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005/operationResults/37ff48555f7a43e3aa73d8c5cb6a4c90?api-version=2024-06-01-preview&t=638781211307849159&c=MIIINDCCBxygAwIBAgITOgTUt9ojTC6toHWmHwAEBNS32jANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSU5GUkEgQ0EgMDEwHhcNMjUwMjA0MDkzMjA2WhcNMjYwMTMwMDkzMjA2WjCBjDELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAldBMRAwDgYDVQQHEwdSZWRtb25kMR4wHAYDVQQKExVNaWNyb3NvZnQgQ29ycG9yYXRpb24xPjA8BgNVBAMTNWFzeW5jb3BlcmF0aW9uc2lnbmluZ2NlcnRpZmljYXRlLm1hbmFnZW1lbnQuYXp1cmUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA16gXsQ1dUq5VsuLYh8_f2fFjN1fHR5gGvSdemC5T25vGoRhLE5a0J5pu_nsjICYcwNUPY49vWZmxbEUsSWlu-RHIHkNrVheJzuN9m3yqff-ariOKGq-dm_-hfBMbmaYPTNBNt0ZWH_NO9XCTL7RvwK3cX1z3VognQZ7c8zqdkO-Zgcz7BQnwgGZXUeSVT9bw9XMp_V2tgVvj317WDXkVULi1qSRc9NHXNbxxGsYtaRcRU151tI4W0XZ8L5ps70C9FstptoEa9li_bkS6l7Xo84LQPsM8AgtKtm_9i0nYKpx5qTlT2rkR9y_-ZJiv7eme8PV2puU1c4GHnx2ycnlBfQIDAQABo4IE1DCCBNAwJwYJKwYBBAGCNxUKBBowGDAKBggrBgEFBQcDATAKBggrBgEFBQcDAjA9BgkrBgEEAYI3FQcEMDAuBiYrBgEEAYI3FQiGkOMNhNW0eITxiz6Fm90Wzp0SgWCC9fYrg_LRIAIBZAIBCjCCAdoGCCsGAQUFBwEBBIIBzDCCAcgwZgYIKwYBBQUHMAKGWmh0dHA6Ly9jcmwubWljcm9zb2Z0LmNvbS9wa2lpbmZyYS9DZXJ0cy9CWTJQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSU5GUkElMjBDQSUyMDAxKDQpLmNydDBWBggrBgEFBQcwAoZKaHR0cDovL2NybDEuYW1lLmdibC9haWEvQlkyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcnQwVgYIKwYBBQUHMAKGSmh0dHA6Ly9jcmwyLmFtZS5nYmwvYWlhL0JZMlBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJTkZSQSUyMENBJTIwMDEoNCkuY3J0MFYGCCsGAQUFBzAChkpodHRwOi8vY3JsMy5hbWUuZ2JsL2FpYS9CWTJQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSU5GUkElMjBDQSUyMDAxKDQpLmNydDBWBggrBgEFBQcwAoZKaHR0cDovL2NybDQuYW1lLmdibC9haWEvQlkyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcnQwHQYDVR0OBBYEFFgo523mRBSbKnT6KXvtmw6cvpgrMA4GA1UdDwEB_wQEAwIFoDBABgNVHREEOTA3gjVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCATUGA1UdHwSCASwwggEoMIIBJKCCASCgggEchkJodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ1JML0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmwxLmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmwyLmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmwzLmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmw0LmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmwwgZ0GA1UdIASBlTCBkjAMBgorBgEEAYI3ewEBMGYGCisGAQQBgjd7AgIwWDBWBggrBgEFBQcCAjBKHkgAMwAzAGUAMAAxADkAMgAxAC0ANABkADYANAAtADQAZgA4AGMALQBhADAANQA1AC0ANQBiAGQAYQBmAGYAZAA1AGUAMwAzAGQwDAYKKwYBBAGCN3sDAjAMBgorBgEEAYI3ewQCMB8GA1UdIwQYMBaAFOXZm2f8-Oy6u_DAqJ2KV4i53z5jMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjANBgkqhkiG9w0BAQsFAAOCAQEAVdrZKGNY4To-sOoukfhPE6X8uHQslYC_RDdwyCW6BK_9MYBNnrjbKFpk9QUXZo61om9p-reuxTfNWATUdTUS4jmiwTArS9PHR18pz0w5auMwrmBGpyDAtbwfCaxnOrMvc3EVEVGdDfC12wH9QZitwIJnpRiONSd12X7KNRSU2lf0dOjB41-PEouKLflcwH0hQ2-cfTsZ7_BPRU7o5-Dk_rrZGVCWFhYfEawAQBT4C8oLiIREvNX620dGVifBT93_md64kbIHBr7HRSIlud-Pj9cuuQbMPLQxBNZOAk3lqU0_2rMwtIG8TsUKVRXTUiV4l0_RrDP9e519Fhq_PcZGsg&s=FSIt3hr5WJfC3h75PEtUu8FlYpELuPy3SJvyutgi6RbyzNiXzzYRVJhDiW4GMg9lt5ylgUs8kzjzi5uIlIvBD1tgLgcIPL0fTfYjpxRdlJ2F-ii73Gp8LRidsl1OL_4BIsEKtCOCP8LaJ7rDkzRG_BOAaDg73Em-NaUWSap8L2mwLc0DqbWtd0EvvrWfauTg3PsETxtakVeUyTDRVfe4GbhM6pKsoL9qen_MQZ7upDSVWtbiMfG_HRASmF-nmMI5HKGchPR3wchaGrFnx5dUyCVUIeY2u88Mckt02-zsZR0y22P9Jrj1rNAJjc0AsX514bjjNvC8pd7l9gy8i2D8mg&h=JYJKkdLho9gMDh8JPjIUmnFlIeSL4bzHf8B8wIHxegw
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/apis/clitest000003/versions/clitest000004/definitions/clitest000005/operationResults/41859bada3bd4b6682e1f5289256e7cf","name":"41859bada3bd4b6682e1f5289256e7cf","status":"Succeeded","startTime":"2024-10-09T08:18:03.9807983+00:00","endTime":"2024-10-09T08:18:04.6077384+00:00"}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/apis/clitest000003/versions/clitest000004/definitions/clitest000005/operationResults/37ff48555f7a43e3aa73d8c5cb6a4c90","name":"37ff48555f7a43e3aa73d8c5cb6a4c90","status":"InProgress","startTime":"2025-03-21T02:32:10.8055725+00:00"}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
+      cache-control:
+      - no-cache
+      content-length:
+      - '370'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Fri, 21 Mar 2025 02:32:10 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005/operationResults/37ff48555f7a43e3aa73d8c5cb6a4c90?api-version=2024-06-01-preview&t=638781211314099076&c=MIIINDCCBxygAwIBAgITOgTUt9ojTC6toHWmHwAEBNS32jANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSU5GUkEgQ0EgMDEwHhcNMjUwMjA0MDkzMjA2WhcNMjYwMTMwMDkzMjA2WjCBjDELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAldBMRAwDgYDVQQHEwdSZWRtb25kMR4wHAYDVQQKExVNaWNyb3NvZnQgQ29ycG9yYXRpb24xPjA8BgNVBAMTNWFzeW5jb3BlcmF0aW9uc2lnbmluZ2NlcnRpZmljYXRlLm1hbmFnZW1lbnQuYXp1cmUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA16gXsQ1dUq5VsuLYh8_f2fFjN1fHR5gGvSdemC5T25vGoRhLE5a0J5pu_nsjICYcwNUPY49vWZmxbEUsSWlu-RHIHkNrVheJzuN9m3yqff-ariOKGq-dm_-hfBMbmaYPTNBNt0ZWH_NO9XCTL7RvwK3cX1z3VognQZ7c8zqdkO-Zgcz7BQnwgGZXUeSVT9bw9XMp_V2tgVvj317WDXkVULi1qSRc9NHXNbxxGsYtaRcRU151tI4W0XZ8L5ps70C9FstptoEa9li_bkS6l7Xo84LQPsM8AgtKtm_9i0nYKpx5qTlT2rkR9y_-ZJiv7eme8PV2puU1c4GHnx2ycnlBfQIDAQABo4IE1DCCBNAwJwYJKwYBBAGCNxUKBBowGDAKBggrBgEFBQcDATAKBggrBgEFBQcDAjA9BgkrBgEEAYI3FQcEMDAuBiYrBgEEAYI3FQiGkOMNhNW0eITxiz6Fm90Wzp0SgWCC9fYrg_LRIAIBZAIBCjCCAdoGCCsGAQUFBwEBBIIBzDCCAcgwZgYIKwYBBQUHMAKGWmh0dHA6Ly9jcmwubWljcm9zb2Z0LmNvbS9wa2lpbmZyYS9DZXJ0cy9CWTJQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSU5GUkElMjBDQSUyMDAxKDQpLmNydDBWBggrBgEFBQcwAoZKaHR0cDovL2NybDEuYW1lLmdibC9haWEvQlkyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcnQwVgYIKwYBBQUHMAKGSmh0dHA6Ly9jcmwyLmFtZS5nYmwvYWlhL0JZMlBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJTkZSQSUyMENBJTIwMDEoNCkuY3J0MFYGCCsGAQUFBzAChkpodHRwOi8vY3JsMy5hbWUuZ2JsL2FpYS9CWTJQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSU5GUkElMjBDQSUyMDAxKDQpLmNydDBWBggrBgEFBQcwAoZKaHR0cDovL2NybDQuYW1lLmdibC9haWEvQlkyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcnQwHQYDVR0OBBYEFFgo523mRBSbKnT6KXvtmw6cvpgrMA4GA1UdDwEB_wQEAwIFoDBABgNVHREEOTA3gjVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCATUGA1UdHwSCASwwggEoMIIBJKCCASCgggEchkJodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ1JML0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmwxLmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmwyLmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmwzLmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmw0LmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmwwgZ0GA1UdIASBlTCBkjAMBgorBgEEAYI3ewEBMGYGCisGAQQBgjd7AgIwWDBWBggrBgEFBQcCAjBKHkgAMwAzAGUAMAAxADkAMgAxAC0ANABkADYANAAtADQAZgA4AGMALQBhADAANQA1AC0ANQBiAGQAYQBmAGYAZAA1AGUAMwAzAGQwDAYKKwYBBAGCN3sDAjAMBgorBgEEAYI3ewQCMB8GA1UdIwQYMBaAFOXZm2f8-Oy6u_DAqJ2KV4i53z5jMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjANBgkqhkiG9w0BAQsFAAOCAQEAVdrZKGNY4To-sOoukfhPE6X8uHQslYC_RDdwyCW6BK_9MYBNnrjbKFpk9QUXZo61om9p-reuxTfNWATUdTUS4jmiwTArS9PHR18pz0w5auMwrmBGpyDAtbwfCaxnOrMvc3EVEVGdDfC12wH9QZitwIJnpRiONSd12X7KNRSU2lf0dOjB41-PEouKLflcwH0hQ2-cfTsZ7_BPRU7o5-Dk_rrZGVCWFhYfEawAQBT4C8oLiIREvNX620dGVifBT93_md64kbIHBr7HRSIlud-Pj9cuuQbMPLQxBNZOAk3lqU0_2rMwtIG8TsUKVRXTUiV4l0_RrDP9e519Fhq_PcZGsg&s=Nf7Lq1P0Mf6UXykZORtBFhIcAzXYGvcYwqlXYPfkXG73Q1NOXoz1V-JfRK3MnP2yqfeXPDYymaqz55P859gyf0OWh79n1KlxStNz3R8PU1zeMGBZfRm8sQrKkjTY3_CXkRJx8Q_IUhfink748g_3MqaoKGaK39wDYfnzssNv-bG6Zhu7osOHfk_atTlmI-xgxHDYzBFi8IWEY-Gatq12XdfMc88p0dW4BziC7bO5FUUNKd47UE62SQp0nCzSvxVpoMWJRz62Y0ZG3f2URx9NULEer7qtOXU5n1rTfQATixO9qI1m-VVDkzz1vOASkYg0fhGw-Ng0gfJ1R7lCbL5HPg&h=HnHQDf0MrXujSbGjOhzPFz7kaDjWDdtEt33ZArHoulk
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-cache:
+      - CONFIG_NOCACHE
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-global-reads:
+      - '3748'
+      x-msedge-ref:
+      - 'Ref A: 9FCCC6B4E6B347B18F2AC380F40FF997 Ref B: MAA201060516035 Ref C: 2025-03-21T02:32:10Z'
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 202
+      message: Accepted
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - apic api definition import-specification
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --api-id --version-id --definition-id --format --specification --value
+      User-Agent:
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005/operationResults/37ff48555f7a43e3aa73d8c5cb6a4c90?api-version=2024-06-01-preview&t=638781211314099076&c=MIIINDCCBxygAwIBAgITOgTUt9ojTC6toHWmHwAEBNS32jANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSU5GUkEgQ0EgMDEwHhcNMjUwMjA0MDkzMjA2WhcNMjYwMTMwMDkzMjA2WjCBjDELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAldBMRAwDgYDVQQHEwdSZWRtb25kMR4wHAYDVQQKExVNaWNyb3NvZnQgQ29ycG9yYXRpb24xPjA8BgNVBAMTNWFzeW5jb3BlcmF0aW9uc2lnbmluZ2NlcnRpZmljYXRlLm1hbmFnZW1lbnQuYXp1cmUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA16gXsQ1dUq5VsuLYh8_f2fFjN1fHR5gGvSdemC5T25vGoRhLE5a0J5pu_nsjICYcwNUPY49vWZmxbEUsSWlu-RHIHkNrVheJzuN9m3yqff-ariOKGq-dm_-hfBMbmaYPTNBNt0ZWH_NO9XCTL7RvwK3cX1z3VognQZ7c8zqdkO-Zgcz7BQnwgGZXUeSVT9bw9XMp_V2tgVvj317WDXkVULi1qSRc9NHXNbxxGsYtaRcRU151tI4W0XZ8L5ps70C9FstptoEa9li_bkS6l7Xo84LQPsM8AgtKtm_9i0nYKpx5qTlT2rkR9y_-ZJiv7eme8PV2puU1c4GHnx2ycnlBfQIDAQABo4IE1DCCBNAwJwYJKwYBBAGCNxUKBBowGDAKBggrBgEFBQcDATAKBggrBgEFBQcDAjA9BgkrBgEEAYI3FQcEMDAuBiYrBgEEAYI3FQiGkOMNhNW0eITxiz6Fm90Wzp0SgWCC9fYrg_LRIAIBZAIBCjCCAdoGCCsGAQUFBwEBBIIBzDCCAcgwZgYIKwYBBQUHMAKGWmh0dHA6Ly9jcmwubWljcm9zb2Z0LmNvbS9wa2lpbmZyYS9DZXJ0cy9CWTJQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSU5GUkElMjBDQSUyMDAxKDQpLmNydDBWBggrBgEFBQcwAoZKaHR0cDovL2NybDEuYW1lLmdibC9haWEvQlkyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcnQwVgYIKwYBBQUHMAKGSmh0dHA6Ly9jcmwyLmFtZS5nYmwvYWlhL0JZMlBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJTkZSQSUyMENBJTIwMDEoNCkuY3J0MFYGCCsGAQUFBzAChkpodHRwOi8vY3JsMy5hbWUuZ2JsL2FpYS9CWTJQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSU5GUkElMjBDQSUyMDAxKDQpLmNydDBWBggrBgEFBQcwAoZKaHR0cDovL2NybDQuYW1lLmdibC9haWEvQlkyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcnQwHQYDVR0OBBYEFFgo523mRBSbKnT6KXvtmw6cvpgrMA4GA1UdDwEB_wQEAwIFoDBABgNVHREEOTA3gjVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCATUGA1UdHwSCASwwggEoMIIBJKCCASCgggEchkJodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ1JML0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmwxLmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmwyLmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmwzLmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmyGNGh0dHA6Ly9jcmw0LmFtZS5nYmwvY3JsL0FNRSUyMElORlJBJTIwQ0ElMjAwMSg0KS5jcmwwgZ0GA1UdIASBlTCBkjAMBgorBgEEAYI3ewEBMGYGCisGAQQBgjd7AgIwWDBWBggrBgEFBQcCAjBKHkgAMwAzAGUAMAAxADkAMgAxAC0ANABkADYANAAtADQAZgA4AGMALQBhADAANQA1AC0ANQBiAGQAYQBmAGYAZAA1AGUAMwAzAGQwDAYKKwYBBAGCN3sDAjAMBgorBgEEAYI3ewQCMB8GA1UdIwQYMBaAFOXZm2f8-Oy6u_DAqJ2KV4i53z5jMB0GA1UdJQQWMBQGCCsGAQUFBwMBBggrBgEFBQcDAjANBgkqhkiG9w0BAQsFAAOCAQEAVdrZKGNY4To-sOoukfhPE6X8uHQslYC_RDdwyCW6BK_9MYBNnrjbKFpk9QUXZo61om9p-reuxTfNWATUdTUS4jmiwTArS9PHR18pz0w5auMwrmBGpyDAtbwfCaxnOrMvc3EVEVGdDfC12wH9QZitwIJnpRiONSd12X7KNRSU2lf0dOjB41-PEouKLflcwH0hQ2-cfTsZ7_BPRU7o5-Dk_rrZGVCWFhYfEawAQBT4C8oLiIREvNX620dGVifBT93_md64kbIHBr7HRSIlud-Pj9cuuQbMPLQxBNZOAk3lqU0_2rMwtIG8TsUKVRXTUiV4l0_RrDP9e519Fhq_PcZGsg&s=Nf7Lq1P0Mf6UXykZORtBFhIcAzXYGvcYwqlXYPfkXG73Q1NOXoz1V-JfRK3MnP2yqfeXPDYymaqz55P859gyf0OWh79n1KlxStNz3R8PU1zeMGBZfRm8sQrKkjTY3_CXkRJx8Q_IUhfink748g_3MqaoKGaK39wDYfnzssNv-bG6Zhu7osOHfk_atTlmI-xgxHDYzBFi8IWEY-Gatq12XdfMc88p0dW4BziC7bO5FUUNKd47UE62SQp0nCzSvxVpoMWJRz62Y0ZG3f2URx9NULEer7qtOXU5n1rTfQATixO9qI1m-VVDkzz1vOASkYg0fhGw-Ng0gfJ1R7lCbL5HPg&h=HnHQDf0MrXujSbGjOhzPFz7kaDjWDdtEt33ZArHoulk
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/apis/clitest000003/versions/clitest000004/definitions/clitest000005/operationResults/37ff48555f7a43e3aa73d8c5cb6a4c90","name":"37ff48555f7a43e3aa73d8c5cb6a4c90","status":"Succeeded","startTime":"2025-03-21T02:32:10.8055725+00:00","endTime":"2025-03-21T02:32:12.5303243+00:00"}'
+    headers:
+      api-supported-versions:
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -86,7 +140,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:18:04 GMT
+      - Fri, 21 Mar 2025 02:32:41 GMT
       expires:
       - '-1'
       pragma:
@@ -102,7 +156,7 @@ interactions:
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '3749'
       x-msedge-ref:
-      - 'Ref A: EC99BA45FC3F48C2B431E1F50B2E3708 Ref B: MAA201060515047 Ref C: 2024-10-09T08:18:03Z'
+      - 'Ref A: 6AFFAEF2DF1F4E6F9FA60629D1104BE3 Ref B: MAA201060516035 Ref C: 2025-03-21T02:32:41Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -129,101 +183,117 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005/exportSpecification?api-version=2024-03-01
   response:
     body:
-      string: '{"format":"inline","value":"{\"openapi\":\"3.0.2\",\"info\":{\"title\":\"Swagger
+      string: '{"format":"inline","value":"{\"openapi\":\"3.0.4\",\"info\":{\"title\":\"Swagger
         Petstore - OpenAPI 3.0\",\"description\":\"This is a sample Pet Store Server
         based on the OpenAPI 3.0 specification.  You can find out more about\\nSwagger
-        at [http://swagger.io](http://swagger.io). In the third iteration of the pet
-        store, we''ve switched to the design first approach!\\nYou can now help us
-        improve the API whether it''s by making changes to the definition itself or
-        to the code.\\nThat way, with time, we can improve the API in general, and
-        expose some of the new features in OAS3.\\n\\nSome useful links:\\n- [The
+        at [https://swagger.io](https://swagger.io). In the third iteration of the
+        pet store, we''ve switched to the design first approach!\\nYou can now help
+        us improve the API whether it''s by making changes to the definition itself
+        or to the code.\\nThat way, with time, we can improve the API in general,
+        and expose some of the new features in OAS3.\\n\\nSome useful links:\\n- [The
         Pet Store repository](https://github.com/swagger-api/swagger-petstore)\\n-
-        [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)\",\"termsOfService\":\"http://swagger.io/terms/\",\"contact\":{\"email\":\"apiteam@swagger.io\"},\"license\":{\"name\":\"Apache
-        2.0\",\"url\":\"http://www.apache.org/licenses/LICENSE-2.0.html\"},\"version\":\"1.0.19\"},\"externalDocs\":{\"description\":\"Find
-        out more about Swagger\",\"url\":\"http://swagger.io\"},\"servers\":[{\"url\":\"/api/v3\"}],\"tags\":[{\"name\":\"pet\",\"description\":\"Everything
-        about your Pets\",\"externalDocs\":{\"description\":\"Find out more\",\"url\":\"http://swagger.io\"}},{\"name\":\"store\",\"description\":\"Access
+        [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)\",\"termsOfService\":\"https://swagger.io/terms/\",\"contact\":{\"email\":\"apiteam@swagger.io\"},\"license\":{\"name\":\"Apache
+        2.0\",\"url\":\"https://www.apache.org/licenses/LICENSE-2.0.html\"},\"version\":\"1.0.26\"},\"externalDocs\":{\"description\":\"Find
+        out more about Swagger\",\"url\":\"https://swagger.io\"},\"servers\":[{\"url\":\"/api/v3\"}],\"tags\":[{\"name\":\"pet\",\"description\":\"Everything
+        about your Pets\",\"externalDocs\":{\"description\":\"Find out more\",\"url\":\"https://swagger.io\"}},{\"name\":\"store\",\"description\":\"Access
         to Petstore orders\",\"externalDocs\":{\"description\":\"Find out more about
-        our store\",\"url\":\"http://swagger.io\"}},{\"name\":\"user\",\"description\":\"Operations
+        our store\",\"url\":\"https://swagger.io\"}},{\"name\":\"user\",\"description\":\"Operations
         about user\"}],\"paths\":{\"/pet\":{\"put\":{\"tags\":[\"pet\"],\"summary\":\"Update
-        an existing pet\",\"description\":\"Update an existing pet by Id\",\"operationId\":\"updatePet\",\"requestBody\":{\"description\":\"Update
+        an existing pet.\",\"description\":\"Update an existing pet by Id.\",\"operationId\":\"updatePet\",\"requestBody\":{\"description\":\"Update
         an existent pet in the store\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}},\"application/x-www-form-urlencoded\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}}},\"required\":true},\"responses\":{\"200\":{\"description\":\"Successful
-        operation\",\"content\":{\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}},\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}}}},\"400\":{\"description\":\"Invalid
-        ID supplied\"},\"404\":{\"description\":\"Pet not found\"},\"405\":{\"description\":\"Validation
-        exception\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]},\"post\":{\"tags\":[\"pet\"],\"summary\":\"Add
-        a new pet to the store\",\"description\":\"Add a new pet to the store\",\"operationId\":\"addPet\",\"requestBody\":{\"description\":\"Create
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}}}},\"400\":{\"description\":\"Invalid
+        ID supplied\"},\"404\":{\"description\":\"Pet not found\"},\"422\":{\"description\":\"Validation
+        exception\"},\"default\":{\"description\":\"Unexpected error\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]},\"post\":{\"tags\":[\"pet\"],\"summary\":\"Add
+        a new pet to the store.\",\"description\":\"Add a new pet to the store.\",\"operationId\":\"addPet\",\"requestBody\":{\"description\":\"Create
         a new pet in the store\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}},\"application/x-www-form-urlencoded\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}}},\"required\":true},\"responses\":{\"200\":{\"description\":\"Successful
-        operation\",\"content\":{\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}},\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}}}},\"405\":{\"description\":\"Invalid
-        input\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]}},\"/pet/findByStatus\":{\"get\":{\"tags\":[\"pet\"],\"summary\":\"Finds
-        Pets by status\",\"description\":\"Multiple status values can be provided
-        with comma separated strings\",\"operationId\":\"findPetsByStatus\",\"parameters\":[{\"name\":\"status\",\"in\":\"query\",\"description\":\"Status
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}}}},\"400\":{\"description\":\"Invalid
+        input\"},\"422\":{\"description\":\"Validation exception\"},\"default\":{\"description\":\"Unexpected
+        error\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]}},\"/pet/findByStatus\":{\"get\":{\"tags\":[\"pet\"],\"summary\":\"Finds
+        Pets by status.\",\"description\":\"Multiple status values can be provided
+        with comma separated strings.\",\"operationId\":\"findPetsByStatus\",\"parameters\":[{\"name\":\"status\",\"in\":\"query\",\"description\":\"Status
         values that need to be considered for filter\",\"required\":false,\"explode\":true,\"schema\":{\"type\":\"string\",\"default\":\"available\",\"enum\":[\"available\",\"pending\",\"sold\"]}}],\"responses\":{\"200\":{\"description\":\"successful
-        operation\",\"content\":{\"application/xml\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/Pet\"}}},\"application/json\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/Pet\"}}}}},\"400\":{\"description\":\"Invalid
-        status value\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]}},\"/pet/findByTags\":{\"get\":{\"tags\":[\"pet\"],\"summary\":\"Finds
-        Pets by tags\",\"description\":\"Multiple tags can be provided with comma
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/Pet\"}}},\"application/xml\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/Pet\"}}}}},\"400\":{\"description\":\"Invalid
+        status value\"},\"default\":{\"description\":\"Unexpected error\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]}},\"/pet/findByTags\":{\"get\":{\"tags\":[\"pet\"],\"summary\":\"Finds
+        Pets by tags.\",\"description\":\"Multiple tags can be provided with comma
         separated strings. Use tag1, tag2, tag3 for testing.\",\"operationId\":\"findPetsByTags\",\"parameters\":[{\"name\":\"tags\",\"in\":\"query\",\"description\":\"Tags
         to filter by\",\"required\":false,\"explode\":true,\"schema\":{\"type\":\"array\",\"items\":{\"type\":\"string\"}}}],\"responses\":{\"200\":{\"description\":\"successful
-        operation\",\"content\":{\"application/xml\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/Pet\"}}},\"application/json\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/Pet\"}}}}},\"400\":{\"description\":\"Invalid
-        tag value\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]}},\"/pet/{petId}\":{\"get\":{\"tags\":[\"pet\"],\"summary\":\"Find
-        pet by ID\",\"description\":\"Returns a single pet\",\"operationId\":\"getPetById\",\"parameters\":[{\"name\":\"petId\",\"in\":\"path\",\"description\":\"ID
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/Pet\"}}},\"application/xml\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/Pet\"}}}}},\"400\":{\"description\":\"Invalid
+        tag value\"},\"default\":{\"description\":\"Unexpected error\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]}},\"/pet/{petId}\":{\"get\":{\"tags\":[\"pet\"],\"summary\":\"Find
+        pet by ID.\",\"description\":\"Returns a single pet.\",\"operationId\":\"getPetById\",\"parameters\":[{\"name\":\"petId\",\"in\":\"path\",\"description\":\"ID
         of pet to return\",\"required\":true,\"schema\":{\"type\":\"integer\",\"format\":\"int64\"}}],\"responses\":{\"200\":{\"description\":\"successful
-        operation\",\"content\":{\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}},\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}}}},\"400\":{\"description\":\"Invalid
-        ID supplied\"},\"404\":{\"description\":\"Pet not found\"}},\"security\":[{\"api_key\":[]},{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]},\"post\":{\"tags\":[\"pet\"],\"summary\":\"Updates
-        a pet in the store with form data\",\"description\":\"\",\"operationId\":\"updatePetWithForm\",\"parameters\":[{\"name\":\"petId\",\"in\":\"path\",\"description\":\"ID
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}}}},\"400\":{\"description\":\"Invalid
+        ID supplied\"},\"404\":{\"description\":\"Pet not found\"},\"default\":{\"description\":\"Unexpected
+        error\"}},\"security\":[{\"api_key\":[]},{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]},\"post\":{\"tags\":[\"pet\"],\"summary\":\"Updates
+        a pet in the store with form data.\",\"description\":\"Updates a pet resource
+        based on the form data.\",\"operationId\":\"updatePetWithForm\",\"parameters\":[{\"name\":\"petId\",\"in\":\"path\",\"description\":\"ID
         of pet that needs to be updated\",\"required\":true,\"schema\":{\"type\":\"integer\",\"format\":\"int64\"}},{\"name\":\"name\",\"in\":\"query\",\"description\":\"Name
         of pet that needs to be updated\",\"schema\":{\"type\":\"string\"}},{\"name\":\"status\",\"in\":\"query\",\"description\":\"Status
-        of pet that needs to be updated\",\"schema\":{\"type\":\"string\"}}],\"responses\":{\"405\":{\"description\":\"Invalid
-        input\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]},\"delete\":{\"tags\":[\"pet\"],\"summary\":\"Deletes
-        a pet\",\"description\":\"\",\"operationId\":\"deletePet\",\"parameters\":[{\"name\":\"api_key\",\"in\":\"header\",\"description\":\"\",\"required\":false,\"schema\":{\"type\":\"string\"}},{\"name\":\"petId\",\"in\":\"path\",\"description\":\"Pet
-        id to delete\",\"required\":true,\"schema\":{\"type\":\"integer\",\"format\":\"int64\"}}],\"responses\":{\"400\":{\"description\":\"Invalid
-        pet value\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]}},\"/pet/{petId}/uploadImage\":{\"post\":{\"tags\":[\"pet\"],\"summary\":\"uploads
-        an image\",\"description\":\"\",\"operationId\":\"uploadFile\",\"parameters\":[{\"name\":\"petId\",\"in\":\"path\",\"description\":\"ID
+        of pet that needs to be updated\",\"schema\":{\"type\":\"string\"}}],\"responses\":{\"200\":{\"description\":\"successful
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}}}},\"400\":{\"description\":\"Invalid
+        input\"},\"default\":{\"description\":\"Unexpected error\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]},\"delete\":{\"tags\":[\"pet\"],\"summary\":\"Deletes
+        a pet.\",\"description\":\"Delete a pet.\",\"operationId\":\"deletePet\",\"parameters\":[{\"name\":\"api_key\",\"in\":\"header\",\"description\":\"\",\"required\":false,\"schema\":{\"type\":\"string\"}},{\"name\":\"petId\",\"in\":\"path\",\"description\":\"Pet
+        id to delete\",\"required\":true,\"schema\":{\"type\":\"integer\",\"format\":\"int64\"}}],\"responses\":{\"200\":{\"description\":\"Pet
+        deleted\"},\"400\":{\"description\":\"Invalid pet value\"},\"default\":{\"description\":\"Unexpected
+        error\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]}},\"/pet/{petId}/uploadImage\":{\"post\":{\"tags\":[\"pet\"],\"summary\":\"Uploads
+        an image.\",\"description\":\"Upload image of the pet.\",\"operationId\":\"uploadFile\",\"parameters\":[{\"name\":\"petId\",\"in\":\"path\",\"description\":\"ID
         of pet to update\",\"required\":true,\"schema\":{\"type\":\"integer\",\"format\":\"int64\"}},{\"name\":\"additionalMetadata\",\"in\":\"query\",\"description\":\"Additional
         Metadata\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"requestBody\":{\"content\":{\"application/octet-stream\":{\"schema\":{\"type\":\"string\",\"format\":\"binary\"}}}},\"responses\":{\"200\":{\"description\":\"successful
-        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/ApiResponse\"}}}}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]}},\"/store/inventory\":{\"get\":{\"tags\":[\"store\"],\"summary\":\"Returns
-        pet inventories by status\",\"description\":\"Returns a map of status codes
-        to quantities\",\"operationId\":\"getInventory\",\"responses\":{\"200\":{\"description\":\"successful
-        operation\",\"content\":{\"application/json\":{\"schema\":{\"type\":\"object\",\"additionalProperties\":{\"type\":\"integer\",\"format\":\"int32\"}}}}}},\"security\":[{\"api_key\":[]}]}},\"/store/order\":{\"post\":{\"tags\":[\"store\"],\"summary\":\"Place
-        an order for a pet\",\"description\":\"Place a new order in the store\",\"operationId\":\"placeOrder\",\"requestBody\":{\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Order\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Order\"}},\"application/x-www-form-urlencoded\":{\"schema\":{\"$ref\":\"#/components/schemas/Order\"}}}},\"responses\":{\"200\":{\"description\":\"successful
-        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Order\"}}}},\"405\":{\"description\":\"Invalid
-        input\"}}}},\"/store/order/{orderId}\":{\"get\":{\"tags\":[\"store\"],\"summary\":\"Find
-        purchase order by ID\",\"description\":\"For valid response try integer IDs
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/ApiResponse\"}}}},\"400\":{\"description\":\"No
+        file uploaded\"},\"404\":{\"description\":\"Pet not found\"},\"default\":{\"description\":\"Unexpected
+        error\"}},\"security\":[{\"petstore_auth\":[\"write:pets\",\"read:pets\"]}]}},\"/store/inventory\":{\"get\":{\"tags\":[\"store\"],\"summary\":\"Returns
+        pet inventories by status.\",\"description\":\"Returns a map of status codes
+        to quantities.\",\"operationId\":\"getInventory\",\"responses\":{\"200\":{\"description\":\"successful
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"type\":\"object\",\"additionalProperties\":{\"type\":\"integer\",\"format\":\"int32\"}}}}},\"default\":{\"description\":\"Unexpected
+        error\"}},\"security\":[{\"api_key\":[]}]}},\"/store/order\":{\"post\":{\"tags\":[\"store\"],\"summary\":\"Place
+        an order for a pet.\",\"description\":\"Place a new order in the store.\",\"operationId\":\"placeOrder\",\"requestBody\":{\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Order\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Order\"}},\"application/x-www-form-urlencoded\":{\"schema\":{\"$ref\":\"#/components/schemas/Order\"}}}},\"responses\":{\"200\":{\"description\":\"successful
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Order\"}}}},\"400\":{\"description\":\"Invalid
+        input\"},\"422\":{\"description\":\"Validation exception\"},\"default\":{\"description\":\"Unexpected
+        error\"}}}},\"/store/order/{orderId}\":{\"get\":{\"tags\":[\"store\"],\"summary\":\"Find
+        purchase order by ID.\",\"description\":\"For valid response try integer IDs
         with value <= 5 or > 10. Other values will generate exceptions.\",\"operationId\":\"getOrderById\",\"parameters\":[{\"name\":\"orderId\",\"in\":\"path\",\"description\":\"ID
         of order that needs to be fetched\",\"required\":true,\"schema\":{\"type\":\"integer\",\"format\":\"int64\"}}],\"responses\":{\"200\":{\"description\":\"successful
-        operation\",\"content\":{\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Order\"}},\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Order\"}}}},\"400\":{\"description\":\"Invalid
-        ID supplied\"},\"404\":{\"description\":\"Order not found\"}}},\"delete\":{\"tags\":[\"store\"],\"summary\":\"Delete
-        purchase order by ID\",\"description\":\"For valid response try integer IDs
-        with value < 1000. Anything above 1000 or nonintegers will generate API errors\",\"operationId\":\"deleteOrder\",\"parameters\":[{\"name\":\"orderId\",\"in\":\"path\",\"description\":\"ID
-        of the order that needs to be deleted\",\"required\":true,\"schema\":{\"type\":\"integer\",\"format\":\"int64\"}}],\"responses\":{\"400\":{\"description\":\"Invalid
-        ID supplied\"},\"404\":{\"description\":\"Order not found\"}}}},\"/user\":{\"post\":{\"tags\":[\"user\"],\"summary\":\"Create
-        user\",\"description\":\"This can only be done by the logged in user.\",\"operationId\":\"createUser\",\"requestBody\":{\"description\":\"Created
-        user object\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/x-www-form-urlencoded\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}}}},\"responses\":{\"default\":{\"description\":\"successful
-        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}}}}}}},\"/user/createWithList\":{\"post\":{\"tags\":[\"user\"],\"summary\":\"Creates
-        list of users with given input array\",\"description\":\"Creates list of users
-        with given input array\",\"operationId\":\"createUsersWithListInput\",\"requestBody\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/User\"}}}}},\"responses\":{\"200\":{\"description\":\"Successful
-        operation\",\"content\":{\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}}}},\"default\":{\"description\":\"successful
-        operation\"}}}},\"/user/login\":{\"get\":{\"tags\":[\"user\"],\"summary\":\"Logs
-        user into the system\",\"description\":\"\",\"operationId\":\"loginUser\",\"parameters\":[{\"name\":\"username\",\"in\":\"query\",\"description\":\"The
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Order\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Order\"}}}},\"400\":{\"description\":\"Invalid
+        ID supplied\"},\"404\":{\"description\":\"Order not found\"},\"default\":{\"description\":\"Unexpected
+        error\"}}},\"delete\":{\"tags\":[\"store\"],\"summary\":\"Delete purchase
+        order by identifier.\",\"description\":\"For valid response try integer IDs
+        with value < 1000. Anything above 1000 or non-integers will generate API errors.\",\"operationId\":\"deleteOrder\",\"parameters\":[{\"name\":\"orderId\",\"in\":\"path\",\"description\":\"ID
+        of the order that needs to be deleted\",\"required\":true,\"schema\":{\"type\":\"integer\",\"format\":\"int64\"}}],\"responses\":{\"200\":{\"description\":\"order
+        deleted\"},\"400\":{\"description\":\"Invalid ID supplied\"},\"404\":{\"description\":\"Order
+        not found\"},\"default\":{\"description\":\"Unexpected error\"}}}},\"/user\":{\"post\":{\"tags\":[\"user\"],\"summary\":\"Create
+        user.\",\"description\":\"This can only be done by the logged in user.\",\"operationId\":\"createUser\",\"requestBody\":{\"description\":\"Created
+        user object\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/x-www-form-urlencoded\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}}}},\"responses\":{\"200\":{\"description\":\"successful
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}}}},\"default\":{\"description\":\"Unexpected
+        error\"}}}},\"/user/createWithList\":{\"post\":{\"tags\":[\"user\"],\"summary\":\"Creates
+        list of users with given input array.\",\"description\":\"Creates list of
+        users with given input array.\",\"operationId\":\"createUsersWithListInput\",\"requestBody\":{\"content\":{\"application/json\":{\"schema\":{\"type\":\"array\",\"items\":{\"$ref\":\"#/components/schemas/User\"}}}}},\"responses\":{\"200\":{\"description\":\"Successful
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}}}},\"default\":{\"description\":\"Unexpected
+        error\"}}}},\"/user/login\":{\"get\":{\"tags\":[\"user\"],\"summary\":\"Logs
+        user into the system.\",\"description\":\"Log into the system.\",\"operationId\":\"loginUser\",\"parameters\":[{\"name\":\"username\",\"in\":\"query\",\"description\":\"The
         user name for login\",\"required\":false,\"schema\":{\"type\":\"string\"}},{\"name\":\"password\",\"in\":\"query\",\"description\":\"The
         password for login in clear text\",\"required\":false,\"schema\":{\"type\":\"string\"}}],\"responses\":{\"200\":{\"description\":\"successful
         operation\",\"headers\":{\"X-Rate-Limit\":{\"description\":\"calls per hour
         allowed by the user\",\"schema\":{\"type\":\"integer\",\"format\":\"int32\"}},\"X-Expires-After\":{\"description\":\"date
         in UTC when token expires\",\"schema\":{\"type\":\"string\",\"format\":\"date-time\"}}},\"content\":{\"application/xml\":{\"schema\":{\"type\":\"string\"}},\"application/json\":{\"schema\":{\"type\":\"string\"}}}},\"400\":{\"description\":\"Invalid
-        username/password supplied\"}}}},\"/user/logout\":{\"get\":{\"tags\":[\"user\"],\"summary\":\"Logs
-        out current logged in user session\",\"description\":\"\",\"operationId\":\"logoutUser\",\"parameters\":[],\"responses\":{\"default\":{\"description\":\"successful
-        operation\"}}}},\"/user/{username}\":{\"get\":{\"tags\":[\"user\"],\"summary\":\"Get
-        user by user name\",\"description\":\"\",\"operationId\":\"getUserByName\",\"parameters\":[{\"name\":\"username\",\"in\":\"path\",\"description\":\"The
-        name that needs to be fetched. Use user1 for testing. \",\"required\":true,\"schema\":{\"type\":\"string\"}}],\"responses\":{\"200\":{\"description\":\"successful
-        operation\",\"content\":{\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}}}},\"400\":{\"description\":\"Invalid
-        username supplied\"},\"404\":{\"description\":\"User not found\"}}},\"put\":{\"tags\":[\"user\"],\"summary\":\"Update
-        user\",\"description\":\"This can only be done by the logged in user.\",\"operationId\":\"updateUser\",\"parameters\":[{\"name\":\"username\",\"in\":\"path\",\"description\":\"name
-        that needs to be updated\",\"required\":true,\"schema\":{\"type\":\"string\"}}],\"requestBody\":{\"description\":\"Update
-        an existent user in the store\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/x-www-form-urlencoded\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}}}},\"responses\":{\"default\":{\"description\":\"successful
-        operation\"}}},\"delete\":{\"tags\":[\"user\"],\"summary\":\"Delete user\",\"description\":\"This
-        can only be done by the logged in user.\",\"operationId\":\"deleteUser\",\"parameters\":[{\"name\":\"username\",\"in\":\"path\",\"description\":\"The
-        name that needs to be deleted\",\"required\":true,\"schema\":{\"type\":\"string\"}}],\"responses\":{\"400\":{\"description\":\"Invalid
-        username supplied\"},\"404\":{\"description\":\"User not found\"}}}}},\"components\":{\"schemas\":{\"Order\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int64\",\"example\":10},\"petId\":{\"type\":\"integer\",\"format\":\"int64\",\"example\":198772},\"quantity\":{\"type\":\"integer\",\"format\":\"int32\",\"example\":7},\"shipDate\":{\"type\":\"string\",\"format\":\"date-time\"},\"status\":{\"type\":\"string\",\"description\":\"Order
-        Status\",\"example\":\"approved\",\"enum\":[\"placed\",\"approved\",\"delivered\"]},\"complete\":{\"type\":\"boolean\"}},\"xml\":{\"name\":\"order\"}},\"Customer\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int64\",\"example\":100000},\"username\":{\"type\":\"string\",\"example\":\"fehguy\"},\"address\":{\"type\":\"array\",\"xml\":{\"name\":\"addresses\",\"wrapped\":true},\"items\":{\"$ref\":\"#/components/schemas/Address\"}}},\"xml\":{\"name\":\"customer\"}},\"Address\":{\"type\":\"object\",\"properties\":{\"street\":{\"type\":\"string\",\"example\":\"437
-        Lytton\"},\"city\":{\"type\":\"string\",\"example\":\"Palo Alto\"},\"state\":{\"type\":\"string\",\"example\":\"CA\"},\"zip\":{\"type\":\"string\",\"example\":\"94301\"}},\"xml\":{\"name\":\"address\"}},\"Category\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int64\",\"example\":1},\"name\":{\"type\":\"string\",\"example\":\"Dogs\"}},\"xml\":{\"name\":\"category\"}},\"User\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int64\",\"example\":10},\"username\":{\"type\":\"string\",\"example\":\"theUser\"},\"firstName\":{\"type\":\"string\",\"example\":\"John\"},\"lastName\":{\"type\":\"string\",\"example\":\"James\"},\"email\":{\"type\":\"string\",\"example\":\"john@email.com\"},\"password\":{\"type\":\"string\",\"example\":\"12345\"},\"phone\":{\"type\":\"string\",\"example\":\"12345\"},\"userStatus\":{\"type\":\"integer\",\"description\":\"User
+        username/password supplied\"},\"default\":{\"description\":\"Unexpected error\"}}}},\"/user/logout\":{\"get\":{\"tags\":[\"user\"],\"summary\":\"Logs
+        out current logged in user session.\",\"description\":\"Log user out of the
+        system.\",\"operationId\":\"logoutUser\",\"parameters\":[],\"responses\":{\"200\":{\"description\":\"successful
+        operation\"},\"default\":{\"description\":\"Unexpected error\"}}}},\"/user/{username}\":{\"get\":{\"tags\":[\"user\"],\"summary\":\"Get
+        user by user name.\",\"description\":\"Get user detail based on username.\",\"operationId\":\"getUserByName\",\"parameters\":[{\"name\":\"username\",\"in\":\"path\",\"description\":\"The
+        name that needs to be fetched. Use user1 for testing\",\"required\":true,\"schema\":{\"type\":\"string\"}}],\"responses\":{\"200\":{\"description\":\"successful
+        operation\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}}}},\"400\":{\"description\":\"Invalid
+        username supplied\"},\"404\":{\"description\":\"User not found\"},\"default\":{\"description\":\"Unexpected
+        error\"}}},\"put\":{\"tags\":[\"user\"],\"summary\":\"Update user resource.\",\"description\":\"This
+        can only be done by the logged in user.\",\"operationId\":\"updateUser\",\"parameters\":[{\"name\":\"username\",\"in\":\"path\",\"description\":\"name
+        that need to be deleted\",\"required\":true,\"schema\":{\"type\":\"string\"}}],\"requestBody\":{\"description\":\"Update
+        an existent user in the store\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}},\"application/x-www-form-urlencoded\":{\"schema\":{\"$ref\":\"#/components/schemas/User\"}}}},\"responses\":{\"200\":{\"description\":\"successful
+        operation\"},\"400\":{\"description\":\"bad request\"},\"404\":{\"description\":\"user
+        not found\"},\"default\":{\"description\":\"Unexpected error\"}}},\"delete\":{\"tags\":[\"user\"],\"summary\":\"Delete
+        user resource.\",\"description\":\"This can only be done by the logged in
+        user.\",\"operationId\":\"deleteUser\",\"parameters\":[{\"name\":\"username\",\"in\":\"path\",\"description\":\"The
+        name that needs to be deleted\",\"required\":true,\"schema\":{\"type\":\"string\"}}],\"responses\":{\"200\":{\"description\":\"User
+        deleted\"},\"400\":{\"description\":\"Invalid username supplied\"},\"404\":{\"description\":\"User
+        not found\"},\"default\":{\"description\":\"Unexpected error\"}}}}},\"components\":{\"schemas\":{\"Order\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int64\",\"example\":10},\"petId\":{\"type\":\"integer\",\"format\":\"int64\",\"example\":198772},\"quantity\":{\"type\":\"integer\",\"format\":\"int32\",\"example\":7},\"shipDate\":{\"type\":\"string\",\"format\":\"date-time\"},\"status\":{\"type\":\"string\",\"description\":\"Order
+        Status\",\"example\":\"approved\",\"enum\":[\"placed\",\"approved\",\"delivered\"]},\"complete\":{\"type\":\"boolean\"}},\"xml\":{\"name\":\"order\"}},\"Category\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int64\",\"example\":1},\"name\":{\"type\":\"string\",\"example\":\"Dogs\"}},\"xml\":{\"name\":\"category\"}},\"User\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int64\",\"example\":10},\"username\":{\"type\":\"string\",\"example\":\"theUser\"},\"firstName\":{\"type\":\"string\",\"example\":\"John\"},\"lastName\":{\"type\":\"string\",\"example\":\"James\"},\"email\":{\"type\":\"string\",\"example\":\"john@email.com\"},\"password\":{\"type\":\"string\",\"example\":\"12345\"},\"phone\":{\"type\":\"string\",\"example\":\"12345\"},\"userStatus\":{\"type\":\"integer\",\"description\":\"User
         Status\",\"format\":\"int32\",\"example\":1}},\"xml\":{\"name\":\"user\"}},\"Tag\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int64\"},\"name\":{\"type\":\"string\"}},\"xml\":{\"name\":\"tag\"}},\"Pet\":{\"required\":[\"name\",\"photoUrls\"],\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"integer\",\"format\":\"int64\",\"example\":10},\"name\":{\"type\":\"string\",\"example\":\"doggie\"},\"category\":{\"$ref\":\"#/components/schemas/Category\"},\"photoUrls\":{\"type\":\"array\",\"xml\":{\"wrapped\":true},\"items\":{\"type\":\"string\",\"xml\":{\"name\":\"photoUrl\"}}},\"tags\":{\"type\":\"array\",\"xml\":{\"wrapped\":true},\"items\":{\"$ref\":\"#/components/schemas/Tag\"}},\"status\":{\"type\":\"string\",\"description\":\"pet
         status in the store\",\"enum\":[\"available\",\"pending\",\"sold\"]}},\"xml\":{\"name\":\"pet\"}},\"ApiResponse\":{\"type\":\"object\",\"properties\":{\"code\":{\"type\":\"integer\",\"format\":\"int32\"},\"type\":{\"type\":\"string\"},\"message\":{\"type\":\"string\"}},\"xml\":{\"name\":\"##default\"}}},\"requestBodies\":{\"Pet\":{\"description\":\"Pet
         object that needs to be added to the store\",\"content\":{\"application/json\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}},\"application/xml\":{\"schema\":{\"$ref\":\"#/components/schemas/Pet\"}}}},\"UserArray\":{\"description\":\"List
@@ -231,15 +301,15 @@ interactions:
         pets in your account\",\"read:pets\":\"read your pets\"}}}},\"api_key\":{\"type\":\"apiKey\",\"name\":\"api_key\",\"in\":\"header\"}}}}"}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '18399'
+      - '19493'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:18:06 GMT
+      - Fri, 21 Mar 2025 02:32:46 GMT
       expires:
       - '-1'
       pragma:
@@ -253,11 +323,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2998'
+      - '2999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '198'
+      - '199'
       x-msedge-ref:
-      - 'Ref A: 5AB16A397E8443A0B9498AB7E4CC8F98 Ref B: MAA201060516049 Ref C: 2024-10-09T08:18:05Z'
+      - 'Ref A: 7E6819699B464BD09587173945575B10 Ref B: MAA201060514025 Ref C: 2025-03-21T02:32:46Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -278,100 +348,114 @@ interactions:
     uri: https://petstore3.swagger.io/api/v3/openapi.json
   response:
     body:
-      string: '{"openapi":"3.0.2","info":{"title":"Swagger Petstore - OpenAPI 3.0","description":"This
+      string: '{"openapi":"3.0.4","info":{"title":"Swagger Petstore - OpenAPI 3.0","description":"This
         is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You
-        can find out more about\nSwagger at [http://swagger.io](http://swagger.io).
+        can find out more about\nSwagger at [https://swagger.io](https://swagger.io).
         In the third iteration of the pet store, we''ve switched to the design first
         approach!\nYou can now help us improve the API whether it''s by making changes
         to the definition itself or to the code.\nThat way, with time, we can improve
         the API in general, and expose some of the new features in OAS3.\n\nSome useful
         links:\n- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)\n-
-        [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)","termsOfService":"http://swagger.io/terms/","contact":{"email":"apiteam@swagger.io"},"license":{"name":"Apache
-        2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"version":"1.0.19"},"externalDocs":{"description":"Find
-        out more about Swagger","url":"http://swagger.io"},"servers":[{"url":"/api/v3"}],"tags":[{"name":"pet","description":"Everything
-        about your Pets","externalDocs":{"description":"Find out more","url":"http://swagger.io"}},{"name":"store","description":"Access
+        [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)","termsOfService":"https://swagger.io/terms/","contact":{"email":"apiteam@swagger.io"},"license":{"name":"Apache
+        2.0","url":"https://www.apache.org/licenses/LICENSE-2.0.html"},"version":"1.0.26"},"externalDocs":{"description":"Find
+        out more about Swagger","url":"https://swagger.io"},"servers":[{"url":"/api/v3"}],"tags":[{"name":"pet","description":"Everything
+        about your Pets","externalDocs":{"description":"Find out more","url":"https://swagger.io"}},{"name":"store","description":"Access
         to Petstore orders","externalDocs":{"description":"Find out more about our
-        store","url":"http://swagger.io"}},{"name":"user","description":"Operations
+        store","url":"https://swagger.io"}},{"name":"user","description":"Operations
         about user"}],"paths":{"/pet":{"put":{"tags":["pet"],"summary":"Update an
-        existing pet","description":"Update an existing pet by Id","operationId":"updatePet","requestBody":{"description":"Update
+        existing pet.","description":"Update an existing pet by Id.","operationId":"updatePet","requestBody":{"description":"Update
         an existent pet in the store","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Pet"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Pet"}},"application/x-www-form-urlencoded":{"schema":{"$ref":"#/components/schemas/Pet"}}},"required":true},"responses":{"200":{"description":"Successful
-        operation","content":{"application/xml":{"schema":{"$ref":"#/components/schemas/Pet"}},"application/json":{"schema":{"$ref":"#/components/schemas/Pet"}}}},"400":{"description":"Invalid
-        ID supplied"},"404":{"description":"Pet not found"},"405":{"description":"Validation
-        exception"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]},"post":{"tags":["pet"],"summary":"Add
-        a new pet to the store","description":"Add a new pet to the store","operationId":"addPet","requestBody":{"description":"Create
+        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Pet"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Pet"}}}},"400":{"description":"Invalid
+        ID supplied"},"404":{"description":"Pet not found"},"422":{"description":"Validation
+        exception"},"default":{"description":"Unexpected error"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]},"post":{"tags":["pet"],"summary":"Add
+        a new pet to the store.","description":"Add a new pet to the store.","operationId":"addPet","requestBody":{"description":"Create
         a new pet in the store","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Pet"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Pet"}},"application/x-www-form-urlencoded":{"schema":{"$ref":"#/components/schemas/Pet"}}},"required":true},"responses":{"200":{"description":"Successful
-        operation","content":{"application/xml":{"schema":{"$ref":"#/components/schemas/Pet"}},"application/json":{"schema":{"$ref":"#/components/schemas/Pet"}}}},"405":{"description":"Invalid
-        input"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]}},"/pet/findByStatus":{"get":{"tags":["pet"],"summary":"Finds
-        Pets by status","description":"Multiple status values can be provided with
-        comma separated strings","operationId":"findPetsByStatus","parameters":[{"name":"status","in":"query","description":"Status
+        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Pet"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Pet"}}}},"400":{"description":"Invalid
+        input"},"422":{"description":"Validation exception"},"default":{"description":"Unexpected
+        error"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]}},"/pet/findByStatus":{"get":{"tags":["pet"],"summary":"Finds
+        Pets by status.","description":"Multiple status values can be provided with
+        comma separated strings.","operationId":"findPetsByStatus","parameters":[{"name":"status","in":"query","description":"Status
         values that need to be considered for filter","required":false,"explode":true,"schema":{"type":"string","default":"available","enum":["available","pending","sold"]}}],"responses":{"200":{"description":"successful
-        operation","content":{"application/xml":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Pet"}}},"application/json":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Pet"}}}}},"400":{"description":"Invalid
-        status value"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]}},"/pet/findByTags":{"get":{"tags":["pet"],"summary":"Finds
-        Pets by tags","description":"Multiple tags can be provided with comma separated
+        operation","content":{"application/json":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Pet"}}},"application/xml":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Pet"}}}}},"400":{"description":"Invalid
+        status value"},"default":{"description":"Unexpected error"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]}},"/pet/findByTags":{"get":{"tags":["pet"],"summary":"Finds
+        Pets by tags.","description":"Multiple tags can be provided with comma separated
         strings. Use tag1, tag2, tag3 for testing.","operationId":"findPetsByTags","parameters":[{"name":"tags","in":"query","description":"Tags
         to filter by","required":false,"explode":true,"schema":{"type":"array","items":{"type":"string"}}}],"responses":{"200":{"description":"successful
-        operation","content":{"application/xml":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Pet"}}},"application/json":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Pet"}}}}},"400":{"description":"Invalid
-        tag value"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]}},"/pet/{petId}":{"get":{"tags":["pet"],"summary":"Find
-        pet by ID","description":"Returns a single pet","operationId":"getPetById","parameters":[{"name":"petId","in":"path","description":"ID
+        operation","content":{"application/json":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Pet"}}},"application/xml":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/Pet"}}}}},"400":{"description":"Invalid
+        tag value"},"default":{"description":"Unexpected error"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]}},"/pet/{petId}":{"get":{"tags":["pet"],"summary":"Find
+        pet by ID.","description":"Returns a single pet.","operationId":"getPetById","parameters":[{"name":"petId","in":"path","description":"ID
         of pet to return","required":true,"schema":{"type":"integer","format":"int64"}}],"responses":{"200":{"description":"successful
-        operation","content":{"application/xml":{"schema":{"$ref":"#/components/schemas/Pet"}},"application/json":{"schema":{"$ref":"#/components/schemas/Pet"}}}},"400":{"description":"Invalid
-        ID supplied"},"404":{"description":"Pet not found"}},"security":[{"api_key":[]},{"petstore_auth":["write:pets","read:pets"]}]},"post":{"tags":["pet"],"summary":"Updates
-        a pet in the store with form data","description":"","operationId":"updatePetWithForm","parameters":[{"name":"petId","in":"path","description":"ID
+        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Pet"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Pet"}}}},"400":{"description":"Invalid
+        ID supplied"},"404":{"description":"Pet not found"},"default":{"description":"Unexpected
+        error"}},"security":[{"api_key":[]},{"petstore_auth":["write:pets","read:pets"]}]},"post":{"tags":["pet"],"summary":"Updates
+        a pet in the store with form data.","description":"Updates a pet resource
+        based on the form data.","operationId":"updatePetWithForm","parameters":[{"name":"petId","in":"path","description":"ID
         of pet that needs to be updated","required":true,"schema":{"type":"integer","format":"int64"}},{"name":"name","in":"query","description":"Name
         of pet that needs to be updated","schema":{"type":"string"}},{"name":"status","in":"query","description":"Status
-        of pet that needs to be updated","schema":{"type":"string"}}],"responses":{"405":{"description":"Invalid
-        input"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]},"delete":{"tags":["pet"],"summary":"Deletes
-        a pet","description":"","operationId":"deletePet","parameters":[{"name":"api_key","in":"header","description":"","required":false,"schema":{"type":"string"}},{"name":"petId","in":"path","description":"Pet
-        id to delete","required":true,"schema":{"type":"integer","format":"int64"}}],"responses":{"400":{"description":"Invalid
-        pet value"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]}},"/pet/{petId}/uploadImage":{"post":{"tags":["pet"],"summary":"uploads
-        an image","description":"","operationId":"uploadFile","parameters":[{"name":"petId","in":"path","description":"ID
+        of pet that needs to be updated","schema":{"type":"string"}}],"responses":{"200":{"description":"successful
+        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Pet"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Pet"}}}},"400":{"description":"Invalid
+        input"},"default":{"description":"Unexpected error"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]},"delete":{"tags":["pet"],"summary":"Deletes
+        a pet.","description":"Delete a pet.","operationId":"deletePet","parameters":[{"name":"api_key","in":"header","description":"","required":false,"schema":{"type":"string"}},{"name":"petId","in":"path","description":"Pet
+        id to delete","required":true,"schema":{"type":"integer","format":"int64"}}],"responses":{"200":{"description":"Pet
+        deleted"},"400":{"description":"Invalid pet value"},"default":{"description":"Unexpected
+        error"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]}},"/pet/{petId}/uploadImage":{"post":{"tags":["pet"],"summary":"Uploads
+        an image.","description":"Upload image of the pet.","operationId":"uploadFile","parameters":[{"name":"petId","in":"path","description":"ID
         of pet to update","required":true,"schema":{"type":"integer","format":"int64"}},{"name":"additionalMetadata","in":"query","description":"Additional
         Metadata","required":false,"schema":{"type":"string"}}],"requestBody":{"content":{"application/octet-stream":{"schema":{"type":"string","format":"binary"}}}},"responses":{"200":{"description":"successful
-        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/ApiResponse"}}}}},"security":[{"petstore_auth":["write:pets","read:pets"]}]}},"/store/inventory":{"get":{"tags":["store"],"summary":"Returns
-        pet inventories by status","description":"Returns a map of status codes to
-        quantities","operationId":"getInventory","responses":{"200":{"description":"successful
-        operation","content":{"application/json":{"schema":{"type":"object","additionalProperties":{"type":"integer","format":"int32"}}}}}},"security":[{"api_key":[]}]}},"/store/order":{"post":{"tags":["store"],"summary":"Place
-        an order for a pet","description":"Place a new order in the store","operationId":"placeOrder","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Order"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Order"}},"application/x-www-form-urlencoded":{"schema":{"$ref":"#/components/schemas/Order"}}}},"responses":{"200":{"description":"successful
-        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Order"}}}},"405":{"description":"Invalid
-        input"}}}},"/store/order/{orderId}":{"get":{"tags":["store"],"summary":"Find
-        purchase order by ID","description":"For valid response try integer IDs with
+        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/ApiResponse"}}}},"400":{"description":"No
+        file uploaded"},"404":{"description":"Pet not found"},"default":{"description":"Unexpected
+        error"}},"security":[{"petstore_auth":["write:pets","read:pets"]}]}},"/store/inventory":{"get":{"tags":["store"],"summary":"Returns
+        pet inventories by status.","description":"Returns a map of status codes to
+        quantities.","operationId":"getInventory","responses":{"200":{"description":"successful
+        operation","content":{"application/json":{"schema":{"type":"object","additionalProperties":{"type":"integer","format":"int32"}}}}},"default":{"description":"Unexpected
+        error"}},"security":[{"api_key":[]}]}},"/store/order":{"post":{"tags":["store"],"summary":"Place
+        an order for a pet.","description":"Place a new order in the store.","operationId":"placeOrder","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/Order"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Order"}},"application/x-www-form-urlencoded":{"schema":{"$ref":"#/components/schemas/Order"}}}},"responses":{"200":{"description":"successful
+        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Order"}}}},"400":{"description":"Invalid
+        input"},"422":{"description":"Validation exception"},"default":{"description":"Unexpected
+        error"}}}},"/store/order/{orderId}":{"get":{"tags":["store"],"summary":"Find
+        purchase order by ID.","description":"For valid response try integer IDs with
         value <= 5 or > 10. Other values will generate exceptions.","operationId":"getOrderById","parameters":[{"name":"orderId","in":"path","description":"ID
         of order that needs to be fetched","required":true,"schema":{"type":"integer","format":"int64"}}],"responses":{"200":{"description":"successful
-        operation","content":{"application/xml":{"schema":{"$ref":"#/components/schemas/Order"}},"application/json":{"schema":{"$ref":"#/components/schemas/Order"}}}},"400":{"description":"Invalid
-        ID supplied"},"404":{"description":"Order not found"}}},"delete":{"tags":["store"],"summary":"Delete
-        purchase order by ID","description":"For valid response try integer IDs with
-        value < 1000. Anything above 1000 or nonintegers will generate API errors","operationId":"deleteOrder","parameters":[{"name":"orderId","in":"path","description":"ID
-        of the order that needs to be deleted","required":true,"schema":{"type":"integer","format":"int64"}}],"responses":{"400":{"description":"Invalid
-        ID supplied"},"404":{"description":"Order not found"}}}},"/user":{"post":{"tags":["user"],"summary":"Create
-        user","description":"This can only be done by the logged in user.","operationId":"createUser","requestBody":{"description":"Created
-        user object","content":{"application/json":{"schema":{"$ref":"#/components/schemas/User"}},"application/xml":{"schema":{"$ref":"#/components/schemas/User"}},"application/x-www-form-urlencoded":{"schema":{"$ref":"#/components/schemas/User"}}}},"responses":{"default":{"description":"successful
-        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/User"}},"application/xml":{"schema":{"$ref":"#/components/schemas/User"}}}}}}},"/user/createWithList":{"post":{"tags":["user"],"summary":"Creates
-        list of users with given input array","description":"Creates list of users
-        with given input array","operationId":"createUsersWithListInput","requestBody":{"content":{"application/json":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/User"}}}}},"responses":{"200":{"description":"Successful
-        operation","content":{"application/xml":{"schema":{"$ref":"#/components/schemas/User"}},"application/json":{"schema":{"$ref":"#/components/schemas/User"}}}},"default":{"description":"successful
-        operation"}}}},"/user/login":{"get":{"tags":["user"],"summary":"Logs user
-        into the system","description":"","operationId":"loginUser","parameters":[{"name":"username","in":"query","description":"The
+        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Order"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Order"}}}},"400":{"description":"Invalid
+        ID supplied"},"404":{"description":"Order not found"},"default":{"description":"Unexpected
+        error"}}},"delete":{"tags":["store"],"summary":"Delete purchase order by identifier.","description":"For
+        valid response try integer IDs with value < 1000. Anything above 1000 or non-integers
+        will generate API errors.","operationId":"deleteOrder","parameters":[{"name":"orderId","in":"path","description":"ID
+        of the order that needs to be deleted","required":true,"schema":{"type":"integer","format":"int64"}}],"responses":{"200":{"description":"order
+        deleted"},"400":{"description":"Invalid ID supplied"},"404":{"description":"Order
+        not found"},"default":{"description":"Unexpected error"}}}},"/user":{"post":{"tags":["user"],"summary":"Create
+        user.","description":"This can only be done by the logged in user.","operationId":"createUser","requestBody":{"description":"Created
+        user object","content":{"application/json":{"schema":{"$ref":"#/components/schemas/User"}},"application/xml":{"schema":{"$ref":"#/components/schemas/User"}},"application/x-www-form-urlencoded":{"schema":{"$ref":"#/components/schemas/User"}}}},"responses":{"200":{"description":"successful
+        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/User"}},"application/xml":{"schema":{"$ref":"#/components/schemas/User"}}}},"default":{"description":"Unexpected
+        error"}}}},"/user/createWithList":{"post":{"tags":["user"],"summary":"Creates
+        list of users with given input array.","description":"Creates list of users
+        with given input array.","operationId":"createUsersWithListInput","requestBody":{"content":{"application/json":{"schema":{"type":"array","items":{"$ref":"#/components/schemas/User"}}}}},"responses":{"200":{"description":"Successful
+        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/User"}},"application/xml":{"schema":{"$ref":"#/components/schemas/User"}}}},"default":{"description":"Unexpected
+        error"}}}},"/user/login":{"get":{"tags":["user"],"summary":"Logs user into
+        the system.","description":"Log into the system.","operationId":"loginUser","parameters":[{"name":"username","in":"query","description":"The
         user name for login","required":false,"schema":{"type":"string"}},{"name":"password","in":"query","description":"The
         password for login in clear text","required":false,"schema":{"type":"string"}}],"responses":{"200":{"description":"successful
         operation","headers":{"X-Rate-Limit":{"description":"calls per hour allowed
         by the user","schema":{"type":"integer","format":"int32"}},"X-Expires-After":{"description":"date
         in UTC when token expires","schema":{"type":"string","format":"date-time"}}},"content":{"application/xml":{"schema":{"type":"string"}},"application/json":{"schema":{"type":"string"}}}},"400":{"description":"Invalid
-        username/password supplied"}}}},"/user/logout":{"get":{"tags":["user"],"summary":"Logs
-        out current logged in user session","description":"","operationId":"logoutUser","parameters":[],"responses":{"default":{"description":"successful
-        operation"}}}},"/user/{username}":{"get":{"tags":["user"],"summary":"Get user
-        by user name","description":"","operationId":"getUserByName","parameters":[{"name":"username","in":"path","description":"The
-        name that needs to be fetched. Use user1 for testing. ","required":true,"schema":{"type":"string"}}],"responses":{"200":{"description":"successful
-        operation","content":{"application/xml":{"schema":{"$ref":"#/components/schemas/User"}},"application/json":{"schema":{"$ref":"#/components/schemas/User"}}}},"400":{"description":"Invalid
-        username supplied"},"404":{"description":"User not found"}}},"put":{"tags":["user"],"summary":"Update
-        user","description":"This can only be done by the logged in user.","operationId":"updateUser","parameters":[{"name":"username","in":"path","description":"name
-        that needs to be updated","required":true,"schema":{"type":"string"}}],"requestBody":{"description":"Update
-        an existent user in the store","content":{"application/json":{"schema":{"$ref":"#/components/schemas/User"}},"application/xml":{"schema":{"$ref":"#/components/schemas/User"}},"application/x-www-form-urlencoded":{"schema":{"$ref":"#/components/schemas/User"}}}},"responses":{"default":{"description":"successful
-        operation"}}},"delete":{"tags":["user"],"summary":"Delete user","description":"This
-        can only be done by the logged in user.","operationId":"deleteUser","parameters":[{"name":"username","in":"path","description":"The
-        name that needs to be deleted","required":true,"schema":{"type":"string"}}],"responses":{"400":{"description":"Invalid
-        username supplied"},"404":{"description":"User not found"}}}}},"components":{"schemas":{"Order":{"type":"object","properties":{"id":{"type":"integer","format":"int64","example":10},"petId":{"type":"integer","format":"int64","example":198772},"quantity":{"type":"integer","format":"int32","example":7},"shipDate":{"type":"string","format":"date-time"},"status":{"type":"string","description":"Order
-        Status","example":"approved","enum":["placed","approved","delivered"]},"complete":{"type":"boolean"}},"xml":{"name":"order"}},"Customer":{"type":"object","properties":{"id":{"type":"integer","format":"int64","example":100000},"username":{"type":"string","example":"fehguy"},"address":{"type":"array","xml":{"name":"addresses","wrapped":true},"items":{"$ref":"#/components/schemas/Address"}}},"xml":{"name":"customer"}},"Address":{"type":"object","properties":{"street":{"type":"string","example":"437
-        Lytton"},"city":{"type":"string","example":"Palo Alto"},"state":{"type":"string","example":"CA"},"zip":{"type":"string","example":"94301"}},"xml":{"name":"address"}},"Category":{"type":"object","properties":{"id":{"type":"integer","format":"int64","example":1},"name":{"type":"string","example":"Dogs"}},"xml":{"name":"category"}},"User":{"type":"object","properties":{"id":{"type":"integer","format":"int64","example":10},"username":{"type":"string","example":"theUser"},"firstName":{"type":"string","example":"John"},"lastName":{"type":"string","example":"James"},"email":{"type":"string","example":"john@email.com"},"password":{"type":"string","example":"12345"},"phone":{"type":"string","example":"12345"},"userStatus":{"type":"integer","description":"User
+        username/password supplied"},"default":{"description":"Unexpected error"}}}},"/user/logout":{"get":{"tags":["user"],"summary":"Logs
+        out current logged in user session.","description":"Log user out of the system.","operationId":"logoutUser","parameters":[],"responses":{"200":{"description":"successful
+        operation"},"default":{"description":"Unexpected error"}}}},"/user/{username}":{"get":{"tags":["user"],"summary":"Get
+        user by user name.","description":"Get user detail based on username.","operationId":"getUserByName","parameters":[{"name":"username","in":"path","description":"The
+        name that needs to be fetched. Use user1 for testing","required":true,"schema":{"type":"string"}}],"responses":{"200":{"description":"successful
+        operation","content":{"application/json":{"schema":{"$ref":"#/components/schemas/User"}},"application/xml":{"schema":{"$ref":"#/components/schemas/User"}}}},"400":{"description":"Invalid
+        username supplied"},"404":{"description":"User not found"},"default":{"description":"Unexpected
+        error"}}},"put":{"tags":["user"],"summary":"Update user resource.","description":"This
+        can only be done by the logged in user.","operationId":"updateUser","parameters":[{"name":"username","in":"path","description":"name
+        that need to be deleted","required":true,"schema":{"type":"string"}}],"requestBody":{"description":"Update
+        an existent user in the store","content":{"application/json":{"schema":{"$ref":"#/components/schemas/User"}},"application/xml":{"schema":{"$ref":"#/components/schemas/User"}},"application/x-www-form-urlencoded":{"schema":{"$ref":"#/components/schemas/User"}}}},"responses":{"200":{"description":"successful
+        operation"},"400":{"description":"bad request"},"404":{"description":"user
+        not found"},"default":{"description":"Unexpected error"}}},"delete":{"tags":["user"],"summary":"Delete
+        user resource.","description":"This can only be done by the logged in user.","operationId":"deleteUser","parameters":[{"name":"username","in":"path","description":"The
+        name that needs to be deleted","required":true,"schema":{"type":"string"}}],"responses":{"200":{"description":"User
+        deleted"},"400":{"description":"Invalid username supplied"},"404":{"description":"User
+        not found"},"default":{"description":"Unexpected error"}}}}},"components":{"schemas":{"Order":{"type":"object","properties":{"id":{"type":"integer","format":"int64","example":10},"petId":{"type":"integer","format":"int64","example":198772},"quantity":{"type":"integer","format":"int32","example":7},"shipDate":{"type":"string","format":"date-time"},"status":{"type":"string","description":"Order
+        Status","example":"approved","enum":["placed","approved","delivered"]},"complete":{"type":"boolean"}},"xml":{"name":"order"}},"Category":{"type":"object","properties":{"id":{"type":"integer","format":"int64","example":1},"name":{"type":"string","example":"Dogs"}},"xml":{"name":"category"}},"User":{"type":"object","properties":{"id":{"type":"integer","format":"int64","example":10},"username":{"type":"string","example":"theUser"},"firstName":{"type":"string","example":"John"},"lastName":{"type":"string","example":"James"},"email":{"type":"string","example":"john@email.com"},"password":{"type":"string","example":"12345"},"phone":{"type":"string","example":"12345"},"userStatus":{"type":"integer","description":"User
         Status","format":"int32","example":1}},"xml":{"name":"user"}},"Tag":{"type":"object","properties":{"id":{"type":"integer","format":"int64"},"name":{"type":"string"}},"xml":{"name":"tag"}},"Pet":{"required":["name","photoUrls"],"type":"object","properties":{"id":{"type":"integer","format":"int64","example":10},"name":{"type":"string","example":"doggie"},"category":{"$ref":"#/components/schemas/Category"},"photoUrls":{"type":"array","xml":{"wrapped":true},"items":{"type":"string","xml":{"name":"photoUrl"}}},"tags":{"type":"array","xml":{"wrapped":true},"items":{"$ref":"#/components/schemas/Tag"}},"status":{"type":"string","description":"pet
         status in the store","enum":["available","pending","sold"]}},"xml":{"name":"pet"}},"ApiResponse":{"type":"object","properties":{"code":{"type":"integer","format":"int32"},"type":{"type":"string"},"message":{"type":"string"}},"xml":{"name":"##default"}}},"requestBodies":{"Pet":{"description":"Pet
         object that needs to be added to the store","content":{"application/json":{"schema":{"$ref":"#/components/schemas/Pet"}},"application/xml":{"schema":{"$ref":"#/components/schemas/Pet"}}}},"UserArray":{"description":"List
@@ -391,7 +475,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Wed, 09 Oct 2024 08:18:07 GMT
+      - Fri, 21 Mar 2025 02:32:48 GMT
       server:
       - Jetty(9.4.53.v20231009)
       transfer-encoding:
