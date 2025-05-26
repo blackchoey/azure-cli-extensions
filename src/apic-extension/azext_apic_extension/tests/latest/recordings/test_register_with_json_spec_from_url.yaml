@@ -119,7 +119,7 @@ interactions:
       content-type:
       - application/json
       date:
-      - Thu, 20 Mar 2025 15:10:47 GMT
+      - Mon, 26 May 2025 07:39:46 GMT
       server:
       - Jetty(9.2.9.v20150224)
       transfer-encoding:
@@ -163,20 +163,20 @@ interactions:
         [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you
         can use the api key `special-key` to test the authorization filters.","kind":"rest","license":{"name":"Apache
         2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"externalDocumentation":[{"title":"Title","description":"Find
-        out more about Swagger","url":"http://swagger.io"}],"contacts":[{"email":"apiteam@swagger.io"}],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore","name":"swaggerpetstore","systemData":{"createdAt":"2025-03-20T15:10:48.855197Z","lastModifiedAt":"2025-03-20T15:10:48.8551952Z"}}'
+        out more about Swagger","url":"http://swagger.io"}],"contacts":[{"email":"apiteam@swagger.io"}],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore","name":"swaggerpetstore","systemData":{"createdAt":"2025-05-26T07:39:48.0902914Z","lastModifiedAt":"2025-05-26T07:39:48.0902892Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '975'
+      - '976'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Thu, 20 Mar 2025 15:10:48 GMT
+      - Mon, 26 May 2025 07:39:48 GMT
       etag:
-      - c2009881-0000-0100-0000-67dc2ff80000
+      - 5300128c-0000-0100-0000-68341ac40000
       expires:
       - '-1'
       pragma:
@@ -189,12 +189,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/d41da3ac-5217-4187-af03-5f3b9c26f3db
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 8E7481FE7D6249A1A2E6E7810C3BE2AB Ref B: MAA201060515033 Ref C: 2025-03-20T15:10:47Z'
+      - 'Ref A: 2DEF96A691F34922867D6E942725FF9A Ref B: MAA201060513027 Ref C: 2025-05-26T07:39:47Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -223,20 +225,20 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7?api-version=2024-03-01
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"1-0-7","lifecycleStage":"design","isDefault":true,"isRecommended":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7","name":"1-0-7","systemData":{"createdAt":"2025-03-20T15:10:50.5847205Z","lastModifiedAt":"2025-03-20T15:10:50.5847188Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"1-0-7","lifecycleStage":"design","isDefault":true,"isRecommended":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7","name":"1-0-7","systemData":{"createdAt":"2025-05-26T07:39:50.3002149Z","lastModifiedAt":"2025-05-26T07:39:50.300212Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '475'
+      - '474'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Thu, 20 Mar 2025 15:10:50 GMT
+      - Mon, 26 May 2025 07:39:49 GMT
       etag:
-      - 0200dfc2-0000-0100-0000-67dc2ffa0000
+      - 3e007f0e-0000-0100-0000-68341ac60000
       expires:
       - '-1'
       pragma:
@@ -249,12 +251,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/c6213294-e7a7-4e2f-97e0-fb52a0752c96
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 9187CC85464A494DA50C5508855713DB Ref B: MAA201060514025 Ref C: 2025-03-20T15:10:49Z'
+      - 'Ref A: 22D03CBBF5C64BE69BA13AD20E6B03E1 Ref B: MAA201060513037 Ref C: 2025-05-26T07:39:48Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -291,7 +295,7 @@ interactions:
         is a sample server Petstore server.  You can find out more about Swagger at
         [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For
         this sample, you can use the api key `special-key` to test the authorization
-        filters."},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7/definitions/openapi","name":"openapi","systemData":{"createdAt":"2025-03-20T15:10:52.3955773Z","lastModifiedAt":"2025-03-20T15:10:52.3955747Z"}}'
+        filters."},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7/definitions/openapi","name":"openapi","systemData":{"createdAt":"2025-05-26T07:39:52.6867525Z","lastModifiedAt":"2025-05-26T07:39:52.6867504Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -302,9 +306,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Thu, 20 Mar 2025 15:10:51 GMT
+      - Mon, 26 May 2025 07:39:52 GMT
       etag:
-      - 6601e3b9-0000-0100-0000-67dc2ffc0000
+      - 0f01441d-0000-0100-0000-68341ac80000
       expires:
       - '-1'
       pragma:
@@ -317,12 +321,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/indonesiacentral/20af2374-2032-44cf-bad7-ff11213e86ae
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 0D056A269A6342C8989FD47EDDC82E39 Ref B: MAA201060515035 Ref C: 2025-03-20T15:10:51Z'
+      - 'Ref A: 42DA8CE77AD541B2A6D70B3798D91BDC Ref B: MAA201060515021 Ref C: 2025-05-26T07:39:51Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -361,11 +367,11 @@ interactions:
       content-length:
       - '0'
       date:
-      - Thu, 20 Mar 2025 15:10:53 GMT
+      - Mon, 26 May 2025 07:39:53 GMT
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7/definitions/openapi/operationResults/fa29c5da084f43d3847769fb32511207?api-version=2024-06-01-preview&t=638780802545197509&c=MIIHpTCCBo2gAwIBAgITfwTbn828Ducmmj24MgAEBNufzTANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDIwHhcNMjUwMTI1MTI1MTUzWhcNMjUwNzI0MTI1MTUzWjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL20TJQJbhV5Jrwzn-fiGrag_COjmaTwDy9Ir0oe1CLIfiJ9ageBVfcEmW-k5bUVL3eg6B8mQTEYE-FJDVVZ4jbJ9Qw8REpm2kBASDRwoItVVD_HBpJf1VhdViEPJPMDvLg0mAmde0X2m3HVEO6Y7eggJ9iL31DDv9PF-Xvn6x9xlWvO3_OCJReOoV_HCTDyzds4Pq9OySlnAGAozKYzOumbcVPz_WEMc_vwW80fjQLmdihJgp6_15qlnMdx48MQhVGT3y4gdbknMQJghyzTFcsASVncSqtmz8nAx5qT9dZ63iaF6E7Fbx76fnF4lx5K72ANX5cjlfVOig5jzgf8RPkCAwEAAaOCBJIwggSOMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHaBggrBgEFBQcBAQSCAcwwggHIMGYGCCsGAQUFBzAChlpodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQkwyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwMig0KS5jcnQwVgYIKwYBBQUHMAKGSmh0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0JMMlBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3J0MFYGCCsGAQUFBzAChkpodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9CTDJQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDAyKDQpLmNydDBWBggrBgEFBQcwAoZKaHR0cDovL2NybDMuYW1lLmdibC9haWEvQkwyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwMig0KS5jcnQwVgYIKwYBBQUHMAKGSmh0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0JMMlBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3J0MB0GA1UdDgQWBBQp8DW_okjTMbIBWANCvQr_FrvzazAOBgNVHQ8BAf8EBAMCBaAwggE1BgNVHR8EggEsMIIBKDCCASSgggEgoIIBHIZCaHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwIwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBSuecJrXSWIEwb2BwnDl3x7l48dVTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBAA5sOyKXcQwQQAVKz9J8GIjVymZkoHVSft4TqdgNxSdoIAYkk_tYdx_dEZChJfSvIfzhzAb8k57EHRKNwKtP752SSUr0Q0oB60Y3Fq7il1fMKFTbVk9ZMTyOoo3hJmRwJaisv9rK2UVHWvwD2iUKD0IK_tHwy3m6bqbGDVKaRn1K9UYM39wEvEdy-k8J2z3Olfn6yYpcrVBHWzDzSy7TVdgUzaa0IZ670aJGPrNVYMvsCepP2_T_FdHVk4LoK9K4_0-GkZbvBLZPQO6FYgttg78s6Nn34TUcXWeTeeXArlkf48rbeL5fDY_CJyKYXLv3arwG7gUdcU5T8MGHeLLzcyo&s=cmq0AEPZIFPUYdkPT8Q07NAHF2ENOkeGO4Ed-j3AG7ykRtV1jTDzEZiyEkIUXWioM5Bu4Mplj7m6XFucR6rFp5eZ65ILlHS2Ql7M_zNt15OWz1VS0UuNu-j-lT7RtbtA6DSxGx3ngPXpuuE0iRwZBkMssGmCpamvToBh-gG7wijwqYDwAw05KPCaa-zRrWMeGGpnzqpWbRcdavZRmDKEMpgdXLUvcJZMF8HeHOCemyrWWg_AIpLyeBZf4b2hV59Ks7FkLRrSbHtierCue1R8JU0PUi3Ih2VUC3tT_WDuyJRohI7rT-AiYSawRFRS7hbIIlMX2vZ0pbCPBtFbJkHs9w&h=uxdHhTQB1p-hastlW9NrLHDpqNUvGzFEenKHK66O-_E
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7/definitions/openapi/operationResults/e5a5516a53df4a90b129e08869745d5a?api-version=2024-06-01-preview&t=638838419942421273&c=MIIHhzCCBm-gAwIBAgITfAeDEnPW_KxJbq8EjgAAB4MSczANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDUwHhcNMjUwNDIwMTUyMDI3WhcNMjUxMDE3MTUyMDI3WjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALO1SAvt4DI7FxxBmZBcfoKDLiXpS8U5adZbRlRvVm-EcAWqGNnVo1AxaXu3ghKMY95LxffhvcYAZ56WhgOxA_gpAUzm4t0yW0aVzv7vAOWZHIG1fvTcWY_sHCkuTyCNAcRbNbaqbidaK9ZOTQ19baUQ26kVkP7tjTi6DWWRlM25d4YQcGaWJoBwUtol-hgB5Z_rVMljRF5Q1T9_3YpRBw57SpHvmb30JNQSpndyeu--Ip8pMwpNaiIRF70G8WfbTBoJhRqNqNAKBLU3CAVV4H6lYrXtSK-gkZC0EzjZ4ze_XVDGBd1sOPsbMx4aQgZEiuDJuuk9eqTzzur3IDUdrP0CAwEAAaOCBHQwggRwMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHLBggrBgEFBQcBAQSCAb0wggG5MGMGCCsGAQUFBzAChldodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MFMGCCsGAQUFBzAChkdodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9DTzFQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA1LmNydDBTBggrBgEFBQcwAoZHaHR0cDovL2NybDMuYW1lLmdibC9haWEvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MB0GA1UdDgQWBBSRrAa71kVppeoZonY7QPy_R7XWQzAOBgNVHQ8BAf8EBAMCBaAwggEmBgNVHR8EggEdMIIBGTCCARWgggERoIIBDYY_aHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwIwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBR61hmFKHlscXYeYPjzS--iBUIWHTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBAChQXwS0_EaMb7G3BWGDeoNhAAEaoKkJVUy5HVGyWKADFm6Tp2WidwOIMoOu-IuoA634ORJ7bIwsC2WhUA0Z8-c2AAD956dAtCkn5pEBXSqwuKMM3l9KOClAY1RiAQcP-GWtmb_mqZspO78GHaq-mwiyIDUICM-uZl-qR6UVt6rLn5xPqHNkenxrslS_G3IJ9yCV1sflxhz93B7VR9H7BtOxd_nqZOD5uSV3OpPnATTRO0KB3VBbZ0KqvdtWoHjNywLqMuhJUufHw2zmlQ-Yj3ndha_yTvOQlT-85ikSoyWI0P4_GeEwX9RdkiVHVzx3gR8HzFKkJXOwRvxQE_9Ov_0&s=WY0MsnAn2cEMT2Hoz2_pJBBMM8T7eX2O70S_R-5OUQMq2mlOr9jgesBGV3_6XoAzuOi3QTPLXduJcJrHJeogxuRdScI_PMWwGpnhEMqOY3VNGDtYwC8QrRo2ps2Vs2i0ZWnKnhCRqW7AqgxBuaTM7SZBAWAz7BVNMBC6ubLb9PvkTFUoU71DczJahkHPxhskuhGrp1IgS-7_m-Uy_yz2uVwTrACzC5d3ZmOl7ffZaHjDdAZ_SgKsKmrkJjgz_e4MLwKwWA98YBn9DYb9miMNnHChzRfXvOBGvNDoeD6ZZ_2NOsGpbONsecBi0SwLv57akUtRpDHPOlt1ug3rcWDYqw&h=ivwN0ciMVhzHqlkVVo6HkWYbw5ITNadK5cAjixn_vB4
       pragma:
       - no-cache
       strict-transport-security:
@@ -374,12 +380,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/998c489c-96af-418f-8fed-4c7c0f91fdf3
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11998'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '798'
       x-msedge-ref:
-      - 'Ref A: 337613404C0242D4B63230A57014928E Ref B: MAA201060514021 Ref C: 2025-03-20T15:10:53Z'
+      - 'Ref A: B085F2B905BF4D60BFA63662E29F983E Ref B: MAA201060515027 Ref C: 2025-05-26T07:39:53Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -401,10 +409,10 @@ interactions:
       User-Agent:
       - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7/definitions/openapi/operationResults/fa29c5da084f43d3847769fb32511207?api-version=2024-06-01-preview&t=638780802545197509&c=MIIHpTCCBo2gAwIBAgITfwTbn828Ducmmj24MgAEBNufzTANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDIwHhcNMjUwMTI1MTI1MTUzWhcNMjUwNzI0MTI1MTUzWjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL20TJQJbhV5Jrwzn-fiGrag_COjmaTwDy9Ir0oe1CLIfiJ9ageBVfcEmW-k5bUVL3eg6B8mQTEYE-FJDVVZ4jbJ9Qw8REpm2kBASDRwoItVVD_HBpJf1VhdViEPJPMDvLg0mAmde0X2m3HVEO6Y7eggJ9iL31DDv9PF-Xvn6x9xlWvO3_OCJReOoV_HCTDyzds4Pq9OySlnAGAozKYzOumbcVPz_WEMc_vwW80fjQLmdihJgp6_15qlnMdx48MQhVGT3y4gdbknMQJghyzTFcsASVncSqtmz8nAx5qT9dZ63iaF6E7Fbx76fnF4lx5K72ANX5cjlfVOig5jzgf8RPkCAwEAAaOCBJIwggSOMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHaBggrBgEFBQcBAQSCAcwwggHIMGYGCCsGAQUFBzAChlpodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQkwyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwMig0KS5jcnQwVgYIKwYBBQUHMAKGSmh0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0JMMlBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3J0MFYGCCsGAQUFBzAChkpodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9CTDJQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDAyKDQpLmNydDBWBggrBgEFBQcwAoZKaHR0cDovL2NybDMuYW1lLmdibC9haWEvQkwyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwMig0KS5jcnQwVgYIKwYBBQUHMAKGSmh0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0JMMlBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3J0MB0GA1UdDgQWBBQp8DW_okjTMbIBWANCvQr_FrvzazAOBgNVHQ8BAf8EBAMCBaAwggE1BgNVHR8EggEsMIIBKDCCASSgggEgoIIBHIZCaHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwIwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBSuecJrXSWIEwb2BwnDl3x7l48dVTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBAA5sOyKXcQwQQAVKz9J8GIjVymZkoHVSft4TqdgNxSdoIAYkk_tYdx_dEZChJfSvIfzhzAb8k57EHRKNwKtP752SSUr0Q0oB60Y3Fq7il1fMKFTbVk9ZMTyOoo3hJmRwJaisv9rK2UVHWvwD2iUKD0IK_tHwy3m6bqbGDVKaRn1K9UYM39wEvEdy-k8J2z3Olfn6yYpcrVBHWzDzSy7TVdgUzaa0IZ670aJGPrNVYMvsCepP2_T_FdHVk4LoK9K4_0-GkZbvBLZPQO6FYgttg78s6Nn34TUcXWeTeeXArlkf48rbeL5fDY_CJyKYXLv3arwG7gUdcU5T8MGHeLLzcyo&s=cmq0AEPZIFPUYdkPT8Q07NAHF2ENOkeGO4Ed-j3AG7ykRtV1jTDzEZiyEkIUXWioM5Bu4Mplj7m6XFucR6rFp5eZ65ILlHS2Ql7M_zNt15OWz1VS0UuNu-j-lT7RtbtA6DSxGx3ngPXpuuE0iRwZBkMssGmCpamvToBh-gG7wijwqYDwAw05KPCaa-zRrWMeGGpnzqpWbRcdavZRmDKEMpgdXLUvcJZMF8HeHOCemyrWWg_AIpLyeBZf4b2hV59Ks7FkLRrSbHtierCue1R8JU0PUi3Ih2VUC3tT_WDuyJRohI7rT-AiYSawRFRS7hbIIlMX2vZ0pbCPBtFbJkHs9w&h=uxdHhTQB1p-hastlW9NrLHDpqNUvGzFEenKHK66O-_E
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7/definitions/openapi/operationResults/e5a5516a53df4a90b129e08869745d5a?api-version=2024-06-01-preview&t=638838419942421273&c=MIIHhzCCBm-gAwIBAgITfAeDEnPW_KxJbq8EjgAAB4MSczANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDUwHhcNMjUwNDIwMTUyMDI3WhcNMjUxMDE3MTUyMDI3WjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALO1SAvt4DI7FxxBmZBcfoKDLiXpS8U5adZbRlRvVm-EcAWqGNnVo1AxaXu3ghKMY95LxffhvcYAZ56WhgOxA_gpAUzm4t0yW0aVzv7vAOWZHIG1fvTcWY_sHCkuTyCNAcRbNbaqbidaK9ZOTQ19baUQ26kVkP7tjTi6DWWRlM25d4YQcGaWJoBwUtol-hgB5Z_rVMljRF5Q1T9_3YpRBw57SpHvmb30JNQSpndyeu--Ip8pMwpNaiIRF70G8WfbTBoJhRqNqNAKBLU3CAVV4H6lYrXtSK-gkZC0EzjZ4ze_XVDGBd1sOPsbMx4aQgZEiuDJuuk9eqTzzur3IDUdrP0CAwEAAaOCBHQwggRwMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHLBggrBgEFBQcBAQSCAb0wggG5MGMGCCsGAQUFBzAChldodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MFMGCCsGAQUFBzAChkdodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9DTzFQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA1LmNydDBTBggrBgEFBQcwAoZHaHR0cDovL2NybDMuYW1lLmdibC9haWEvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MB0GA1UdDgQWBBSRrAa71kVppeoZonY7QPy_R7XWQzAOBgNVHQ8BAf8EBAMCBaAwggEmBgNVHR8EggEdMIIBGTCCARWgggERoIIBDYY_aHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwIwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBR61hmFKHlscXYeYPjzS--iBUIWHTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBAChQXwS0_EaMb7G3BWGDeoNhAAEaoKkJVUy5HVGyWKADFm6Tp2WidwOIMoOu-IuoA634ORJ7bIwsC2WhUA0Z8-c2AAD956dAtCkn5pEBXSqwuKMM3l9KOClAY1RiAQcP-GWtmb_mqZspO78GHaq-mwiyIDUICM-uZl-qR6UVt6rLn5xPqHNkenxrslS_G3IJ9yCV1sflxhz93B7VR9H7BtOxd_nqZOD5uSV3OpPnATTRO0KB3VBbZ0KqvdtWoHjNywLqMuhJUufHw2zmlQ-Yj3ndha_yTvOQlT-85ikSoyWI0P4_GeEwX9RdkiVHVzx3gR8HzFKkJXOwRvxQE_9Ov_0&s=WY0MsnAn2cEMT2Hoz2_pJBBMM8T7eX2O70S_R-5OUQMq2mlOr9jgesBGV3_6XoAzuOi3QTPLXduJcJrHJeogxuRdScI_PMWwGpnhEMqOY3VNGDtYwC8QrRo2ps2Vs2i0ZWnKnhCRqW7AqgxBuaTM7SZBAWAz7BVNMBC6ubLb9PvkTFUoU71DczJahkHPxhskuhGrp1IgS-7_m-Uy_yz2uVwTrACzC5d3ZmOl7ffZaHjDdAZ_SgKsKmrkJjgz_e4MLwKwWA98YBn9DYb9miMNnHChzRfXvOBGvNDoeD6ZZ_2NOsGpbONsecBi0SwLv57akUtRpDHPOlt1ug3rcWDYqw&h=ivwN0ciMVhzHqlkVVo6HkWYbw5ITNadK5cAjixn_vB4
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/apis/swaggerpetstore/versions/1-0-7/definitions/openapi/operationResults/fa29c5da084f43d3847769fb32511207","name":"fa29c5da084f43d3847769fb32511207","status":"InProgress","startTime":"2025-03-20T15:10:55.2982939+00:00"}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/apis/swaggerpetstore/versions/1-0-7/definitions/openapi/operationResults/e5a5516a53df4a90b129e08869745d5a","name":"e5a5516a53df4a90b129e08869745d5a","status":"InProgress","startTime":"2025-05-26T07:39:54.2007148+00:00"}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -415,11 +423,11 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Thu, 20 Mar 2025 15:10:54 GMT
+      - Mon, 26 May 2025 07:39:54 GMT
       expires:
       - '-1'
       location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7/definitions/openapi/operationResults/fa29c5da084f43d3847769fb32511207?api-version=2024-06-01-preview&t=638780802557240744&c=MIIHpTCCBo2gAwIBAgITfwTbn828Ducmmj24MgAEBNufzTANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDIwHhcNMjUwMTI1MTI1MTUzWhcNMjUwNzI0MTI1MTUzWjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL20TJQJbhV5Jrwzn-fiGrag_COjmaTwDy9Ir0oe1CLIfiJ9ageBVfcEmW-k5bUVL3eg6B8mQTEYE-FJDVVZ4jbJ9Qw8REpm2kBASDRwoItVVD_HBpJf1VhdViEPJPMDvLg0mAmde0X2m3HVEO6Y7eggJ9iL31DDv9PF-Xvn6x9xlWvO3_OCJReOoV_HCTDyzds4Pq9OySlnAGAozKYzOumbcVPz_WEMc_vwW80fjQLmdihJgp6_15qlnMdx48MQhVGT3y4gdbknMQJghyzTFcsASVncSqtmz8nAx5qT9dZ63iaF6E7Fbx76fnF4lx5K72ANX5cjlfVOig5jzgf8RPkCAwEAAaOCBJIwggSOMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHaBggrBgEFBQcBAQSCAcwwggHIMGYGCCsGAQUFBzAChlpodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQkwyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwMig0KS5jcnQwVgYIKwYBBQUHMAKGSmh0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0JMMlBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3J0MFYGCCsGAQUFBzAChkpodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9CTDJQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDAyKDQpLmNydDBWBggrBgEFBQcwAoZKaHR0cDovL2NybDMuYW1lLmdibC9haWEvQkwyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwMig0KS5jcnQwVgYIKwYBBQUHMAKGSmh0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0JMMlBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3J0MB0GA1UdDgQWBBQp8DW_okjTMbIBWANCvQr_FrvzazAOBgNVHQ8BAf8EBAMCBaAwggE1BgNVHR8EggEsMIIBKDCCASSgggEgoIIBHIZCaHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwIwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBSuecJrXSWIEwb2BwnDl3x7l48dVTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBAA5sOyKXcQwQQAVKz9J8GIjVymZkoHVSft4TqdgNxSdoIAYkk_tYdx_dEZChJfSvIfzhzAb8k57EHRKNwKtP752SSUr0Q0oB60Y3Fq7il1fMKFTbVk9ZMTyOoo3hJmRwJaisv9rK2UVHWvwD2iUKD0IK_tHwy3m6bqbGDVKaRn1K9UYM39wEvEdy-k8J2z3Olfn6yYpcrVBHWzDzSy7TVdgUzaa0IZ670aJGPrNVYMvsCepP2_T_FdHVk4LoK9K4_0-GkZbvBLZPQO6FYgttg78s6Nn34TUcXWeTeeXArlkf48rbeL5fDY_CJyKYXLv3arwG7gUdcU5T8MGHeLLzcyo&s=FN77XXpVN_1UaXz54vUp07NdNq-TN637ZteYEgnb2O6shF6X3baQSG5Jb_GDojyuvhangbT1qEv6XISIrSv8cS6CDphteezF3H6rIri_eOxOjhEpSFkYwXjHvQ0lh3YXxMe5XJuGaX1d8X7YXOxZNNow-T4AgFUh1GBuLtTiks5VbS8PIsRvkKVYkhIu-gJ3PS6nGs8VER9HhQnc_3m8vY0DOUdxotbKFDjiK2WcIX30dHyLBhNwog6Ov24xfDneVoV8euwP1rKW0KCywzJyzJn0pJRcnGjNkMx2DiEt_GHw8AtMn4TSPjWOqKiW5qSlpvdKMaFt1Z3eyS8MQ5Mx1Q&h=IFQJaWYoRyrJt3D5GG9Vq_W9K9yJ-lGQCABdeJKkNN8
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7/definitions/openapi/operationResults/e5a5516a53df4a90b129e08869745d5a?api-version=2024-06-01-preview&t=638838419949447631&c=MIIHhzCCBm-gAwIBAgITfAeDEnPW_KxJbq8EjgAAB4MSczANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDUwHhcNMjUwNDIwMTUyMDI3WhcNMjUxMDE3MTUyMDI3WjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALO1SAvt4DI7FxxBmZBcfoKDLiXpS8U5adZbRlRvVm-EcAWqGNnVo1AxaXu3ghKMY95LxffhvcYAZ56WhgOxA_gpAUzm4t0yW0aVzv7vAOWZHIG1fvTcWY_sHCkuTyCNAcRbNbaqbidaK9ZOTQ19baUQ26kVkP7tjTi6DWWRlM25d4YQcGaWJoBwUtol-hgB5Z_rVMljRF5Q1T9_3YpRBw57SpHvmb30JNQSpndyeu--Ip8pMwpNaiIRF70G8WfbTBoJhRqNqNAKBLU3CAVV4H6lYrXtSK-gkZC0EzjZ4ze_XVDGBd1sOPsbMx4aQgZEiuDJuuk9eqTzzur3IDUdrP0CAwEAAaOCBHQwggRwMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHLBggrBgEFBQcBAQSCAb0wggG5MGMGCCsGAQUFBzAChldodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MFMGCCsGAQUFBzAChkdodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9DTzFQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA1LmNydDBTBggrBgEFBQcwAoZHaHR0cDovL2NybDMuYW1lLmdibC9haWEvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MB0GA1UdDgQWBBSRrAa71kVppeoZonY7QPy_R7XWQzAOBgNVHQ8BAf8EBAMCBaAwggEmBgNVHR8EggEdMIIBGTCCARWgggERoIIBDYY_aHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwIwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBR61hmFKHlscXYeYPjzS--iBUIWHTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBAChQXwS0_EaMb7G3BWGDeoNhAAEaoKkJVUy5HVGyWKADFm6Tp2WidwOIMoOu-IuoA634ORJ7bIwsC2WhUA0Z8-c2AAD956dAtCkn5pEBXSqwuKMM3l9KOClAY1RiAQcP-GWtmb_mqZspO78GHaq-mwiyIDUICM-uZl-qR6UVt6rLn5xPqHNkenxrslS_G3IJ9yCV1sflxhz93B7VR9H7BtOxd_nqZOD5uSV3OpPnATTRO0KB3VBbZ0KqvdtWoHjNywLqMuhJUufHw2zmlQ-Yj3ndha_yTvOQlT-85ikSoyWI0P4_GeEwX9RdkiVHVzx3gR8HzFKkJXOwRvxQE_9Ov_0&s=Z3-n10PLaoE4fR4zSYkwhs27pKST2gpWmDWBQKMVAHzOsyzBkkcsSuKtpkigpXZcMFLWlT_abkSOc8VjBjRXO3iNFLd59QYiBtW1jQXUSiSzLcFJWAZqtT6JydmbHZIs0NDVahj6BxTDknAr3-XRDVhwiODJKRJ0dOhtCxgoYDAKbdTm_HssZ1h1DIel56oyBG5kKv9JBQAclWkW21lxZZ0MYlSwVpQx2ZHtjc4ZDLX98suSEdi5e165X3ZON_4Lu-h3tNp9Er6oSg6LcwRSJxLKdnxe8qzWx2-OE4uZN4BTc45xTtR_G829qgf70ANsBz1MXMS3CXo7sXnQnVzFHA&h=_sGgTxdmAckpSWIr-uraBbRJ0E55QI84dmQydEbeR1o
       pragma:
       - no-cache
       strict-transport-security:
@@ -430,10 +438,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/0f613af5-e234-494b-98f9-5684fad1fd40
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: 240E9E7E7A6049E9BEBF4A12DC3FD592 Ref B: MAA201060514021 Ref C: 2025-03-20T15:10:54Z'
+      - 'Ref A: DABF31D440CB45A39E254EC778BD64F1 Ref B: MAA201060515027 Ref C: 2025-05-26T07:39:54Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -455,10 +465,10 @@ interactions:
       User-Agent:
       - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7/definitions/openapi/operationResults/fa29c5da084f43d3847769fb32511207?api-version=2024-06-01-preview&t=638780802557240744&c=MIIHpTCCBo2gAwIBAgITfwTbn828Ducmmj24MgAEBNufzTANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDIwHhcNMjUwMTI1MTI1MTUzWhcNMjUwNzI0MTI1MTUzWjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAL20TJQJbhV5Jrwzn-fiGrag_COjmaTwDy9Ir0oe1CLIfiJ9ageBVfcEmW-k5bUVL3eg6B8mQTEYE-FJDVVZ4jbJ9Qw8REpm2kBASDRwoItVVD_HBpJf1VhdViEPJPMDvLg0mAmde0X2m3HVEO6Y7eggJ9iL31DDv9PF-Xvn6x9xlWvO3_OCJReOoV_HCTDyzds4Pq9OySlnAGAozKYzOumbcVPz_WEMc_vwW80fjQLmdihJgp6_15qlnMdx48MQhVGT3y4gdbknMQJghyzTFcsASVncSqtmz8nAx5qT9dZ63iaF6E7Fbx76fnF4lx5K72ANX5cjlfVOig5jzgf8RPkCAwEAAaOCBJIwggSOMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHaBggrBgEFBQcBAQSCAcwwggHIMGYGCCsGAQUFBzAChlpodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQkwyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwMig0KS5jcnQwVgYIKwYBBQUHMAKGSmh0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0JMMlBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3J0MFYGCCsGAQUFBzAChkpodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9CTDJQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDAyKDQpLmNydDBWBggrBgEFBQcwAoZKaHR0cDovL2NybDMuYW1lLmdibC9haWEvQkwyUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwMig0KS5jcnQwVgYIKwYBBQUHMAKGSmh0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0JMMlBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3J0MB0GA1UdDgQWBBQp8DW_okjTMbIBWANCvQr_FrvzazAOBgNVHQ8BAf8EBAMCBaAwggE1BgNVHR8EggEsMIIBKDCCASSgggEgoIIBHIZCaHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JshjRodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDIoNCkuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwIwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBSuecJrXSWIEwb2BwnDl3x7l48dVTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBAA5sOyKXcQwQQAVKz9J8GIjVymZkoHVSft4TqdgNxSdoIAYkk_tYdx_dEZChJfSvIfzhzAb8k57EHRKNwKtP752SSUr0Q0oB60Y3Fq7il1fMKFTbVk9ZMTyOoo3hJmRwJaisv9rK2UVHWvwD2iUKD0IK_tHwy3m6bqbGDVKaRn1K9UYM39wEvEdy-k8J2z3Olfn6yYpcrVBHWzDzSy7TVdgUzaa0IZ670aJGPrNVYMvsCepP2_T_FdHVk4LoK9K4_0-GkZbvBLZPQO6FYgttg78s6Nn34TUcXWeTeeXArlkf48rbeL5fDY_CJyKYXLv3arwG7gUdcU5T8MGHeLLzcyo&s=FN77XXpVN_1UaXz54vUp07NdNq-TN637ZteYEgnb2O6shF6X3baQSG5Jb_GDojyuvhangbT1qEv6XISIrSv8cS6CDphteezF3H6rIri_eOxOjhEpSFkYwXjHvQ0lh3YXxMe5XJuGaX1d8X7YXOxZNNow-T4AgFUh1GBuLtTiks5VbS8PIsRvkKVYkhIu-gJ3PS6nGs8VER9HhQnc_3m8vY0DOUdxotbKFDjiK2WcIX30dHyLBhNwog6Ov24xfDneVoV8euwP1rKW0KCywzJyzJn0pJRcnGjNkMx2DiEt_GHw8AtMn4TSPjWOqKiW5qSlpvdKMaFt1Z3eyS8MQ5Mx1Q&h=IFQJaWYoRyrJt3D5GG9Vq_W9K9yJ-lGQCABdeJKkNN8
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7/definitions/openapi/operationResults/e5a5516a53df4a90b129e08869745d5a?api-version=2024-06-01-preview&t=638838419949447631&c=MIIHhzCCBm-gAwIBAgITfAeDEnPW_KxJbq8EjgAAB4MSczANBgkqhkiG9w0BAQsFADBEMRMwEQYKCZImiZPyLGQBGRYDR0JMMRMwEQYKCZImiZPyLGQBGRYDQU1FMRgwFgYDVQQDEw9BTUUgSW5mcmEgQ0EgMDUwHhcNMjUwNDIwMTUyMDI3WhcNMjUxMDE3MTUyMDI3WjBAMT4wPAYDVQQDEzVhc3luY29wZXJhdGlvbnNpZ25pbmdjZXJ0aWZpY2F0ZS5tYW5hZ2VtZW50LmF6dXJlLmNvbTCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALO1SAvt4DI7FxxBmZBcfoKDLiXpS8U5adZbRlRvVm-EcAWqGNnVo1AxaXu3ghKMY95LxffhvcYAZ56WhgOxA_gpAUzm4t0yW0aVzv7vAOWZHIG1fvTcWY_sHCkuTyCNAcRbNbaqbidaK9ZOTQ19baUQ26kVkP7tjTi6DWWRlM25d4YQcGaWJoBwUtol-hgB5Z_rVMljRF5Q1T9_3YpRBw57SpHvmb30JNQSpndyeu--Ip8pMwpNaiIRF70G8WfbTBoJhRqNqNAKBLU3CAVV4H6lYrXtSK-gkZC0EzjZ4ze_XVDGBd1sOPsbMx4aQgZEiuDJuuk9eqTzzur3IDUdrP0CAwEAAaOCBHQwggRwMCcGCSsGAQQBgjcVCgQaMBgwCgYIKwYBBQUHAwEwCgYIKwYBBQUHAwIwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhpDjDYTVtHiE8Ys-hZvdFs6dEoFghfmRS4WsmTQCAWQCAQcwggHLBggrBgEFBQcBAQSCAb0wggG5MGMGCCsGAQUFBzAChldodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpaW5mcmEvQ2VydHMvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmwxLmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MFMGCCsGAQUFBzAChkdodHRwOi8vY3JsMi5hbWUuZ2JsL2FpYS9DTzFQS0lJTlRDQTAxLkFNRS5HQkxfQU1FJTIwSW5mcmElMjBDQSUyMDA1LmNydDBTBggrBgEFBQcwAoZHaHR0cDovL2NybDMuYW1lLmdibC9haWEvQ08xUEtJSU5UQ0EwMS5BTUUuR0JMX0FNRSUyMEluZnJhJTIwQ0ElMjAwNS5jcnQwUwYIKwYBBQUHMAKGR2h0dHA6Ly9jcmw0LmFtZS5nYmwvYWlhL0NPMVBLSUlOVENBMDEuQU1FLkdCTF9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3J0MB0GA1UdDgQWBBSRrAa71kVppeoZonY7QPy_R7XWQzAOBgNVHQ8BAf8EBAMCBaAwggEmBgNVHR8EggEdMIIBGTCCARWgggERoIIBDYY_aHR0cDovL2NybC5taWNyb3NvZnQuY29tL3BraWluZnJhL0NSTC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMS5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMi5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsMy5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JshjFodHRwOi8vY3JsNC5hbWUuZ2JsL2NybC9BTUUlMjBJbmZyYSUyMENBJTIwMDUuY3JsMIGdBgNVHSAEgZUwgZIwDAYKKwYBBAGCN3sBATBmBgorBgEEAYI3ewICMFgwVgYIKwYBBQUHAgIwSh5IADMAMwBlADAAMQA5ADIAMQAtADQAZAA2ADQALQA0AGYAOABjAC0AYQAwADUANQAtADUAYgBkAGEAZgBmAGQANQBlADMAMwBkMAwGCisGAQQBgjd7AwIwDAYKKwYBBAGCN3sEAjAfBgNVHSMEGDAWgBR61hmFKHlscXYeYPjzS--iBUIWHTAdBgNVHSUEFjAUBggrBgEFBQcDAQYIKwYBBQUHAwIwDQYJKoZIhvcNAQELBQADggEBAChQXwS0_EaMb7G3BWGDeoNhAAEaoKkJVUy5HVGyWKADFm6Tp2WidwOIMoOu-IuoA634ORJ7bIwsC2WhUA0Z8-c2AAD956dAtCkn5pEBXSqwuKMM3l9KOClAY1RiAQcP-GWtmb_mqZspO78GHaq-mwiyIDUICM-uZl-qR6UVt6rLn5xPqHNkenxrslS_G3IJ9yCV1sflxhz93B7VR9H7BtOxd_nqZOD5uSV3OpPnATTRO0KB3VBbZ0KqvdtWoHjNywLqMuhJUufHw2zmlQ-Yj3ndha_yTvOQlT-85ikSoyWI0P4_GeEwX9RdkiVHVzx3gR8HzFKkJXOwRvxQE_9Ov_0&s=Z3-n10PLaoE4fR4zSYkwhs27pKST2gpWmDWBQKMVAHzOsyzBkkcsSuKtpkigpXZcMFLWlT_abkSOc8VjBjRXO3iNFLd59QYiBtW1jQXUSiSzLcFJWAZqtT6JydmbHZIs0NDVahj6BxTDknAr3-XRDVhwiODJKRJ0dOhtCxgoYDAKbdTm_HssZ1h1DIel56oyBG5kKv9JBQAclWkW21lxZZ0MYlSwVpQx2ZHtjc4ZDLX98suSEdi5e165X3ZON_4Lu-h3tNp9Er6oSg6LcwRSJxLKdnxe8qzWx2-OE4uZN4BTc45xTtR_G829qgf70ANsBz1MXMS3CXo7sXnQnVzFHA&h=_sGgTxdmAckpSWIr-uraBbRJ0E55QI84dmQydEbeR1o
   response:
     body:
-      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/apis/swaggerpetstore/versions/1-0-7/definitions/openapi/operationResults/fa29c5da084f43d3847769fb32511207","name":"fa29c5da084f43d3847769fb32511207","status":"Succeeded","startTime":"2025-03-20T15:10:55.2982939+00:00","endTime":"2025-03-20T15:10:56.4336304+00:00"}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/apis/swaggerpetstore/versions/1-0-7/definitions/openapi/operationResults/e5a5516a53df4a90b129e08869745d5a","name":"e5a5516a53df4a90b129e08869745d5a","status":"Succeeded","startTime":"2025-05-26T07:39:54.2007148+00:00","endTime":"2025-05-26T07:39:54.9124642+00:00"}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -469,7 +479,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Thu, 20 Mar 2025 15:11:26 GMT
+      - Mon, 26 May 2025 07:40:25 GMT
       expires:
       - '-1'
       pragma:
@@ -482,10 +492,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/50d3555c-e5f2-4923-9234-ad2b04951898
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: C5908D736E644D95A06AEC80E6E5AEA2 Ref B: MAA201060514021 Ref C: 2025-03-20T15:11:25Z'
+      - 'Ref A: 51B65BC88FAA4A0A9485B215403CD254 Ref B: MAA201060515027 Ref C: 2025-05-26T07:40:25Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -516,20 +528,20 @@ interactions:
         [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you
         can use the api key `special-key` to test the authorization filters.","kind":"rest","lifecycleStage":"design","license":{"name":"Apache
         2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"externalDocumentation":[{"title":"Title","description":"Find
-        out more about Swagger","url":"http://swagger.io"}],"contacts":[{"email":"apiteam@swagger.io"}],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore","name":"swaggerpetstore","systemData":{"createdAt":"2025-03-20T15:10:48.855197Z","lastModifiedAt":"2025-03-20T15:10:48.8551952Z"}}'
+        out more about Swagger","url":"http://swagger.io"}],"contacts":[{"email":"apiteam@swagger.io"}],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore","name":"swaggerpetstore","systemData":{"createdAt":"2025-05-26T07:39:48.0902914Z","lastModifiedAt":"2025-05-26T07:39:49.2191663Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '1001'
+      - '1002'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Thu, 20 Mar 2025 15:11:28 GMT
+      - Mon, 26 May 2025 07:40:26 GMT
       etag:
-      - c200d481-0000-0100-0000-67dc2ffa0000
+      - 53001a8c-0000-0100-0000-68341ac60000
       expires:
       - '-1'
       pragma:
@@ -542,10 +554,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/1e7e6ef8-d1b0-4591-a340-b605f46276ea
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: 5994C8870534478BA627F922E08AAF47 Ref B: MAA201060516033 Ref C: 2025-03-20T15:11:27Z'
+      - 'Ref A: 2B548B333966479DA80E66DB6F872477 Ref B: MAA201060513019 Ref C: 2025-05-26T07:40:26Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -570,20 +584,20 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7?api-version=2024-03-01
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"1-0-7","lifecycleStage":"design","isDefault":true,"isRecommended":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7","name":"1-0-7","systemData":{"createdAt":"2025-03-20T15:10:50.5847205Z","lastModifiedAt":"2025-03-20T15:10:50.5847188Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"1-0-7","lifecycleStage":"design","isDefault":true,"isRecommended":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7","name":"1-0-7","systemData":{"createdAt":"2025-05-26T07:39:50.3002149Z","lastModifiedAt":"2025-05-26T07:39:50.300212Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '475'
+      - '474'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Thu, 20 Mar 2025 15:11:29 GMT
+      - Mon, 26 May 2025 07:40:28 GMT
       etag:
-      - 0200dfc2-0000-0100-0000-67dc2ffa0000
+      - 3e007f0e-0000-0100-0000-68341ac60000
       expires:
       - '-1'
       pragma:
@@ -596,10 +610,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/a6888a47-c00d-4335-af4b-6badb3798221
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: 49522562D9E54C49B529B33AF69BF0DE Ref B: MAA201060515011 Ref C: 2025-03-20T15:11:29Z'
+      - 'Ref A: 4ACB5949FB3F43CA83554B802A0676CF Ref B: MAA201060513009 Ref C: 2025-05-26T07:40:27Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -628,7 +644,7 @@ interactions:
         is a sample server Petstore server.  You can find out more about Swagger at
         [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For
         this sample, you can use the api key `special-key` to test the authorization
-        filters.","specification":{"name":"openapi","version":"2.0"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7/definitions/openapi","name":"openapi","systemData":{"createdAt":"2025-03-20T15:10:52.3955773Z","lastModifiedAt":"2025-03-20T15:10:59.1795127Z"}}'
+        filters.","specification":{"name":"openapi","version":"2.0"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-7/definitions/openapi","name":"openapi","systemData":{"createdAt":"2025-05-26T07:39:52.6867525Z","lastModifiedAt":"2025-05-26T07:39:54.6372329Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -639,9 +655,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Thu, 20 Mar 2025 15:11:31 GMT
+      - Mon, 26 May 2025 07:40:29 GMT
       etag:
-      - 660180bb-0000-0100-0000-67dc30030000
+      - 0f017f1d-0000-0100-0000-68341aca0000
       expires:
       - '-1'
       pragma:
@@ -654,10 +670,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/7be5afc0-9da0-4bdc-a767-84eedb317f1a
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: 4C970B412BD04702B8130DA6FC9EABE4 Ref B: MAA201060514009 Ref C: 2025-03-20T15:11:30Z'
+      - 'Ref A: 461451AC683A47FB9CC5296423572093 Ref B: MAA201060513023 Ref C: 2025-05-26T07:40:29Z'
       x-powered-by:
       - ASP.NET
     status:

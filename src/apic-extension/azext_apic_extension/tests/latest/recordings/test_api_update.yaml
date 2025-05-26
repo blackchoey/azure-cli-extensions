@@ -19,7 +19,7 @@ interactions:
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis","properties":{"title":"Echo
-        API","kind":"rest","externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003","name":"clitest000003","systemData":{"createdAt":"2025-03-21T02:31:45.6995542Z","lastModifiedAt":"2025-03-21T02:31:45.6995505Z"}}'
+        API","kind":"rest","externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003","name":"clitest000003","systemData":{"createdAt":"2025-05-26T07:35:37.4545443Z","lastModifiedAt":"2025-05-26T07:35:37.9608762Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -30,9 +30,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Mar 2025 02:31:46 GMT
+      - Mon, 26 May 2025 07:35:38 GMT
       etag:
-      - d500d18b-0000-0100-0000-67dccf910000
+      - 53006186-0000-0100-0000-683419c90000
       expires:
       - '-1'
       pragma:
@@ -45,10 +45,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/4b3e5197-4d77-4ef2-af38-f1e2da78040a
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3748'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: 43885974BA2748E1B2E2275F3E3B7664 Ref B: MAA201060515037 Ref C: 2025-03-21T02:31:46Z'
+      - 'Ref A: FAD19F8B738A4293A8F0FC1CB4393766 Ref B: MAA201060513031 Ref C: 2025-05-26T07:35:38Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -79,7 +81,7 @@ interactions:
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis","properties":{"title":"Echo
-        API 2","kind":"rest","externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003","name":"clitest000003","systemData":{"createdAt":"2025-03-21T02:31:45.6995542Z","lastModifiedAt":"2025-03-21T02:31:48.1662779Z"}}'
+        API 2","kind":"rest","externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003","name":"clitest000003","systemData":{"createdAt":"2025-05-26T07:35:37.4545443Z","lastModifiedAt":"2025-05-26T07:35:40.4689312Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -90,9 +92,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Mar 2025 02:31:48 GMT
+      - Mon, 26 May 2025 07:35:39 GMT
       etag:
-      - d500008c-0000-0100-0000-67dccf940000
+      - 53006e86-0000-0100-0000-683419cc0000
       expires:
       - '-1'
       pragma:
@@ -105,12 +107,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/b297a8aa-f518-49c7-aa54-377db57379d7
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2996'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '196'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: B18ED20D7E1F4764B0824B9716C3222B Ref B: MAA201060515037 Ref C: 2025-03-21T02:31:47Z'
+      - 'Ref A: 07B5DBB57E9C450AA50CC11A3FE204EC Ref B: MAA201060513031 Ref C: 2025-05-26T07:35:39Z'
       x-powered-by:
       - ASP.NET
     status:
