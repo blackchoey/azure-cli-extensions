@@ -24,10 +24,10 @@ interactions:
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis","properties":{"title":"Swagger
-        Petstore","description":"API Description","kind":"rest","license":{"name":"MIT"},"externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore","name":"swaggerpetstore","systemData":{"createdAt":"2024-10-09T08:19:54.0629355Z","lastModifiedAt":"2024-10-09T08:19:54.0629346Z"}}'
+        Petstore","description":"API Description","kind":"rest","license":{"name":"MIT"},"externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore","name":"swaggerpetstore","systemData":{"createdAt":"2025-05-26T06:50:22.7856404Z","lastModifiedAt":"2025-05-26T06:50:22.7856382Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -35,9 +35,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:19:53 GMT
+      - Mon, 26 May 2025 06:50:22 GMT
       etag:
-      - c100e165-0000-0100-0000-67063caa0000
+      - 5300454e-0000-0100-0000-68340f2e0000
       expires:
       - '-1'
       pragma:
@@ -50,12 +50,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/b3e0f5c4-a222-40a2-9ff2-f7704bd7ba76
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 0A94740F5F754CF192B398534373358E Ref B: MAA201060515033 Ref C: 2024-10-09T08:19:52Z'
+      - 'Ref A: 08136D4FBF6A4229AE4B7013D92E549C Ref B: MAA201060513021 Ref C: 2025-05-26T06:50:21Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -84,20 +86,20 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-0?api-version=2024-03-01
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"1-0-0","lifecycleStage":"design"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-0","name":"1-0-0","systemData":{"createdAt":"2024-10-09T08:19:55.7494296Z","lastModifiedAt":"2024-10-09T08:19:55.7494283Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"1-0-0","lifecycleStage":"design","isDefault":true,"isRecommended":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-0","name":"1-0-0","systemData":{"createdAt":"2025-05-26T06:50:24.5269486Z","lastModifiedAt":"2025-05-26T06:50:24.5269474Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '436'
+      - '475'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:19:55 GMT
+      - Mon, 26 May 2025 06:50:24 GMT
       etag:
-      - 6f00c4c6-0000-0100-0000-67063cab0000
+      - 3d00c6f6-0000-0100-0000-68340f300000
       expires:
       - '-1'
       pragma:
@@ -110,12 +112,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/ea09d170-95ce-4fca-8633-8ed41de28899
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 29276E5434B048959A2F62FEC6FAC405 Ref B: MAA201060514011 Ref C: 2024-10-09T08:19:54Z'
+      - 'Ref A: 992170B24C1B4ACA86E5187279AB47AF Ref B: MAA201060515037 Ref C: 2025-05-26T06:50:23Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -145,20 +149,20 @@ interactions:
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions/definitions","properties":{"title":"openapi","description":"API
-        Description"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-0/definitions/openapi","name":"openapi","systemData":{"createdAt":"2024-10-09T08:19:56.981163Z","lastModifiedAt":"2024-10-09T08:19:56.9811622Z"}}'
+        Description"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-0/definitions/openapi","name":"openapi","systemData":{"createdAt":"2025-05-26T06:50:26.1940806Z","lastModifiedAt":"2025-05-26T06:50:26.1940787Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '477'
+      - '478'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:19:57 GMT
+      - Mon, 26 May 2025 06:50:26 GMT
       etag:
-      - 76006430-0000-0100-0000-67063cac0000
+      - 0d0128f9-0000-0100-0000-68340f320000
       expires:
       - '-1'
       pragma:
@@ -171,12 +175,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/a4891cb3-1c9a-4b80-849f-704d8bf1b7cc
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 3D424F3DD11E477DA2A13F4B34EC1BEE Ref B: MAA201060516031 Ref C: 2024-10-09T08:19:56Z'
+      - 'Ref A: D3F9122965B642C786879B5123420BDB Ref B: MAA201060516021 Ref C: 2025-05-26T06:50:25Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -237,13 +243,13 @@ interactions:
       string: ''
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
       - '0'
       date:
-      - Wed, 09 Oct 2024 08:19:58 GMT
+      - Mon, 26 May 2025 06:50:27 GMT
       expires:
       - '-1'
       pragma:
@@ -254,12 +260,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/indonesiacentral/ee457957-c3aa-4503-8eec-5b70b85e3b42
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 79050623337640BB8BCCE187490581EC Ref B: MAA201060514037 Ref C: 2024-10-09T08:19:57Z'
+      - 'Ref A: F85223B7B347475E92D014C3D29B3A4A Ref B: MAA201060513027 Ref C: 2025-05-26T06:50:26Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -285,10 +293,10 @@ interactions:
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis","properties":{"title":"Swagger
-        Petstore","description":"API Description","kind":"rest","lifecycleStage":"design","license":{"name":"MIT"},"externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore","name":"swaggerpetstore","systemData":{"createdAt":"2024-10-09T08:19:54.0629355Z","lastModifiedAt":"2024-10-09T08:19:54.0629346Z"}}'
+        Petstore","description":"API Description","kind":"rest","lifecycleStage":"design","license":{"name":"MIT"},"externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore","name":"swaggerpetstore","systemData":{"createdAt":"2025-05-26T06:50:22.7856404Z","lastModifiedAt":"2025-05-26T06:50:24.4356151Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -296,9 +304,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:20:00 GMT
+      - Mon, 26 May 2025 06:50:29 GMT
       etag:
-      - c100f265-0000-0100-0000-67063cab0000
+      - 53004e4e-0000-0100-0000-68340f300000
       expires:
       - '-1'
       pragma:
@@ -311,10 +319,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/b777ba95-432c-44e6-b453-dbe51a8de15b
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: E9FAFE237B234780BB7EF8F494C36345 Ref B: MAA201060514009 Ref C: 2024-10-09T08:19:59Z'
+      - 'Ref A: 3EACA9400DA94F3CA13C51F6555E598E Ref B: MAA201060515023 Ref C: 2025-05-26T06:50:29Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -339,20 +349,20 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-0?api-version=2024-03-01
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"1-0-0","lifecycleStage":"design"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-0","name":"1-0-0","systemData":{"createdAt":"2024-10-09T08:19:55.7494296Z","lastModifiedAt":"2024-10-09T08:19:55.7494283Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"1-0-0","lifecycleStage":"design","isDefault":true,"isRecommended":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-0","name":"1-0-0","systemData":{"createdAt":"2025-05-26T06:50:24.5269486Z","lastModifiedAt":"2025-05-26T06:50:24.5269474Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '436'
+      - '475'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:20:00 GMT
+      - Mon, 26 May 2025 06:50:29 GMT
       etag:
-      - 6f00c4c6-0000-0100-0000-67063cab0000
+      - 3d00c6f6-0000-0100-0000-68340f300000
       expires:
       - '-1'
       pragma:
@@ -365,10 +375,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/5d4d9bff-8458-4cc5-a97f-49817bcffbd2
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: FEB0E20D6CCF4F1387D6BACE68A8BAD6 Ref B: MAA201060516035 Ref C: 2024-10-09T08:20:00Z'
+      - 'Ref A: E18E9732F930470F8F527A567E2C13C8 Ref B: MAA201060515033 Ref C: 2025-05-26T06:50:30Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -394,20 +406,20 @@ interactions:
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions/definitions","properties":{"title":"openapi","description":"API
-        Description","specification":{"name":"openapi","version":"3-0-0"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-0/definitions/openapi","name":"openapi","systemData":{"createdAt":"2024-10-09T08:19:56.981163Z","lastModifiedAt":"2024-10-09T08:19:58.8758056Z"}}'
+        Description","specification":{"name":"openapi","version":"3-0-0"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore/versions/1-0-0/definitions/openapi","name":"openapi","systemData":{"createdAt":"2025-05-26T06:50:26.1940806Z","lastModifiedAt":"2025-05-26T06:50:28.0356321Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '530'
+      - '531'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:20:02 GMT
+      - Mon, 26 May 2025 06:50:31 GMT
       etag:
-      - 76007530-0000-0100-0000-67063cae0000
+      - 0d0140f9-0000-0100-0000-68340f340000
       expires:
       - '-1'
       pragma:
@@ -420,10 +432,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/dc93ca02-468f-47ea-b5de-1480a5edf791
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: 9FD07E2CD6D44712AE1D650FD8F326E0 Ref B: MAA201060514053 Ref C: 2024-10-09T08:20:02Z'
+      - 'Ref A: 35A2AE77D5734593AB4F7ABA2C134F62 Ref B: MAA201060513047 Ref C: 2025-05-26T06:50:30Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -482,7 +496,7 @@ interactions:
         integer\n          format: int32\n        message:\n          type: string\n"}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -490,7 +504,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:20:03 GMT
+      - Mon, 26 May 2025 06:50:33 GMT
       expires:
       - '-1'
       pragma:
@@ -503,12 +517,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/b70b55e9-27cf-4a62-b531-ec2f0c72c41e
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: F6ECE32F28544C4BBBF3174CA43EDFB0 Ref B: MAA201060514053 Ref C: 2024-10-09T08:20:03Z'
+      - 'Ref A: 33AF95E12D714EC5BC2743B8E1BD061B Ref B: MAA201060515021 Ref C: 2025-05-26T06:50:32Z'
       x-powered-by:
       - ASP.NET
     status:

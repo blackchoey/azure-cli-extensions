@@ -18,20 +18,20 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004?api-version=2024-03-01
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"v1.0.0","lifecycleStage":"production"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004","name":"clitest000004","systemData":{"createdAt":"2024-10-09T08:21:02.2688339Z","lastModifiedAt":"2024-10-09T08:21:02.2688332Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"v1.0.0","lifecycleStage":"production","isDefault":true,"isRecommended":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004","name":"clitest000004","systemData":{"createdAt":"2025-05-26T06:52:26.1361447Z","lastModifiedAt":"2025-05-26T06:52:26.136143Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '455'
+      - '493'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:21:03 GMT
+      - Mon, 26 May 2025 06:52:27 GMT
       etag:
-      - 6f0057ca-0000-0100-0000-67063cee0000
+      - 3d00def7-0000-0100-0000-68340faa0000
       expires:
       - '-1'
       pragma:
@@ -44,10 +44,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/d3f575bf-da89-418a-b2d5-3339720db37d
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: 1D91E92F8E6C4E86929EDD24D5E9E2B2 Ref B: MAA201060515009 Ref C: 2024-10-09T08:21:03Z'
+      - 'Ref A: 76E8424B500844809D18249AD913D895 Ref B: MAA201060513051 Ref C: 2025-05-26T06:52:27Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -76,20 +78,20 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004?api-version=2024-03-01
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"v1.0.1","lifecycleStage":"development"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004","name":"clitest000004","systemData":{"lastModifiedAt":"2024-10-09T08:21:04.9950475Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"v1.0.1","lifecycleStage":"development","isDefault":true,"isRecommended":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004","name":"clitest000004","systemData":{"createdAt":"2025-05-26T06:52:26.1361447Z","lastModifiedAt":"2025-05-26T06:52:29.1715721Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '413'
+      - '495'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:21:04 GMT
+      - Mon, 26 May 2025 06:52:29 GMT
       etag:
-      - 6f0072ca-0000-0100-0000-67063cf00000
+      - 3d00e1f7-0000-0100-0000-68340fad0000
       expires:
       - '-1'
       pragma:
@@ -102,12 +104,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/45ca7c54-8ad8-4e92-a32e-710d6ecfaf34
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2998'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '198'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: F67877F72E90401D862FF6EECFB4A51E Ref B: MAA201060515009 Ref C: 2024-10-09T08:21:04Z'
+      - 'Ref A: 3913D59EFD904D7F913D5A4068D6616A Ref B: MAA201060513051 Ref C: 2025-05-26T06:52:27Z'
       x-powered-by:
       - ASP.NET
     status:

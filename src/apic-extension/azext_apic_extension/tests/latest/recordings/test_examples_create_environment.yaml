@@ -23,10 +23,10 @@ interactions:
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/environments","properties":{"title":"Public
-        cloud","kind":"development","customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/environments/cli000003","name":"cli000003","systemData":{"createdAt":"2024-10-09T08:19:08.4444354Z"}}'
+        cloud","kind":"development","customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/environments/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T06:48:17.1981262Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -34,9 +34,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:19:08 GMT
+      - Mon, 26 May 2025 06:48:17 GMT
       etag:
-      - 3400befc-0000-0100-0000-67063c7c0000
+      - 720071a9-0000-0100-0000-68340eb10000
       expires:
       - '-1'
       pragma:
@@ -49,12 +49,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/2d635f27-c8ab-4b0d-aa1a-3f129a598d30
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 244783F0DE9C48388C53DBF1BD09F0F2 Ref B: MAA201060515033 Ref C: 2024-10-09T08:19:06Z'
+      - 'Ref A: A6A031D2A49B473FAA72F45DDAD9F0BB Ref B: MAA201060514039 Ref C: 2025-05-26T06:48:16Z'
       x-powered-by:
       - ASP.NET
     status:

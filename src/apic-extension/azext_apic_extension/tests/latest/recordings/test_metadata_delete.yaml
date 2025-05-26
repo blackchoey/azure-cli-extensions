@@ -23,11 +23,11 @@ interactions:
       string: ''
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       date:
-      - Wed, 09 Oct 2024 08:19:40 GMT
+      - Mon, 26 May 2025 06:49:26 GMT
       expires:
       - '-1'
       pragma:
@@ -38,12 +38,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/922b7753-c1b9-4a1a-a292-790492200659
       x-ms-ratelimit-remaining-subscription-deletes:
-      - '199'
+      - '799'
       x-ms-ratelimit-remaining-subscription-global-deletes:
-      - '2999'
+      - '11999'
       x-msedge-ref:
-      - 'Ref A: 5EABB79548714E3983EAC63634BEF5E8 Ref B: MAA201060515029 Ref C: 2024-10-09T08:19:39Z'
+      - 'Ref A: AE2B71DBDF9547E5B2108FD109BBEE33 Ref B: MAA201060515037 Ref C: 2025-05-26T06:49:26Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -71,7 +73,7 @@ interactions:
       string: '{"code":"404"}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -79,7 +81,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:19:40 GMT
+      - Mon, 26 May 2025 06:49:28 GMT
       expires:
       - '-1'
       pragma:
@@ -92,10 +94,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/094edd46-7138-4d2f-a40d-fe57e7dde7cd
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: F64C76994C174AC1A82068B7F4488A3E Ref B: MAA201060516021 Ref C: 2024-10-09T08:19:40Z'
+      - 'Ref A: 8017A57FFF084FE09C0ADD2F41784C67 Ref B: MAA201060513023 Ref C: 2025-05-26T06:49:27Z'
       x-powered-by:
       - ASP.NET
     status:

@@ -29,10 +29,10 @@ interactions:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis","properties":{"title":"test
         api","summary":"summary","description":"API description","kind":"rest","license":{"url":"example.com"},"externalDocumentation":[{"title":"onboarding
-        docs","url":"example.com"}],"contacts":[{"name":"test","url":"example.com","email":"contact@example.com"}],"customProperties":{"clitest000003":true}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/cli000004","name":"cli000004","systemData":{"createdAt":"2024-10-09T08:17:39.4819888Z","lastModifiedAt":"2024-10-09T08:17:39.4819877Z"}}'
+        docs","url":"example.com"}],"contacts":[{"name":"test","url":"example.com","email":"contact@example.com"}],"customProperties":{"clitest000003":true}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/cli000004","name":"cli000004","systemData":{"createdAt":"2025-05-26T06:46:28.0259583Z","lastModifiedAt":"2025-05-26T06:46:28.0259565Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -40,9 +40,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:17:39 GMT
+      - Mon, 26 May 2025 06:46:28 GMT
       etag:
-      - c1000259-0000-0100-0000-67063c230000
+      - 53008649-0000-0100-0000-68340e440000
       expires:
       - '-1'
       pragma:
@@ -55,12 +55,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/bbc23e5a-533d-4845-9f0c-7cca1ca7373b
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 8CC55F75DDCB4F02AC5DFCC20C4B4EED Ref B: MAA201060515035 Ref C: 2024-10-09T08:17:38Z'
+      - 'Ref A: B66718D8D6C6477C9D85B2A96786ACA2 Ref B: MAA201060516019 Ref C: 2025-05-26T06:46:26Z'
       x-powered-by:
       - ASP.NET
     status:

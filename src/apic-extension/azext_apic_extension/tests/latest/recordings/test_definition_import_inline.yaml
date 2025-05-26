@@ -27,13 +27,13 @@ interactions:
       string: ''
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
       - '0'
       date:
-      - Wed, 09 Oct 2024 08:17:51 GMT
+      - Mon, 26 May 2025 06:46:41 GMT
       expires:
       - '-1'
       pragma:
@@ -44,12 +44,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/7fdc41fe-e2e1-4190-9848-04aace6554b1
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2998'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '198'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 56978BC57894428FB7C095792892B7E9 Ref B: MAA201060513021 Ref C: 2024-10-09T08:17:51Z'
+      - 'Ref A: 9E1919F5672B4D2399E6138A7A17CAED Ref B: MAA201060514049 Ref C: 2025-05-26T06:46:40Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -80,7 +82,7 @@ interactions:
         Management facade for a very handy and free online HTTP tool.\",\"version\":\"1.0\"}}"}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -88,7 +90,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:17:53 GMT
+      - Mon, 26 May 2025 06:46:42 GMT
       expires:
       - '-1'
       pragma:
@@ -101,12 +103,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/43b75036-c0fd-4e21-9425-b7405eb8d696
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 7C3A28E1C6D14BE083988DC2C5A7E8EC Ref B: MAA201060516017 Ref C: 2024-10-09T08:17:52Z'
+      - 'Ref A: 0540BBCD8469447797D83F7A4F704B10 Ref B: MAA201060514009 Ref C: 2025-05-26T06:46:42Z'
       x-powered-by:
       - ASP.NET
     status:

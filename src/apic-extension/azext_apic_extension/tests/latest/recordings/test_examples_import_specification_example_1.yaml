@@ -27,13 +27,13 @@ interactions:
       string: ''
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
       - '0'
       date:
-      - Wed, 09 Oct 2024 08:19:01 GMT
+      - Mon, 26 May 2025 06:48:04 GMT
       expires:
       - '-1'
       pragma:
@@ -44,12 +44,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/527c0a81-cdd9-48b6-8af4-a8d134c4610e
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 682D7DB3072F4DF9AB80F9EAAF0C5C72 Ref B: MAA201060516021 Ref C: 2024-10-09T08:19:01Z'
+      - 'Ref A: 2DA8F8697FE74E76B23ADDB07A2DA358 Ref B: MAA201060516033 Ref C: 2025-05-26T06:48:04Z'
       x-powered-by:
       - ASP.NET
     status:

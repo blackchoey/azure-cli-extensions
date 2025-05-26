@@ -18,18 +18,18 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions?api-version=2024-03-01
   response:
     body:
-      string: '{"value":[{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions/definitions","properties":{"title":"OpenAPI"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005","name":"clitest000005","systemData":{"createdAt":"2024-10-09T08:18:57.0572466Z","lastModifiedAt":"2024-10-09T08:18:57.0572458Z"}},{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions/definitions","properties":{"title":"OpenAPI"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000006","name":"clitest000006","systemData":{"createdAt":"2024-10-09T08:18:58.3580614Z","lastModifiedAt":"2024-10-09T08:18:58.3580605Z"}}]}'
+      string: '{"value":[{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions/definitions","properties":{"title":"OpenAPI"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005","name":"clitest000005","systemData":{"createdAt":"2025-05-26T06:47:08.3908571Z","lastModifiedAt":"2025-05-26T06:47:08.3908553Z"}},{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions/definitions","properties":{"title":"OpenAPI"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000006","name":"clitest000006","systemData":{"createdAt":"2025-05-26T06:47:10.690841Z","lastModifiedAt":"2025-05-26T06:47:10.6908396Z"}}]}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '941'
+      - '940'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:18:59 GMT
+      - Mon, 26 May 2025 06:47:11 GMT
       expires:
       - '-1'
       pragma:
@@ -42,10 +42,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/ab5a5844-be92-4ecc-ae2d-b4098c88ce8b
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: A6E4D17FCC714D7E9C3FD073C3E89145 Ref B: MAA201060516021 Ref C: 2024-10-09T08:18:59Z'
+      - 'Ref A: 0BBEE23512D047F2BBB0768B6DDB666D Ref B: MAA201060515029 Ref C: 2025-05-26T06:47:11Z'
       x-powered-by:
       - ASP.NET
     status:

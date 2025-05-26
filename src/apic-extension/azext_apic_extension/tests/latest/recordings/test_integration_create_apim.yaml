@@ -20,12 +20,12 @@ interactions:
       ParameterSetName:
       - -g -n --azure-apim -i --msi-resource-id
       User-Agent:
-      - AZURECLI/2.67.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003?api-version=2024-06-01-preview
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apiSources","properties":{"apiSourceType":"AzureApiManagement","apimSource":{"resourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiManagement/service/clitest000004","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"azureApiManagementSource":{"resourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiManagement/service/clitest000004","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"sourceLifecycleStage":"design","targetEnvironmentId":"/workspaces/default/environments/azure-api-management","targetLifecycleStage":"design","importSpecification":"always","linkState":{"state":"initializing","lastUpdatedOn":"2024-12-24T07:30:53.3997958Z"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003","name":"cli000003","systemData":{"createdAt":"2024-12-24T07:30:53.3997938Z","lastModifiedAt":"2024-12-24T07:30:53.3997919Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apiSources","properties":{"apiSourceType":"AzureApiManagement","apimSource":{"resourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiManagement/service/clitest000004","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"azureApiManagementSource":{"resourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiManagement/service/clitest000004","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"sourceLifecycleStage":"design","targetEnvironmentId":"/workspaces/default/environments/azure-api-management","targetLifecycleStage":"design","importSpecification":"always","linkState":{"state":"initializing","lastUpdatedOn":"2025-05-26T06:50:47.2843888Z"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T06:50:47.2843887Z","lastModifiedAt":"2025-05-26T06:50:47.2843868Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -36,9 +36,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 24 Dec 2024 07:30:53 GMT
+      - Mon, 26 May 2025 06:50:47 GMT
       etag:
-      - 0a00e783-0000-3300-0000-676a632d0000
+      - 5100ef14-0000-0100-0000-68340f470000
       expires:
       - '-1'
       pragma:
@@ -51,12 +51,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/8987919e-56b5-4db8-9556-ee1a3bbf56a7
       x-ms-ratelimit-remaining-subscription-global-writes:
       - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
       - '799'
       x-msedge-ref:
-      - 'Ref A: 8A292E25303F4B6F8FE86A99C399FA6B Ref B: MAA201060513045 Ref C: 2024-12-24T07:30:50Z'
+      - 'Ref A: 34CC1A120CE645CA9C9C8790EAE957C9 Ref B: MAA201060516009 Ref C: 2025-05-26T06:50:46Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -76,12 +78,12 @@ interactions:
       ParameterSetName:
       - -g -n -i
       User-Agent:
-      - AZURECLI/2.67.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003?api-version=2024-06-01-preview
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apiSources","properties":{"apiSourceType":"AzureApiManagement","apimSource":{"resourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiManagement/service/clitest000004","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"azureApiManagementSource":{"resourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiManagement/service/clitest000004","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"sourceLifecycleStage":"design","targetEnvironmentId":"/workspaces/default/environments/azure-api-management","targetLifecycleStage":"design","importSpecification":"always","linkState":{"state":"initializing","lastUpdatedOn":"2024-12-24T07:30:53.3997958Z"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003","name":"cli000003","systemData":{"createdAt":"2024-12-24T07:30:53.3997938Z","lastModifiedAt":"2024-12-24T07:30:53.3997919Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apiSources","properties":{"apiSourceType":"AzureApiManagement","apimSource":{"resourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiManagement/service/clitest000004","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"azureApiManagementSource":{"resourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiManagement/service/clitest000004","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"sourceLifecycleStage":"design","targetEnvironmentId":"/workspaces/default/environments/azure-api-management","targetLifecycleStage":"design","importSpecification":"always","linkState":{"state":"initializing","lastUpdatedOn":"2025-05-26T06:50:47.2843888Z"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T06:50:47.2843887Z","lastModifiedAt":"2025-05-26T06:50:47.2843868Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -92,9 +94,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Tue, 24 Dec 2024 07:30:55 GMT
+      - Mon, 26 May 2025 06:50:48 GMT
       etag:
-      - 0a00e783-0000-3300-0000-676a632d0000
+      - 5100ef14-0000-0100-0000-68340f470000
       expires:
       - '-1'
       pragma:
@@ -107,10 +109,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/8c7c91c6-ab39-429e-a729-02ce76229616
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: EC6649C72E924E18B01BEBABEE4C3426 Ref B: MAA201060516027 Ref C: 2024-12-24T07:30:54Z'
+      - 'Ref A: 3BC40E5ABD2D4ADBB1F77644CD9BF7A7 Ref B: MAA201060516021 Ref C: 2025-05-26T06:50:48Z'
       x-powered-by:
       - ASP.NET
     status:

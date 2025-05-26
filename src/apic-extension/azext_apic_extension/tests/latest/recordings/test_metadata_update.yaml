@@ -19,10 +19,10 @@ interactions:
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/metadataSchemas","properties":{"assignedTo":[{"entity":"api","required":true,"deprecated":false},{"entity":"environment","required":false,"deprecated":false},{"entity":"deployment","required":true,"deprecated":false}],"schema":"{\"type\":\"boolean\",
-        \"title\":\"Public Facing\"}"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/metadataSchemas/clitest000003","name":"clitest000003","systemData":{"createdAt":"2024-10-09T08:19:52.0507775Z","lastModifiedAt":"2024-10-09T08:19:52.0507765Z"}}'
+        \"title\":\"Public Facing\"}"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/metadataSchemas/clitest000003","name":"clitest000003","systemData":{"createdAt":"2025-05-26T06:49:44.9482307Z","lastModifiedAt":"2025-05-26T06:49:44.9482296Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -30,9 +30,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:19:52 GMT
+      - Mon, 26 May 2025 06:49:46 GMT
       etag:
-      - 2a028be5-0000-0100-0000-67063ca80000
+      - 85017176-0000-0100-0000-68340f080000
       expires:
       - '-1'
       pragma:
@@ -45,10 +45,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/7979ad64-7fec-4ff3-8c8a-6754bf696b0c
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: 08D53D08A6354D44879778278DC1A74C Ref B: MAA201060513029 Ref C: 2024-10-09T08:19:52Z'
+      - 'Ref A: 030F2B1FCD5B41DE9E040761BA2DA057 Ref B: MAA201060515047 Ref C: 2025-05-26T06:49:45Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -81,20 +83,20 @@ interactions:
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/metadataSchemas","properties":{"assignedTo":[{"entity":"api","required":true,"deprecated":false},{"entity":"environment","required":false,"deprecated":false},{"entity":"deployment","required":true,"deprecated":false}],"schema":"{\"type\":\"boolean\",
-        \"title\":\"Updated Title\"}"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/metadataSchemas/clitest000003","name":"clitest000003","systemData":{"lastModifiedAt":"2024-10-09T08:19:54.1778663Z"}}'
+        \"title\":\"Updated Title\"}"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/metadataSchemas/clitest000003","name":"clitest000003","systemData":{"createdAt":"2025-05-26T06:49:44.9482307Z","lastModifiedAt":"2025-05-26T06:49:47.837883Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '575'
+      - '617'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:19:53 GMT
+      - Mon, 26 May 2025 06:49:48 GMT
       etag:
-      - 2a02a8e6-0000-0100-0000-67063caa0000
+      - 85019c76-0000-0100-0000-68340f0b0000
       expires:
       - '-1'
       pragma:
@@ -107,12 +109,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/9c84a733-b04c-4d6c-a64a-320607e983b8
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: D7F9528CBBA14180934A4C570995E7FA Ref B: MAA201060513029 Ref C: 2024-10-09T08:19:53Z'
+      - 'Ref A: 48746EFA32274190A35F901B3391C742 Ref B: MAA201060515047 Ref C: 2025-05-26T06:49:46Z'
       x-powered-by:
       - ASP.NET
     status:

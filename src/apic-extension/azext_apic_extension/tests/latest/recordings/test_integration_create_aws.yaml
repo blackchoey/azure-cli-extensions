@@ -19,25 +19,25 @@ interactions:
       ParameterSetName:
       - -g -n -i --aws-access-key-reference --aws-region --aws-secret-access-key-reference
       User-Agent:
-      - AZURECLI/2.67.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003?api-version=2024-06-01-preview
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apiSources","properties":{"apiSourceType":"AmazonApiGateway","amazonApiGatewaySource":{"accessKey":"https://kv-canary-franktest.vault.azure.net/secrets/AccessKey","secretAccessKey":"https://kv-canary-franktest.vault.azure.net/secrets/SecretAccessKey","regionName":"us-west-2","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"sourceLifecycleStage":"design","targetEnvironmentId":"/workspaces/default/environments/amazon-api-gateway","targetLifecycleStage":"design","importSpecification":"always","linkState":{"state":"initializing","lastUpdatedOn":"2025-01-15T01:16:34.4881503Z"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003","name":"cli000003","systemData":{"createdAt":"2025-01-15T01:16:34.4881477Z","lastModifiedAt":"2025-01-15T01:16:34.488146Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apiSources","properties":{"apiSourceType":"AmazonApiGateway","amazonApiGatewaySource":{"accessKey":"https://kv-canary-franktest.vault.azure.net/secrets/AccessKey","secretAccessKey":"https://kv-canary-franktest.vault.azure.net/secrets/SecretAccessKey","regionName":"us-west-2","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"sourceLifecycleStage":"design","targetEnvironmentId":"/workspaces/default/environments/amazon-api-gateway","targetLifecycleStage":"design","importSpecification":"always","linkState":{"state":"initializing","lastUpdatedOn":"2025-05-26T06:51:07.6486591Z"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T06:51:07.6486588Z","lastModifiedAt":"2025-05-26T06:51:07.6486569Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '1080'
+      - '1081'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 15 Jan 2025 01:16:34 GMT
+      - Mon, 26 May 2025 06:51:07 GMT
       etag:
-      - d91457da-0000-2000-0000-67870c720000
+      - 51000d15-0000-0100-0000-68340f5b0000
       expires:
       - '-1'
       pragma:
@@ -50,12 +50,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/indonesiacentral/6d2dd2f9-5080-427d-8d8d-a9759d612a78
       x-ms-ratelimit-remaining-subscription-global-writes:
       - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
       - '799'
       x-msedge-ref:
-      - 'Ref A: E68490A6C8504981A44DF6F018E193E5 Ref B: MAA201060516017 Ref C: 2025-01-15T01:16:29Z'
+      - 'Ref A: FCCC9F23CDC74AD58FE8EA282A23F92A Ref B: MAA201060513039 Ref C: 2025-05-26T06:51:05Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -75,25 +77,25 @@ interactions:
       ParameterSetName:
       - -g -n -i
       User-Agent:
-      - AZURECLI/2.67.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003?api-version=2024-06-01-preview
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apiSources","properties":{"apiSourceType":"AmazonApiGateway","amazonApiGatewaySource":{"accessKey":"https://kv-canary-franktest.vault.azure.net/secrets/AccessKey","secretAccessKey":"https://kv-canary-franktest.vault.azure.net/secrets/SecretAccessKey","regionName":"us-west-2","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"sourceLifecycleStage":"design","targetEnvironmentId":"/workspaces/default/environments/amazon-api-gateway","targetLifecycleStage":"design","importSpecification":"always","linkState":{"state":"initializing","lastUpdatedOn":"2025-01-15T01:16:34.4881503Z"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003","name":"cli000003","systemData":{"createdAt":"2025-01-15T01:16:34.4881477Z","lastModifiedAt":"2025-01-15T01:16:34.488146Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apiSources","properties":{"apiSourceType":"AmazonApiGateway","amazonApiGatewaySource":{"accessKey":"https://kv-canary-franktest.vault.azure.net/secrets/AccessKey","secretAccessKey":"https://kv-canary-franktest.vault.azure.net/secrets/SecretAccessKey","regionName":"us-west-2","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"sourceLifecycleStage":"design","targetEnvironmentId":"/workspaces/default/environments/amazon-api-gateway","targetLifecycleStage":"design","importSpecification":"always","linkState":{"state":"syncing","lastUpdatedOn":"2025-05-26T06:51:09.1957996Z"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T06:51:07.6486588Z","lastModifiedAt":"2025-05-26T06:51:09.1957993Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '1080'
+      - '1076'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 15 Jan 2025 01:16:35 GMT
+      - Mon, 26 May 2025 06:51:09 GMT
       etag:
-      - d91457da-0000-2000-0000-67870c720000
+      - 51000f15-0000-0100-0000-68340f5d0000
       expires:
       - '-1'
       pragma:
@@ -106,10 +108,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/01c39991-96b0-4be3-bc34-fccbacb44083
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: 8B711BC3F9014326B9A1E12B4D969D88 Ref B: MAA201060515051 Ref C: 2025-01-15T01:16:35Z'
+      - 'Ref A: 5579AC0E405F48ECBB2E86599C45D2C8 Ref B: MAA201060516009 Ref C: 2025-05-26T06:51:08Z'
       x-powered-by:
       - ASP.NET
     status:

@@ -23,13 +23,13 @@ interactions:
       string: ''
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
       - '0'
       date:
-      - Wed, 09 Oct 2024 08:17:44 GMT
+      - Mon, 26 May 2025 06:46:36 GMT
       expires:
       - '-1'
       pragma:
@@ -40,12 +40,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/bddb05bd-d3c8-426b-ac04-2316e1205734
       x-ms-ratelimit-remaining-subscription-deletes:
-      - '199'
+      - '799'
       x-ms-ratelimit-remaining-subscription-global-deletes:
-      - '2999'
+      - '11999'
       x-msedge-ref:
-      - 'Ref A: 3885676F58654F2DA80BB9329DEAE039 Ref B: MAA201060515047 Ref C: 2024-10-09T08:17:44Z'
+      - 'Ref A: CE1732DFA9C242C59CBA6705B938ADEF Ref B: MAA201060516025 Ref C: 2025-05-26T06:46:36Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -73,7 +75,7 @@ interactions:
       string: '{"code":"404"}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -81,7 +83,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:17:46 GMT
+      - Mon, 26 May 2025 06:46:38 GMT
       expires:
       - '-1'
       pragma:
@@ -94,10 +96,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/c23d9655-71da-49cc-a674-6902c8fda47b
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: D96DF1C5DF164EF282942EC071D6D094 Ref B: MAA201060516033 Ref C: 2024-10-09T08:17:45Z'
+      - 'Ref A: 3590AAE78026444390C29659A79E3E8E Ref B: MAA201060516049 Ref C: 2025-05-26T06:46:37Z'
       x-powered-by:
       - ASP.NET
     status:

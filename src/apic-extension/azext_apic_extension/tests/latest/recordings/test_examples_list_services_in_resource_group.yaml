@@ -18,18 +18,18 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services?api-version=2024-03-01
   response:
     body:
-      string: '{"value":[{"type":"Microsoft.ApiCenter/services","location":"eastus","sku":{"name":"Free"},"properties":{"dataApiHostname":"clitest000002.data.eastus.azure-apicenter.ms"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002","name":"clitest000002","tags":{},"systemData":{"createdAt":"2024-10-09T08:20:06.7516145Z","lastModifiedAt":"2024-10-09T08:20:06.7516049Z"}}]}'
+      string: '{"value":[{"type":"Microsoft.ApiCenter/services","location":"eastus","identity":{"type":"SystemAssigned","principalId":"d295c479-a776-4256-8a8f-35ab974a1eb0","tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47"},"sku":{"name":"Free"},"properties":{"portalHostname":"clitest000002.portal.eastus.azure-apicenter.ms","provisioningState":"InProgress"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002","name":"clitest000002","tags":{},"systemData":{"createdAt":"2025-05-26T06:51:22.7510203Z","lastModifiedAt":"2025-05-26T06:51:22.7510056Z"}}]}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '451'
+      - '625'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:20:07 GMT
+      - Mon, 26 May 2025 06:51:24 GMT
       expires:
       - '-1'
       pragma:
@@ -42,10 +42,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-original-request-ids:
+      - ''
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: E8A6A8B82BF64E4ABC58FD3DDFD6EE9E Ref B: MAA201060516037 Ref C: 2024-10-09T08:20:07Z'
+      - 'Ref A: 71860353131349DD9CA0972B28AD0B5D Ref B: MAA201060513021 Ref C: 2025-05-26T06:51:23Z'
       x-powered-by:
       - ASP.NET
     status:

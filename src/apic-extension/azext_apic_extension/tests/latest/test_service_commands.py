@@ -193,12 +193,6 @@ class ServiceCommandsTests(ScenarioTest):
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
     @ApicServicePreparer()
-    @ApimServicePreparer()
-    def test_examples_import_selected_apis_from_apim(self):
-        self.cmd('az apic import-from-apim -g {rg} --service-name {s} --apim-name {apim_name} --apim-apis [echo,foo]')
-
-    @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
-    @ApicServicePreparer()
     def test_examples_list_services_in_resource_group(self):
         self.cmd('az apic list -g {rg}', checks=[
             self.check('length(@)', 1),

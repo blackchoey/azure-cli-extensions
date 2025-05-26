@@ -18,20 +18,20 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004?api-version=2024-03-01
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"v1.0.0","lifecycleStage":"production"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004","name":"clitest000004","systemData":{"createdAt":"2024-10-09T08:20:58.1445151Z","lastModifiedAt":"2024-10-09T08:20:58.1445142Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"v1.0.0","lifecycleStage":"production","isDefault":true,"isRecommended":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004","name":"clitest000004","systemData":{"createdAt":"2025-05-26T06:52:15.7753031Z","lastModifiedAt":"2025-05-26T06:52:15.7753017Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '455'
+      - '494'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:20:59 GMT
+      - Mon, 26 May 2025 06:52:16 GMT
       etag:
-      - 6f002aca-0000-0100-0000-67063cea0000
+      - 3d00c7f7-0000-0100-0000-68340f9f0000
       expires:
       - '-1'
       pragma:
@@ -44,10 +44,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/df1d4bd7-f6f6-4059-9be8-60b7f940a17a
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: A1E9DF4166D34E5196BCA64AEF4B5090 Ref B: MAA201060514053 Ref C: 2024-10-09T08:20:59Z'
+      - 'Ref A: 2D9CF581114A47A99F43DE2497B76545 Ref B: MAA201060515029 Ref C: 2025-05-26T06:52:16Z'
       x-powered-by:
       - ASP.NET
     status:

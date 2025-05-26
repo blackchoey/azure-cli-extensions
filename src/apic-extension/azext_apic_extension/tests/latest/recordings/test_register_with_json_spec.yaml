@@ -45,10 +45,10 @@ interactions:
         Store repository](https://github.com/swagger-api/swagger-petstore)\n- [The
         source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)","kind":"rest","license":{"name":"Apache
         2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"externalDocumentation":[{"title":"Title","description":"Find
-        out more about Swagger","url":"http://swagger.io"}],"contacts":[{"email":"apiteam@swagger.io"}],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30","name":"swaggerpetstore-openapi30","systemData":{"createdAt":"2024-10-09T08:19:54.8325261Z","lastModifiedAt":"2024-10-09T08:19:54.8325251Z"}}'
+        out more about Swagger","url":"http://swagger.io"}],"contacts":[{"email":"apiteam@swagger.io"}],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30","name":"swaggerpetstore-openapi30","systemData":{"createdAt":"2025-05-26T06:50:04.3983137Z","lastModifiedAt":"2025-05-26T06:50:04.3983123Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -56,9 +56,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:19:55 GMT
+      - Mon, 26 May 2025 06:50:04 GMT
       etag:
-      - c100e665-0000-0100-0000-67063caa0000
+      - 5300fb4d-0000-0100-0000-68340f1c0000
       expires:
       - '-1'
       pragma:
@@ -71,12 +71,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/14139215-b6db-4dd9-b884-729e1f58fe37
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11997'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '797'
       x-msedge-ref:
-      - 'Ref A: ABABBCBF318942349913A2BAAEEBC50C Ref B: MAA201060516047 Ref C: 2024-10-09T08:19:53Z'
+      - 'Ref A: 62D464E99A1C47FBBAF60E60936C6B71 Ref B: MAA201060515039 Ref C: 2025-05-26T06:50:02Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -105,20 +107,20 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30/versions/1-0-19?api-version=2024-03-01
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"1-0-19","lifecycleStage":"design"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30/versions/1-0-19","name":"1-0-19","systemData":{"createdAt":"2024-10-09T08:19:56.0227789Z","lastModifiedAt":"2024-10-09T08:19:56.0227779Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"1-0-19","lifecycleStage":"design","isDefault":true,"isRecommended":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30/versions/1-0-19","name":"1-0-19","systemData":{"createdAt":"2025-05-26T06:50:06.5223628Z","lastModifiedAt":"2025-05-26T06:50:06.52236Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '449'
+      - '486'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:19:56 GMT
+      - Mon, 26 May 2025 06:50:06 GMT
       etag:
-      - 6f00c7c6-0000-0100-0000-67063cac0000
+      - 3d0090f6-0000-0100-0000-68340f1e0000
       expires:
       - '-1'
       pragma:
@@ -131,12 +133,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/842880fd-44c2-4f34-85d5-495ecaaa32cb
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 517F261485BF4D8FB1E0C2D974274BFC Ref B: MAA201060516039 Ref C: 2024-10-09T08:19:55Z'
+      - 'Ref A: 8B93BDA0C5E14775803EFFE6A279F8FE Ref B: MAA201060516047 Ref C: 2025-05-26T06:50:05Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -181,10 +185,10 @@ interactions:
         to the definition itself or to the code.\nThat way, with time, we can improve
         the API in general, and expose some of the new features in OAS3.\n\nSome useful
         links:\n- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)\n-
-        [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30/versions/1-0-19/definitions/openapi","name":"openapi","systemData":{"createdAt":"2024-10-09T08:19:57.6660922Z","lastModifiedAt":"2024-10-09T08:19:57.6660914Z"}}'
+        [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30/versions/1-0-19/definitions/openapi","name":"openapi","systemData":{"createdAt":"2025-05-26T06:50:08.6435968Z","lastModifiedAt":"2025-05-26T06:50:08.6435948Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -192,9 +196,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:19:57 GMT
+      - Mon, 26 May 2025 06:50:08 GMT
       etag:
-      - 76006830-0000-0100-0000-67063cad0000
+      - 0d012ff7-0000-0100-0000-68340f200000
       expires:
       - '-1'
       pragma:
@@ -207,12 +211,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/cbf648e9-301f-4671-94e8-316c501dc7bc
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 2006204F91514BF494E5D9616CAC87BB Ref B: MAA201060515051 Ref C: 2024-10-09T08:19:56Z'
+      - 'Ref A: 148BE905AA9248679367A761F90A713D Ref B: MAA201060516035 Ref C: 2025-05-26T06:50:07Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -658,13 +664,13 @@ interactions:
       string: ''
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
       - '0'
       date:
-      - Wed, 09 Oct 2024 08:19:59 GMT
+      - Mon, 26 May 2025 06:50:10 GMT
       expires:
       - '-1'
       pragma:
@@ -675,12 +681,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/848713fd-745f-43e7-9c6e-f7aac4cf3d0a
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 9A17F989BD03498E839563259636550F Ref B: MAA201060515053 Ref C: 2024-10-09T08:19:58Z'
+      - 'Ref A: 62DC1340AADE4F5B8C86621896884025 Ref B: MAA201060514027 Ref C: 2025-05-26T06:50:09Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -716,10 +724,10 @@ interactions:
         Store repository](https://github.com/swagger-api/swagger-petstore)\n- [The
         source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)","kind":"rest","lifecycleStage":"design","license":{"name":"Apache
         2.0","url":"http://www.apache.org/licenses/LICENSE-2.0.html"},"externalDocumentation":[{"title":"Title","description":"Find
-        out more about Swagger","url":"http://swagger.io"}],"contacts":[{"email":"apiteam@swagger.io"}],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30","name":"swaggerpetstore-openapi30","systemData":{"createdAt":"2024-10-09T08:19:54.8325261Z","lastModifiedAt":"2024-10-09T08:19:54.8325251Z"}}'
+        out more about Swagger","url":"http://swagger.io"}],"contacts":[{"email":"apiteam@swagger.io"}],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30","name":"swaggerpetstore-openapi30","systemData":{"createdAt":"2025-05-26T06:50:04.3983137Z","lastModifiedAt":"2025-05-26T06:50:04.8648698Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -727,9 +735,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:20:00 GMT
+      - Mon, 26 May 2025 06:50:12 GMT
       etag:
-      - c100f665-0000-0100-0000-67063cac0000
+      - 5300094e-0000-0100-0000-68340f1e0000
       expires:
       - '-1'
       pragma:
@@ -742,10 +750,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/5fb8a79b-8e22-473d-9438-66e86d167cc9
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3749'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: 3A6EB45269BE4D76BC76123E5D6A53E0 Ref B: MAA201060513027 Ref C: 2024-10-09T08:20:00Z'
+      - 'Ref A: 9138ED99ABD54B088B73E3E11D0FA17D Ref B: MAA201060514025 Ref C: 2025-05-26T06:50:12Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -770,20 +780,20 @@ interactions:
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30/versions/1-0-19?api-version=2024-03-01
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"1-0-19","lifecycleStage":"design"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30/versions/1-0-19","name":"1-0-19","systemData":{"createdAt":"2024-10-09T08:19:56.0227789Z","lastModifiedAt":"2024-10-09T08:19:56.0227779Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions","properties":{"title":"1-0-19","lifecycleStage":"design","isDefault":true,"isRecommended":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30/versions/1-0-19","name":"1-0-19","systemData":{"createdAt":"2025-05-26T06:50:06.5223628Z","lastModifiedAt":"2025-05-26T06:50:06.52236Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '449'
+      - '486'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:20:01 GMT
+      - Mon, 26 May 2025 06:50:13 GMT
       etag:
-      - 6f00c7c6-0000-0100-0000-67063cac0000
+      - 3d0090f6-0000-0100-0000-68340f1e0000
       expires:
       - '-1'
       pragma:
@@ -796,10 +806,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/indonesiacentral/6cfca70b-2d49-4667-8bce-42bccf0d8ca3
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3748'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: D518E1EC957D4E7B9ABD5496DAD329D7 Ref B: MAA201060515017 Ref C: 2024-10-09T08:20:01Z'
+      - 'Ref A: 553EA53CB3CF4FA6BC259BF6934FAAFF Ref B: MAA201060513039 Ref C: 2025-05-26T06:50:13Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -832,10 +844,10 @@ interactions:
         to the definition itself or to the code.\nThat way, with time, we can improve
         the API in general, and expose some of the new features in OAS3.\n\nSome useful
         links:\n- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)\n-
-        [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)","specification":{"name":"openapi","version":"3-0-2"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30/versions/1-0-19/definitions/openapi","name":"openapi","systemData":{"createdAt":"2024-10-09T08:19:57.6660922Z","lastModifiedAt":"2024-10-09T08:20:00.0979714Z"}}'
+        [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)","specification":{"name":"openapi","version":"3-0-2"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore-openapi30/versions/1-0-19/definitions/openapi","name":"openapi","systemData":{"createdAt":"2025-05-26T06:50:08.6435968Z","lastModifiedAt":"2025-05-26T06:50:10.9687803Z"}}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -843,9 +855,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:20:02 GMT
+      - Mon, 26 May 2025 06:50:14 GMT
       etag:
-      - 76008a30-0000-0100-0000-67063cb00000
+      - 0d017ef7-0000-0100-0000-68340f220000
       expires:
       - '-1'
       pragma:
@@ -858,10 +870,12 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/460b62a1-fa3a-493b-9839-d0e2758cd066
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '3748'
+      - '16499'
       x-msedge-ref:
-      - 'Ref A: D95B85F487AA4DCCB8E28D800090A910 Ref B: MAA201060514019 Ref C: 2024-10-09T08:20:02Z'
+      - 'Ref A: 0FD1F5D513154EDC9851A33ED237F750 Ref B: MAA201060516029 Ref C: 2025-05-26T06:50:14Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -1306,7 +1320,7 @@ interactions:
         \"header\"\n            }\n        }\n    }\n}"}'
     headers:
       api-supported-versions:
-      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview
+      - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
@@ -1314,7 +1328,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 09 Oct 2024 08:20:04 GMT
+      - Mon, 26 May 2025 06:50:16 GMT
       expires:
       - '-1'
       pragma:
@@ -1327,12 +1341,14 @@ interactions:
       - CONFIG_NOCACHE
       x-content-type-options:
       - nosniff
+      x-ms-operation-identifier:
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/13c5e32c-15f9-4cf1-bb6b-cd4e1e7f87c3
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '2999'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '199'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: 333EF8440AAA48B78D9BC181AA8F1C74 Ref B: MAA201060516049 Ref C: 2024-10-09T08:20:03Z'
+      - 'Ref A: E83F9ADB363C4290AAC3F421E0CE8AAC Ref B: MAA201060516049 Ref C: 2025-05-26T06:50:16Z'
       x-powered-by:
       - ASP.NET
     status:
