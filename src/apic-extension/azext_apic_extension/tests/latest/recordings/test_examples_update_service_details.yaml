@@ -13,25 +13,25 @@ interactions:
       ParameterSetName:
       - -g -n
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002?api-version=2024-03-01
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services","location":"eastus","identity":{"type":"SystemAssigned","principalId":"ebc9110d-d393-4ef7-bf55-b41064bba3fe","tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47"},"sku":{"name":"Free"},"properties":{"dataApiHostname":"clitest000002.data.eastus.azure-apicenter.ms","portalHostname":"clitest000002.portal.eastus.azure-apicenter.ms","provisioningState":"Succeeded"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002","name":"clitest000002","tags":{},"systemData":{"createdAt":"2025-05-26T06:50:45.0813518Z","lastModifiedAt":"2025-05-26T06:50:45.081338Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services","location":"eastus","identity":{"type":"SystemAssigned","principalId":"c5b4c8b1-cda5-4a77-9820-97d2ab14afdb","tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47"},"sku":{"name":"Free"},"properties":{"portalHostname":"clitest000002.portal.eastus.azure-apicenter.ms","provisioningState":"Succeeded"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002","name":"clitest000002","tags":{},"systemData":{"createdAt":"2025-05-26T08:51:20.7365899Z","lastModifiedAt":"2025-05-26T08:51:20.7365778Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '676'
+      - '612'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:50:46 GMT
+      - Mon, 26 May 2025 08:51:21 GMT
       etag:
-      - c700fdd4-0000-0100-0000-68340f460000
+      - d2002350-0000-0100-0000-68342b880000
       expires:
       - '-1'
       pragma:
@@ -47,7 +47,7 @@ interactions:
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: 8E091262A8C74EADA6D20FCC80911DFA Ref B: MAA201060514045 Ref C: 2025-05-26T06:50:45Z'
+      - 'Ref A: 4FBB83F351B04312AA31F3C8BF54A742 Ref B: MAA201060515051 Ref C: 2025-05-26T08:51:21Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -72,12 +72,12 @@ interactions:
       ParameterSetName:
       - -g -n
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002?api-version=2024-03-01
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services","location":"eastus","identity":{"type":"SystemAssigned","principalId":"ebc9110d-d393-4ef7-bf55-b41064bba3fe","tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47"},"sku":{"name":"Free"},"properties":{"dataApiHostname":"clitest000002.data.eastus.azure-apicenter.ms","portalHostname":"clitest000002.portal.eastus.azure-apicenter.ms","provisioningState":"Succeeded"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002","name":"clitest000002","tags":{},"systemData":{"createdAt":"2025-05-26T06:50:45.0813518Z","lastModifiedAt":"2025-05-26T06:50:49.5313232Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services","location":"eastus","identity":{"type":"SystemAssigned","principalId":"c5b4c8b1-cda5-4a77-9820-97d2ab14afdb","tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47"},"sku":{"name":"Free"},"properties":{"dataApiHostname":"clitest000002.data.eastus.azure-apicenter.ms","portalHostname":"clitest000002.portal.eastus.azure-apicenter.ms","provisioningState":"Succeeded"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002","name":"clitest000002","tags":{},"systemData":{"createdAt":"2025-05-26T08:51:20.7365899Z","lastModifiedAt":"2025-05-26T08:51:26.9263043Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -88,7 +88,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:50:49 GMT
+      - Mon, 26 May 2025 08:51:26 GMT
       expires:
       - '-1'
       pragma:
@@ -102,13 +102,13 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/2782db59-ee77-4c4e-8cb4-40a1b21e7af8
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/2be9507b-f930-470d-90e8-21f7f3099a49
       x-ms-ratelimit-remaining-subscription-global-writes:
       - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
       - '799'
       x-msedge-ref:
-      - 'Ref A: 259838C391D0489DB5EC2BE54E89A0AB Ref B: MAA201060514045 Ref C: 2025-05-26T06:50:47Z'
+      - 'Ref A: 6BB16D1D112D46089D00E5B1E23D5804 Ref B: MAA201060515051 Ref C: 2025-05-26T08:51:22Z'
       x-powered-by:
       - ASP.NET
     status:

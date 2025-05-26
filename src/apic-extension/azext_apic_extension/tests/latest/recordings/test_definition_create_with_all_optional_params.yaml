@@ -17,13 +17,13 @@ interactions:
       ParameterSetName:
       - -g -n --api-id --version-id --definition-id --title --description
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/cli000005?api-version=2024-03-01
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions/definitions","properties":{"title":"OpenAPI","description":"test
-        description"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/cli000005","name":"cli000005","systemData":{"createdAt":"2025-05-26T06:46:13.9806055Z","lastModifiedAt":"2025-05-26T06:46:13.9806037Z"}}'
+        description"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/cli000005","name":"cli000005","systemData":{"createdAt":"2025-05-26T08:46:17.3219254Z","lastModifiedAt":"2025-05-26T08:46:17.3219235Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -34,9 +34,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:46:13 GMT
+      - Mon, 26 May 2025 08:46:17 GMT
       etag:
-      - 0d01d0de-0000-0100-0000-68340e350000
+      - 1001b7d7-0000-0100-0000-68342a590000
       expires:
       - '-1'
       pragma:
@@ -50,13 +50,13 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/1db01b19-c940-4072-b533-c76f79622adc
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/505eb123-2901-40ac-9e21-3cfb0d3db960
       x-ms-ratelimit-remaining-subscription-global-writes:
       - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
       - '799'
       x-msedge-ref:
-      - 'Ref A: 5D9A0651860543D49F332F4C47BD5868 Ref B: MAA201060515029 Ref C: 2025-05-26T06:46:12Z'
+      - 'Ref A: 2CD228219BA54BD3BEABA941EB6E3AEF Ref B: MAA201060515009 Ref C: 2025-05-26T08:46:15Z'
       x-powered-by:
       - ASP.NET
     status:

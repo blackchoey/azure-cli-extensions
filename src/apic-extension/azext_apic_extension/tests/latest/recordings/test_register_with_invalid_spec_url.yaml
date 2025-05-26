@@ -26,17 +26,17 @@ interactions:
       content-type:
       - text/plain; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:50:00 GMT
+      - Mon, 26 May 2025 08:50:34 GMT
       referrer-policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       server:
       - github.com
       set-cookie:
-      - _gh_sess=fH0lHRfkrv9y44SZJincL34R9X51ceoCaPn4Wrk7Co%2FKM5M%2B6A7LoDc5T961cCOpRNiUWxD28FifhbMXORuRbBjOZo6Q%2BNJjFAg%2BBHK%2BsVh8hePkoLd0s3Toupt3A0ie1wu3UbOccsoDD4dgk8EI70o97KqZCbBQGawD3fcR6z3daS%2BBS13xAtWPstS%2BRwaEPjyzghGqW8hud3OJ4pdeYxi7M%2Fh8WdPXUfA%2FtG6lprOqm%2F6ZW%2BNiBV1mUXCDRsGPVFoa8AzBKj9J%2FZwTVTgCow%3D%3D--x%2BmrdUlnFV5b5mOp--J%2FSXaz07C%2Bb%2BbVownnsNbA%3D%3D;
+      - _gh_sess=Njilgea4kwEG642C2k6zcZad3VcEk0jJyVMOL8uuPmJcdwa5lOzXyZDvECtogsKhHkxN1bq7zvGkR46UCxkI5sGYqYfiQn5KWpMJ38zvmj8DI5yMG7uG3XG%2BUOGkfrJ9qob8Rc8JPSlFF1ZhnOUEMAwFJTJh4w59xvsPzIZeSlAUrDYehOSCSWX9x04jOL2CO5hRC%2FxWjY7Sf%2FM2csn5S%2B6crt3fRCiNmXuJZJFR9gffSnlCYe3LebdUp4oyl6XYUZCFDKhSJz7mq0rYTbzE%2BA%3D%3D--gAaJy6dc079Xjv%2FR--VZCKceVXCkiAhzZDjBP4Qw%3D%3D;
         Path=/; HttpOnly; Secure; SameSite=Lax
-      - _octo=GH1.1.902238776.1748242200; Path=/; Domain=github.com; Expires=Tue,
-        26 May 2026 06:50:00 GMT; Secure; SameSite=Lax
-      - logged_in=no; Path=/; Domain=github.com; Expires=Tue, 26 May 2026 06:50:00
+      - _octo=GH1.1.1630559354.1748249434; Path=/; Domain=github.com; Expires=Tue,
+        26 May 2026 08:50:34 GMT; Secure; SameSite=Lax
+      - logged_in=no; Path=/; Domain=github.com; Expires=Tue, 26 May 2026 08:50:34
         GMT; HttpOnly; Secure; SameSite=Lax
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
@@ -48,7 +48,7 @@ interactions:
       x-frame-options:
       - deny
       x-github-request-id:
-      - E351:274984:24E34E:29C070:68340F18
+      - 369E:48517:4983C:52014:68342B5A
       x-xss-protection:
       - '0'
     status:
@@ -68,7 +68,7 @@ interactions:
       ParameterSetName:
       - -g -n --api-id
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore?api-version=2024-03-01
   response:
@@ -84,7 +84,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:50:01 GMT
+      - Mon, 26 May 2025 08:50:35 GMT
       expires:
       - '-1'
       pragma:
@@ -98,11 +98,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/92593e43-d6c4-40fd-8e00-7958da73d6e6
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/ff72b600-acc6-4f8e-931b-522be15d63d3
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: 04EA50EC90E441BCAA417B0FB4CA0071 Ref B: MAA201060516033 Ref C: 2025-05-26T06:50:01Z'
+      - 'Ref A: A38DCD1BD8F941E682CF54096E6EB6DA Ref B: MAA201060516019 Ref C: 2025-05-26T08:50:35Z'
       x-powered-by:
       - ASP.NET
     status:

@@ -18,26 +18,26 @@ interactions:
       ParameterSetName:
       - -g -n --metadata-name --schema --assignments
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/metadataSchemas/cli000003?api-version=2024-03-01
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/metadataSchemas","properties":{"assignedTo":[{"entity":"api","required":true,"deprecated":false}],"schema":"{\"type\":
-        \"boolean\", \"title\": \"Public Facing\"}"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/metadataSchemas/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T06:49:53.0220422Z","lastModifiedAt":"2025-05-26T06:49:53.0220404Z"}}'
+        \"boolean\", \"title\": \"Public Facing\"}"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/metadataSchemas/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T08:49:45.7009217Z","lastModifiedAt":"2025-05-26T08:49:45.70092Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '492'
+      - '490'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:49:52 GMT
+      - Mon, 26 May 2025 08:49:45 GMT
       etag:
-      - 85011377-0000-0100-0000-68340f110000
+      - 8901f0c1-0000-0100-0000-68342b290000
       expires:
       - '-1'
       pragma:
@@ -51,13 +51,13 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/d32fd1d2-eaee-4b4f-980c-b8d85fbbb2f4
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/8d86dfc7-da89-460c-b580-08dd96836447
       x-ms-ratelimit-remaining-subscription-global-writes:
       - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
       - '799'
       x-msedge-ref:
-      - 'Ref A: 5ABD1C53D0E0405BAF34F57F505B2C30 Ref B: MAA201060514031 Ref C: 2025-05-26T06:49:52Z'
+      - 'Ref A: 34FD054186CE4252BCAC29EC044DC33F Ref B: MAA201060513029 Ref C: 2025-05-26T08:49:44Z'
       x-powered-by:
       - ASP.NET
     status:

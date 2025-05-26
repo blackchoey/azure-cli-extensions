@@ -15,8 +15,8 @@ interactions:
   response:
     body:
       string: '!!! The response body has been omitted from the recording because it
-        is larger than 128 KB. It will be replaced with blank content of 288541 bytes
-        while replay. <CTRL-REPLACE>288541'
+        is larger than 128 KB. It will be replaced with blank content of 288539 bytes
+        while replay. <CTRL-REPLACE>288539'
     headers:
       accept-ranges:
       - bytes
@@ -69,19 +69,19 @@ interactions:
       content-type:
       - text/html; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:49:54 GMT
+      - Mon, 26 May 2025 08:50:12 GMT
       etag:
-      - W/"77465b90f755de6a93b4851781ebed76"
+      - W/"e0629f469883027b07c0022300c7002e"
       referrer-policy:
       - origin-when-cross-origin, strict-origin-when-cross-origin
       server:
       - github.com
       set-cookie:
-      - _gh_sess=pxd0KKrFgAE2ttUWk17XV83du26L%2BWis%2Bl6aj4sO3JiiBkBewpRfNKXK2NPHIe9vUtm%2BdjrmZDvlkpv5drSqVOpnCD2EuEl5819C8l7VwgX7RvV0Cwjvmpnsp5uZmyF6FwPNDICJOYgMf9Fnldg8DYVGcG4aDkRK8esPgqmlCSDn4mYz%2FzAOrskN49L15TOt%2FkTW2BiWofbN5MjBLB7LZTIJMfuQCbUSfQiMWl1FwoEoW2QZB7T3IKCjHerZLPm8IDApuinJ8JA%2BJuGaBBb0Gg%3D%3D--1TtDZK3AnuyJwq8t--9rCyxVpCqcDLWt5tAA%2BrOA%3D%3D;
+      - _gh_sess=XKXv3PUQgTUdpmxWBx79gZ7kIag882LqCsbcDPY2vyGYwO0dD%2BKWOsWNJZkrQHr%2F%2FnLm07HbQP%2BZxXmowyolhHJ3bVmtXEq3g4C75Lvb9Re3G7qOGure12SPF0MVGpyTepctncqGex5DGJxLbf%2B%2FaSaAWvr%2BKMS%2Bcq0cRmVWH4zdBw5lRPo50VyFVGLDHw0UjIsQbP0WsV3%2Fe3TSaJvtdQF5FxDRKcQSOJVqYhZFtoCWszpojhKo7zzkdYSUSgwKA77NM65NQWxexajgizHl6g%3D%3D--r2FJlemaY%2F%2F%2Ban8C--R996GIImRSENO8UnwUasLQ%3D%3D;
         Path=/; HttpOnly; Secure; SameSite=Lax
-      - _octo=GH1.1.1166894906.1748242199; Path=/; Domain=github.com; Expires=Tue,
-        26 May 2026 06:49:59 GMT; Secure; SameSite=Lax
-      - logged_in=no; Path=/; Domain=github.com; Expires=Tue, 26 May 2026 06:49:59
+      - _octo=GH1.1.1914326983.1748249421; Path=/; Domain=github.com; Expires=Tue,
+        26 May 2026 08:50:21 GMT; Secure; SameSite=Lax
+      - logged_in=no; Path=/; Domain=github.com; Expires=Tue, 26 May 2026 08:50:21
         GMT; HttpOnly; Secure; SameSite=Lax
       strict-transport-security:
       - max-age=31536000; includeSubdomains; preload
@@ -95,7 +95,7 @@ interactions:
       x-frame-options:
       - deny
       x-github-request-id:
-      - C2B3:12F80F:245093:29295E:68340F17
+      - 2BA9:248769:3D25F:4434C:68342B4D
       x-xss-protection:
       - '0'
     status:
@@ -115,7 +115,7 @@ interactions:
       ParameterSetName:
       - -g -n --api-id
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/swaggerpetstore?api-version=2024-03-01
   response:
@@ -131,7 +131,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:50:00 GMT
+      - Mon, 26 May 2025 08:50:23 GMT
       expires:
       - '-1'
       pragma:
@@ -145,11 +145,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/4732f748-6b52-43bc-ad7a-0053fcb470b0
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/15525c87-d126-47e9-9d24-d26d4ed30a22
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: D3A6A71E09CB4A46A249913AD8B901DB Ref B: MAA201060515023 Ref C: 2025-05-26T06:49:59Z'
+      - 'Ref A: 158271A32F7747A3B6402C523BBC9A71 Ref B: MAA201060513017 Ref C: 2025-05-26T08:50:22Z'
       x-powered-by:
       - ASP.NET
     status:

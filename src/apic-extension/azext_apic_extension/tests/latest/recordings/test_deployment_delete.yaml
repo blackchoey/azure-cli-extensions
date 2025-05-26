@@ -15,7 +15,7 @@ interactions:
       ParameterSetName:
       - -g -n --api-id --deployment-id --yes
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: DELETE
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000004/deployments/mock-deployment?api-version=2024-03-01
   response:
@@ -27,7 +27,7 @@ interactions:
       cache-control:
       - no-cache
       date:
-      - Mon, 26 May 2025 06:47:50 GMT
+      - Mon, 26 May 2025 08:48:06 GMT
       expires:
       - '-1'
       pragma:
@@ -39,13 +39,13 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/19b224a6-7b28-406d-a73e-90c03a0e6ac0
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/4e4f76b3-e37f-4980-8c6d-9eb264bb0cd0
       x-ms-ratelimit-remaining-subscription-deletes:
       - '799'
       x-ms-ratelimit-remaining-subscription-global-deletes:
       - '11999'
       x-msedge-ref:
-      - 'Ref A: 5E146BA08C554444AF91A2668C639F71 Ref B: MAA201060514029 Ref C: 2025-05-26T06:47:50Z'
+      - 'Ref A: F9D823A9624F44F79AEE4418ADE0D849 Ref B: MAA201060515017 Ref C: 2025-05-26T08:48:05Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -65,7 +65,7 @@ interactions:
       ParameterSetName:
       - -g -n --api-id --deployment-id
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000004/deployments/mock-deployment?api-version=2024-03-01
   response:
@@ -81,7 +81,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:47:52 GMT
+      - Mon, 26 May 2025 08:48:08 GMT
       expires:
       - '-1'
       pragma:
@@ -95,11 +95,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/366e3447-9e55-438a-97d9-1d5c76e1c781
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/9cd8859f-a6fc-4ed6-8b02-b2c95996af61
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: 137D2008EEB1428B94A0667CE50E1D96 Ref B: MAA201060514039 Ref C: 2025-05-26T06:47:51Z'
+      - 'Ref A: 3738AEFA77C74CB696F0CF4EE247FE23 Ref B: MAA201060515047 Ref C: 2025-05-26T08:48:07Z'
       x-powered-by:
       - ASP.NET
     status:

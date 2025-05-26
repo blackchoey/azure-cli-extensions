@@ -13,14 +13,14 @@ interactions:
       ParameterSetName:
       - -g -n --api-id
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000004/deployments?api-version=2024-03-01
   response:
     body:
       string: '{"value":[{"type":"Microsoft.ApiCenter/services/workspaces/apis/deployments","properties":{"title":"test
-        deployment","environmentId":"/workspaces/default/environments/clitest000003","definitionId":"/workspaces/default/apis/clitest000004/versions/clitest000005/definitions/clitest000006","server":{"runtimeUri":["https://example.com"]},"customProperties":{},"recommended":false,"isDefault":true},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000004/deployments/clitest000007","name":"clitest000007","systemData":{"createdAt":"2025-05-26T06:48:18.1077728Z","lastModifiedAt":"2025-05-26T06:48:18.1077704Z"}},{"type":"Microsoft.ApiCenter/services/workspaces/apis/deployments","properties":{"title":"test
-        deployment","environmentId":"/workspaces/default/environments/clitest000003","definitionId":"/workspaces/default/apis/clitest000004/versions/clitest000005/definitions/clitest000006","server":{"runtimeUri":["https://example.com"]},"customProperties":{},"recommended":false,"isDefault":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000004/deployments/clitest000008","name":"clitest000008","systemData":{"createdAt":"2025-05-26T06:48:20.1303005Z","lastModifiedAt":"2025-05-26T06:48:20.1302984Z"}}]}'
+        deployment","environmentId":"/workspaces/default/environments/clitest000003","definitionId":"/workspaces/default/apis/clitest000004/versions/clitest000005/definitions/clitest000006","server":{"runtimeUri":["https://example.com"]},"customProperties":{},"recommended":false,"isDefault":true},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000004/deployments/clitest000007","name":"clitest000007","systemData":{"createdAt":"2025-05-26T08:48:45.4263257Z","lastModifiedAt":"2025-05-26T08:48:45.4263224Z"}},{"type":"Microsoft.ApiCenter/services/workspaces/apis/deployments","properties":{"title":"test
+        deployment","environmentId":"/workspaces/default/environments/clitest000003","definitionId":"/workspaces/default/apis/clitest000004/versions/clitest000005/definitions/clitest000006","server":{"runtimeUri":["https://example.com"]},"customProperties":{},"recommended":false,"isDefault":false},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000004/deployments/clitest000008","name":"clitest000008","systemData":{"createdAt":"2025-05-26T08:48:47.2109578Z","lastModifiedAt":"2025-05-26T08:48:47.2109541Z"}}]}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -31,7 +31,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:48:21 GMT
+      - Mon, 26 May 2025 08:48:48 GMT
       expires:
       - '-1'
       pragma:
@@ -45,11 +45,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/c0c38880-1fb0-4c23-a619-ac5a11dbd9c4
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/bbfc0bb7-7de1-4d11-a276-28f2dd33d67a
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: ACAB4C34B76E469CB879D86FAA0F8260 Ref B: MAA201060514035 Ref C: 2025-05-26T06:48:20Z'
+      - 'Ref A: C88B3353BF0048CBACDD47BB927B87E8 Ref B: MAA201060516031 Ref C: 2025-05-26T08:48:48Z'
       x-powered-by:
       - ASP.NET
     status:

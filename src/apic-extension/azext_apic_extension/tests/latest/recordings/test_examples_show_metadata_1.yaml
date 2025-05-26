@@ -13,26 +13,26 @@ interactions:
       ParameterSetName:
       - -g -n --metadata-name
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/metadataSchemas/clitest000003?api-version=2024-03-01
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/metadataSchemas","properties":{"assignedTo":[{"entity":"api","required":true,"deprecated":false},{"entity":"environment","required":false,"deprecated":false},{"entity":"deployment","required":true,"deprecated":false}],"schema":"{\"type\":\"boolean\",
-        \"title\":\"Public Facing\"}"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/metadataSchemas/clitest000003","name":"clitest000003","systemData":{"createdAt":"2025-05-26T06:49:07.8541423Z","lastModifiedAt":"2025-05-26T06:49:07.8541405Z"}}'
+        \"title\":\"Public Facing\"}"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/metadataSchemas/clitest000003","name":"clitest000003","systemData":{"createdAt":"2025-05-26T08:49:31.291832Z","lastModifiedAt":"2025-05-26T08:49:31.2918304Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '618'
+      - '617'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:49:09 GMT
+      - Mon, 26 May 2025 08:49:32 GMT
       etag:
-      - 85011270-0000-0100-0000-68340ee30000
+      - 8901b9bf-0000-0100-0000-68342b1b0000
       expires:
       - '-1'
       pragma:
@@ -46,11 +46,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/02edc2cc-6f20-4cdf-84a7-49b6ba8b74a9
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/62a77e98-41ff-4e3d-a0b7-8fbe36818e23
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: 12A5CF18BE81406BB32D8B11DB0E0DB8 Ref B: MAA201060516017 Ref C: 2025-05-26T06:49:08Z'
+      - 'Ref A: 396FDF5FF43A45489293AC1098C4D8AD Ref B: MAA201060514021 Ref C: 2025-05-26T08:49:32Z'
       x-powered-by:
       - ASP.NET
     status:
