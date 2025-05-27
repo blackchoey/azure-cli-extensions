@@ -13,13 +13,13 @@ interactions:
       ParameterSetName:
       - -g -n --filter
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/environments?$filter=name%20eq%20%27clitest000003%27&api-version=2024-03-01
   response:
     body:
       string: '{"value":[{"type":"Microsoft.ApiCenter/services/workspaces/environments","properties":{"title":"test
-        environment","kind":"testing","customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/environments/clitest000003","name":"clitest000003","systemData":{"createdAt":"2025-05-26T06:47:35.0561087Z"}}]}'
+        environment","kind":"testing","customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/environments/clitest000003","name":"clitest000003","systemData":{"createdAt":"2025-05-26T08:47:54.4878657Z"}}]}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -30,7 +30,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:47:38 GMT
+      - Mon, 26 May 2025 08:47:57 GMT
       expires:
       - '-1'
       pragma:
@@ -44,11 +44,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/eb5bc113-3d47-4102-bad4-0c0c937e58af
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/77b13e96-6a82-44e5-9bad-95eb4d10a4bf
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: 563D94FF2B4C413A891F9D3B3FF7E3A8 Ref B: MAA201060515023 Ref C: 2025-05-26T06:47:37Z'
+      - 'Ref A: 97CD5E1603C546FB8EF82B1269B621ED Ref B: MAA201060515045 Ref C: 2025-05-26T08:47:57Z'
       x-powered-by:
       - ASP.NET
     status:

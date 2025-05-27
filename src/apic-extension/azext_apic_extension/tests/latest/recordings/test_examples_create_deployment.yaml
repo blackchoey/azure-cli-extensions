@@ -20,13 +20,13 @@ interactions:
       - -g -n --deployment-id --title --description --api-id --environment-id --definition-id
         --server
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000004/deployments/mock-deployment?api-version=2024-03-01
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/deployments","properties":{"title":"Production
-        deployment","description":"Public cloud production deployment.","environmentId":"/workspaces/default/environments/clitest000003","definitionId":"/workspaces/default/apis/clitest000004/versions/clitest000005/definitions/clitest000006","server":{"runtimeUri":["https://example.com"]},"customProperties":{},"recommended":false,"isDefault":true},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000004/deployments/cli000007","name":"cli000007","systemData":{"createdAt":"2025-05-26T06:48:47.4115862Z","lastModifiedAt":"2025-05-26T06:48:47.4115838Z"}}'
+        deployment","description":"Public cloud production deployment.","environmentId":"/workspaces/default/environments/clitest000003","definitionId":"/workspaces/default/apis/clitest000004/versions/clitest000005/definitions/clitest000006","server":{"runtimeUri":["https://example.com"]},"customProperties":{},"recommended":false,"isDefault":true},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000004/deployments/cli000007","name":"cli000007","systemData":{"createdAt":"2025-05-26T08:49:04.1754796Z","lastModifiedAt":"2025-05-26T08:49:04.1754735Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -37,9 +37,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:48:47 GMT
+      - Mon, 26 May 2025 08:49:04 GMT
       etag:
-      - ac00810b-0000-0100-0000-68340ecf0000
+      - ad00b369-0000-0100-0000-68342b000000
       expires:
       - '-1'
       pragma:
@@ -53,13 +53,13 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/indonesiacentral/ec46d2d0-764a-495a-971c-7786a9f00e21
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/f9c132c2-068c-432a-8b35-5fa9b804813c
       x-ms-ratelimit-remaining-subscription-global-writes:
       - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
       - '799'
       x-msedge-ref:
-      - 'Ref A: 37A62728EAB644018B085268FF19ABA0 Ref B: MAA201060513027 Ref C: 2025-05-26T06:48:46Z'
+      - 'Ref A: 1360053500274C76A7DDF99EB3580906 Ref B: MAA201060515049 Ref C: 2025-05-26T08:49:02Z'
       x-powered-by:
       - ASP.NET
     status:

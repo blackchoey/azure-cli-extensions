@@ -17,13 +17,13 @@ interactions:
       ParameterSetName:
       - -g -n --api-id --title --type
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/cli000003?api-version=2024-03-01
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis","properties":{"title":"Echo
-        API","kind":"rest","externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T06:46:09.0681626Z","lastModifiedAt":"2025-05-26T06:46:09.0681606Z"}}'
+        API","kind":"rest","externalDocumentation":[],"contacts":[],"customProperties":{}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T08:46:13.2782668Z","lastModifiedAt":"2025-05-26T08:46:13.2782649Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -34,9 +34,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:46:08 GMT
+      - Mon, 26 May 2025 08:46:12 GMT
       etag:
-      - 53000649-0000-0100-0000-68340e310000
+      - 53005ee2-0000-0100-0000-68342a550000
       expires:
       - '-1'
       pragma:
@@ -50,13 +50,13 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/a263fde4-1a2a-4b70-aeb1-28b9ead41c97
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/ba07016d-7e4e-41e6-ba99-3a18440d161d
       x-ms-ratelimit-remaining-subscription-global-writes:
       - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
       - '799'
       x-msedge-ref:
-      - 'Ref A: 2617AB0E8520431C91C544351649911A Ref B: MAA201060514031 Ref C: 2025-05-26T06:46:07Z'
+      - 'Ref A: E98A15B1A06B45AB9E7EAE7CB5932D04 Ref B: MAA201060516045 Ref C: 2025-05-26T08:46:09Z'
       x-powered-by:
       - ASP.NET
     status:

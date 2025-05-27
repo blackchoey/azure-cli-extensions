@@ -15,7 +15,7 @@ interactions:
       ParameterSetName:
       - -g -n --metadata-name --yes
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: DELETE
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/metadataSchemas/clitest000003?api-version=2024-03-01
   response:
@@ -27,7 +27,7 @@ interactions:
       cache-control:
       - no-cache
       date:
-      - Mon, 26 May 2025 06:49:10 GMT
+      - Mon, 26 May 2025 08:49:43 GMT
       expires:
       - '-1'
       pragma:
@@ -39,13 +39,13 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/0a39fc01-d173-4c2a-a185-29ef2c832a5b
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/f8935a1c-d199-458a-bb79-bccdcc3550b5
       x-ms-ratelimit-remaining-subscription-deletes:
       - '799'
       x-ms-ratelimit-remaining-subscription-global-deletes:
       - '11999'
       x-msedge-ref:
-      - 'Ref A: 45459DB2809E410BB11378C5298C7BB0 Ref B: MAA201060515049 Ref C: 2025-05-26T06:49:10Z'
+      - 'Ref A: 17113BDC0D2647088C9AA162859DA52F Ref B: MAA201060515017 Ref C: 2025-05-26T08:49:42Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -65,7 +65,7 @@ interactions:
       ParameterSetName:
       - -g -n --metadata-name
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/metadataSchemas/clitest000003?api-version=2024-03-01
   response:
@@ -81,7 +81,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:49:12 GMT
+      - Mon, 26 May 2025 08:49:44 GMT
       expires:
       - '-1'
       pragma:
@@ -95,11 +95,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/6f49c6fb-562b-4a63-8f71-9b70189741f6
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/c730a907-76b5-44f5-b3ad-115f00191832
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: 7A882B23C4D844DA9BB4A7706C02C3F6 Ref B: MAA201060513031 Ref C: 2025-05-26T06:49:11Z'
+      - 'Ref A: 7D2681624DFE434C9972A9608C05383F Ref B: MAA201060515037 Ref C: 2025-05-26T08:49:44Z'
       x-powered-by:
       - ASP.NET
     status:

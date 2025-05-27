@@ -13,23 +13,23 @@ interactions:
       ParameterSetName:
       - -g
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services?api-version=2024-03-01
   response:
     body:
-      string: '{"value":[{"type":"Microsoft.ApiCenter/services","location":"eastus","identity":{"type":"SystemAssigned","principalId":"d295c479-a776-4256-8a8f-35ab974a1eb0","tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47"},"sku":{"name":"Free"},"properties":{"portalHostname":"clitest000002.portal.eastus.azure-apicenter.ms","provisioningState":"InProgress"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002","name":"clitest000002","tags":{},"systemData":{"createdAt":"2025-05-26T06:51:22.7510203Z","lastModifiedAt":"2025-05-26T06:51:22.7510056Z"}}]}'
+      string: '{"value":[{"type":"Microsoft.ApiCenter/services","location":"eastus","identity":{"type":"SystemAssigned","principalId":"5fb9a582-f029-4500-abcb-8d16e72418f9","tenantId":"72f988bf-86f1-41af-91ab-2d7cd011db47"},"sku":{"name":"Free"},"properties":{"dataApiHostname":"clitest000002.data.eastus.azure-apicenter.ms","portalHostname":"clitest000002.portal.eastus.azure-apicenter.ms","provisioningState":"Succeeded"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002","name":"clitest000002","tags":{},"systemData":{"createdAt":"2025-05-26T08:51:25.5123054Z","lastModifiedAt":"2025-05-26T08:51:25.512294Z"}}]}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '625'
+      - '688'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:51:24 GMT
+      - Mon, 26 May 2025 08:51:27 GMT
       expires:
       - '-1'
       pragma:
@@ -45,9 +45,9 @@ interactions:
       x-ms-original-request-ids:
       - ''
       x-ms-ratelimit-remaining-subscription-global-reads:
-      - '16499'
+      - '16498'
       x-msedge-ref:
-      - 'Ref A: 71860353131349DD9CA0972B28AD0B5D Ref B: MAA201060513021 Ref C: 2025-05-26T06:51:23Z'
+      - 'Ref A: 6D493C6313FB41438D9BB994AE7169C8 Ref B: MAA201060514029 Ref C: 2025-05-26T08:51:26Z'
       x-powered-by:
       - ASP.NET
     status:

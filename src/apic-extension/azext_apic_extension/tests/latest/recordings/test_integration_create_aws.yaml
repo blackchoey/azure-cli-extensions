@@ -19,12 +19,12 @@ interactions:
       ParameterSetName:
       - -g -n -i --aws-access-key-reference --aws-region --aws-secret-access-key-reference
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003?api-version=2024-06-01-preview
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apiSources","properties":{"apiSourceType":"AmazonApiGateway","amazonApiGatewaySource":{"accessKey":"https://kv-canary-franktest.vault.azure.net/secrets/AccessKey","secretAccessKey":"https://kv-canary-franktest.vault.azure.net/secrets/SecretAccessKey","regionName":"us-west-2","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"sourceLifecycleStage":"design","targetEnvironmentId":"/workspaces/default/environments/amazon-api-gateway","targetLifecycleStage":"design","importSpecification":"always","linkState":{"state":"initializing","lastUpdatedOn":"2025-05-26T06:51:07.6486591Z"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T06:51:07.6486588Z","lastModifiedAt":"2025-05-26T06:51:07.6486569Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apiSources","properties":{"apiSourceType":"AmazonApiGateway","amazonApiGatewaySource":{"accessKey":"https://kv-canary-franktest.vault.azure.net/secrets/AccessKey","secretAccessKey":"https://kv-canary-franktest.vault.azure.net/secrets/SecretAccessKey","regionName":"us-west-2","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"sourceLifecycleStage":"design","targetEnvironmentId":"/workspaces/default/environments/amazon-api-gateway","targetLifecycleStage":"design","importSpecification":"always","linkState":{"state":"initializing","lastUpdatedOn":"2025-05-26T09:02:14.5452209Z"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T09:02:14.5452207Z","lastModifiedAt":"2025-05-26T09:02:14.5452189Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -35,9 +35,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:51:07 GMT
+      - Mon, 26 May 2025 09:02:16 GMT
       etag:
-      - 51000d15-0000-0100-0000-68340f5b0000
+      - 51003fc4-0000-0100-0000-68342e160000
       expires:
       - '-1'
       pragma:
@@ -51,13 +51,13 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/indonesiacentral/6d2dd2f9-5080-427d-8d8d-a9759d612a78
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/7e759042-e897-448a-94ee-ea071b49feba
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '11999'
+      - '12000'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '799'
+      - '800'
       x-msedge-ref:
-      - 'Ref A: FCCC9F23CDC74AD58FE8EA282A23F92A Ref B: MAA201060513039 Ref C: 2025-05-26T06:51:05Z'
+      - 'Ref A: 73B3A51112624AEFA1F1E77D11915809 Ref B: MAA201060513049 Ref C: 2025-05-26T09:02:07Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -77,25 +77,25 @@ interactions:
       ParameterSetName:
       - -g -n -i
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003?api-version=2024-06-01-preview
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apiSources","properties":{"apiSourceType":"AmazonApiGateway","amazonApiGatewaySource":{"accessKey":"https://kv-canary-franktest.vault.azure.net/secrets/AccessKey","secretAccessKey":"https://kv-canary-franktest.vault.azure.net/secrets/SecretAccessKey","regionName":"us-west-2","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"sourceLifecycleStage":"design","targetEnvironmentId":"/workspaces/default/environments/amazon-api-gateway","targetLifecycleStage":"design","importSpecification":"always","linkState":{"state":"syncing","lastUpdatedOn":"2025-05-26T06:51:09.1957996Z"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T06:51:07.6486588Z","lastModifiedAt":"2025-05-26T06:51:09.1957993Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apiSources","properties":{"apiSourceType":"AmazonApiGateway","amazonApiGatewaySource":{"accessKey":"https://kv-canary-franktest.vault.azure.net/secrets/AccessKey","secretAccessKey":"https://kv-canary-franktest.vault.azure.net/secrets/SecretAccessKey","regionName":"us-west-2","msiResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/rg-apic-extension-cli-test/providers/Microsoft.ManagedIdentity/userAssignedIdentities/apic-extension-cli-test"},"sourceLifecycleStage":"design","targetEnvironmentId":"/workspaces/default/environments/amazon-api-gateway","targetLifecycleStage":"design","importSpecification":"always","linkState":{"state":"initializing","lastUpdatedOn":"2025-05-26T09:02:14.5452209Z"}},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apiSources/cli000003","name":"cli000003","systemData":{"createdAt":"2025-05-26T09:02:14.5452207Z","lastModifiedAt":"2025-05-26T09:02:14.5452189Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '1076'
+      - '1081'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:51:09 GMT
+      - Mon, 26 May 2025 09:02:17 GMT
       etag:
-      - 51000f15-0000-0100-0000-68340f5d0000
+      - 51003fc4-0000-0100-0000-68342e160000
       expires:
       - '-1'
       pragma:
@@ -109,11 +109,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/01c39991-96b0-4be3-bc34-fccbacb44083
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/7a8c20be-287b-4c62-8d71-9f2f1c29298c
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: 5579AC0E405F48ECBB2E86599C45D2C8 Ref B: MAA201060516009 Ref C: 2025-05-26T06:51:08Z'
+      - 'Ref A: 9022C05022DE4A4EA19D117C4B4F10B1 Ref B: MAA201060515045 Ref C: 2025-05-26T09:02:16Z'
       x-powered-by:
       - ASP.NET
     status:

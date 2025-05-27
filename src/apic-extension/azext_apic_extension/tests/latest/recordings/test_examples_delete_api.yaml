@@ -15,7 +15,7 @@ interactions:
       ParameterSetName:
       - -g -n --api-id --yes
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: DELETE
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003?api-version=2024-03-01
   response:
@@ -27,7 +27,7 @@ interactions:
       cache-control:
       - no-cache
       date:
-      - Mon, 26 May 2025 06:46:31 GMT
+      - Mon, 26 May 2025 08:46:37 GMT
       expires:
       - '-1'
       pragma:
@@ -39,13 +39,13 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/af6e7e9c-781e-454c-b307-fae3623341c6
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/2ed52c02-9720-458e-8a03-17320f4235e2
       x-ms-ratelimit-remaining-subscription-deletes:
       - '799'
       x-ms-ratelimit-remaining-subscription-global-deletes:
       - '11999'
       x-msedge-ref:
-      - 'Ref A: B2CD6F39A37E47D8B791331E166C3D2F Ref B: MAA201060514035 Ref C: 2025-05-26T06:46:30Z'
+      - 'Ref A: 9A117044706A4C308A52354B4703BEF1 Ref B: MAA201060515047 Ref C: 2025-05-26T08:46:37Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -65,7 +65,7 @@ interactions:
       ParameterSetName:
       - -g -n --api-id
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003?api-version=2024-03-01
   response:
@@ -81,7 +81,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:46:32 GMT
+      - Mon, 26 May 2025 08:46:38 GMT
       expires:
       - '-1'
       pragma:
@@ -95,11 +95,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/16602c6c-57da-4449-80e6-f5afff555fe3
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/2c0516fd-d653-4077-8c92-7c11d81a62d0
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: 1C349944CB7A4803B67B34F8E81DD407 Ref B: MAA201060515049 Ref C: 2025-05-26T06:46:31Z'
+      - 'Ref A: 61634BABD59B46B6B46B09BF726BF969 Ref B: MAA201060513053 Ref C: 2025-05-26T08:46:38Z'
       x-powered-by:
       - ASP.NET
     status:

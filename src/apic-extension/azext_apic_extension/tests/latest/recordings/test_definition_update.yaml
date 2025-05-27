@@ -13,25 +13,25 @@ interactions:
       ParameterSetName:
       - -g -n --api-id --version-id --definition-id --title --description
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005?api-version=2024-03-01
   response:
     body:
-      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions/definitions","properties":{"title":"OpenAPI"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005","name":"clitest000005","systemData":{"createdAt":"2025-05-26T06:48:28.9436533Z","lastModifiedAt":"2025-05-26T06:48:28.943652Z"}}'
+      string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions/definitions","properties":{"title":"OpenAPI"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005","name":"clitest000005","systemData":{"createdAt":"2025-05-26T08:48:58.2874438Z","lastModifiedAt":"2025-05-26T08:48:58.2874424Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
       cache-control:
       - no-cache
       content-length:
-      - '463'
+      - '464'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:48:30 GMT
+      - Mon, 26 May 2025 08:49:00 GMT
       etag:
-      - 0d01e7ec-0000-0100-0000-68340ebc0000
+      - 10014be8-0000-0100-0000-68342afa0000
       expires:
       - '-1'
       pragma:
@@ -45,11 +45,11 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/13c8705e-a67e-44f9-a8ea-bc640862c676
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/b9c6b680-ed3c-4e9f-bf57-801351494715
       x-ms-ratelimit-remaining-subscription-global-reads:
       - '16499'
       x-msedge-ref:
-      - 'Ref A: 71B672CAC8EE4CE89D7354A2E65EE30B Ref B: MAA201060516021 Ref C: 2025-05-26T06:48:29Z'
+      - 'Ref A: 79EDEF5A64674FD1834FEB7AC6BF574F Ref B: MAA201060514047 Ref C: 2025-05-26T08:49:00Z'
       x-powered-by:
       - ASP.NET
     status:
@@ -73,13 +73,13 @@ interactions:
       ParameterSetName:
       - -g -n --api-id --version-id --definition-id --title --description
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005?api-version=2024-03-01
   response:
     body:
       string: '{"type":"Microsoft.ApiCenter/services/workspaces/apis/versions/definitions","properties":{"title":"Swagger","description":"test
-        description 2"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005","name":"clitest000005","systemData":{"createdAt":"2025-05-26T06:48:28.9436533Z","lastModifiedAt":"2025-05-26T06:48:32.4360727Z"}}'
+        description 2"},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005","name":"clitest000005","systemData":{"createdAt":"2025-05-26T08:48:58.2874438Z","lastModifiedAt":"2025-05-26T08:49:01.8044905Z"}}'
     headers:
       api-supported-versions:
       - 2023-07-01-preview, 2024-03-01, 2024-03-15-preview, 2024-06-01-preview
@@ -90,9 +90,9 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Mon, 26 May 2025 06:48:32 GMT
+      - Mon, 26 May 2025 08:49:01 GMT
       etag:
-      - 0d013ded-0000-0100-0000-68340ec00000
+      - 1001aee8-0000-0100-0000-68342afd0000
       expires:
       - '-1'
       pragma:
@@ -106,13 +106,13 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/a8d86b01-64f7-42df-bf00-5c3ddf3bc9ad
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/7f442620-7f99-4446-91c3-66e51e2f0469
       x-ms-ratelimit-remaining-subscription-global-writes:
-      - '11998'
+      - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
-      - '798'
+      - '799'
       x-msedge-ref:
-      - 'Ref A: AAC592222DE14C5F87D004D6115624BB Ref B: MAA201060516021 Ref C: 2025-05-26T06:48:30Z'
+      - 'Ref A: F432CE5B3D414FBD964FDA4AB5C9AED7 Ref B: MAA201060514047 Ref C: 2025-05-26T08:49:01Z'
       x-powered-by:
       - ASP.NET
     status:

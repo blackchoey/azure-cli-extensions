@@ -19,7 +19,7 @@ interactions:
       ParameterSetName:
       - -g -n --api-id --version-id --definition-id --format --value --specification
       User-Agent:
-      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.11.9 (Windows-10-10.0.22631-SP0)
+      - AZURECLI/2.63.0 azsdk-python-core/1.28.0 Python/3.12.7 (Windows-11-10.0.22631-SP0)
     method: POST
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clirg000001/providers/Microsoft.ApiCenter/services/clitest000002/workspaces/default/apis/clitest000003/versions/clitest000004/definitions/clitest000005/importSpecification?api-version=2024-03-01
   response:
@@ -33,7 +33,7 @@ interactions:
       content-length:
       - '0'
       date:
-      - Mon, 26 May 2025 06:48:04 GMT
+      - Mon, 26 May 2025 08:48:20 GMT
       expires:
       - '-1'
       pragma:
@@ -45,13 +45,13 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-operation-identifier:
-      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/527c0a81-cdd9-48b6-8af4-a8d134c4610e
+      - tenantId=72f988bf-86f1-41af-91ab-2d7cd011db47,objectId=33608faa-33a6-4705-beb1-c8904392c4a4/southeastasia/73252ebb-39ed-4293-8536-9c7c01c84370
       x-ms-ratelimit-remaining-subscription-global-writes:
       - '11999'
       x-ms-ratelimit-remaining-subscription-writes:
       - '799'
       x-msedge-ref:
-      - 'Ref A: 2DA8F8697FE74E76B23ADDB07A2DA358 Ref B: MAA201060516033 Ref C: 2025-05-26T06:48:04Z'
+      - 'Ref A: FED1C5D95AAB47E9A9892D9C3537CE41 Ref B: MAA201060515051 Ref C: 2025-05-26T08:48:20Z'
       x-powered-by:
       - ASP.NET
     status:
