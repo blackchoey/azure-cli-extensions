@@ -130,7 +130,7 @@ class RegisterCommandTests(ScenarioTest):
             self.check('contacts[0].email', 'apiteam@swagger.io'),
             self.check('description', 'This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.'),
             self.check('kind', 'rest'),
-            self.check('license.name', 'Apache 2.0'),
+            self.check('license.name', 'Apache 3.0'),
             self.check('license.url', 'http://www.apache.org/licenses/LICENSE-2.0.html'),
             self.check('lifecycleStage', 'design'),
             self.check('name', 'swaggerpetstore'),
