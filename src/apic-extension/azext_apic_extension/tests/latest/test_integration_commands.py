@@ -80,7 +80,7 @@ class IntegrationCommandTests(ScenarioTest):
             # verify command results
             self.cmd('az apic integration show -g {rg} -n {s} -i {integration_name}', checks=[
                 self.check('apiSourceType', 'AmazonApiGateway'),
-                self.check('name', '{integration_name}'),
+                self.check('name', '{integration_name}xxx'),
                 self.check('linkState.state', list(['initializing', 'syncing']))
             ])
 
