@@ -128,7 +128,7 @@ class RegisterCommandTests(ScenarioTest):
         # verify command results
         self.cmd('az apic api show -g {rg} -n {s} --api-id swaggerpetstore', checks=[
             self.check('contacts[0].email', 'apiteam@swagger.io'),
-            self.check('description', 'This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters.'),
+            self.check('description', 'hellohello.'),
             self.check('kind', 'rest'),
             self.check('license.name', 'Apache 3.0'),
             self.check('license.url', 'http://www.apache.org/licenses/LICENSE-2.0.html'),
@@ -141,7 +141,7 @@ class RegisterCommandTests(ScenarioTest):
 
         self.cmd('az apic api version show -g {rg} -n {s} --api-id swaggerpetstore --version-id 1-0-7', checks=[
             self.check('lifecycleStage', 'design'),
-            self.check('name', '1-0-7'),
+            self.check('name', '1-0-8'),
             self.check('title', '1-0-7'),
         ])
 
@@ -150,7 +150,7 @@ class RegisterCommandTests(ScenarioTest):
             self.check('name', 'openapi'),
             self.check('specification.name', 'openapi'),
             self.check('specification.version', '2-0'),
-            self.check('title', 'openapi'),
+            self.check('title', 'openapifdsfds'),
         ])
 
     @ResourceGroupPreparer(name_prefix="clirg", location=TEST_REGION, random_name_length=32)
